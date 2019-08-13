@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
+
 import NavLink from '../../atoms/NavLink';
 import Logo from '../../atoms/Logo';
-
 import SocialButton from '../../atoms/SocialButton';
 import MenuToggle from '../../atoms/MenuToggle';
 import NavBarWrapper from './NavBarWrapper';
