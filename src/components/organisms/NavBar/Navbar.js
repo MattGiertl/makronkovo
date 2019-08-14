@@ -17,8 +17,15 @@ const NavBar = () => {
       <Logo />
       <NavItems showMenu={showMenu} id="NavItems">
         <SocialButtonGroup>
-          <SocialButton marginRight="15px" icon={['fab', 'instagram']} />
-          <SocialButton icon={['fab', 'facebook']} />
+          <SocialButton
+            to="https://www.instagram.com/makronkovo/?hl=en"
+            marginRight="15px"
+            icon={['fab', 'instagram']}
+          />
+          <SocialButton
+            to="https://www.facebook.com/makronkovo/"
+            icon={['fab', 'facebook']}
+          />
         </SocialButtonGroup>
         <NavLink to="/">TORTY NA MIERU</NavLink>
         <NavLink to="/">DEZERTY</NavLink>
