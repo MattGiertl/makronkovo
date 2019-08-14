@@ -4,13 +4,13 @@ import styled from "@emotion/styled";
 const Paragraph = styled.p(
   {
     color: theme.colors.mediumGold,
-    fontSize: theme.fontSizes.dinProBoldSmall,
+    fontSize: theme.fontSizes.small,
     textAlign: "left",
     lineHeight: "19px",
     margin: "0"
   },
   props => ({
-    fontWeight: props.bold ? "bold" : "none",
+    fontWeight: props.bold ? "bold" : "normal",
     marginBottom: props.marginBottom
   })
 );

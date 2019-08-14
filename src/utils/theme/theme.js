@@ -8,15 +8,10 @@ const theme = {
     green: "#9ADDB6"
   },
   fontSizes: {
-    heading: "22px",
-    hamburgerMenuMobile: "22px",
-    caslonAntiqueBoldMedium: "19px",
-    caslonAntiqueBoldSmall: "15px",
-    dinProRegularLarge: "30px",
-    dinProRegularMedium: "19px" /*specified for prices */,
-    dinProRegularSmall: "15px",
-    dinProBoldLarge: "19px",
-    dinProBoldSmall: "15px"
+    xl: "30px",
+    large: "22px", // used for headings
+    medium: "19px",
+    small: "15px"
   },
   letterSpacing: {
     heading: "0.1em"

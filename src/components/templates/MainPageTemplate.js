@@ -1,10 +1,15 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import NavBar from '../organisms/NavBar/Navbar';
+
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faTimes, faBars } from '@fortawesome/free-solid-svg-icons';
+import { fab, faInstagram } from '@fortawesome/free-brands-svg-icons';
+
+library.add(fab, faInstagram, faTimes, faBars);
 
 const MainPageTemplate = () => (
   <div>
-    <p>Main!</p>
-    <Link to="/faq">Go to FAQ</Link>
+    <NavBar />
   </div>
 );
 

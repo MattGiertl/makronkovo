@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 
 const Heading = styled.h1({
   color: theme.colors.mediumGold,
-  fontSize: theme.fontSizes.heading,
+  fontSize: theme.fontSizes.xl,
   letterSpacing: theme.letterSpacing.heading,
   textAlign: "center",
   lineHeight: "28px",
