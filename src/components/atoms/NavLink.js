@@ -20,13 +20,10 @@ const StyledLink = styled(Link)(
       fontSize: theme.fontSizes.medium,
       marginBottom: '25px',
     },
-<<<<<<< HEAD
 
     '&:active': {
       color: theme.colors.lightPink,
     },
-=======
->>>>>>> 19b88fa42acabf867b086cfe6451e74ccbe1e8d7
   },
   props => ({
     [mobileQuery]: {
