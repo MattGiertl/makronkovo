@@ -31,7 +31,7 @@ const ContentWrapper = styled.div({
 const FaqTemplate = () => {
   const renderFaqPairs = FaqPairData.pairs.map(pair => {
     const { question, answer } = pair;
-    return <FaqPair question={question} answer={answer} />;
+    return <FaqPair question={question} answer={answer} key={question} />;
   });
 
   return (
@@ -39,7 +39,7 @@ const FaqTemplate = () => {
       <ContentWrapper>
         <Heading>Časté otázky</Heading>
         <Fountain />
-        {renderFaqPairs()}
+        {renderFaqPairs}
       </ContentWrapper>
     </div>
   );
