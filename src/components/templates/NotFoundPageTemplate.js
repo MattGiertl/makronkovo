@@ -63,11 +63,11 @@ const NotFoudPage = () => {
     },
 
     [laptopQuery]: {
-      margin: "27px 550px 0"
+      margin: "27px 730px 0"
     },
 
     [desktopQuery]: {
-      margin: "27px 550px 0"
+      margin: "27px 730px 0"
     }
   });
 
