@@ -10,6 +10,7 @@ const StyledIcon = styled(FontAwesomeIcon)({
   color: theme.colors.mediumGold,
   display: 'none',
   position: 'fixed',
+  zIndex: '-1',
 
   [mobileQuery]: {
     display: 'flex',
