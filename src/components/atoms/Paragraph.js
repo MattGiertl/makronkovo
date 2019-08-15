@@ -5,13 +5,13 @@ const Paragraph = styled.p(
   {
     color: theme.colors.mediumGold,
     fontSize: theme.fontSizes.small,
-    textAlign: "left",
     lineHeight: "19px",
     margin: "0"
   },
   props => ({
     fontWeight: props.bold ? "bold" : "normal",
-    marginBottom: props.marginBottom
+    marginBottom: props.marginBottom,
+    textAlign: props.textAlign ? props.textAlign : "left"
   })
 );
 

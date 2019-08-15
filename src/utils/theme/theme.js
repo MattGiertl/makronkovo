@@ -8,6 +8,7 @@ const theme = {
     green: "#9ADDB6"
   },
   fontSizes: {
+    xxl: "120px",
     xl: "30px",
     large: "22px", // used for headings
     medium: "19px",
