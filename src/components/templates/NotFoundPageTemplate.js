@@ -22,9 +22,29 @@ const NotFoudPage = () => {
   });
 
   const StyledCake = styled.img({
-    margin: "30px auto 32px auto",
-    width: "188px",
-    height: "158px"
+    [mobileQuery]: {
+      margin: "15px auto 12px auto",
+      width: "138px",
+      height: "108px"
+    },
+
+    [tabletQuery]: {
+      margin: "30px auto 32px auto",
+      width: "188px",
+      height: "158px"
+    },
+
+    [laptopQuery]: {
+      margin: "30px auto 32px auto",
+      width: "188px",
+      height: "158px"
+    },
+
+    [desktopQuery]: {
+      margin: "30px auto 32px auto",
+      width: "188px",
+      height: "158px"
+    }
   });
 
   const ContentWrapper = styled.div({
@@ -51,11 +71,29 @@ const NotFoudPage = () => {
     }
   });
 
+  const StyledHeading = styled(Heading)({
+    [mobileQuery]: {
+      fontSize: theme.fontSizes.xl
+    },
+
+    [tabletQuery]: {
+      fontSize: theme.fontSizes.xxl
+    },
+
+    [laptopQuery]: {
+      fontSize: theme.fontSizes.xxl
+    },
+
+    [desktopQuery]: {
+      fontSize: theme.fontSizes.xxl
+    }
+  });
+
   return (
     <NotFoudWrapper>
-      <Heading
-        mobileMarginTop="6px"
-        mobileMarginBottom="14px"
+      <StyledHeading
+        mobileMarginTop="0px"
+        mobileMarginBottom="0px"
         laptopMarginTop="50px"
         laptopMarginBottom="14px"
         desktopMarginTop="50px"
@@ -63,7 +101,7 @@ const NotFoudPage = () => {
         fontSize={theme.fontSizes.xxl}
       >
         404
-      </Heading>
+      </StyledHeading>
       <StyledCake src={CakeImg} alt="Koláč" />
       <MediumHeading>Hups, stránka sa nenašla.</MediumHeading>
       <ContentWrapper>
