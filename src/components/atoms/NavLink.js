@@ -24,6 +24,10 @@ const StyledLink = styled(Link)(
     '&:active': {
       color: theme.colors.lightPink,
     },
+
+    '&:hover': {
+      color: theme.colors.lightPink,
+    },
   },
   props => ({
     [mobileQuery]: {

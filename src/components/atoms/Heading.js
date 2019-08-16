@@ -9,6 +9,7 @@ const Heading = styled.h1(
     letterSpacing: theme.letterSpacing.heading,
     textAlign: 'center',
     lineHeight: '28px',
+    margin: 0,
 
     [mobileQuery]: {
       fontSize: theme.fontSizes.medium,

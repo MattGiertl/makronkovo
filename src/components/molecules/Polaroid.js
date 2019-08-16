@@ -1,23 +1,45 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import theme from '../../utils/theme/theme';
-import { mobileQuery } from '../../utils/mediaqueries';
+import {
+  mobileQuery,
+  laptopQuery,
+  desktopQuery,
+  tabletQuery,
+} from '../../utils/mediaqueries';
 import { Link } from 'gatsby';
+import Paragraph from '../atoms/Paragraph';
 
 const Wrapper = styled.div(
   {
     display: 'flex',
     cursor: 'pointer',
     flexDirection: 'column',
-    width: '380px',
-    height: '405px',
     padding: '10px 10px 0',
     background: 'white',
-    marginBottom: '40px',
     textDecoration: 'none',
+    marginBottom: '10px',
 
     [mobileQuery]: {
       height: '300px',
+      width: '260px',
+      marginBottom: '40px',
+    },
+
+    [tabletQuery]: {
+      height: '275px',
+      width: '245px',
+      marginBottom: '40px',
+    },
+
+    [laptopQuery]: {
+      width: '280px',
+      height: '305px',
+    },
+
+    [desktopQuery]: {
+      width: '380px',
+      height: '405px',
     },
   },
   props => ({
@@ -31,40 +53,65 @@ const PolaroidImg = styled.img({
   width: '100%',
 });
 
-const Description = styled.label({
-  margin: 'auto 0',
-  fontSize: theme.fontSizes.large,
-  color: theme.colors.mediumGold,
-  textAlign: 'center',
-
-  [mobileQuery]: {
-    fontSize: theme.fontSizes.medium,
-  },
+const Price = styled.div({
+  display: 'flex',
+  justifyContent: 'center',
 });
 
-const Price = styled.label({
-  textAlign: 'center',
-  fontSize: theme.fontSizes.medium,
-  color: theme.colors.mediumGold,
+const DescriptionWrapper = styled.div({
+  display: 'flex',
+  height: '100%',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
 });
 
 const Polaroid = ({
   img,
   alt,
   description,
+  descriptionText,
+  heading,
   to = '/',
   oldPrice,
   price,
   shadowed,
   id,
 }) => {
+  const renderPrice = () => (
+    <DescriptionWrapper>
+      <Paragraph bold>{description}</Paragraph>
+      <Price>
+        <Paragraph
+          marginRight="10px"
+          fontSize={theme.fontSizes.small}
+          textDecoration="line-through"
+        >
+          {oldPrice}€
+        </Paragraph>
+        <Paragraph textAlign="center" fontSize={theme.fontSizes.small}>
+          {price}€
+        </Paragraph>
+      </Price>
+    </DescriptionWrapper>
+  );
+
+  const renderReference = () => (
+    <DescriptionWrapper>
+      <Paragraph bold>{description}</Paragraph>
+      <Paragraph textAlign="center">{descriptionText}</Paragraph>
+    </DescriptionWrapper>
+  );
   return (
-    <PolaroidWrapper to={to} shadowed={shadowed} id={id}>
+    <PolaroidWrapper to={to} disabled={!to} shadowed={shadowed} id={id}>
       <PolaroidImg src={img} alt={alt} />
-      <Description>{description}</Description>
-      {price && (
-        <Price>{`${<strikethrough>{oldPrice}</strikethrough>} ${price}`}</Price>
+      {heading && (
+        <Paragraph fontSize={theme.fontSizes.large} margin="auto">
+          {heading}
+        </Paragraph>
       )}
+      {price && renderPrice()}
+      {descriptionText && renderReference()}
     </PolaroidWrapper>
   );
 };

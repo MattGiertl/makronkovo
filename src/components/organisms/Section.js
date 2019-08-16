@@ -6,6 +6,7 @@ import {
   mobileQuery,
   laptopQuery,
   desktopQuery,
+  tabletQuery,
 } from '../../utils/mediaqueries';
 
 import theme from '../../utils/theme/theme';
@@ -14,9 +15,7 @@ const Wrapper = styled.section(
   {
     display: 'flex',
     flexDirection: 'column',
-    background: theme.colors.lightPink,
     marginTop: '30px',
-    marginBottom: '65px',
   },
   props => ({
     background: props.background ? props.background : theme.colors.white,
@@ -32,12 +31,16 @@ const Content = styled.div(
       margin: '0 30px',
     },
 
+    [tabletQuery]: {
+      margin: '0 120px 50px',
+    },
+
     [laptopQuery]: {
-      margin: '0 100px 50px',
+      margin: '0 175px 50px',
     },
 
     [desktopQuery]: {
-      margin: '0 350px 50px',
+      margin: '0 300px 50px',
     },
   },
   props => ({
@@ -47,13 +50,7 @@ const Content = styled.div(
 
 const Section = ({ heading, children, id, background, spaceAround }) => (
   <Wrapper id={id} background={background}>
-    <FountainHeading
-      marginTop="35px"
-      marginBottom="45px"
-      mobileMargin="0 1px"
-    >
-      {heading}
-    </FountainHeading>
+    <FountainHeading mobileMargin="0 1px">{heading}</FountainHeading>
     <Content spaceAround={spaceAround}>{children}</Content>
   </Wrapper>
 );
