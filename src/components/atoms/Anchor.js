@@ -8,30 +8,34 @@ import {
   laptopQuery
 } from "../../utils/mediaqueries";
 
-const StyledAnchor = styled.a({
-  color: theme.colors.darkGold,
-  textDecoration: "none",
-  fontWeight: "bold",
-  
-  [mobileQuery]: {
-    fontSize: theme.fontSizes.small
+const StyledAnchor = styled.a(
+  {
+    color: theme.colors.darkGold,
+    textDecoration: "none",
+
+    [mobileQuery]: {
+      fontSize: theme.fontSizes.small
+    },
+
+    [tabletQuery]: {
+      fontSize: theme.fontSizes.medium
+    },
+
+    [laptopQuery]: {
+      fontSize: theme.fontSizes.medium
+    },
+
+    [desktopQuery]: {
+      fontSize: theme.fontSizes.medium
+    }
   },
+  props => ({
+    fontWeight: props.bold ? "bold" : "normal",
+  })
+);
 
-  [tabletQuery]: {
-    fontSize: theme.fontSizes.medium
-  },
-
-  [laptopQuery]: {
-    fontSize: theme.fontSizes.medium
-  },
-
-  [desktopQuery]: {
-    fontSize: theme.fontSizes.medium
-  }
-});
-
-const Anchor = ({ href, children }) => (
-  <StyledAnchor href={href}>{children}</StyledAnchor>
+const Anchor = ({ href, children, bold }) => (
+  <StyledAnchor href={href} bold={bold}>{children}</StyledAnchor>
 );
 
 export default Anchor;
