@@ -37,7 +37,7 @@ const NavBar = () => {
           O NÁS
         </NavLink>
         <NavLink to="/">GALÉRIA</NavLink>
-        <NavLink to="/">KONTAKT</NavLink>
+        <NavLink to="/kontakt">KONTAKT</NavLink>
         <NavLink to="/caste-otazky">ČASTÉ OTÁZKY</NavLink>
       </NavItems>
     </NavBarWrapper>

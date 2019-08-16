@@ -76,19 +76,19 @@ const NotFoudTemplate = () => {
   const StyledHeading = styled(Heading)(
     {
       [mobileQuery]: {
-        fontSize: theme.fontSizes.xl
+        fontSize: theme.fontSizes.xxl
       },
 
       [tabletQuery]: {
-        fontSize: theme.fontSizes.xxl
+        fontSize: theme.fontSizes.xxxl
       },
 
       [laptopQuery]: {
-        fontSize: theme.fontSizes.xxl
+        fontSize: theme.fontSizes.xxxl
       },
 
       [desktopQuery]: {
-        fontSize: theme.fontSizes.xxl
+        fontSize: theme.fontSizes.xxxl
       }
     },
     props => ({
@@ -102,11 +102,13 @@ const NotFoudTemplate = () => {
       <NavBar />
       <NotFoudWrapper>
         <StyledHeading
-          mobileMargin="0px"
+          mobileMargin="10px"
           laptopMarginTop="50px"
           laptopMarginBottom="14px"
           desktopMarginTop="50px"
           desktopMarginBottom="14px"
+          tabletMarginTop="70px"
+          tabletMarginBottom="50px"
         >
           404
         </StyledHeading>

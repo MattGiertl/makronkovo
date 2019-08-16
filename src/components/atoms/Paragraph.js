@@ -10,7 +10,9 @@ const Paragraph = styled.p(
   },
   props => ({
     fontWeight: props.bold ? "bold" : "normal",
+    marginLeft: props.marginLeft,
     marginBottom: props.marginBottom,
+    lineHeight: props.lineHeight ? props.lineHeight : "19px",
     textAlign: props.textAlign ? props.textAlign : "left"
   })
 );
