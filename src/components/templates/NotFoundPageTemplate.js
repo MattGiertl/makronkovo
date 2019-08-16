@@ -48,27 +48,28 @@ const NotFoudPage = () => {
   });
 
   const ContentWrapper = styled.div({
-    margin: "0 20px"
+    [mobileQuery]: {
+      margin: "0 30px"
+    },
+
+    [tabletQuery]: {
+      margin: "0 225px"
+    },
+
+    [laptopQuery]: {
+      margin: "0 650px"
+    },
+
+    [desktopQuery]: {
+      margin: "0 650px"
+    }
   });
 
   const NavWrapper = styled.div({
     display: "flex",
-    justifyContent: "space-around",
-    [mobileQuery]: {
-      margin: "27px -15px"
-    },
-
-    [tabletQuery]: {
-      margin: "27px 160px 0"
-    },
-
-    [laptopQuery]: {
-      margin: "27px 730px 0"
-    },
-
-    [desktopQuery]: {
-      margin: "27px 730px 0"
-    }
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginTop: "27px"
   });
 
   const StyledHeading = styled(Heading)({
@@ -98,13 +99,12 @@ const NotFoudPage = () => {
         laptopMarginBottom="14px"
         desktopMarginTop="50px"
         desktopMarginBottom="14px"
-        fontSize={theme.fontSizes.xxl}
       >
         404
       </StyledHeading>
       <StyledCake src={CakeImg} alt="Koláč" />
-      <MediumHeading>Hups, stránka sa nenašla.</MediumHeading>
       <ContentWrapper>
+        <MediumHeading>Hups, stránka sa nenašla.</MediumHeading>
         <Paragraph textAlign="center">
           Ale chutné dezerty a torty sa pre Vás nájdu vždy :)
         </Paragraph>
