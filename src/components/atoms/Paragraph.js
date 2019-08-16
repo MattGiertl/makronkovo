@@ -27,20 +27,24 @@ const Paragraph = styled.p(
     [mobileQuery]: {
       width: props.mobileWidth,
       marginTop: props.mobileMarginTop,
+      fontSize: props.mobileFontSize,
     },
 
     [tabletQuery]: {
       width: props.tabletWidth,
+      fontSize: props.tabletFontSize,
     },
 
     [laptopQuery]: {
       width: props.laptopWidth,
       margin: props.laptopMargin,
+      fontSize: props.laptopFontSize,
     },
 
     [desktopQuery]: {
       width: props.desktopWidth,
       margin: props.desktopMargin,
+      fontSize: props.desktopFontSize,
     },
   }),
 );

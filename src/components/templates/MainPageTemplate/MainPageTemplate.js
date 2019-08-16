@@ -23,15 +23,16 @@ import PolaroidDummy from '../../../../static/img/jumbotron.jpg';
 import SlideShow from '../../atoms/Slideshow';
 import Button from '../../atoms/Button';
 import SquarePic from '../../atoms/SquarePic';
-import Input from '../../atoms/Input';
 import Paragraph from '../../atoms/Paragraph';
 import Footer from '../../molecules/Footer';
 import Polaroid from '../../molecules/Polaroid';
 import Section from '../../organisms/Section';
 
 import SlideShowWrapper from './SlideShowWrapper';
-import InputWrapper from './InputWrapper';
 import LabeledSquarePic from '../../molecules/LabeledSquarePic';
+
+import mainPageData from '../../../data/mock/mainsite.json';
+import Newsletter from '../../organisms/Newsletter/Newsletter';
 
 library.add(
   fab,
@@ -44,6 +45,62 @@ library.add(
 );
 
 const MainPageTemplate = () => {
+  const { sections } = mainPageData;
+  const { offer, discount, reference } = sections;
+
+  const renderDiscountPolaroids = discount.polaroids.map(discount => (
+    <Polaroid src={discount.image}>
+      <Paragraph bold fontSize={theme.fontSizes.small}>
+        {discount.heading}
+      </Paragraph>
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
+        <Paragraph
+          textDecoration="line-through"
+          marginRight="10px"
+          fontSize={theme.fontSizes.small}
+        >
+          {discount.oldPrice}€
+        </Paragraph>
+        <Paragraph
+          textDecoration="line-through"
+          marginRight="10px"
+          fontSize={theme.fontSizes.small}
+        >
+          {discount.newPrice}€
+        </Paragraph>
+      </div>
+    </Polaroid>
+  ));
+
+  const renderOfferPolaroids = offer.polaroids.map(offer => (
+    <Polaroid src={offer.image}>
+      <Paragraph
+        bold
+        desktopFontSize={theme.fontSizes.large}
+        laptopFontSize={theme.fontSizes.medium}
+      >
+        {offer.heading}
+      </Paragraph>
+    </Polaroid>
+  ));
+
+  const renderReferencePolaroids = reference.polaroids.map(reference => (
+    <Polaroid src={reference.image}>
+      <Paragraph bold textAlign="center" fontSize={theme.fontSizes.small}>
+        {reference.author}
+      </Paragraph>
+      <Paragraph textAlign="center" fontSize={theme.fontSizes.small}>
+        {reference.review}
+      </Paragraph>
+    </Polaroid>
+  ));
+
   return (
     <div>
       <NavBar />
@@ -57,43 +114,21 @@ const MainPageTemplate = () => {
 
       <Section
         spaceAround
-        background={theme.colors.lightPink}
-        heading="PONÚKAME VÁM"
+        background={offer.background}
+        heading={offer.heading}
         id="OfferSection"
       >
-        <Polaroid img={PolaroidDummy} heading="TORTY NA MIERU" />
-        <Polaroid img={PolaroidDummy} heading="DEZERTY" />
-        <Polaroid img={PolaroidDummy} heading="CANDY BARY" />
+        {renderOfferPolaroids}
       </Section>
 
       <Section
         spaceAround
-        heading="ZĽAVNENÉ PRODUKTY"
+        heading={discount.heading}
         price="20"
         oldPrice="22"
         id="DiscountedProducts"
       >
-        <Polaroid
-          price="20"
-          oldPrice="22"
-          shadowed
-          img={PolaroidDummy}
-          description="Vanilkovo-citrónový cheescake"
-        />
-        <Polaroid
-          price="20"
-          oldPrice="22"
-          shadowed
-          img={PolaroidDummy}
-          description="Vanilkovo-citrónový cheescake"
-        />
-        <Polaroid
-          price="20"
-          oldPrice="22"
-          shadowed
-          img={PolaroidDummy}
-          description="Vanilkovo-citrónový cheescake"
-        />
+        {renderDiscountPolaroids}
       </Section>
 
       <Section heading="INSTAGRAM @MAKRONKOVO" id="InstagramSection">
@@ -115,29 +150,8 @@ const MainPageTemplate = () => {
         />
       </Section>
 
-      <Section
-        spaceAround
-        heading="REFERENCIE OD NAŠICH KLIENTOV"
-        id="ReferenceSection"
-      >
-        <Polaroid
-          shadowed
-          img={PolaroidDummy}
-          description="@angiesdiary_"
-          descriptionText="Ďakujem za najkrajšiu a najchutnejšiu tortu akú som mala 💗"
-        />
-        <Polaroid
-          shadowed
-          img={PolaroidDummy}
-          description="@angiesdiary_"
-          descriptionText="Ďakujem za najkrajšiu a najchutnejšiu tortu akú som mala 💗"
-        />
-        <Polaroid
-          shadowed
-          img={PolaroidDummy}
-          description="@angiesdiary_"
-          descriptionText="Ďakujem za najkrajšiu a najchutnejšiu tortu akú som mala 💗"
-        />
+      <Section spaceAround heading={reference.heading} id="ReferenceSection">
+        {renderReferencePolaroids}
         <div
           style={{
             display: 'flex',
@@ -151,43 +165,9 @@ const MainPageTemplate = () => {
       </Section>
 
       <Section heading="NEWSLETTER">
-        <Paragraph
-          textAlign="center"
-          laptopWidth="100%"
-          desktopWidth="100%"
-          laptopMargin="0 200px"
-          desktopMargin="0 200px"
-        >
-          Máte záujem zisťovať novinky o našich dezertoch, tortách a sladkých
-          akciách? Cez náš newsletter Vám nič neujde.
-        </Paragraph>
-        <InputWrapper>
-          <Input
-            type="text"
-            placeholder="Zadajte Váš e-mail"
-            mobileMarginTop="50px"
-          />
-          <Button
-            width="380px"
-            marginLeft="40px"
-            onClick={() => alert('NOT IMPLEMENTED YET')}
-          >
-            Prihlásiť sa k odberu
-          </Button>
-        </InputWrapper>
-        {/* TODO: Lukass Anchor */}
-        <Paragraph
-          fontSize={theme.fontSizes.xs}
-          textAlign="center"
-          mobileMarginTop="27px"
-        >
-          Odoslaním registrácie k newsletteru súhlasím, že som si prečítal(a){' '}
-          <a href="/">
-            Podmienky pre spracovanie osobných údajov pre newsletter
-          </a>{' '}
-          a súhlasím s nimi.
-        </Paragraph>
+        <Newsletter />
       </Section>
+
       <Section heading="NÁŠ TÝM">
         <LabeledSquarePic
           src={PolaroidDummy}

@@ -6,7 +6,7 @@ import { mobileQuery } from '../../utils/mediaqueries';
 const StyledMap = styled.iframe({
   width: '590px',
   height: '390px',
-  marginTop: '60px',
+  margin: '60px 0',
 
   [mobileQuery]: {
     width: '100%',

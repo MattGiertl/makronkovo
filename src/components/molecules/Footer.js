@@ -15,6 +15,7 @@ const FooterBackground = styled.div({
   alignItems: 'center',
   width: '100%',
   background: theme.colors.lightPink,
+  marginTop: 'auto',
 
   height: '50px',
 
