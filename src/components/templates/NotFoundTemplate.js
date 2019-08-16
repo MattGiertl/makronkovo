@@ -14,7 +14,7 @@ import {
   laptopQuery
 } from "../../utils/mediaqueries";
 
-const NotFoudPage = () => {
+const NotFoudTemplate = () => {
   const NotFoudWrapper = styled.div({
     display: "flex",
     flexDirection: "column",
@@ -134,4 +134,4 @@ const NotFoudPage = () => {
   );
 };
 
-export default NotFoudPage;
+export default NotFoudTemplate;
