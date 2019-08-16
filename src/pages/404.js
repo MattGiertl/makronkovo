@@ -1,5 +1,10 @@
-import React from 'react';
+import React from "react";
+import NotFoundTemplate from "../components/templates/NotFoundTemplate";
 
-const NotFound = () => <div>404!</div>;
+const NotFound = () => (
+  <div>
+    <NotFoundTemplate />
+  </div>
+);
 
 export default NotFound;

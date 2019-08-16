@@ -1,39 +1,39 @@
-import React from 'react';
+import React from "react";
 
-import styled from '@emotion/styled';
-import { Link } from 'gatsby';
-import theme from '../../utils/theme/theme';
-import { mobileQuery, tabletQuery } from '../../utils/mediaqueries';
+import styled from "@emotion/styled";
+import { Link } from "gatsby";
+import theme from "../../utils/theme/theme";
+import { mobileQuery, tabletQuery } from "../../utils/mediaqueries";
 
 const StyledLink = styled(Link)(
   {
-    textDecoration: 'none',
+    textDecoration: "none",
     color: theme.colors.mediumGold,
     fontSize: theme.fontSizes.small,
 
     [mobileQuery]: {
       fontSize: theme.fontSizes.medium,
-      marginBottom: '17px',
+      marginBottom: "17px"
     },
 
     [tabletQuery]: {
       fontSize: theme.fontSizes.medium,
-      marginBottom: '25px',
+      marginBottom: "25px"
     },
 
-    '&:active': {
-      color: theme.colors.lightPink,
-    },
+    "&:active": {
+      color: theme.colors.lightPink
+    }
   },
   props => ({
     [mobileQuery]: {
-      marginTop: props.marginTop,
+      marginTop: props.marginTop
     },
 
     [tabletQuery]: {
-      marginTop: props.marginTop,
-    },
-  }),
+      marginTop: props.marginTop
+    }
+  })
 );
 
 const NavLink = ({ marginTop, children, to, ...rest }) => (
