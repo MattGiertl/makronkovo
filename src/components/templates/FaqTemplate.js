@@ -1,31 +1,32 @@
-import React from "react";
-import Heading from "../atoms/Heading";
-import Fountain from "../atoms/Fountain";
-import FaqPair from "../molecules/FaqPair";
-import styled from "@emotion/styled";
-import FaqPairData from "../../data/faq.json";
+import React from 'react';
+import Heading from '../atoms/Heading';
+import Fountain from '../atoms/Fountain';
+import FaqPair from '../molecules/FaqPair';
+import styled from '@emotion/styled';
+import FaqPairData from '../../data/mock/faq.json';
 import {
   tabletQuery,
   mobileQuery,
-  tabletLandscapeQuery
-} from "../../utils/mediaqueries";
+  tabletLandscapeQuery,
+} from '../../utils/mediaqueries';
+import Footer from '../molecules/Footer';
 
 const ContentWrapper = styled.div({
-  display: "flex",
-  flexDirection: "column",
-  margin: "0 29.17%",
+  display: 'flex',
+  flexDirection: 'column',
+  margin: '0 29.17% 55px',
 
   [mobileQuery]: {
-    margin: "0 43px 0 37px"
+    margin: '0 43px 0 37px',
   },
 
   [tabletQuery]: {
-    margin: "0 43px 0 37px"
+    margin: '0 43px 0 37px',
   },
 
   [tabletLandscapeQuery]: {
-    margin: "0 29.17%"
-  }
+    margin: '0 29.17%',
+  },
 });
 
 const FaqTemplate = () => {
@@ -35,12 +36,13 @@ const FaqTemplate = () => {
   });
 
   return (
-    <div>
+    <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
       <ContentWrapper>
         <Heading>Časté otázky</Heading>
         <Fountain />
         {renderFaqPairs}
       </ContentWrapper>
+      <Footer />
     </div>
   );
 };

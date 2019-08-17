@@ -1,45 +1,48 @@
-import theme from "../../utils/theme/theme";
-import styled from "@emotion/styled";
+import theme from '../../utils/theme/theme';
+import styled from '@emotion/styled';
 import {
   tabletQuery,
   mobileQuery,
   desktopQuery,
-  laptopQuery
-} from "../../utils/mediaqueries";
+  laptopQuery,
+} from '../../utils/mediaqueries';
 
 const Heading = styled.h1(
   {
     color: theme.colors.mediumGold,
-    fontSize: theme.fontSizes.xl,
     letterSpacing: theme.letterSpacing.heading,
-    textAlign: "center",
-    lineHeight: "28px"
+    textAlign: 'center',
+    lineHeight: '28px',
+    margin: 0,
   },
 
   props => ({
-    marginBottom: props.marginBottom ? props.marginBottom : "6px",
-    fontSize: props.fontSize ? props.fontSize : theme.fontSizes.xl,
+    marginTop: props.marginTop,
+    marginBottom: props.marginBottom ? props.marginBottom : '6px',
+    margin: props.margin,
+    fontSize: props.fontSize ? props.fontSize : theme.fontSizes.large,
 
     [mobileQuery]: {
+      margin: props.mobileMargin,
       marginTop: props.mobileMarginTop,
-      marginBottom: props.mobileMarginBottom
+      marginBottom: props.mobileMarginBottom,
     },
 
     [tabletQuery]: {
       marginTop: props.tabletMarginTop,
-      marginBottom: props.tabletMarginBottom
+      marginBottom: props.tabletMarginBottom,
     },
 
     [laptopQuery]: {
       marginTop: props.laptopMarginTop,
-      marginBottom: props.laptopMarginBottom
+      marginBottom: props.laptopMarginBottom,
     },
 
     [desktopQuery]: {
       marginTop: props.desktopMarginTop,
-      marginBottom: props.desktopMarginBottom
-    }
-  })
+      marginBottom: props.desktopMarginBottom,
+    },
+  }),
 );
 
 export default Heading;
