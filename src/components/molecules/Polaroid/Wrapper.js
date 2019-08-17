@@ -15,6 +15,8 @@ const Wrapper = styled.div(
     transition: 'box-shadow 300ms, height 300ms, width 300ms',
 
     '&:hover': {
+      width: '19em',
+      height: '20em',
       boxShadow: '0px 10px 20px rgba(0, 0, 0, 0.24)',
     },
   },
