@@ -10,8 +10,6 @@ import {
   faPhoneAlt,
 } from '@fortawesome/free-solid-svg-icons';
 
-import theme from '../../../utils/theme/theme';
-
 import { fab, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 import MainSlideShowPic1 from '../../../../static/img/products-grid1.jpg';
@@ -23,16 +21,14 @@ import PolaroidDummy from '../../../../static/img/jumbotron.jpg';
 import SlideShow from '../../atoms/Slideshow';
 import Button from '../../atoms/Button';
 import SquarePic from '../../atoms/SquarePic';
-import Paragraph from '../../atoms/Paragraph';
 import Footer from '../../molecules/Footer';
-import Polaroid from '../../molecules/Polaroid';
 import Section from '../../organisms/Section';
 
 import SlideShowWrapper from './SlideShowWrapper';
 import LabeledSquarePic from '../../molecules/LabeledSquarePic';
 
-import mainPageData from '../../../data/mock/mainsite.json';
 import Newsletter from '../../organisms/Newsletter/Newsletter';
+import styled from '@emotion/styled';
 
 library.add(
   fab,
@@ -44,63 +40,21 @@ library.add(
   faPhoneAlt,
 );
 
-const MainPageTemplate = () => {
-  const { sections } = mainPageData;
-  const { offer, discount, reference } = sections;
+const ButtonWrapper = styled.div({
+  display: 'flex',
+  width: '100%',
+  justifyContent: 'center',
+  marginTop: '40px',
+});
 
-  const renderOfferPolaroids = offer.polaroids.map(offer => (
-    <Polaroid src={offer.image}>
-      <Paragraph
-        bold
-        desktopFontSize={theme.fontSizes.large}
-        laptopFontSize={theme.fontSizes.medium}
-      >
-        {offer.heading}
-      </Paragraph>
-    </Polaroid>
-  ));
-
-  const renderDiscountPolaroids = discount.polaroids.map(discount => (
-    <Polaroid src={discount.image} shadowed>
-      <Paragraph bold fontSize={theme.fontSizes.small}>
-        {discount.heading}
-      </Paragraph>
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-      >
-        <Paragraph
-          textDecoration="line-through"
-          marginRight="10px"
-          fontSize={theme.fontSizes.small}
-        >
-          {discount.oldPrice}€
-        </Paragraph>
-        <Paragraph
-          textDecoration="line-through"
-          marginRight="10px"
-          fontSize={theme.fontSizes.small}
-        >
-          {discount.newPrice}€
-        </Paragraph>
-      </div>
-    </Polaroid>
-  ));
-
-  const renderReferencePolaroids = reference.polaroids.map(reference => (
-    <Polaroid src={reference.image} shadowed>
-      <Paragraph bold textAlign="center" fontSize={theme.fontSizes.small}>
-        {reference.author}
-      </Paragraph>
-      <Paragraph textAlign="center" fontSize={theme.fontSizes.small}>
-        {reference.review}
-      </Paragraph>
-    </Polaroid>
-  ));
-
+const MainPageTemplate = ({
+  offerPolaroids,
+  discountPolaroids,
+  referencePolaroids,
+  offer,
+  discount,
+  reference,
+}) => {
   return (
     <div>
       <NavBar />
@@ -118,7 +72,7 @@ const MainPageTemplate = () => {
         heading={offer.heading}
         id="OfferSection"
       >
-        {renderOfferPolaroids}
+        {offerPolaroids}
       </Section>
 
       <Section
@@ -128,17 +82,10 @@ const MainPageTemplate = () => {
         oldPrice="22"
         id="DiscountedProducts"
       >
-        {renderDiscountPolaroids}
-        <div
-          style={{
-            display: 'flex',
-            width: '100%',
-            justifyContent: 'center',
-            marginTop: '40px',
-          }}
-        >
+        {discountPolaroids}
+        <ButtonWrapper>
           <Button onClick={() => alert('NOT IMPLEMENTED YET')}>Viac</Button>
-        </div>
+        </ButtonWrapper>
       </Section>
 
       <Section heading="INSTAGRAM @MAKRONKOVO" id="InstagramSection">
@@ -161,17 +108,10 @@ const MainPageTemplate = () => {
       </Section>
 
       <Section spaceAround heading={reference.heading} id="ReferenceSection">
-        {renderReferencePolaroids}
-        <div
-          style={{
-            display: 'flex',
-            width: '100%',
-            justifyContent: 'center',
-            marginTop: '40px',
-          }}
-        >
+        {referencePolaroids}
+        <ButtonWrapper>
           <Button onClick={() => alert('NOT IMPLEMENTED YET')}>Viac</Button>
-        </div>
+        </ButtonWrapper>
       </Section>
 
       <Section heading="NEWSLETTER">

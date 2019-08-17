@@ -18,7 +18,7 @@ const Wrapper = styled.div(
     height: '405px',
     width: '380px',
 
-    transition: 'box-shadow 300ms',
+    transition: 'box-shadow 300ms, height 300ms, width 300ms',
 
     '&:hover': {
       boxShadow: '0px 10px 20px rgba(0, 0, 0, 0.24)',
@@ -26,6 +26,8 @@ const Wrapper = styled.div(
 
     [mobileQuery]: {
       marginBottom: '40px',
+      height: '243px',
+      width: '228px',
     },
 
     [tabletQuery]: {
@@ -37,12 +39,22 @@ const Wrapper = styled.div(
     [laptopQuery]: {
       height: '243px',
       width: '228px',
+
+      '&:hover': {
+        height: '255px',
+        width: '240px',
+      },
     },
 
     [desktopQuery]: {
       height: '405px',
       width: '380px',
       padding: '15px 15px 0',
+
+      '&:hover': {
+        height: '417px',
+        width: '392px',
+      },
     },
   },
   props => ({
