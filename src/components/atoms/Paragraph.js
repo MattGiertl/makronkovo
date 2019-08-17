@@ -1,5 +1,6 @@
 import theme from "../../utils/theme/theme";
 import styled from "@emotion/styled";
+import { mobileQuery } from "../../utils/mediaqueries";
 
 const Paragraph = styled.p(
   {
@@ -15,6 +16,10 @@ const Paragraph = styled.p(
     lineHeight: props.lineHeight ? props.lineHeight : "19px",
     textAlign: props.textAlign ? props.textAlign : "left",
     fontSize: props.fontSize ? props.fontSize : theme.fontSizes.small,
+
+    [mobileQuery]: {
+      marginTop: props.mobileMarginTop
+    }
   })
 );
 
