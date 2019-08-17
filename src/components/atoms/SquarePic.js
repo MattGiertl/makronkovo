@@ -11,14 +11,12 @@ const Pic = styled.div(
     backgroundSize: 'cover',
     height: '200px',
     width: '200px',
-    margin: '0 10px',
-    marginBottom: '20px',
+    margin: '0 10px 20px',
 
     [mobileQuery]: {
       width: '120px',
       height: '120px',
-      margin: '0 5px',
-      marginBottom: '10px',
+      margin: '0 5px 10px',
     },
   },
   props => ({
