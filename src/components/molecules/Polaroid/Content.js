@@ -4,6 +4,7 @@ import {
   tabletQuery,
   laptopQuery,
   desktopQuery,
+  mobileQuery,
 } from '../../../utils/mediaqueries';
 
 const Content = styled.div({
@@ -11,6 +12,10 @@ const Content = styled.div({
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
+
+  [mobileQuery]: {
+    height: '100%',
+  },
 
   [tabletQuery]: {
     height: '66px',

@@ -39,6 +39,7 @@ const Wrapper = styled.div(
     [laptopQuery]: {
       height: '243px',
       width: '228px',
+      marginBottom: '40px',
 
       '&:hover': {
         height: '255px',
@@ -50,6 +51,7 @@ const Wrapper = styled.div(
       height: '405px',
       width: '380px',
       padding: '15px 15px 0',
+      marginBottom: '40px',
 
       '&:hover': {
         height: '417px',

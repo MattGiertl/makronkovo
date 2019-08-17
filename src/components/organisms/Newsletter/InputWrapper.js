@@ -1,10 +1,11 @@
-import styled from '@emotion/styled';
 import {
   mobileQuery,
   laptopQuery,
   desktopQuery,
   tabletQuery,
 } from '../../../utils/mediaqueries';
+
+import styled from '@emotion/styled';
 
 const InputWrapper = styled.div({
   display: 'flex',
