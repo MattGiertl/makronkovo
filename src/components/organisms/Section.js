@@ -2,12 +2,6 @@ import React from 'react';
 
 import styled from '@emotion/styled';
 import FountainHeading from '../molecules/FountainHeading';
-import {
-  mobileQuery,
-  laptopQuery,
-  desktopQuery,
-  tabletQuery,
-} from '../../utils/mediaqueries';
 
 import theme from '../../utils/theme/theme';
 
@@ -27,21 +21,7 @@ const Content = styled.div(
     display: 'flex',
     flexWrap: 'wrap',
 
-    [mobileQuery]: {
-      margin: '0 30px',
-    },
-
-    [tabletQuery]: {
-      margin: '0 120px 50px',
-    },
-
-    [laptopQuery]: {
-      margin: '0 175px 50px',
-    },
-
-    [desktopQuery]: {
-      margin: '0 300px 50px',
-    },
+    margin: '0 10%',
   },
   props => ({
     justifyContent: props.spaceAround ? 'space-around' : 'center',
