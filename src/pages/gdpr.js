@@ -8,6 +8,6 @@ const renderGDRPText = GDRPText.rules.map(text => {
   return <Paragraph marginBottom="34px">{rule}</Paragraph>;
 });
 
-const GDPR = () => <GDRPTemplate GDRPText={renderGDRPText} />;
+const GDPR = () => <GDRPTemplate gdprText={renderGDRPText} />;
 
 export default GDPR;

@@ -41,7 +41,7 @@ const GDRPTemplate = props => {
         >
           Súhlas so spracovaním osobných údajov pre newsletter
         </Paragraph>
-        {props.GDRPText}
+        {props.gdprText}
       </ContentWrapper>
     </>
   );
