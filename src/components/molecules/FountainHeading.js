@@ -36,7 +36,11 @@ const FountainHeading = ({
   children,
   ...props
 }) => (
-  <Wrapper mobileMargin="25px 0" mobileMarginBottom {...props}>
+  <Wrapper
+    mobileMargin="25px 0"
+    mobileMarginBottom={mobileMarginBottom}
+    {...props}
+  >
     <Heading mobileMargin={mobileMargin} marginBottom="6px">
       {children}
     </Heading>
