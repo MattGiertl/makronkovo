@@ -48,8 +48,20 @@ const MainPageTemplate = () => {
   const { sections } = mainPageData;
   const { offer, discount, reference } = sections;
 
+  const renderOfferPolaroids = offer.polaroids.map(offer => (
+    <Polaroid src={offer.image}>
+      <Paragraph
+        bold
+        desktopFontSize={theme.fontSizes.large}
+        laptopFontSize={theme.fontSizes.medium}
+      >
+        {offer.heading}
+      </Paragraph>
+    </Polaroid>
+  ));
+
   const renderDiscountPolaroids = discount.polaroids.map(discount => (
-    <Polaroid src={discount.image}>
+    <Polaroid src={discount.image} shadowed>
       <Paragraph bold fontSize={theme.fontSizes.small}>
         {discount.heading}
       </Paragraph>
@@ -78,20 +90,8 @@ const MainPageTemplate = () => {
     </Polaroid>
   ));
 
-  const renderOfferPolaroids = offer.polaroids.map(offer => (
-    <Polaroid src={offer.image}>
-      <Paragraph
-        bold
-        desktopFontSize={theme.fontSizes.large}
-        laptopFontSize={theme.fontSizes.medium}
-      >
-        {offer.heading}
-      </Paragraph>
-    </Polaroid>
-  ));
-
   const renderReferencePolaroids = reference.polaroids.map(reference => (
-    <Polaroid src={reference.image}>
+    <Polaroid src={reference.image} shadowed>
       <Paragraph bold textAlign="center" fontSize={theme.fontSizes.small}>
         {reference.author}
       </Paragraph>
@@ -129,6 +129,16 @@ const MainPageTemplate = () => {
         id="DiscountedProducts"
       >
         {renderDiscountPolaroids}
+        <div
+          style={{
+            display: 'flex',
+            width: '100%',
+            justifyContent: 'center',
+            marginTop: '40px',
+          }}
+        >
+          <Button onClick={() => alert('NOT IMPLEMENTED YET')}>Viac</Button>
+        </div>
       </Section>
 
       <Section heading="INSTAGRAM @MAKRONKOVO" id="InstagramSection">

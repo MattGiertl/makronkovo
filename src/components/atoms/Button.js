@@ -9,6 +9,7 @@ const Button = styled.button(
     background: theme.colors.mediumGold,
     color: theme.colors.white,
     fontSize: theme.fontSizes.small,
+    transition: 'background 200ms',
 
     '&:hover': {
       background: theme.colors.darkGold,
