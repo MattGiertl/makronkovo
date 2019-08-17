@@ -19,6 +19,8 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 import { fab, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import SquarePic from '../components/atoms/SquarePic';
+import LabeledSquarePic from '../components/molecules/LabeledSquarePic';
 
 library.add(
   fab,
@@ -31,8 +33,8 @@ library.add(
 );
 
 const MainPage = () => {
-  const { sections } = mainPageData;
-  const { offer, discount, reference } = sections;
+  const { sections, slideshow } = mainPageData;
+  const { offer, discount, instagram, reference, team } = sections;
 
   const renderOfferPolaroids = offer.polaroids.map(offer => (
     <Polaroid src={offer.image}>
@@ -66,7 +68,6 @@ const MainPage = () => {
           {discount.oldPrice}€
         </Paragraph>
         <Paragraph
-          textDecoration="line-through"
           marginRight="10px"
           fontSize={theme.fontSizes.small}
         >
@@ -74,6 +75,10 @@ const MainPage = () => {
         </Paragraph>
       </div>
     </Polaroid>
+  ));
+
+  const renderInstagramPosts = instagram.posts.map(post => (
+    <SquarePic src={post.image} href="https://www.instagram.com/makronkovo/" />
   ));
 
   const renderReferencePolaroids = reference.polaroids.map(reference => (
@@ -87,14 +92,27 @@ const MainPage = () => {
     </Polaroid>
   ));
 
+  const renderTeamMembers = team.pictures.map(member => (
+    <LabeledSquarePic
+      src={member.image}
+      heading={member.name}
+      description={member.position}
+    />
+  ));
+
   return (
     <MainPageTemplate
+      slideshow={slideshow}
       offer={offer}
       offerPolaroids={renderOfferPolaroids}
       discount={discount}
       discountPolaroids={renderDiscountPolaroids}
+      instagram={instagram}
+      instagramPosts={renderInstagramPosts}
       reference={reference}
       referencePolaroids={renderReferencePolaroids}
+      team={team}
+      teamMembers={renderTeamMembers}
     />
   );
 };

@@ -1,4 +1,15 @@
 {
+  "slideshow": [
+    {
+      "image": "img/products-full-width.jpg"
+    },
+    {
+      "image": "img/products-grid2.jpg"
+    },
+    {
+      "image": "img/home-jumbotron.jpg"
+    }
+  ],
   "sections": {
     "offer": {
       "heading": "PONÚKAME VÁM",
@@ -42,6 +53,24 @@
         }
       ]
     },
+    "instagram": {
+      "heading": "INSTAGRAM @ MARKRONKOVO",
+      "background": "white",
+      "posts": [
+        {
+          "image": "img/products-full-width.jpg"
+        },
+        {
+          "image": "img/products-full-width.jpg"
+        },
+        {
+          "image": "img/products-full-width.jpg"
+        },
+        {
+          "image": "img/products-full-width.jpg"
+        }
+      ]
+    },
     "reference": {
       "heading": "REFERENCIE OD NAŠICH KLIENTOV",
       "background": "white",
@@ -60,6 +89,32 @@
           "image": "img/products-full-width.jpg",
           "author": "@katarina_kaA",
           "review": "A to aká je výborná ani písať nemusím ❤️"
+        }
+      ]
+    },
+    "team": {
+      "heading": "NÁŠ TÝM",
+      "background": "white",
+      "pictures": [
+        {
+          "image": "img/products-full-width.jpg",
+          "name": "Darinka",
+          "position": "Šéfka"
+        },
+        {
+          "image": "img/products-full-width.jpg",
+          "name": "Romana",
+          "position": "Komunikácia"
+        },
+        {
+          "image": "img/products-full-width.jpg",
+          "name": "Ivka",
+          "position": "Cukrárka"
+        },
+        {
+          "image": "img/products-full-width.jpg",
+          "name": "Veronika",
+          "position": "Cukrárka"
         }
       ]
     }

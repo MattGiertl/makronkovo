@@ -12,20 +12,12 @@ import {
 
 import { fab, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
-import MainSlideShowPic1 from '../../../../static/img/products-grid1.jpg';
-import MainSlideShowPic2 from '../../../../static/img/products-grid2.jpg';
-import MainSlideShowPic3 from '../../../../static/img/products-grid3.jpg';
-
-import PolaroidDummy from '../../../../static/img/jumbotron.jpg';
-
 import SlideShow from '../../atoms/Slideshow';
 import Button from '../../atoms/Button';
-import SquarePic from '../../atoms/SquarePic';
 import Footer from '../../molecules/Footer';
 import Section from '../../organisms/Section';
 
 import SlideShowWrapper from './SlideShowWrapper';
-import LabeledSquarePic from '../../molecules/LabeledSquarePic';
 
 import Newsletter from '../../organisms/Newsletter/Newsletter';
 import styled from '@emotion/styled';
@@ -48,21 +40,26 @@ const ButtonWrapper = styled.div({
 });
 
 const MainPageTemplate = ({
-  offerPolaroids,
-  discountPolaroids,
-  referencePolaroids,
+  slideshow,
   offer,
+  offerPolaroids,
   discount,
+  discountPolaroids,
+  instagram,
+  instagramPosts,
   reference,
+  referencePolaroids,
+  team,
+  teamMembers,
 }) => {
   return (
     <div>
       <NavBar />
       <SlideShowWrapper>
         <SlideShow>
-          <img src={MainSlideShowPic1} alt="Pic1" />
-          <img src={MainSlideShowPic2} alt="Pic2" />
-          <img src={MainSlideShowPic3} alt="Pic3" />
+          {slideshow.map(item => (
+            <img src={item.image} alt={item.image} key={item.image} />
+          ))}
         </SlideShow>
       </SlideShowWrapper>
 
@@ -88,23 +85,12 @@ const MainPageTemplate = ({
         </ButtonWrapper>
       </Section>
 
-      <Section heading="INSTAGRAM @MAKRONKOVO" id="InstagramSection">
-        <SquarePic
-          href="https://www.instagram.com/makronkovo/"
-          src={PolaroidDummy}
-        />
-        <SquarePic
-          href="https://www.instagram.com/makronkovo/"
-          src={PolaroidDummy}
-        />
-        <SquarePic
-          href="https://www.instagram.com/makronkovo/"
-          src={PolaroidDummy}
-        />
-        <SquarePic
-          href="https://www.instagram.com/makronkovo/"
-          src={PolaroidDummy}
-        />
+      <Section
+        heading={instagram.heading}
+        background={instagram.background}
+        id="InstagramSection"
+      >
+        {instagramPosts}
       </Section>
 
       <Section spaceAround heading={reference.heading} id="ReferenceSection">
@@ -118,27 +104,12 @@ const MainPageTemplate = ({
         <Newsletter />
       </Section>
 
-      <Section heading="NÁŠ TÝM">
-        <LabeledSquarePic
-          src={PolaroidDummy}
-          heading="Darinka"
-          description="Šéfka"
-        />
-        <LabeledSquarePic
-          src={PolaroidDummy}
-          heading="Darinka"
-          description="Šéfka"
-        />
-        <LabeledSquarePic
-          src={PolaroidDummy}
-          heading="Darinka"
-          description="Šéfka"
-        />
-        <LabeledSquarePic
-          src={PolaroidDummy}
-          heading="Darinka"
-          description="Šéfka"
-        />
+      <Section
+        team={team.heading}
+        background={team.background}
+        heading="NÁŠ TÝM"
+      >
+        {teamMembers}
       </Section>
       <Footer />
     </div>
