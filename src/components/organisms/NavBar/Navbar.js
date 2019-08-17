@@ -33,7 +33,7 @@ const NavBar = () => {
           CANDY BAR
         </NavLink>
         <Logo show />
-        <NavLink marginTop="50px" to="/">
+        <NavLink marginTop="50px" to="/onas">
           O NÁS
         </NavLink>
         <NavLink to="/">GALÉRIA</NavLink>

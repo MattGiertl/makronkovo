@@ -4,7 +4,7 @@ import NavBar from "../organisms/NavBar/Navbar";
 import Heading from "../atoms/Heading";
 import MediumHeading from "../atoms/MediumHeading";
 import Anchor from "../atoms/Anchor";
-import CakeImg from "../../../static/assets/Group.png";
+import CakeImg from "../../../static/assets/Cake.png";
 import theme from "../../utils/theme/theme";
 import Paragraph from "../atoms/Paragraph";
 import {
