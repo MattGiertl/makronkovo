@@ -50,27 +50,27 @@ const NotFoudTemplate = () => {
 
   const ContentWrapper = styled.div({
     [mobileQuery]: {
-      margin: '0 30px',
+      margin: '0 1%',
     },
 
     [tabletQuery]: {
-      margin: '0 225px',
+      margin: '0 20%',
     },
 
     [laptopQuery]: {
-      margin: '0 650px',
+      margin: '0 30%',
     },
 
     [desktopQuery]: {
-      margin: '0 650px',
+      margin: '0 35%',
     },
   });
 
   const NavWrapper = styled.div({
     display: 'flex',
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
     alignItems: 'center',
-    marginTop: '27px',
+    margin: "27px"
   });
 
   const StyledHeading = styled(Heading)(
