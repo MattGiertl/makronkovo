@@ -2,26 +2,15 @@ import React from 'react';
 import Heading from '../atoms/Heading';
 import styled from '@emotion/styled';
 import Fountain from '../atoms/Fountain';
-import { mobileQuery, laptopQuery, desktopQuery, tabletQuery } from '../../utils/mediaqueries';
+import { mobileQuery } from '../../utils/mediaqueries';
 
 const Wrapper = styled.div({
   display: 'flex',
   flexDirection: 'column',
+  marginBottom: '25px',
 
   [mobileQuery]: {
-    margin: '35px 0 30px',
-  },
-
-  [tabletQuery]: {
-    margin: '65px 0 25px',
-  },
-
-  [laptopQuery]: {
-    margin: '65px 0 25px',
-  },
-
-  [desktopQuery]: {
-    margin: '65px 0 25px',
+    marginBottom: '30px',
   },
 });
 
