@@ -8,6 +8,7 @@ const StyledDiv = styled.div({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
+  boxShadow: '0px 10px 20px rgba(0, 0, 0, 0.12)',
   [mobileQuery]: {
     height: '536px',
     width: '100%',
@@ -27,9 +28,9 @@ const StyledDiv = styled.div({
   },
 
   [desktopQuery]: {
-    height: '200px',
+    height: '347px',
     width: '1010px',
-    margin: '29px',
+    // margin: '25px',
   },
 });
 
@@ -63,6 +64,13 @@ const TextWrapper = styled.div(
   },
   props => ({
     order: props.order,
+    [mobileQuery]: {
+      order: props.mobileOrder
+    },
+
+    [tabletQuery]: {
+      order: props.tabletOrder
+    }
   }),
 );
 
@@ -76,11 +84,13 @@ const Card = ({
   marginBottomHeading,
   marginBottomParagraph,
   order,
+  mobileOrder,
+  tabletOrder
 }) => (
   <StyledDiv>
     <ContentWrapper>
-      <Image src={image} height="100%" width="40%" alt={imageName} marginRight="10%" mobileWidth="100%" tabletWidth="100%" />
-      <TextWrapper order={order}>
+      <Image src={image} height="70%" width="40%" alt={imageName} marginRight="10%" mobileWidth="100%" tabletWidth="100%" />
+      <TextWrapper order={order} tabletOrder={tabletOrder} mobileOrder={mobileOrder}>
         <Paragraph bold={boldHeading} marginBottom={marginBottomHeading}>
           {heading}
         </Paragraph>
