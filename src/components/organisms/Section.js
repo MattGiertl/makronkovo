@@ -11,6 +11,7 @@ const Wrapper = styled.section(
     display: 'flex',
     flexDirection: 'column',
     margin: '30px 0',
+    paddingTop: '65px',
   },
   props => ({
     background: props.background ? props.background : theme.colors.white,
@@ -21,7 +22,6 @@ const Content = styled.div({
   display: 'flex',
   flexWrap: 'wrap',
   justifyContent: 'center',
-
   margin: '0 10%',
 
   [laptopQuery]: {
