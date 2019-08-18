@@ -1,15 +1,11 @@
 import theme from '../../utils/theme/theme';
 import styled from '@emotion/styled';
-import {
-  mobileQuery,
-  tabletQuery,
-  desktopQuery,
-  laptopQuery,
-} from '../../utils/mediaqueries';
+import { mobileQuery, tabletQuery, desktopQuery, laptopQuery } from '../../utils/mediaqueries';
 
 const Paragraph = styled.p(
   {
     color: theme.colors.mediumGold,
+    fontFamily: 'caslon_antiqueregular',
     lineHeight: '19px',
     margin: '0',
   },

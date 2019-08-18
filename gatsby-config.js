@@ -7,6 +7,20 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        custom: {
+          families: [
+            'caslon_antiquebold',
+            'caslon_antiquebolditalic',
+            'caslon_antiqueitalic',
+            'caslon_antiqueregular',
+          ],
+          urls: ['/fonts.css'],
+        },
+      },
+    },
+    {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: 'gatsby-source-filesystem',
       options: {
