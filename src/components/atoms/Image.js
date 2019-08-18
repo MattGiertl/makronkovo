@@ -1,6 +1,8 @@
 import styled from "@emotion/styled";
 import {
-  mobileQuery
+  mobileQuery,
+  tabletQuery,
+  tabletLandscapeQuery
 } from "../../utils/mediaqueries";
 
 const Image = styled.img({}, props => ({
@@ -9,6 +11,12 @@ const Image = styled.img({}, props => ({
   marginRight: props.marginRight,
   [mobileQuery]: {
     width: props.mobileWidth
+  },
+  [tabletQuery]: {
+    width: props.tabletWidth
+  },
+  [tabletLandscapeQuery]: {
+    width: props.tabletWidth
   }
 }));
 

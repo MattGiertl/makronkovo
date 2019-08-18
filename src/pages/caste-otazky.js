@@ -1,12 +1,6 @@
-import React from "react";
-import FaqTemplate from "../components/templates/FaqTemplate";
-import NavBar from "../components/organisms/NavBar/Navbar";
+import React from 'react';
+import FaqTemplate from '../components/templates/FaqTemplate';
 
-const Faq = () => (
-  <div>
-    <NavBar />
-    <FaqTemplate />
-  </div>
-);
+const Faq = () => <FaqTemplate />;
 
 export default Faq;

@@ -1,11 +1,10 @@
 import React from 'react';
-import NavBar from '../organisms/NavBar/Navbar';
 import Heading from '../atoms/Heading';
 import Fountain from '../atoms/Fountain';
+import Layout from '../organisms/Layout';
 import styled from '@emotion/styled';
 import Card from '../atoms/Card';
 import CardsContent from '../../data/mock/about.json';
-import Footer from '../molecules/Footer';
 
 const ContentWrapper = styled.div({
   display: 'flex',
@@ -46,14 +45,14 @@ const AboutTemplate = () => {
 
   return (
     <>
-      <NavBar />
+      <Layout>
       <ContentWrapper>
         <Heading>O NÁS</Heading>
         <Fountain />
         {renderFirstCard()}
         {renderSecondCard()}
       </ContentWrapper>
-      <Footer />
+      </Layout>
     </>
   );
 };

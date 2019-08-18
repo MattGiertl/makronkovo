@@ -27,7 +27,7 @@ const StyledDiv = styled.div({
   },
 
   [desktopQuery]: {
-    height: '347px',
+    height: '200px',
     width: '1010px',
     margin: '29px',
   },
@@ -80,7 +80,7 @@ const Card = ({
 }) => (
   <StyledDiv>
     <ContentWrapper>
-      <Image src={image} height="60%" width="40%" alt={imageName} marginRight="10%" mobileWidth="100%" />
+      <Image src={image} height="100%" width="40%" alt={imageName} marginRight="10%" mobileWidth="100%" tabletWidth="100%" />
       <TextWrapper order={order}>
         <Paragraph bold={boldHeading} marginBottom={marginBottomHeading}>
           {heading}

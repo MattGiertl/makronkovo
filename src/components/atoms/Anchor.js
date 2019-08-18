@@ -10,7 +10,7 @@ import {
 
 const StyledAnchor = styled.a(
   {
-    color: theme.colors.darkGold,
+    color: theme.colors.mediumGold,
     textDecoration: "none",
 
     [mobileQuery]: {
