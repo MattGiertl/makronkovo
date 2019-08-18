@@ -23,11 +23,11 @@ const StyledLink = styled(Link)(
     },
 
     '&:active': {
-      color: theme.colors.lightPink,
+      color: theme.colors.mediumPink,
     },
 
     '&:hover': {
-      color: theme.colors.lightPink,
+      color: theme.colors.mediumPink,
     },
   },
   props => ({
