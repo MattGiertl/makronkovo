@@ -1,11 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import theme from '../../utils/theme/theme';
-import {
-  mobileQuery,
-  laptopQuery,
-  desktopQuery,
-} from '../../utils/mediaqueries';
+import { mobileQuery, laptopQuery, desktopQuery, tabletQuery } from '../../utils/mediaqueries';
 import Paragraph from '../atoms/Paragraph';
 
 const FooterBackground = styled.div({
@@ -16,33 +12,40 @@ const FooterBackground = styled.div({
   width: '100%',
   background: theme.colors.lightPink,
   marginTop: 'auto',
+  position: 'absolute',
+  bottom: 0,
 
   height: '50px',
 
   [mobileQuery]: {
     height: '95px',
+    marginTop: '60px',
+  },
+
+  [tabletQuery]: {
+    marginTop: '80px',
   },
 
   [laptopQuery]: {
     justifyContent: 'space-around',
     flexDirection: 'row',
+    marginTop: '100px',
   },
 
   [desktopQuery]: {
     justifyContent: 'space-around',
     flexDirection: 'row',
+    marginTop: '150px',
   },
 });
 
 const Footer = () => (
   <FooterBackground>
     {/* TODO: Add Links */}
-    <Paragraph fontSize={theme.fontSizes.small}>
-      Newsletter - Spracovanie osobných údajov
-    </Paragraph>
     <Paragraph fontSize={theme.fontSizes.small} mobileMarginTop="23px" bold>
       &copy; Makronkovo, 2019
     </Paragraph>
+    <Paragraph fontSize={theme.fontSizes.small}>Newsletter - Spracovanie osobných údajov</Paragraph>
   </FooterBackground>
 );
 

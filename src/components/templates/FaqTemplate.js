@@ -1,20 +1,15 @@
 import React from 'react';
-import Heading from '../atoms/Heading';
-import Fountain from '../atoms/Fountain';
 import FaqPair from '../molecules/FaqPair';
 import styled from '@emotion/styled';
 import FaqPairData from '../../data/mock/faq.json';
-import {
-  tabletQuery,
-  mobileQuery,
-  tabletLandscapeQuery,
-} from '../../utils/mediaqueries';
-import Footer from '../molecules/Footer';
+import { tabletQuery, mobileQuery, tabletLandscapeQuery } from '../../utils/mediaqueries';
+import Layout from '../organisms/Layout';
+import FountainHeading from '../molecules/FountainHeading';
 
 const ContentWrapper = styled.div({
   display: 'flex',
   flexDirection: 'column',
-  margin: '0 29.17% 55px',
+  margin: '0 29.17%',
 
   [mobileQuery]: {
     margin: '0 43px 0 37px',
@@ -36,14 +31,12 @@ const FaqTemplate = () => {
   });
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+    <Layout>
       <ContentWrapper>
-        <Heading>Časté otázky</Heading>
-        <Fountain />
+        <FountainHeading>Časté otázky</FountainHeading>
         {renderFaqPairs}
       </ContentWrapper>
-      <Footer />
-    </div>
+    </Layout>
   );
 };
 
