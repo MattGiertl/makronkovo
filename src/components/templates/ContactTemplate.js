@@ -11,6 +11,7 @@ import {
 import Fountain from '../atoms/Fountain';
 import Map from '../atoms/Map';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Footer from '../molecules/Footer';
 
 const ContentWrapper = styled.div({
   display: 'flex',
@@ -59,8 +60,9 @@ const ContactTemplate = () => (
         <Paragraph>Otváracia doba:</Paragraph>
         <Paragraph marginLeft="4px">Podľa dohody</Paragraph>
       </OpeningHours>
-      <Map />-
+      <Map />
     </ContentWrapper>
+    <Footer />
   </>
 );
 

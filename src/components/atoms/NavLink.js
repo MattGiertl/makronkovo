@@ -10,6 +10,7 @@ const StyledLink = styled(Link)(
     textDecoration: "none",
     color: theme.colors.mediumGold,
     fontSize: theme.fontSizes.small,
+    transition: 'color 300ms',
 
     [mobileQuery]: {
       fontSize: theme.fontSizes.medium,
@@ -21,9 +22,13 @@ const StyledLink = styled(Link)(
       marginBottom: "25px"
     },
 
-    "&:active": {
-      color: theme.colors.lightPink
-    }
+    '&:active': {
+      color: theme.colors.lightPink,
+    },
+
+    '&:hover': {
+      color: theme.colors.lightPink,
+    },
   },
   props => ({
     [mobileQuery]: {

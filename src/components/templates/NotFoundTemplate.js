@@ -1,106 +1,106 @@
-import React from "react";
-import styled from "@emotion/styled";
-import NavBar from "../organisms/NavBar/Navbar";
-import Heading from "../atoms/Heading";
-import MediumHeading from "../atoms/MediumHeading";
-import Anchor from "../atoms/Anchor";
-import CakeImg from "../../../static/assets/Cake.png";
-import theme from "../../utils/theme/theme";
-import Paragraph from "../atoms/Paragraph";
+import React from 'react';
+import styled from '@emotion/styled';
+import NavBar from '../organisms/NavBar/Navbar';
+import Heading from '../atoms/Heading';
+import MediumHeading from '../atoms/MediumHeading';
+import Anchor from '../atoms/Anchor';
+import CakeImg from '../../../static/assets/Cake.png';
+import theme from '../../utils/theme/theme';
+import Paragraph from '../atoms/Paragraph';
 import {
   tabletQuery,
   mobileQuery,
   desktopQuery,
-  laptopQuery
-} from "../../utils/mediaqueries";
+  laptopQuery,
+} from '../../utils/mediaqueries';
 
 const NotFoudTemplate = () => {
-  const NotFoudWrapper = styled.div({
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    width: "100%"
+  const NotFoundWrapper = styled.div({
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    width: '100%',
   });
 
   const StyledCake = styled.img({
     [mobileQuery]: {
-      margin: "15px auto 12px",
-      width: "138px",
-      height: "108px"
+      margin: '15px auto 12px',
+      width: '138px',
+      height: '108px',
     },
 
     [tabletQuery]: {
-      margin: "30px auto 32px",
-      width: "188px",
-      height: "158px"
+      margin: '30px auto 32px',
+      width: '188px',
+      height: '158px',
     },
 
     [laptopQuery]: {
-      margin: "30px auto 32px",
-      width: "188px",
-      height: "158px"
+      margin: '30px auto 32px',
+      width: '188px',
+      height: '158px',
     },
 
     [desktopQuery]: {
-      margin: "30px auto 32px",
-      width: "188px",
-      height: "158px"
-    }
+      margin: '30px auto 32px',
+      width: '188px',
+      height: '158px',
+    },
   });
 
   const ContentWrapper = styled.div({
     [mobileQuery]: {
-      margin: "0 30px"
+      margin: '0 30px',
     },
 
     [tabletQuery]: {
-      margin: "0 225px"
+      margin: '0 225px',
     },
 
     [laptopQuery]: {
-      margin: "0 650px"
+      margin: '0 650px',
     },
 
     [desktopQuery]: {
-      margin: "0 650px"
-    }
+      margin: '0 650px',
+    },
   });
 
   const NavWrapper = styled.div({
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    marginTop: "27px"
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginTop: '27px',
   });
 
   const StyledHeading = styled(Heading)(
     {
       [mobileQuery]: {
-        fontSize: theme.fontSizes.xxl
+        fontSize: theme.fontSizes.xxl,
       },
 
       [tabletQuery]: {
-        fontSize: theme.fontSizes.xxxl
+        fontSize: theme.fontSizes.xxxl,
       },
 
       [laptopQuery]: {
-        fontSize: theme.fontSizes.xxxl
+        fontSize: theme.fontSizes.xxxl,
       },
 
       [desktopQuery]: {
-        fontSize: theme.fontSizes.xxxl
-      }
+        fontSize: theme.fontSizes.xxxl,
+      },
     },
     props => ({
       marginTop: props.mobileMargin,
-      marginBottom: props.mobileMargin
-    })
+      marginBottom: props.mobileMargin,
+    }),
   );
 
   return (
     <>
       <NavBar />
-      <NotFoudWrapper>
+      <NotFoundWrapper>
         <StyledHeading
           mobileMargin="10px"
           laptopMarginTop="50px"
@@ -131,7 +131,7 @@ const NotFoudTemplate = () => {
             </Anchor>
           </NavWrapper>
         </ContentWrapper>
-      </NotFoudWrapper>
+      </NotFoundWrapper>
     </>
   );
 };

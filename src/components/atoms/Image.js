@@ -1,7 +1,11 @@
-import React from 'react'
+import styled from "@emotion/styled";
 
-const Image = ({image, width, height, imageName}) => (
-    <img src={image} width={width} height={height} alt={imageName} />
-);
+const Image = styled.img({}, props => ({
+  src: props.Image,
+  width: props.width,
+  height: props.height,
+  alt: props.imageName,
+  marginRight: props.marginRight,
+}));
 
 export default Image;

@@ -1,33 +1,68 @@
-import React from "react";
-import NavBar from "../organisms/NavBar/Navbar";
-import Card from "../atoms/Card";
-import CakesImage from "../../../static/assets/Cakes.png";
-import SignImage from "../../../static/assets/Sign.png";
+import React from 'react';
+import NavBar from '../organisms/NavBar/Navbar';
+import Heading from '../atoms/Heading';
+import Fountain from '../atoms/Fountain';
+import styled from '@emotion/styled';
+import Card from '../atoms/Card';
+import CardsContent from '../../data/about.json';
+import { tabletQuery, mobileQuery, tabletLandscapeQuery } from '../../utils/mediaqueries';
+import Footer from '../molecules/Footer';
+
+const ContentWrapper = styled.div({
+  display: 'flex',
+  flexDirection: 'column',
+  margin: '45px 455px 55px',
+
+  [mobileQuery]: {
+    margin: '0 43px 0 37px',
+  },
+
+  [tabletQuery]: {
+    margin: '0 43px 0 37px',
+  },
+
+  [tabletLandscapeQuery]: {
+    margin: '0 29.17%',
+  },
+});
 
 const AboutTemplate = () => {
+  const renderFirstCard = () => {
+    const { firstCard } = CardsContent.cards;
+    return (
+      <Card
+        image={firstCard.image}
+        imageName={firstCard.imageName}
+        heading={firstCard.heading}
+        paragraph={firstCard.paragraph}
+        boldHeading="bold"
+      />
+    );
+  };
+
+  const renderSecondCard = () => {
+    const { secondCard } = CardsContent.cards;
+    return (
+      <Card
+        image={secondCard.image}
+        imageName={secondCard.imageName}
+        heading={secondCard.heading}
+        paragraph={secondCard.paragraph}
+        boldParagraph="bold"
+      />
+    );
+  };
+
   return (
     <>
       <NavBar />
-      <Card
-        cardHeight="347px"
-        cardWidth="1010px"
-        image={CakesImage}
-        imageHeight="267px"
-        imageWidth="379px"
-        imageName="koláčiky"
-        heading="Sme cukrárska manufaktúra MAKRONKOVO a pečieme dezerty, ktoré spôsobujú závislosti."
-        paragraph="Sme iní, pretože sa nebojíme kvality, my na nej staviame. Cítiť v dezerte pravú čokoládu, živočíšnu smotanu alebo maslo namiesto margarínu a žiadne stužovače je už celkom rarita. My ale meníme pravidlá hry, koláč má byť totiž za odmenu a nie za trest."
-      />
-      <Card
-        cardHeight="347px"
-        cardWidth="1010px"
-        image={SignImage}
-        imageHeight="267px"
-        imageWidth="379px"
-        imageName="koláčiky"
-        heading="MAKRONKOVO vzniklo v roku 2013 ako súčasť bistra Pigis v Banskej Bystrici. Začínali sme s makronkami a pár dezertami, ktoré sa stali veľmi vyhľadávané a preto sme našu ponuku postupne rozširovali. Bistro sme v júni 2018 zavreli aby sme mohli naplno robiť to, čo nás najviac baví a to sú práve dezerty."
-        paragraph="Robíme kvalitu namiesto kvantity a robíme len s tými najlepšími ktorí sa neboja byť iní."
-      />
+      <ContentWrapper>
+        <Heading>O NÁS</Heading>
+        <Fountain />
+        {renderFirstCard()}
+        {renderSecondCard()}
+      </ContentWrapper>
+      <Footer />
     </>
   );
 };
