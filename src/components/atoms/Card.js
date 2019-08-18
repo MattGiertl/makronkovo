@@ -85,11 +85,12 @@ const Card = ({
   marginBottomParagraph,
   order,
   mobileOrder,
-  tabletOrder
+  tabletOrder,
+  imageMarginTop
 }) => (
   <StyledDiv>
     <ContentWrapper>
-      <Image src={image} height="70%" width="40%" alt={imageName} marginRight="10%" mobileWidth="100%" tabletWidth="100%" />
+      <Image src={image} height="70%" width="40%" alt={imageName} marginRight="10%" marginTop="35px" mobileWidth="100%" tabletWidth="100%" />
       <TextWrapper order={order} tabletOrder={tabletOrder} mobileOrder={mobileOrder}>
         <Paragraph bold={boldHeading} marginBottom={marginBottomHeading}>
           {heading}

@@ -9,6 +9,7 @@ const Image = styled.img({}, props => ({
   width: props.width,
   height: props.height,
   marginRight: props.marginRight,
+  marginTop: props.marginTop,
   [mobileQuery]: {
     width: props.mobileWidth
   },
