@@ -1,6 +1,5 @@
 import React from 'react';
-import Heading from '../atoms/Heading';
-import Fountain from '../atoms/Fountain';
+import Heading from '../molecules/FountainHeading';
 import Layout from '../organisms/Layout';
 import styled from '@emotion/styled';
 import Card from '../atoms/Card';
@@ -48,7 +47,6 @@ const AboutTemplate = () => {
       <Layout>
       <ContentWrapper>
         <Heading>O NÁS</Heading>
-        <Fountain />
         {renderFirstCard()}
         {renderSecondCard()}
       </ContentWrapper>

@@ -59,11 +59,10 @@ const ContentWrapper = styled.div(
 
 const TextWrapper = styled.div(
   {
-    marginRight: '10%',
+    margin: "50px 10px 50px 0"
   },
   props => ({
-    marginTop: props.marginTop,
-    order: props.order
+    order: props.order,
   }),
 );
 
