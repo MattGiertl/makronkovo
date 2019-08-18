@@ -4,26 +4,14 @@ import Heading from '../atoms/Heading';
 import Fountain from '../atoms/Fountain';
 import styled from '@emotion/styled';
 import Card from '../atoms/Card';
-import CardsContent from '../../data/about.json';
-import { tabletQuery, mobileQuery, tabletLandscapeQuery } from '../../utils/mediaqueries';
+import CardsContent from '../../data/mock/about.json';
 import Footer from '../molecules/Footer';
 
 const ContentWrapper = styled.div({
   display: 'flex',
   flexDirection: 'column',
-  margin: '45px 455px 55px',
-
-  [mobileQuery]: {
-    margin: '0 43px 0 37px',
-  },
-
-  [tabletQuery]: {
-    margin: '0 43px 0 37px',
-  },
-
-  [tabletLandscapeQuery]: {
-    margin: '0 29.17%',
-  },
+  justifyContent: 'center',
+  alignItems: 'center',
 });
 
 const AboutTemplate = () => {
@@ -36,6 +24,7 @@ const AboutTemplate = () => {
         heading={firstCard.heading}
         paragraph={firstCard.paragraph}
         boldHeading="bold"
+        marginBottomHeading="25px"
       />
     );
   };
@@ -49,6 +38,8 @@ const AboutTemplate = () => {
         heading={secondCard.heading}
         paragraph={secondCard.paragraph}
         boldParagraph="bold"
+        marginBottomHeading="25px"
+        order={-1}
       />
     );
   };

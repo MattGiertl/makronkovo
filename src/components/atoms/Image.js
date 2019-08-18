@@ -1,11 +1,15 @@
 import styled from "@emotion/styled";
+import {
+  mobileQuery
+} from "../../utils/mediaqueries";
 
 const Image = styled.img({}, props => ({
-  src: props.Image,
   width: props.width,
   height: props.height,
-  alt: props.imageName,
   marginRight: props.marginRight,
+  [mobileQuery]: {
+    width: props.mobileWidth
+  }
 }));
 
 export default Image;
