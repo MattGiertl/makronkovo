@@ -7,11 +7,16 @@ import { desktopQuery, laptopQuery, mobileQuery, tabletQuery } from '../../utils
 
 const StyledLogo = styled.img(
   {
+    display: 'flex',
+
     [mobileQuery]: {
-      display: 'flex',
-      margin: '0 auto',
-      marginTop: '30px',
+      margin: '30px auto 0',
       width: '180px',
+    },
+
+    [tabletQuery]: {
+      margin: '30px auto 0',
+      width: '200px',
     },
   },
   props => ({
