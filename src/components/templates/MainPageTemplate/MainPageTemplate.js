@@ -13,31 +13,14 @@ import {
 import { fab, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 import SlideShow from '../../atoms/Slideshow';
-import Button from '../../atoms/Button';
 import Footer from '../../molecules/Footer';
 import Section from '../../organisms/Section';
 
 import SlideShowWrapper from './SlideShowWrapper';
 
 import Newsletter from '../../organisms/Newsletter/Newsletter';
-import styled from '@emotion/styled';
 
-library.add(
-  fab,
-  faInstagram,
-  faTimes,
-  faBars,
-  faMapMarkerAlt,
-  faEnvelope,
-  faPhoneAlt,
-);
-
-const ButtonWrapper = styled.div({
-  display: 'flex',
-  width: '100%',
-  justifyContent: 'center',
-  marginTop: '40px',
-});
+library.add(fab, faInstagram, faTimes, faBars, faMapMarkerAlt, faEnvelope, faPhoneAlt);
 
 const MainPageTemplate = ({
   slideshow,
@@ -63,52 +46,27 @@ const MainPageTemplate = ({
         </SlideShow>
       </SlideShowWrapper>
 
-      <Section
-        spaceAround
-        background={offer.background}
-        heading={offer.heading}
-        id="OfferSection"
-      >
+      <Section background={offer.background} heading={offer.heading} id="OfferSection">
         {offerPolaroids}
       </Section>
 
-      <Section
-        spaceAround
-        heading={discount.heading}
-        price="20"
-        oldPrice="22"
-        id="DiscountedProducts"
-      >
+      <Section heading={discount.heading} price="20" oldPrice="22" id="DiscountedProducts">
         {discountPolaroids}
-        <ButtonWrapper>
-          <Button onClick={() => alert('NOT IMPLEMENTED YET')}>Viac</Button>
-        </ButtonWrapper>
       </Section>
 
-      <Section
-        heading={instagram.heading}
-        background={instagram.background}
-        id="InstagramSection"
-      >
+      <Section heading={instagram.heading} background={instagram.background} id="InstagramSection">
         {instagramPosts}
       </Section>
 
       <Section spaceAround heading={reference.heading} id="ReferenceSection">
         {referencePolaroids}
-        <ButtonWrapper>
-          <Button onClick={() => alert('NOT IMPLEMENTED YET')}>Viac</Button>
-        </ButtonWrapper>
       </Section>
 
       <Section heading="NEWSLETTER">
         <Newsletter />
       </Section>
 
-      <Section
-        team={team.heading}
-        background={team.background}
-        heading="NÁŠ TÝM"
-      >
+      <Section team={team.heading} background={team.background} heading="NÁŠ TÝM">
         {teamMembers}
       </Section>
       <Footer />

@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import theme from '../../../utils/theme/theme';
+import { tabletQuery } from '../../../utils/mediaqueries';
 
 const Wrapper = styled.div(
   {
@@ -7,10 +8,14 @@ const Wrapper = styled.div(
     flexDirection: 'column',
     background: theme.colors.white,
     padding: '9px 9px 0',
+    margin: '0 15px 40px',
 
-    height: '19em',
-    width: '18em',
-    marginBottom: '40px',
+    height: '19rem',
+    width: '18rem',
+
+    [tabletQuery]: {
+      height: '17rem',
+    },
 
     transition: 'box-shadow 300ms, height 300ms, width 300ms',
 

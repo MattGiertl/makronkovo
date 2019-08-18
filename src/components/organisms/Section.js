@@ -16,22 +16,18 @@ const Wrapper = styled.section(
   }),
 );
 
-const Content = styled.div(
-  {
-    display: 'flex',
-    flexWrap: 'wrap',
+const Content = styled.div({
+  display: 'flex',
+  flexWrap: 'wrap',
+  justifyContent: 'center',
 
-    margin: '0 10%',
-  },
-  props => ({
-    justifyContent: props.spaceAround ? 'space-around' : 'center',
-  }),
-);
+  margin: '0 10%',
+});
 
 const Section = ({ heading, children, id, background, spaceAround }) => (
   <Wrapper id={id} background={background}>
     <FountainHeading mobileMargin="0 1px">{heading}</FountainHeading>
-    <Content spaceAround={spaceAround}>{children}</Content>
+    <Content>{children}</Content>
   </Wrapper>
 );
 

@@ -21,6 +21,7 @@ const StyledLogo = styled.img(
 
     [tabletQuery]: {
       display: props.showLogo ? 'none' : 'block',
+      width: '180px',
     },
 
     [laptopQuery]: {
