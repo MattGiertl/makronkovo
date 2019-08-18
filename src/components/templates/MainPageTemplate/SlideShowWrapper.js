@@ -23,6 +23,7 @@ const SlideShowWrapper = styled.div({
   [desktopQuery]: {
     width: '750px',
     height: '325px',
+    marginTop: '-66px',
   },
 });
 
