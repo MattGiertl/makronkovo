@@ -27,7 +27,7 @@ const NavItems = styled.div(
     },
 
     [desktopQuery]: {
-      margin: '0 50px',
+      margin: '0 10%',
       justifyContent: 'space-around',
     },
   },
