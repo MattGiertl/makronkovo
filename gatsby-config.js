@@ -15,6 +15,7 @@ module.exports = {
             'caslon_antiquebolditalic',
             'caslon_antiqueitalic',
             'caslon_antiqueregular',
+            'DIN Pro',
           ],
           urls: ['/fonts.css'],
         },
