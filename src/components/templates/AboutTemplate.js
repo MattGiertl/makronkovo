@@ -38,6 +38,8 @@ const AboutTemplate = () => {
         boldParagraph="bold"
         marginBottomHeading="25px"
         order={-1}
+        mobileOrder={1}
+        tabletOrder={1}
       />
     );
   };
