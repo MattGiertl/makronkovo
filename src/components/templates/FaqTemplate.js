@@ -1,11 +1,10 @@
 import React from 'react';
-import Heading from '../atoms/Heading';
-import Fountain from '../atoms/Fountain';
 import FaqPair from '../molecules/FaqPair';
 import styled from '@emotion/styled';
 import FaqPairData from '../../data/mock/faq.json';
 import { tabletQuery, mobileQuery, tabletLandscapeQuery } from '../../utils/mediaqueries';
 import Layout from '../organisms/Layout';
+import FountainHeading from '../molecules/FountainHeading';
 
 const ContentWrapper = styled.div({
   display: 'flex',
@@ -34,8 +33,7 @@ const FaqTemplate = () => {
   return (
     <Layout>
       <ContentWrapper>
-        <Heading>Časté otázky</Heading>
-        <Fountain />
+        <FountainHeading>Časté otázky</FountainHeading>
         {renderFaqPairs}
       </ContentWrapper>
     </Layout>

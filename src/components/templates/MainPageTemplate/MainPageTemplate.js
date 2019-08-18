@@ -1,26 +1,10 @@
 import React from 'react';
-import NavBar from '../../organisms/NavBar/Navbar';
-
-import { library } from '@fortawesome/fontawesome-svg-core';
-import {
-  faTimes,
-  faBars,
-  faMapMarkerAlt,
-  faEnvelope,
-  faPhoneAlt,
-} from '@fortawesome/free-solid-svg-icons';
-
-import { fab, faInstagram } from '@fortawesome/free-brands-svg-icons';
-
-import SlideShow from '../../atoms/Slideshow';
-import Footer from '../../molecules/Footer';
-import Section from '../../organisms/Section';
 
 import SlideShowWrapper from './SlideShowWrapper';
-
+import SlideShow from '../../atoms/Slideshow';
+import Section from '../../organisms/Section';
 import Newsletter from '../../organisms/Newsletter/Newsletter';
-
-library.add(fab, faInstagram, faTimes, faBars, faMapMarkerAlt, faEnvelope, faPhoneAlt);
+import Layout from '../../organisms/Layout';
 
 const MainPageTemplate = ({
   slideshow,
@@ -36,8 +20,7 @@ const MainPageTemplate = ({
   teamMembers,
 }) => {
   return (
-    <div>
-      <NavBar />
+    <Layout>
       <SlideShowWrapper>
         <SlideShow>
           {slideshow.map(item => (
@@ -69,8 +52,7 @@ const MainPageTemplate = ({
       <Section team={team.heading} background={team.background} heading="NÁŠ TÝM">
         {teamMembers}
       </Section>
-      <Footer />
-    </div>
+    </Layout>
   );
 };
 
