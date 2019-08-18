@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { laptopQuery, mobileQuery } from '../../utils/mediaqueries';
+import { laptopQuery, mobileQuery, tabletQuery, desktopQuery } from '../../utils/mediaqueries';
 import theme from '../../utils/theme/theme';
 
 const Input = styled.input(
@@ -18,8 +18,18 @@ const Input = styled.input(
       width: '100%',
     },
 
+    [tabletQuery]: {
+      width: '100%',
+      marginRight: '15px',
+    },
+
     [laptopQuery]: {
-      width: '380px',
+      width: '45%',
+    },
+
+    [desktopQuery]: {
+      width: '25%',
+      marginRight: '15px',
     },
   },
   props => ({

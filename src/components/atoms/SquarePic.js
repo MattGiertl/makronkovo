@@ -9,13 +9,13 @@ const Pic = styled.div(
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
     backgroundSize: 'cover',
-    height: '200px',
-    width: '200px',
+    height: '225px',
+    width: '225px',
     margin: '0 10px 20px',
 
     [mobileQuery]: {
-      width: '120px',
-      height: '120px',
+      width: '140px',
+      height: '140px',
       margin: '0 5px 10px',
     },
   },
