@@ -1,11 +1,6 @@
 import styled from '@emotion/styled';
 
-import {
-  desktopQuery,
-  laptopQuery,
-  mobileQuery,
-  tabletQuery,
-} from '../../../utils/mediaqueries';
+import { desktopQuery, laptopQuery, mobileQuery, tabletQuery } from '../../../utils/mediaqueries';
 
 const NavItems = styled.div(
   {
@@ -27,12 +22,12 @@ const NavItems = styled.div(
     },
 
     [laptopQuery]: {
-      margin: '0 50px',
+      margin: '0 25px',
       justifyContent: 'space-around',
     },
 
     [desktopQuery]: {
-      margin: '0 100px',
+      margin: '0 50px',
       justifyContent: 'space-around',
     },
   },

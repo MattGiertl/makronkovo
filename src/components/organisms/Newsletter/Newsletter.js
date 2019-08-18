@@ -14,31 +14,18 @@ const Newsletter = () => (
       laptopMargin="0 200px"
       desktopMargin="0 200px"
     >
-      Máte záujem zisťovať novinky o našich dezertoch, tortách a sladkých
-      akciách? Cez náš newsletter Vám nič neujde.
+      Máte záujem zisťovať novinky o našich dezertoch, tortách a sladkých akciách? Cez náš
+      newsletter Vám nič neujde.
     </Paragraph>
     <InputWrapper>
-      <Input
-        type="text"
-        placeholder="Zadajte Váš e-mail"
-        mobileMarginTop="50px"
-      />
-      <Button
-        width="380px"
-        marginLeft="40px"
-        onClick={() => alert('NOT IMPLEMENTED YET')}
-      >
+      <Input width="40%" type="text" placeholder="Zadajte Váš e-mail" mobileMarginTop="50px" />
+      <Button width="40%" onClick={() => alert('NOT IMPLEMENTED YET')}>
         Prihlásiť sa k odberu
       </Button>
     </InputWrapper>
-    <Paragraph
-      fontSize={theme.fontSizes.xs}
-      textAlign="center"
-      mobileMarginTop="27px"
-    >
+    <Paragraph fontSize={theme.fontSizes.xs} textAlign="center" mobileMarginTop="27px">
       Odoslaním registrácie k newsletteru súhlasím, že som si prečítal(a){' '}
-      <a href="/">Podmienky pre spracovanie osobných údajov pre newsletter</a> a
-      súhlasím s nimi.
+      <a href="/">Podmienky pre spracovanie osobných údajov pre newsletter</a> a súhlasím s nimi.
     </Paragraph>
   </>
 );

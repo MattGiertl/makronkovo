@@ -5,7 +5,7 @@ import { mobileQuery } from '../../utils/mediaqueries';
 const Button = styled.button(
   {
     cursor: 'pointer',
-    height: '52px',
+    height: '3.688em',
     background: theme.colors.mediumGold,
     color: theme.colors.white,
     fontSize: theme.fontSizes.small,
@@ -22,7 +22,7 @@ const Button = styled.button(
     },
   },
   props => ({
-    width: props.width ? props.width : '170px',
+    width: props.width ? props.width : '10.625em',
     marginTop: props.marginTop,
     marginLeft: props.marginLeft,
   }),
