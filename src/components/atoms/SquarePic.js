@@ -14,8 +14,8 @@ const Pic = styled.div(
     margin: '0 10px 20px',
 
     [mobileQuery]: {
-      width: '120px',
-      height: '120px',
+      width: '140px',
+      height: '140px',
       margin: '0 5px 10px',
     },
   },
