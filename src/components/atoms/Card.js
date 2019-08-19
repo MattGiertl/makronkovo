@@ -31,7 +31,6 @@ const StyledDiv = styled.div({
     height: '347px',
     width: '1010px',
     marginBottom: '25px',
-    // margin: '25px',
   },
 });
 
