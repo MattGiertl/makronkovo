@@ -1,63 +1,70 @@
 @font-face {
   font-family: 'Caslon Antique';
-  src: url('../../../../static/fonts/caslon/caslonantique-webfont.woff') format('woff'),
-    url('/static//fonts/caslon/caslonantique-webfont.woff');
-}
-
-/* @font-face {
-  font-family: 'caslon_antiquebold';
-  src: url('../../static/fonts/caslon/caslonantique-bold-webfont.woff') format('woff');
+  src: url('../../../../static/fonts/caslon/caslonantique-webfont.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'caslon_antiquebolditalic';
-  src: url('../../static/fonts/caslonantique-bolditalic-webfont.woff') format('woff');
+  font-family: 'Caslon Antique Bold';
+  src: url('../../../../static/fonts/caslon/caslonantique-bold-webfont.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'caslon_antiqueitalic';
-  src: url('/static/fonts/caslonantique-italic-webfont.woff') format('woff');
-} */
+  font-family: 'Caslon Antique Bold Italic';
+  src: url('../../../../static/fonts/caslon/caslonantique-bolditalic-webfont.woff') format('woff');
+}
 
-/* @font-face {
-  font-family: 'DIN Pro';
-  src: url('DINPro.woff2') format('woff2'), url('DINPro.woff') format('woff');
+@font-face {
+  font-family: 'Caslon Antique Italic';
+  src: url('../../../../static/fonts/caslon/caslonantique-italic-webfont.woff') format('woff');
 }
 
 @font-face {
   font-family: 'DIN Pro';
-  src: url('DINPro-Bold.woff2') format('woff2'), url('DINPro-Bold.woff') format('woff');
+  src: url('../../../../static/fonts/dinpro/DINPro.woff2') format('woff2'),
+    url('../../../../static/fonts/dinpro/DINPro.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'DIN Pro';
-  src: url('DINPro-Light.woff2') format('woff2'), url('DINPro-Light.woff') format('woff');
+  font-family: 'DIN Pro Bold';
+  src: url('../../../../static/fonts/dinpro/DINPro-Bold.woff2') format('woff2'),
+    url('../../../../static/fonts/dinpro/DINPro-Bold.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'DIN Pro';
-  src: url('DINPro-Medium.woff2') format('woff2'), url('DINPro-Medium.woff') format('woff');
+  font-family: 'DIN Pro Light';
+  src: url('../../../../static/fonts/dinpro/DINPro-Medium.woff2') format('woff2'),
+    url('../../../../static/fonts/dinpro/DINPro-Medium.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'DIN Pro';
-  src: url('DINPro-Cond.woff2') format('woff2'), url('DINPro-Cond.woff') format('woff');
+  font-family: 'DIN Pro Medium';
+  src: url('../../../../static/fonts/dinpro/DINPro-Medium.woff2') format('woff2'),
+    url('../../../../static/fonts/dinpro/DINPro-Medium.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'DIN Pro';
-  src: url('DINPro-CondBold.woff2') format('woff2'), url('DINPro-CondBold.woff') format('woff');
+  font-family: 'DIN Pro Cond';
+  src: url('../../../../static/fonts/dinpro/DINPro-Cond.woff2') format('woff2'),
+    url('../../../../static/fonts/dinpro/DINPro-Cond.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'DIN Pro';
-  src: url('DINPro-CondLight.woff2') format('woff2'), url('DINPro-CondLight.woff') format('woff');
+  font-family: 'DIN Pro Cond Bold';
+  src: url('../../../../static/fonts/dinpro/DINPro-CondBold.woff2') format('woff2'),
+    url('../../../../static/fonts/dinpro/DINPro-CondBold.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'DIN Pro';
-  src: url('DINPro-CondMedium.woff2') format('woff2'), url('DINPro-CondMedium.woff') format('woff');
-} */
+  font-family: 'DIN Pro Cond Light';
+  src: url('../../../../static/fonts/dinpro/DINPro-CondLight.woff2') format('woff2'),
+    url('../../../../static/fonts/dinpro/DINPro-CondLight.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'DIN Pro Cond Medium';
+  src: url('../../../../static/fonts/dinpro/DINPro-CondMedium.woff2') format('woff2'),
+    url('../../../../static/fonts/dinpro/DINPro-CondMedium.woff') format('woff');
+}
 
 body {
   font-family: Caslon Antique, sans-serif;

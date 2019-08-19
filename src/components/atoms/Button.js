@@ -9,6 +9,7 @@ const Button = styled.button({
   color: theme.colors.white,
   fontSize: theme.fontSizes.small,
   transition: 'background 200ms',
+  fontFamily: 'inherit',
   width: '10.625em',
 
   '&:hover': {
@@ -30,7 +31,7 @@ const Button = styled.button({
 
   [desktopQuery]: {
     width: '25%',
-  }
+  },
 });
 
 export default Button;

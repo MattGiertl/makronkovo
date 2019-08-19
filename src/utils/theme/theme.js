@@ -8,7 +8,24 @@ const theme = {
     green: '#9ADDB6',
   },
   fontFamilies: {
-    caslon: 'Caslon Antique',
+    caslon: {
+      regular: 'Caslon Antique',
+      bold: 'Caslon Antique Bold',
+      boldItalic: 'Caslon Antique Bold Italic',
+      italic: 'Caslon Antique Italic',
+    },
+    dinPro: {
+      regular: 'DIN Pro',
+      bold: 'DIN Pro Bold',
+      light: 'DIN Pro Light',
+      medium: 'DIN Pro Medium',
+    },
+    dinProCond: {
+      regular: 'DIN Pro Cond',
+      bold: 'DIN Pro Cond Bold',
+      light: 'DIN Pro Cond Light',
+      medium: 'DIN Pro Cond Medium',
+    },
     sansSerif: 'sans-serif',
   },
   fontSizes: {
