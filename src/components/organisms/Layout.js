@@ -1,10 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
-
-import './layout.css';
-
-import NavBar from '../NavBar/Navbar';
-import Footer from '../../molecules/Footer';
+import NavBar from './NavBar/Navbar';
+import Footer from '../molecules/Footer';
 
 const Wrapper = styled.div({
   display: 'flex',

@@ -22,7 +22,15 @@ import { fab, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import SquarePic from '../components/atoms/SquarePic';
 import LabeledSquarePic from '../components/molecules/LabeledSquarePic';
 
-library.add(fab, faInstagram, faTimes, faBars, faMapMarkerAlt, faEnvelope, faPhoneAlt);
+library.add(
+  fab,
+  faInstagram,
+  faTimes,
+  faBars,
+  faMapMarkerAlt,
+  faEnvelope,
+  faPhoneAlt,
+);
 
 const MainPage = () => {
   const { sections, slideshow } = mainPageData;
@@ -30,7 +38,11 @@ const MainPage = () => {
 
   const renderOfferPolaroids = offer.polaroids.map(offer => (
     <Polaroid src={offer.image}>
-      <Paragraph desktopFontSize={theme.fontSizes.large} laptopFontSize={theme.fontSizes.medium}>
+      <Paragraph
+        bold
+        desktopFontSize={theme.fontSizes.large}
+        laptopFontSize={theme.fontSizes.medium}
+      >
         {offer.heading}
       </Paragraph>
     </Polaroid>
@@ -38,7 +50,7 @@ const MainPage = () => {
 
   const renderDiscountPolaroids = discount.polaroids.map(discount => (
     <Polaroid src={discount.image} shadowed>
-      <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} fontSize={theme.fontSizes.small}>
+      <Paragraph bold fontSize={theme.fontSizes.small}>
         {discount.heading}
       </Paragraph>
       <div
@@ -52,12 +64,10 @@ const MainPage = () => {
           textDecoration="line-through"
           marginRight="10px"
           fontSize={theme.fontSizes.small}
-          fontFamily={theme.fontFamilies.dinPro.regular}
         >
           {discount.oldPrice}€
         </Paragraph>
         <Paragraph
-          fontFamily={theme.fontFamilies.dinPro.regular}
           marginRight="10px"
           fontSize={theme.fontSizes.small}
         >
@@ -73,25 +83,21 @@ const MainPage = () => {
 
   const renderReferencePolaroids = reference.polaroids.map(reference => (
     <Polaroid src={reference.image} shadowed>
-      <Paragraph
-        fontFamily={theme.fontFamilies.dinPro.bold}
-        textAlign="center"
-        fontSize={theme.fontSizes.small}
-      >
+      <Paragraph bold textAlign="center" fontSize={theme.fontSizes.small}>
         {reference.author}
       </Paragraph>
-      <Paragraph
-        fontFamily={theme.fontFamilies.dinPro.regular}
-        textAlign="center"
-        fontSize={theme.fontSizes.small}
-      >
+      <Paragraph textAlign="center" fontSize={theme.fontSizes.small}>
         {reference.review}
       </Paragraph>
     </Polaroid>
   ));
 
   const renderTeamMembers = team.pictures.map(member => (
-    <LabeledSquarePic src={member.image} heading={member.name} description={member.position} />
+    <LabeledSquarePic
+      src={member.image}
+      heading={member.name}
+      description={member.position}
+    />
   ));
 
   return (

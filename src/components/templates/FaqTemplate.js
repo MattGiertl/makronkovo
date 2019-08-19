@@ -3,7 +3,7 @@ import FaqPair from '../molecules/FaqPair';
 import styled from '@emotion/styled';
 import FaqPairData from '../../data/mock/faq.json';
 import { tabletQuery, mobileQuery, tabletLandscapeQuery } from '../../utils/mediaqueries';
-import Layout from '../organisms/Layout/Layout';
+import Layout from '../organisms/Layout';
 import FountainHeading from '../molecules/FountainHeading';
 
 const ContentWrapper = styled.div({

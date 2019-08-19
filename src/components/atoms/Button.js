@@ -8,7 +8,6 @@ const Button = styled.button({
   background: theme.colors.mediumGold,
   color: theme.colors.white,
   fontSize: theme.fontSizes.small,
-  fontFamily: theme.fontFamilies.dinPro.regular,
   transition: 'background 200ms',
   width: '10.625em',
 
@@ -31,7 +30,7 @@ const Button = styled.button({
 
   [desktopQuery]: {
     width: '25%',
-  },
+  }
 });
 
 export default Button;
