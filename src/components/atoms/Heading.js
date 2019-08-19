@@ -1,16 +1,12 @@
 import theme from '../../utils/theme/theme';
 import styled from '@emotion/styled';
-import {
-  tabletQuery,
-  mobileQuery,
-  desktopQuery,
-  laptopQuery,
-} from '../../utils/mediaqueries';
+import { tabletQuery, mobileQuery, desktopQuery, laptopQuery } from '../../utils/mediaqueries';
 
 const Heading = styled.h1(
   {
     color: theme.colors.mediumGold,
     letterSpacing: theme.letterSpacing.heading,
+    fontFamily: theme.fontFamilies.caslon,
     textAlign: 'center',
     lineHeight: '28px',
     margin: 0,

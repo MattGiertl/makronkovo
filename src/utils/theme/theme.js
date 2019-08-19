@@ -8,12 +8,8 @@ const theme = {
     green: '#9ADDB6',
   },
   fontFamilies: {
-    caslon: {
-      bold: 'caslon_antiquebold',
-      boldItalic: 'caslon_antiquebolditalic',
-      italic: 'caslon_antiqueitalic',
-      regular: 'caslon_antiqueregular',
-    },
+    caslon: 'Caslon Antique',
+    sansSerif: 'sans-serif',
   },
   fontSizes: {
     xxxl: '120px', // RENAME LATER
