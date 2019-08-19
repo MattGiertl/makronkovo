@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import CollectionTemplate from '../../components/templates/CollectionTemplate';
 
 const CollectionPage = ({ pageContext }) => {
