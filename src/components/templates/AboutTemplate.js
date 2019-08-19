@@ -37,9 +37,8 @@ const AboutTemplate = () => {
         paragraph={secondCard.paragraph}
         boldParagraph="bold"
         marginBottomHeading="25px"
-        order={-1}
         mobileOrder={1}
-        tabletOrder={1}
+        desktopOrder={-1}
       />
     );
   };
@@ -47,11 +46,11 @@ const AboutTemplate = () => {
   return (
     <>
       <Layout>
-      <ContentWrapper>
-        <Heading>O NÁS</Heading>
-        {renderFirstCard()}
-        {renderSecondCard()}
-      </ContentWrapper>
+        <ContentWrapper>
+          <Heading>O NÁS</Heading>
+          {renderFirstCard()}
+          {renderSecondCard()}
+        </ContentWrapper>
       </Layout>
     </>
   );
