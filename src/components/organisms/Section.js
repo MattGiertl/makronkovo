@@ -35,7 +35,7 @@ const Content = styled.div({
 
 const Section = ({ heading, children, id, background, spaceAround }) => (
   <Wrapper id={id} background={background}>
-    <FountainHeading mobileMargin="0 1px">{heading}</FountainHeading>
+    <FountainHeading>{heading}</FountainHeading>
     <Content>{children}</Content>
   </Wrapper>
 );
