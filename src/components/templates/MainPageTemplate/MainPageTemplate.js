@@ -4,7 +4,7 @@ import SlideShowWrapper from './SlideShowWrapper';
 import SlideShow from '../../atoms/Slideshow';
 import Section from '../../organisms/Section';
 import Newsletter from '../../organisms/Newsletter/Newsletter';
-import Layout from '../../organisms/Layout/Layout';
+import Layout from '../../organisms/Layout';
 
 const MainPageTemplate = ({
   slideshow,
