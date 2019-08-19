@@ -7,18 +7,16 @@ import { mobileQuery } from '../../utils/mediaqueries';
 const Wrapper = styled.div({
   display: 'flex',
   flexDirection: 'column',
-  marginBottom: '25px',
+  margin: '0 5px 25px',
 
   [mobileQuery]: {
-    marginBottom: '30px',
+    margin: '0 5px 25px',
   },
 });
 
-const FountainHeading = ({ mobileMarginBottom = 0, mobileMargin, children, ...props }) => (
-  <Wrapper mobileMargin="25px 0" mobileMarginBottom={mobileMarginBottom} {...props}>
-    <Heading mobileMargin={mobileMargin} marginBottom="6px">
-      {children}
-    </Heading>
+const FountainHeading = ({ children }) => (
+  <Wrapper>
+    <Heading>{children}</Heading>
     <Fountain />
   </Wrapper>
 );
