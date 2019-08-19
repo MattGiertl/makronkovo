@@ -1,31 +1,23 @@
 import React from 'react';
-// import CollectionTemplate from '../../components/templates/CollectionTemplate';
-import { graphql } from 'gatsby';
+import CollectionTemplate from '../../components/templates/CollectionTemplate';
+import { graphql, StaticQuery } from 'gatsby';
 
-const CollectionsPage = ({ data }) => {
-  const { node: section } = data.allMarkdownRemark.edges;
-
-//   const currentsection = section.filter
-//   return (
-//     <>
-//       {/* <CollectionTemplate title={data} /> */}
-//       {console}
-//     </>
-//   );
-// };
-
-export const pageQuery = graphql`
-  query Desserts {
-    allMarkdownRemark {
-      edges {
-        node {
-          frontmatter {
-            title
+export default ({ path }) => (
+  <StaticQuery
+    query={graphql`
+      query Desserts {
+        allMarkdownRemark(filter: { frontmatter: { path: { eq: "Boa" } }) {
+          edges {
+            node {
+              frontmatter {
+                title
+                path
+              }
+            }
           }
         }
       }
-    }
-  }
-`;
-
-export default CollectionsPage;
+    `}
+    render={data => <CollectionTemplate data={data} />}
+  />
+);

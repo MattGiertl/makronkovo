@@ -1,16 +1,13 @@
 import React from 'react';
 
 import FountainHeading from '../molecules/FountainHeading';
-import NavBar from '../organisms/NavBar/Navbar';
+import Layout from '../organisms/Layout/Layout';
 
-const CollectionTemplate = ({ title }) => {
+const CollectionTemplate = () => {
   return (
-    <>
-      <NavBar />
-      <div>
-        <FountainHeading>{title}</FountainHeading>
-      </div>
-    </>
+    <Layout>
+      <FountainHeading>Boa</FountainHeading>
+    </Layout>
   );
 };
 
