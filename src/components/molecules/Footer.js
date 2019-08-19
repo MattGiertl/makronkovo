@@ -42,15 +42,14 @@ const FooterBackground = styled.div({
 const Footer = () => (
   <FooterBackground>
     {/* TODO: Add Links */}
-    <Paragraph
-      fontFamily={theme.fontFamilies.dinPro.regular}
-      fontSize={theme.fontSizes.small}
-      mobileMarginTop="23px"
-      bold
-    >
+    <Paragraph mobileMarginTop="16px" fontFamily={theme.fontFamilies.dinPro.regular}>
       &copy; Makronkovo, 2019
     </Paragraph>
-    <Paragraph fontFamily={theme.fontFamilies.dinPro.regular} fontSize={theme.fontSizes.small}>
+    <Paragraph
+      mobileMargin="auto 0 20px"
+      fontFamily={theme.fontFamilies.dinPro.regular}
+      fontSize={theme.fontSizes.small}
+    >
       Newsletter - Spracovanie osobných údajov
     </Paragraph>
   </FooterBackground>

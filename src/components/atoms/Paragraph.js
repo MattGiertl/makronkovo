@@ -21,6 +21,7 @@ const Paragraph = styled.p(
 
     [mobileQuery]: {
       width: props.mobileWidth,
+      margin: props.mobileMargin,
       marginTop: props.mobileMarginTop,
       fontSize: props.mobileFontSize,
     },
