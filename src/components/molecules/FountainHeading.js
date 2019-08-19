@@ -10,7 +10,7 @@ const Wrapper = styled.div({
   margin: '0 5px 25px',
 
   [mobileQuery]: {
-    margin: '0 5px 25px',
+    margin: '0 50px 25px',
   },
 });
 
