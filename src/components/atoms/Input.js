@@ -7,6 +7,7 @@ const Input = styled.input(
     height: '46px',
     fontSize: theme.fontSizes.small,
     border: `1px solid ${theme.colors.mediumGold}`,
+    fontFamily: theme.fontFamilies.dinPro.regular,
     color: theme.colors.mediumGold,
     textAlign: 'center',
 
