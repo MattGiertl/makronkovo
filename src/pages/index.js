@@ -30,7 +30,11 @@ const MainPage = () => {
 
   const renderOfferPolaroids = offer.polaroids.map(offer => (
     <Polaroid src={offer.image}>
-      <Paragraph desktopFontSize={theme.fontSizes.large} laptopFontSize={theme.fontSizes.medium}>
+      <Paragraph
+        fontFamily={theme.fontFamilies.caslonAntique.regular}
+        desktopFontSize={theme.fontSizes.large}
+        laptopFontSize={theme.fontSizes.medium}
+      >
         {offer.heading}
       </Paragraph>
     </Polaroid>
