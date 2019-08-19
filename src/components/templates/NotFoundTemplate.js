@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import theme from '../../utils/theme/theme';
 import { tabletQuery, mobileQuery, desktopQuery, laptopQuery } from '../../utils/mediaqueries';
 
-import Layout from '../organisms/Layout';
+import Layout from '../organisms/Layout/Layout';
 import Paragraph from '../atoms/Paragraph';
 import Heading from '../atoms/Heading';
 import MediumHeading from '../atoms/MediumHeading';

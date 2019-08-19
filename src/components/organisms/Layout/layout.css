@@ -1,6 +1,7 @@
 @font-face {
   font-family: 'Caslon Antique';
-  src: url('/static/fonts/caslon/caslonantique-webfont.woff') format('woff');
+  src: url('../../../../static/fonts/caslon/caslonantique-webfont.woff') format('woff'),
+    url('/static//fonts/caslon/caslonantique-webfont.woff');
 }
 
 /* @font-face {
@@ -57,3 +58,7 @@
   font-family: 'DIN Pro';
   src: url('DINPro-CondMedium.woff2') format('woff2'), url('DINPro-CondMedium.woff') format('woff');
 } */
+
+body {
+  font-family: Caslon Antique, sans-serif;
+}

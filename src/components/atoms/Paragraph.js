@@ -11,6 +11,7 @@ const Paragraph = styled.p(
   },
   props => ({
     fontWeight: props.bold ? 'bold' : 'normal',
+    fontFamily: "'Caslon Antique', sans-serif",
     margin: props.margin,
     marginLeft: props.marginLeft,
     marginRight: props.marginRight,

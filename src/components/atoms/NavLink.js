@@ -10,7 +10,6 @@ const StyledLink = styled(Link)(
     textDecoration: 'none',
     color: theme.colors.mediumGold,
     fontSize: theme.fontSizes.small,
-    fontFamily: theme.fontFamilies.caslon,
     transition: 'color 300ms',
 
     [mobileQuery]: {

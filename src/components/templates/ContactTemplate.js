@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import Paragraph from '../atoms/Paragraph';
 import Map from '../atoms/Map';
-import Layout from '../organisms/Layout';
+import Layout from '../organisms/Layout/Layout';
 import FountainHeading from '../molecules/FountainHeading';
 
 const ContentWrapper = styled.div({
