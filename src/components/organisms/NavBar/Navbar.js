@@ -22,10 +22,7 @@ const NavBar = () => {
             marginRight="15px"
             icon={['fab', 'instagram']}
           />
-          <SocialButton
-            to="https://www.facebook.com/makronkovo/"
-            icon={['fab', 'facebook']}
-          />
+          <SocialButton to="https://www.facebook.com/makronkovo/" icon={['fab', 'facebook']} />
         </SocialButtonGroup>
         <NavLink to="/">TORTY NA MIERU</NavLink>
         <NavLink to="/">DEZERTY</NavLink>
