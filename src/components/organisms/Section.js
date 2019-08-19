@@ -23,6 +23,9 @@ const Content = styled.div({
   flexWrap: 'wrap',
   justifyContent: 'center',
   margin: '0 10%',
+  [mobileQuery]: {
+    margin: 0,
+  },
 
   [laptopQuery]: {
     margin: '0 5%',
@@ -31,13 +34,9 @@ const Content = styled.div({
   [desktopQuery]: {
     margin: '0 10%',
   },
-
-  [mobileQuery]: {
-    margin: 0
-  }
 });
 
-const Section = ({ heading, children, id, background, spaceAround }) => (
+const Section = ({ heading, children, id, background }) => (
   <Wrapper id={id} background={background}>
     <FountainHeading>{heading}</FountainHeading>
     <Content>{children}</Content>
