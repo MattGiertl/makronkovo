@@ -14,6 +14,7 @@ const StyledLink = styled(Link)(
     transition: 'color 300ms',
 
     [mobileQuery]: {
+      fontFamily: theme.fontFamilies.caslonAntique.bold,
       fontSize: theme.fontSizes.medium,
       marginBottom: '17px',
     },
