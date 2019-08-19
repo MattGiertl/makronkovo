@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 import FountainHeading from '../molecules/FountainHeading';
 
 import theme from '../../utils/theme/theme';
-import { laptopQuery, desktopQuery } from '../../utils/mediaqueries';
+import { laptopQuery, desktopQuery, mobileQuery } from '../../utils/mediaqueries';
 
 const Wrapper = styled.section(
   {
@@ -31,6 +31,10 @@ const Content = styled.div({
   [desktopQuery]: {
     margin: '0 10%',
   },
+
+  [mobileQuery]: {
+    margin: 0
+  }
 });
 
 const Section = ({ heading, children, id, background, spaceAround }) => (
