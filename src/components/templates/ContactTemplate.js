@@ -8,8 +8,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import Paragraph from '../atoms/Paragraph';
 import Map from '../atoms/Map';
-import Layout from '../organisms/Layout';
+import Layout from '../organisms/Layout/Layout';
 import FountainHeading from '../molecules/FountainHeading';
+import theme from '../../utils/theme/theme';
 
 const ContentWrapper = styled.div({
   display: 'flex',
@@ -40,20 +41,20 @@ const ContactTemplate = () => (
   <Layout>
     <ContentWrapper>
       <FountainHeading>Kontakt</FountainHeading>
-      <Paragraph lineHeight="24px">
+      <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
         <FontAwesomeIcon icon="map-marker-alt" style={{ marginRight: '4px' }} />
         Zvolenská cesta 85, Banská Bystrica
       </Paragraph>
-      <Paragraph lineHeight="24px">
+      <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
         <FontAwesomeIcon style={{ marginRight: '4px' }} icon="envelope" />
         makronkovo@makronkovo.sk
       </Paragraph>
-      <Paragraph lineHeight="24px">
+      <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
         <FontAwesomeIcon style={{ marginRight: '4px' }} icon="phone-alt" />
         0948 009 800
       </Paragraph>
       <OpeningHours>
-        <Paragraph>Otváracia doba:</Paragraph>
+        <Paragraph fontFamily={theme.fontFamilies.dinPro.bold}>Otváracia doba:</Paragraph>
         <Paragraph marginLeft="4px">Podľa dohody</Paragraph>
       </OpeningHours>
       <Map />
