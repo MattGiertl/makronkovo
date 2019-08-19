@@ -6,6 +6,7 @@ const Heading = styled.h1(
   {
     color: theme.colors.mediumGold,
     letterSpacing: theme.letterSpacing.heading,
+    fontFamily: theme.fontFamilies.caslonAntique.regular,
     textAlign: 'center',
     lineHeight: '28px',
     margin: 0,

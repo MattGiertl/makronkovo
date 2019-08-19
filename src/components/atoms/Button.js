@@ -8,8 +8,8 @@ const Button = styled.button({
   background: theme.colors.mediumGold,
   color: theme.colors.white,
   fontSize: theme.fontSizes.small,
+  fontFamily: theme.fontFamilies.dinPro.regular,
   transition: 'background 200ms',
-  fontFamily: 'inherit',
   width: '10.625em',
 
   '&:hover': {

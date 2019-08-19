@@ -5,13 +5,11 @@ import { mobileQuery, tabletQuery, desktopQuery, laptopQuery } from '../../utils
 const Paragraph = styled.p(
   {
     color: theme.colors.mediumGold,
-    fontFamily: 'caslon_antiqueregular',
     lineHeight: '19px',
     margin: '0',
   },
   props => ({
-    fontWeight: props.bold ? 'bold' : 'normal',
-    fontFamily: "'Caslon Antique', sans-serif",
+    fontFamily: props.fontFamily ? props.fontFamily : theme.fontFamilies.dinPro.regular,
     margin: props.margin,
     marginLeft: props.marginLeft,
     marginRight: props.marginRight,

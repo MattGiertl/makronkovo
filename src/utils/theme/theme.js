@@ -8,7 +8,7 @@ const theme = {
     green: '#9ADDB6',
   },
   fontFamilies: {
-    caslon: {
+    caslonAntique: {
       regular: 'Caslon Antique',
       bold: 'Caslon Antique Bold',
       boldItalic: 'Caslon Antique Bold Italic',

@@ -65,7 +65,3 @@
   src: url('../../../../static/fonts/dinpro/DINPro-CondMedium.woff2') format('woff2'),
     url('../../../../static/fonts/dinpro/DINPro-CondMedium.woff') format('woff');
 }
-
-body {
-  font-family: Caslon Antique, sans-serif;
-}

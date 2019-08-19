@@ -3,6 +3,7 @@ import SquarePic from '../atoms/SquarePic';
 import styled from '@emotion/styled';
 import { laptopQuery, desktopQuery } from '../../utils/mediaqueries';
 import Paragraph from '../atoms/Paragraph';
+import theme from '../../utils/theme/theme';
 
 const LabeledSquarePicWrapper = styled.div({
   display: 'flex',
@@ -29,8 +30,8 @@ const LabeledSquarePic = ({ src, href, heading, description }) => (
   <LabeledSquarePicWrapper>
     <SquarePic src={src} href={href} />
     <DescriptionWrapper>
-      <Paragraph bold>{heading}</Paragraph>
-      <Paragraph>{description}</Paragraph>
+      <Paragraph fontFamily={theme.fontFamilies.dinPro.bold}>{heading}</Paragraph>
+      <Paragraph fontFamily={theme.fontFamilies.dinPro.regular}>{description}</Paragraph>
     </DescriptionWrapper>
   </LabeledSquarePicWrapper>
 );
