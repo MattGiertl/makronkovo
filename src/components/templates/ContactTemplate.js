@@ -1,17 +1,16 @@
 import React from 'react';
-import NavBar from '../organisms/NavBar/Navbar';
+
 import styled from '@emotion/styled';
-import Paragraph from '../atoms/Paragraph';
-import Heading from '../atoms/Heading';
-import {
-  tabletQuery,
-  tabletLandscapeQuery,
-  mobileQuery,
-} from '../../utils/mediaqueries';
-import Fountain from '../atoms/Fountain';
-import Map from '../atoms/Map';
+
+import { tabletQuery, tabletLandscapeQuery, mobileQuery } from '../../utils/mediaqueries';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Footer from '../molecules/Footer';
+
+import Paragraph from '../atoms/Paragraph';
+import Map from '../atoms/Map';
+import Layout from '../organisms/Layout/Layout';
+import FountainHeading from '../molecules/FountainHeading';
+import theme from '../../utils/theme/theme';
 
 const ContentWrapper = styled.div({
   display: 'flex',
@@ -39,31 +38,28 @@ const OpeningHours = styled.div({
 });
 
 const ContactTemplate = () => (
-  <>
-    <NavBar />
+  <Layout>
     <ContentWrapper>
-      <Heading>Kontakt</Heading>
-      <Fountain />
-      <Paragraph lineHeight="24px">
+      <FountainHeading>Kontakt</FountainHeading>
+      <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
         <FontAwesomeIcon icon="map-marker-alt" style={{ marginRight: '4px' }} />
         Zvolenská cesta 85, Banská Bystrica
       </Paragraph>
-      <Paragraph lineHeight="24px">
+      <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
         <FontAwesomeIcon style={{ marginRight: '4px' }} icon="envelope" />
         makronkovo@makronkovo.sk
       </Paragraph>
-      <Paragraph lineHeight="24px">
+      <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
         <FontAwesomeIcon style={{ marginRight: '4px' }} icon="phone-alt" />
         0948 009 800
       </Paragraph>
       <OpeningHours>
-        <Paragraph>Otváracia doba:</Paragraph>
+        <Paragraph fontFamily={theme.fontFamilies.dinPro.bold}>Otváracia doba:</Paragraph>
         <Paragraph marginLeft="4px">Podľa dohody</Paragraph>
       </OpeningHours>
       <Map />
     </ContentWrapper>
-    <Footer />
-  </>
+  </Layout>
 );
 
 export default ContactTemplate;

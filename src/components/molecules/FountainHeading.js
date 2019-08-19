@@ -2,48 +2,21 @@ import React from 'react';
 import Heading from '../atoms/Heading';
 import styled from '@emotion/styled';
 import Fountain from '../atoms/Fountain';
-import {
-  mobileQuery,
-  laptopQuery,
-  desktopQuery,
-  tabletQuery,
-} from '../../utils/mediaqueries';
+import { mobileQuery } from '../../utils/mediaqueries';
 
 const Wrapper = styled.div({
   display: 'flex',
   flexDirection: 'column',
+  margin: '0 5px 25px',
 
   [mobileQuery]: {
-    margin: '35px 0 25px',
-  },
-
-  [tabletQuery]: {
-    margin: '65px 0 45px',
-  },
-
-  [laptopQuery]: {
-    margin: '65px 0 45px',
-  },
-
-  [desktopQuery]: {
-    margin: '65px 0 45px',
+    margin: '0 50px 25px',
   },
 });
 
-const FountainHeading = ({
-  mobileMarginBottom = 0,
-  mobileMargin,
-  children,
-  ...props
-}) => (
-  <Wrapper
-    mobileMargin="25px 0"
-    mobileMarginBottom={mobileMarginBottom}
-    {...props}
-  >
-    <Heading mobileMargin={mobileMargin} marginBottom="6px">
-      {children}
-    </Heading>
+const FountainHeading = ({ children }) => (
+  <Wrapper>
+    <Heading>{children}</Heading>
     <Fountain />
   </Wrapper>
 );

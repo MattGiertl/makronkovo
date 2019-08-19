@@ -1,36 +1,31 @@
-import React from "react";
-import styled from "@emotion/styled";
-import Paragraph from "../atoms/Paragraph";
-import NavBar from "../organisms/NavBar/Navbar";
-import theme from "../../utils/theme/theme";
-import {
-  tabletQuery,
-  mobileQuery,
-  tabletLandscapeQuery
-} from "../../utils/mediaqueries";
+import React from 'react';
+import styled from '@emotion/styled';
+import Paragraph from '../atoms/Paragraph';
+import theme from '../../utils/theme/theme';
+import { tabletQuery, mobileQuery, tabletLandscapeQuery } from '../../utils/mediaqueries';
+import Layout from '../organisms/Layout/Layout';
 
 const ContentWrapper = styled.div({
-  display: "flex",
-  flexDirection: "column",
-  margin: "0 22%",
+  display: 'flex',
+  flexDirection: 'column',
+  margin: '0 22%',
 
   [mobileQuery]: {
-    margin: "0 43px 0 37px"
+    margin: '0 43px 0 37px',
   },
 
   [tabletQuery]: {
-    margin: "0 20%"
+    margin: '0 20%',
   },
 
   [tabletLandscapeQuery]: {
-    margin: "0 29.17%"
-  }
+    margin: '0 29.17%',
+  },
 });
 
 const GDRPTemplate = props => {
   return (
-    <>
-      <NavBar />
+    <Layout>
       <ContentWrapper>
         <Paragraph
           bold
@@ -43,7 +38,7 @@ const GDRPTemplate = props => {
         </Paragraph>
         {props.gdprText}
       </ContentWrapper>
-    </>
+    </Layout>
   );
 };
 

@@ -2,56 +2,41 @@ import React from 'react';
 
 import styled from '@emotion/styled';
 import FountainHeading from '../molecules/FountainHeading';
-import {
-  mobileQuery,
-  laptopQuery,
-  desktopQuery,
-  tabletQuery,
-} from '../../utils/mediaqueries';
 
 import theme from '../../utils/theme/theme';
+import { laptopQuery, desktopQuery } from '../../utils/mediaqueries';
 
 const Wrapper = styled.section(
   {
     display: 'flex',
     flexDirection: 'column',
-    marginTop: '30px',
+    margin: '30px 0',
+    paddingTop: '65px',
   },
   props => ({
     background: props.background ? props.background : theme.colors.white,
   }),
 );
 
-const Content = styled.div(
-  {
-    display: 'flex',
-    flexWrap: 'wrap',
+const Content = styled.div({
+  display: 'flex',
+  flexWrap: 'wrap',
+  justifyContent: 'center',
+  margin: '0 10%',
 
-    [mobileQuery]: {
-      margin: '0 30px',
-    },
-
-    [tabletQuery]: {
-      margin: '0 120px 50px',
-    },
-
-    [laptopQuery]: {
-      margin: '0 175px 50px',
-    },
-
-    [desktopQuery]: {
-      margin: '0 300px 50px',
-    },
+  [laptopQuery]: {
+    margin: '0 5%',
   },
-  props => ({
-    justifyContent: props.spaceAround ? 'space-around' : 'center',
-  }),
-);
+
+  [desktopQuery]: {
+    margin: '0 10%',
+  },
+});
 
 const Section = ({ heading, children, id, background, spaceAround }) => (
   <Wrapper id={id} background={background}>
-    <FountainHeading mobileMargin="0 1px">{heading}</FountainHeading>
-    <Content spaceAround={spaceAround}>{children}</Content>
+    <FountainHeading>{heading}</FountainHeading>
+    <Content>{children}</Content>
   </Wrapper>
 );
 

@@ -1,11 +1,6 @@
 import theme from '../../utils/theme/theme';
 import styled from '@emotion/styled';
-import {
-  mobileQuery,
-  tabletQuery,
-  desktopQuery,
-  laptopQuery,
-} from '../../utils/mediaqueries';
+import { mobileQuery, tabletQuery, desktopQuery, laptopQuery } from '../../utils/mediaqueries';
 
 const Paragraph = styled.p(
   {
@@ -14,7 +9,7 @@ const Paragraph = styled.p(
     margin: '0',
   },
   props => ({
-    fontWeight: props.bold ? 'bold' : 'normal',
+    fontFamily: props.fontFamily ? props.fontFamily : theme.fontFamilies.dinPro.regular,
     margin: props.margin,
     marginLeft: props.marginLeft,
     marginRight: props.marginRight,
@@ -26,6 +21,7 @@ const Paragraph = styled.p(
 
     [mobileQuery]: {
       width: props.mobileWidth,
+      margin: props.mobileMargin,
       marginTop: props.mobileMarginTop,
       fontSize: props.mobileFontSize,
     },

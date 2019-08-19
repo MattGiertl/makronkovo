@@ -1,115 +1,124 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import NavBar from '../organisms/NavBar/Navbar';
+import theme from '../../utils/theme/theme';
+import { tabletQuery, mobileQuery, desktopQuery, laptopQuery } from '../../utils/mediaqueries';
+
+import Layout from '../organisms/Layout/Layout';
+import Paragraph from '../atoms/Paragraph';
 import Heading from '../atoms/Heading';
 import MediumHeading from '../atoms/MediumHeading';
 import Anchor from '../atoms/Anchor';
+
 import CakeImg from '../../../static/assets/Group.png';
-import theme from '../../utils/theme/theme';
-import Paragraph from '../atoms/Paragraph';
-import {
-  tabletQuery,
-  mobileQuery,
-  desktopQuery,
-  laptopQuery,
-} from '../../utils/mediaqueries';
 
-const NotFoudTemplate = () => {
-  const NotFoundWrapper = styled.div({
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    width: '100%',
-  });
+const NotFoundWrapper = styled.div({
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  width: '100%',
+});
 
-  const StyledCake = styled.img({
+const StyledCake = styled.img({
+  [mobileQuery]: {
+    margin: '15px auto 12px',
+    width: '138px',
+    height: '108px',
+  },
+
+  [tabletQuery]: {
+    margin: '30px auto 32px',
+    width: '188px',
+    height: '158px',
+  },
+
+  [laptopQuery]: {
+    margin: '30px auto 32px',
+    width: '188px',
+    height: '158px',
+  },
+
+  [desktopQuery]: {
+    margin: '30px auto 32px',
+    width: '188px',
+    height: '158px',
+  },
+});
+
+const ContentWrapper = styled.div({
+  [mobileQuery]: {
+    margin: '0 1%',
+  },
+
+  [tabletQuery]: {
+    margin: '0 20%',
+  },
+
+  [laptopQuery]: {
+    margin: '0 30%',
+  },
+
+  [desktopQuery]: {
+    margin: '0 35%',
+  },
+});
+
+const NavWrapper = styled.div({
+  display: 'flex',
+  justifyContent: 'space-around',
+  alignItems: 'center',
+  margin: '27px',
+});
+
+const StyledHeading = styled(Heading)(
+  {
     [mobileQuery]: {
-      margin: '15px auto 12px',
-      width: '138px',
-      height: '108px',
+      fontSize: theme.fontSizes.xxl,
+      margin: '10px',
     },
 
     [tabletQuery]: {
-      margin: '30px auto 32px',
-      width: '188px',
-      height: '158px',
+      fontSize: theme.fontSizes.xxxl,
+      margin: '70px 0 50px',
     },
 
     [laptopQuery]: {
-      margin: '30px auto 32px',
-      width: '188px',
-      height: '158px',
+      fontSize: theme.fontSizes.xxxl,
+      margin: '50px 0 14px',
     },
 
     [desktopQuery]: {
-      margin: '30px auto 32px',
-      width: '188px',
-      height: '158px',
+      fontSize: theme.fontSizes.xxxl,
+      margin: '50px 0 14px',
     },
-  });
+  },
+  props => ({
+    marginTop: props.mobileMargin,
+    marginBottom: props.mobileMargin,
+  }),
+);
 
-  const ContentWrapper = styled.div({
-    [mobileQuery]: {
-      margin: '0 30px',
-    },
-
-    [tabletQuery]: {
-      margin: '0 225px',
-    },
-
-    [laptopQuery]: {
-      margin: '0 650px',
-    },
-
-    [desktopQuery]: {
-      margin: '0 650px',
-    },
-  });
-
-  const NavWrapper = styled.div({
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginTop: '27px',
-  });
-
-  const StyledHeading = styled(Heading)(
+const NotFoundTemplate = () => {
+  const navLinkData = [
     {
-      [mobileQuery]: {
-        fontSize: theme.fontSizes.xxl,
-      },
-
-      [tabletQuery]: {
-        fontSize: theme.fontSizes.xxxl,
-      },
-
-      [laptopQuery]: {
-        fontSize: theme.fontSizes.xxxl,
-      },
-
-      [desktopQuery]: {
-        fontSize: theme.fontSizes.xxxl,
-      },
+      href: '/torty-na-mieru',
+      text: 'Torty na mieru',
     },
-    props => ({
-      marginTop: props.mobileMargin,
-      marginBottom: props.mobileMargin,
-    }),
-  );
+    {
+      href: '/dezerty',
+      text: 'Dezerty',
+    },
+    {
+      href: '/candy-bar',
+      text: 'Candy Bar',
+    },
+  ];
+
+  const navLinks = navLinkData.map(link => <Anchor href={link.href}>{link.href}</Anchor>);
 
   return (
-    <>
-      <NavBar />
+    <Layout>
       <NotFoundWrapper>
-        <StyledHeading
-          mobileMargin="10px"
-          laptopMarginTop="50px"
-          laptopMarginBottom="14px"
-          desktopMarginTop="50px"
-          desktopMarginBottom="14px"
-          tabletMarginTop="70px"
-          tabletMarginBottom="50px"
-        >
+        <StyledHeading tabletMarginTop="70px" tabletMarginBottom="50px">
           404
         </StyledHeading>
         <StyledCake src={CakeImg} alt="Koláč" />
@@ -119,21 +128,11 @@ const NotFoudTemplate = () => {
             Ale chutné dezerty a torty sa pre Vás nájdu vždy :)
           </Paragraph>
           <Paragraph textAlign="center">Pozrite si našu ponuku.</Paragraph>
-          <NavWrapper>
-            <Anchor href="/" bold>
-              Torty na mieru
-            </Anchor>
-            <Anchor href="/" bold>
-              Dezerty
-            </Anchor>
-            <Anchor href="/" bold>
-              Candy bar
-            </Anchor>
-          </NavWrapper>
+          <NavWrapper>{navLinks}</NavWrapper>
         </ContentWrapper>
       </NotFoundWrapper>
-    </>
+    </Layout>
   );
 };
 
-export default NotFoudTemplate;
+export default NotFoundTemplate;
