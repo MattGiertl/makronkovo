@@ -1,6 +1,6 @@
 {
-  "categories": {
-    "dessertCategory": {
+  "categories": [
+    {
       "title": "DEZERTY",
       "path": "/dezerty",
       "categoryItems": [
@@ -34,7 +34,7 @@
         }
       ]
     },
-    "cakeCategory": {
+    {
       "title": "CANDY BAR",
       "path": "/candy-bar",
       "categoryItems": [
@@ -68,5 +68,5 @@
         }
       ]
     }
-  }
+  ]
 }

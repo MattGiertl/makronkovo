@@ -8,15 +8,15 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const result = await graphql(`
     {
       allMockJson {
-        nodes {
-          categories {
-            dessertCategory {
+        edges {
+          node {
+            categories {
+              path
+              title
               categoryItems {
                 categoryName
                 image
               }
-              path
-              title
             }
           }
         }
@@ -29,19 +29,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return;
   }
 
-  console.log(result);
-
-  createPage({
-    path: '/dezerty',
-    component: collectionPage,
-    context: { boa: 'krista', result },
+  result.data.allMockJson.edges.forEach(({ node }) => {
+    createPage({
+      path: node.categories.path,
+      component: collectionPage,
+      context: { ...node },
+    });
   });
-
-  // result.data.allMockJson.nodes.forEach(({ node }) => {
-  //   createPage({
-  //     path: '/dezerty',
-  //     component: collectionPage,
-  //     context: { node },
-  //   });
-  // });
 };
