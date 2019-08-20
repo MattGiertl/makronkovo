@@ -7,10 +7,14 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const result = await graphql(`
     {
-      allMarkdownRemark {
-        edges {
-          node {
-            frontmatter {
+      allMockJson {
+        nodes {
+          categories {
+            dessertCategory {
+              categoryItems {
+                categoryName
+                image
+              }
               path
               title
             }
@@ -25,11 +29,19 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return;
   }
 
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    createPage({
-      path: node.frontmatter.path,
-      component: collectionPage,
-      context: { ...node },
-    });
+  console.log(result);
+
+  createPage({
+    path: '/dezerty',
+    component: collectionPage,
+    context: { boa: 'krista', result },
   });
+
+  // result.data.allMockJson.nodes.forEach(({ node }) => {
+  //   createPage({
+  //     path: '/dezerty',
+  //     component: collectionPage,
+  //     context: { node },
+  //   });
+  // });
 };
