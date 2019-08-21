@@ -23,12 +23,11 @@ const ContentWrapper = styled.div({
   },
 });
 
-const GDRPTemplate = props => {
+const GDPRTemplate = () => {
   return (
     <Layout>
       <ContentWrapper>
         <Paragraph
-          bold
           fontSize={theme.fontSizes.medium}
           marginBottom="34px"
           marginTop="34px"
@@ -36,10 +35,9 @@ const GDRPTemplate = props => {
         >
           Súhlas so spracovaním osobných údajov pre newsletter
         </Paragraph>
-        {props.gdprText}
       </ContentWrapper>
     </Layout>
   );
 };
 
-export default GDRPTemplate;
+export default GDPRTemplate;

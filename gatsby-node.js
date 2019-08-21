@@ -7,16 +7,14 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const result = await graphql(`
     {
-      allMockJson {
+      allCategoriesJson {
         edges {
           node {
-            categories {
-              path
-              title
-              categoryItems {
-                categoryName
-                image
-              }
+            title
+            to
+            categoryItems {
+              categoryName
+              image
             }
           }
         }
@@ -29,9 +27,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return;
   }
 
-  result.data.allMockJson.edges.forEach(({ node }) => {
+  result.data.allCategoriesJson.edges.forEach(({ node }) => {
     createPage({
-      path: node.categories.path,
+      path: node.to,
       component: collectionPage,
       context: { ...node },
     });

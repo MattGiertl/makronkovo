@@ -1,8 +1,7 @@
 [
   {
-    "id": "desserts",
     "title": "DEZERTY",
-    "path": "/dezerty",
+    "to": "/dezerty",
     "categoryItems": [
       {
         "categoryName": "CHEESECAKY",
@@ -35,9 +34,8 @@
     ]
   },
   {
-    "id": "candybars",
     "title": "CANDY BAR",
-    "path": "/candy-bar",
+    "to": "/candy-bar",
     "categoryItems": [
       {
         "categoryName": "CHEESECAKY",

@@ -1,7 +1,5 @@
 import React from 'react';
-import FaqPair from '../molecules/FaqPair';
 import styled from '@emotion/styled';
-import FaqPairData from '../../data/mock/faq.json';
 import { tabletQuery, mobileQuery, tabletLandscapeQuery } from '../../utils/mediaqueries';
 import Layout from '../organisms/Layout/Layout';
 import FountainHeading from '../molecules/FountainHeading';
@@ -24,17 +22,12 @@ const ContentWrapper = styled.div({
   },
 });
 
-const FaqTemplate = () => {
-  const renderFaqPairs = FaqPairData.pairs.map(pair => {
-    const { question, answer } = pair;
-    return <FaqPair question={question} answer={answer} key={question} />;
-  });
-
+const FaqTemplate = ({ faqPairs }) => {
   return (
     <Layout>
       <ContentWrapper>
         <FountainHeading>Časté otázky</FountainHeading>
-        {renderFaqPairs}
+        {faqPairs}
       </ContentWrapper>
     </Layout>
   );
