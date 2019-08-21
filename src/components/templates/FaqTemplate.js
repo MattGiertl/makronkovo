@@ -33,7 +33,7 @@ const FaqTemplate = () => {
   return (
     <Layout>
       <ContentWrapper>
-        <FountainHeading>Časté otázky</FountainHeading>
+        <FountainHeading>ČASTÉ OTÁZKY</FountainHeading>
         {renderFaqPairs}
       </ContentWrapper>
     </Layout>

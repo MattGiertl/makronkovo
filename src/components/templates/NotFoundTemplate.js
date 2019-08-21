@@ -71,6 +71,7 @@ const NavWrapper = styled.div({
 
 const StyledHeading = styled(Heading)(
   {
+    fontFamily: theme.fontFamilies.dinPro.bold,
     [mobileQuery]: {
       fontSize: theme.fontSizes.xxl,
       margin: '10px',
@@ -113,7 +114,7 @@ const NotFoundTemplate = () => {
     },
   ];
 
-  const navLinks = navLinkData.map(link => <Anchor href={link.href}>{link.href}</Anchor>);
+  const navLinks = navLinkData.map(link => <Anchor href={link.href} fontFamily={theme.fontFamilies.dinPro.bold}>{link.text}</Anchor>);
 
   return (
     <Layout>

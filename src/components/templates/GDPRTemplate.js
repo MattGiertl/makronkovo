@@ -28,7 +28,7 @@ const GDRPTemplate = props => {
     <Layout>
       <ContentWrapper>
         <Paragraph
-          bold
+          fontFamily= {theme.fontFamilies.dinPro.bold}
           fontSize={theme.fontSizes.medium}
           marginBottom="34px"
           marginTop="34px"

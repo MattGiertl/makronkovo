@@ -33,7 +33,7 @@ const Newsletter = () => (
       mobileMarginTop="27px"
     >
       Odoslaním registrácie k newsletteru súhlasím, že som si prečítal(a){' '}
-      <a href="/">Podmienky pre spracovanie osobných údajov pre newsletter</a> a súhlasím s nimi.
+      <a href="/gdpr">Podmienky pre spracovanie osobných údajov pre newsletter</a> a súhlasím s nimi.
     </Paragraph>
   </>
 );
