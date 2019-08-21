@@ -14,6 +14,7 @@ const Paragraph = styled.p(
     marginLeft: props.marginLeft,
     marginRight: props.marginRight,
     marginBottom: props.marginBottom,
+    marginTop: props.marginTop,
     lineHeight: props.lineHeight ? props.lineHeight : '19px',
     textAlign: props.textAlign,
     fontSize: props.fontSize ? props.fontSize : theme.fontSizes.small,

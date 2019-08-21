@@ -2,68 +2,64 @@
   {
     "title": "DEZERTY",
     "to": "/dezerty",
+    "lightText": "Vyberte si z našej širokej ponuky dezertov.",
+    "boldText": "V prípade záujmu o odber dezertov pre kaviareň alebo reštauráciu nás prosím priamo kontaktujte.",
     "categoryItems": [
       {
         "categoryName": "CHEESECAKY",
-        "image": "../../../../static/img/dessertcategories/cheesecaky.jpg"
+        "image": "/img/cake.jpg"
       },
       {
         "categoryName": "BEZLEPKOVÉ TORTY",
-        "image": "../../../../static/img/dessertcategories/bezlepkove-torty.jpg"
+        "image": "/img/cake.jpg"
       },
       {
         "categoryName": "TORTY",
-        "image": "../../../../static/img/dessertcategories/torty,jpg"
+        "image": "/img/cake.jpg"
       },
       {
         "categoryName": "TARTY",
-        "image": "../../../../static/img/dessertcategories/tarty.jpg"
+        "image": "/img/cake.jpg"
       },
       {
         "categoryName": "RANAJKOVÉ KOLÁČE",
-        "image": "../../../../static/img/dessertcategories/ranajkove-kolace"
+        "image": "/img/cake.jpg"
       },
       {
         "categoryName": "DEZERTY KUSOVKY",
-        "image": "../../../../static/img/dessertcategories/dezerty-kusovky.jpg"
+        "image": "/img/cake.jpg"
       },
       {
         "categoryName": "DEZERTY V POHÁRIKU",
-        "image": "../../../../static/img/dessertcategories/dezerty-v-pohariku.jpg"
+        "image": "/img/cake.jpg"
       }
     ]
   },
   {
     "title": "CANDY BAR",
     "to": "/candy-bar",
+    "lightText": "Zložte si candy bar na mieru z našej širokej ponuky dezertov.",
+    "boldText": "Doprava a aranžovanie candy baru nie je súčasťou ceny dezertov. Doprava 50€ • Aranžovanie 50€",
     "categoryItems": [
       {
-        "categoryName": "CHEESECAKY",
-        "image": "../../../../static/img/dessertcategories/cheesecaky.jpg"
+        "categoryName": "KUSOVKY",
+        "image": "/img/cake.jpg"
       },
       {
-        "categoryName": "BEZLEPKOVÉ TORTY",
-        "image": "../../../../static/img/dessertcategories/bezlepkove-torty.jpg"
+        "categoryName": "OBALOVANÉ CESTO",
+        "image": "/img/cake.jpg"
       },
       {
-        "categoryName": "TORTY",
-        "image": "../../../../static/img/dessertcategories/torty,jpg"
+        "categoryName": "TORTY A MINI KOCKY",
+        "image": "/img/cake.jpg"
       },
       {
-        "categoryName": "TARTY",
-        "image": "../../../../static/img/dessertcategories/tarty.jpg"
-      },
-      {
-        "categoryName": "RANAJKOVÉ KOLÁČE",
-        "image": "../../../../static/img/dessertcategories/ranajkove-kolace"
-      },
-      {
-        "categoryName": "DEZERTY KUSOVKY",
-        "image": "../../../../static/img/dessertcategories/dezerty-kusovky.jpg"
+        "categoryName": "MAKRÓNKY",
+        "image": "/img/cake.jpg"
       },
       {
         "categoryName": "DEZERTY V POHÁRIKU",
-        "image": "../../../../static/img/dessertcategories/dezerty-v-pohariku.jpg"
+        "image": "/img/cake.jpg"
       }
     ]
   }

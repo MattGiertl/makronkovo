@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { useStaticQuery } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 
 import FaqPair from '../components/molecules/FaqPair';
 import FaqTemplate from '../templates/FaqTemplate';

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { useStaticQuery } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 
 import Paragraph from '../components/atoms/Paragraph';
 import GDPRTemplate from '../templates/GDPRTemplate';
