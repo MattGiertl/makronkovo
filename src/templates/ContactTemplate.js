@@ -19,11 +19,11 @@ const ContentWrapper = styled.div({
   alignItems: 'center',
 
   [mobileQuery]: {
-    margin: '0 43px 0 37px',
+    margin: '0 37px',
   },
 
   [tabletQuery]: {
-    margin: '0 43px 0 37px',
+    margin: '0 43px',
   },
 
   [tabletLandscapeQuery]: {

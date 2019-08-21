@@ -38,7 +38,18 @@ const TextWrapper = styled.div({
   flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'center',
-  margin: '0 35% 20px',
+
+  [mobileQuery]: {
+    display: 'none',
+  },
+
+  [laptopQuery]: {
+    margin: '0 30% 20px',
+  },
+
+  [desktopQuery]: {
+    margin: '0 38% 20px',
+  },
 });
 
 const CollectionTemplate = ({ pageContext }) => {
