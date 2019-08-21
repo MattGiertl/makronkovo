@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { laptopQuery, desktopQuery, mobileQuery, tabletQuery } from '../../../utils/mediaqueries';
+import { laptopQuery, desktopQuery, mobileQuery, tabletQuery } from '../../utils/mediaqueries';
 
 const SlideShowWrapper = styled.div({
   display: 'flex',

@@ -1,9 +1,11 @@
 import React from 'react';
+
+import { tabletQuery, mobileQuery, tabletLandscapeQuery } from '../utils/mediaqueries';
 import styled from '@emotion/styled';
-import Paragraph from '../atoms/Paragraph';
-import theme from '../../utils/theme/theme';
-import { tabletQuery, mobileQuery, tabletLandscapeQuery } from '../../utils/mediaqueries';
-import Layout from '../organisms/Layout/Layout';
+import theme from '../utils/theme/theme';
+
+import Layout from '../components/organisms/Layout/Layout';
+import Paragraph from '../components/atoms/Paragraph';
 
 const ContentWrapper = styled.div({
   display: 'flex',
@@ -23,12 +25,11 @@ const ContentWrapper = styled.div({
   },
 });
 
-const GDRPTemplate = props => {
+const GDPRTemplate = ({ gdprText }) => {
   return (
     <Layout>
       <ContentWrapper>
         <Paragraph
-          bold
           fontSize={theme.fontSizes.medium}
           marginBottom="34px"
           marginTop="34px"
@@ -36,10 +37,10 @@ const GDRPTemplate = props => {
         >
           Súhlas so spracovaním osobných údajov pre newsletter
         </Paragraph>
-        {props.gdprText}
+        {gdprText}
       </ContentWrapper>
     </Layout>
   );
 };
 
-export default GDRPTemplate;
+export default GDPRTemplate;

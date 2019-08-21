@@ -1,10 +1,10 @@
 import React from 'react';
 
 import SlideShowWrapper from './SlideShowWrapper';
-import SlideShow from '../../atoms/Slideshow';
-import Section from '../../organisms/Section';
-import Newsletter from '../../organisms/Newsletter/Newsletter';
-import Layout from '../../organisms/Layout/Layout';
+import SlideShow from '../../components/atoms/Slideshow';
+import Section from '../../components/organisms/Section';
+import Newsletter from '../../components/organisms/Newsletter/Newsletter';
+import Layout from '../../components/organisms/Layout/Layout';
 
 const MainPageTemplate = ({
   slideshow,

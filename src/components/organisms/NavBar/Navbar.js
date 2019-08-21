@@ -25,8 +25,8 @@ const NavBar = () => {
           <SocialButton to="https://www.facebook.com/makronkovo/" icon={['fab', 'facebook']} />
         </SocialButtonGroup>
         <NavLink to="/">TORTY NA MIERU</NavLink>
-        <NavLink to="/">DEZERTY</NavLink>
-        <NavLink marginBottom="50px" to="/">
+        <NavLink to="/dezerty">DEZERTY</NavLink>
+        <NavLink marginBottom="50px" to="/candy-bar">
           CANDY BAR
         </NavLink>
         <NavLink to="/">

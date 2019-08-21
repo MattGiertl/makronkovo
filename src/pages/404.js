@@ -1,5 +1,5 @@
-import React from "react";
-import NotFoundTemplate from "../components/templates/NotFoundTemplate";
+import React from 'react';
+import NotFoundTemplate from '../templates/NotFoundTemplate';
 
 const NotFound = () => (
   <div>
