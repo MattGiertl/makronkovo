@@ -3,7 +3,7 @@ import React from 'react';
 import { useStaticQuery } from 'gatsby';
 
 import Paragraph from '../components/atoms/Paragraph';
-import GDPRTemplate from '../components/templates/GDPRTemplate';
+import GDPRTemplate from '../templates/GDPRTemplate';
 
 const GDPR = () => {
   const data = useStaticQuery(gdprQuery);

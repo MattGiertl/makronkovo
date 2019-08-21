@@ -3,7 +3,7 @@ import '../normalize.css';
 
 import mainPageData from '../data/mainsite.json';
 
-import MainPageTemplate from '../components/templates/MainPageTemplate/MainPageTemplate';
+import MainPageTemplate from '../templates/MainPageTemplate/MainPageTemplate';
 import Polaroid from '../components/molecules/Polaroid';
 import Paragraph from '../components/atoms/Paragraph';
 

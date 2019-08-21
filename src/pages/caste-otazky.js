@@ -3,7 +3,7 @@ import React from 'react';
 import { useStaticQuery } from 'gatsby';
 
 import FaqPair from '../components/molecules/FaqPair';
-import FaqTemplate from '../components/templates/FaqTemplate';
+import FaqTemplate from '../templates/FaqTemplate';
 
 const Faq = () => {
   const data = useStaticQuery(faqQuery);

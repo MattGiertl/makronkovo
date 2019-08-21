@@ -1,8 +1,10 @@
 import React from 'react';
+
 import styled from '@emotion/styled';
-import { tabletQuery, mobileQuery, tabletLandscapeQuery } from '../../utils/mediaqueries';
-import Layout from '../organisms/Layout/Layout';
-import FountainHeading from '../molecules/FountainHeading';
+import { tabletQuery, mobileQuery, tabletLandscapeQuery } from '../utils/mediaqueries';
+
+import Layout from '../components/organisms/Layout/Layout';
+import FountainHeading from '../components/molecules/FountainHeading';
 
 const ContentWrapper = styled.div({
   display: 'flex',

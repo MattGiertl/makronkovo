@@ -1,9 +1,11 @@
 import React from 'react';
+
+import { tabletQuery, mobileQuery, tabletLandscapeQuery } from '../utils/mediaqueries';
 import styled from '@emotion/styled';
-import Paragraph from '../atoms/Paragraph';
-import theme from '../../utils/theme/theme';
-import { tabletQuery, mobileQuery, tabletLandscapeQuery } from '../../utils/mediaqueries';
-import Layout from '../organisms/Layout/Layout';
+import theme from '../utils/theme/theme';
+
+import Layout from '../components/organisms/Layout/Layout';
+import Paragraph from '../components/atoms/Paragraph';
 
 const ContentWrapper = styled.div({
   display: 'flex',

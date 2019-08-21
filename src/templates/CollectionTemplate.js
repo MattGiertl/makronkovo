@@ -1,7 +1,7 @@
 import React from 'react';
 
-import FountainHeading from '../molecules/FountainHeading';
-import Layout from '../organisms/Layout/Layout';
+import FountainHeading from '../components/molecules/FountainHeading';
+import Layout from '../components/organisms/Layout/Layout';
 
 const CollectionTemplate = ({ title }) => {
   return (
