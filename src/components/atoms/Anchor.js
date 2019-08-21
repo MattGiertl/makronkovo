@@ -30,7 +30,6 @@ const StyledAnchor = styled.a(
     }
   },
   props => ({
-    // fontWeight: props.bold ? "bold" : "normal",
     fontFamily: props.fontFamily ? props.fontFamily : theme.fontFamilies.dinPro.regular,
   })
 );
