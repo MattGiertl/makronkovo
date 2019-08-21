@@ -1,28 +1,16 @@
 import React from 'react';
 import '../normalize.css';
 
-import mainPageData from '../data/mock/mainsite.json';
+import mainPageData from '../data/mainsite.json';
 
-import MainPageTemplate from '../components/templates/MainPageTemplate/MainPageTemplate';
+import MainPageTemplate from '../templates/MainPageTemplate/MainPageTemplate';
 import Polaroid from '../components/molecules/Polaroid';
 import Paragraph from '../components/atoms/Paragraph';
 
 import theme from '../utils/theme/theme';
 
-import { library } from '@fortawesome/fontawesome-svg-core';
-import {
-  faTimes,
-  faBars,
-  faMapMarkerAlt,
-  faEnvelope,
-  faPhoneAlt,
-} from '@fortawesome/free-solid-svg-icons';
-
-import { fab, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import SquarePic from '../components/atoms/SquarePic';
 import LabeledSquarePic from '../components/molecules/LabeledSquarePic';
-
-library.add(fab, faInstagram, faTimes, faBars, faMapMarkerAlt, faEnvelope, faPhoneAlt);
 
 const MainPage = () => {
   const { sections, slideshow } = mainPageData;

@@ -1,15 +1,15 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import theme from '../../utils/theme/theme';
-import { tabletQuery, mobileQuery, desktopQuery, laptopQuery } from '../../utils/mediaqueries';
+import theme from '../utils/theme/theme';
+import { tabletQuery, mobileQuery, desktopQuery, laptopQuery } from '../utils/mediaqueries';
 
-import Layout from '../organisms/Layout/Layout';
-import Paragraph from '../atoms/Paragraph';
-import Heading from '../atoms/Heading';
-import MediumHeading from '../atoms/MediumHeading';
-import Anchor from '../atoms/Anchor';
+import Layout from '../components/organisms/Layout/Layout';
+import Paragraph from '../components/atoms/Paragraph';
+import Heading from '../components/atoms/Heading';
+import MediumHeading from '../components/atoms/MediumHeading';
+import Anchor from '../components/atoms/Anchor';
 
-import CakeImg from '../../../static/assets/Group.png';
+import CakeImg from '../../static/assets/Group.png';
 
 const NotFoundWrapper = styled.div({
   display: 'flex',

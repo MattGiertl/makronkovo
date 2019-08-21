@@ -1,16 +1,15 @@
 import React from 'react';
 
 import styled from '@emotion/styled';
+import theme from '../utils/theme/theme';
 
-import { tabletQuery, tabletLandscapeQuery, mobileQuery } from '../../utils/mediaqueries';
+import { tabletQuery, tabletLandscapeQuery, mobileQuery } from '../utils/mediaqueries';
 
+import Paragraph from '../components/atoms/Paragraph';
+import Map from '../components/atoms/Map';
+import Layout from '../components/organisms/Layout/Layout';
+import FountainHeading from '../components/molecules/FountainHeading';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-import Paragraph from '../atoms/Paragraph';
-import Map from '../atoms/Map';
-import Layout from '../organisms/Layout/Layout';
-import FountainHeading from '../molecules/FountainHeading';
-import theme from '../../utils/theme/theme';
 
 const ContentWrapper = styled.div({
   display: 'flex',
@@ -20,11 +19,11 @@ const ContentWrapper = styled.div({
   alignItems: 'center',
 
   [mobileQuery]: {
-    margin: '0 43px 0 37px',
+    margin: '0 37px',
   },
 
   [tabletQuery]: {
-    margin: '0 43px 0 37px',
+    margin: '0 43px',
   },
 
   [tabletLandscapeQuery]: {
