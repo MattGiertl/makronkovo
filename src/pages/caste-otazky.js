@@ -1,17 +1,13 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+
 import { useStaticQuery } from 'gatsby';
 
-import FaqTemplate from '../components/templates/FaqTemplate';
 import FaqPair from '../components/molecules/FaqPair';
-import { FaqQuery } from '../utils/graphqlQueries';
+import FaqTemplate from '../components/templates/FaqTemplate';
 
 const Faq = () => {
-  const data = useStaticQuery(FaqQuery);
+  const data = useStaticQuery(faqQuery);
   const { nodes: faqPairs } = data.allFaqJson;
-
-  useEffect(() => {
-    console.log(data.allFaqJson);
-  });
 
   const renderFaqPairs = faqPairs.map(pair => (
     <FaqPair question={pair.question} answer={pair.answer} />
@@ -19,5 +15,16 @@ const Faq = () => {
 
   return <FaqTemplate faqPairs={renderFaqPairs} />;
 };
+
+const faqQuery = graphql`
+  query FaqQuery {
+    allFaqJson {
+      nodes {
+        question
+        answer
+      }
+    }
+  }
+`;
 
 export default Faq;

@@ -23,7 +23,7 @@ const ContentWrapper = styled.div({
   },
 });
 
-const GDPRTemplate = () => {
+const GDPRTemplate = ({ gdprText }) => {
   return (
     <Layout>
       <ContentWrapper>
@@ -35,6 +35,7 @@ const GDPRTemplate = () => {
         >
           Súhlas so spracovaním osobných údajov pre newsletter
         </Paragraph>
+        {gdprText}
       </ContentWrapper>
     </Layout>
   );
