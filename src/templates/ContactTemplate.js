@@ -39,7 +39,7 @@ const OpeningHours = styled.div({
 const ContactTemplate = () => (
   <Layout>
     <ContentWrapper>
-      <FountainHeading>Kontakt</FountainHeading>
+      <FountainHeading>KONTAKT</FountainHeading>
       <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
         <FontAwesomeIcon icon="map-marker-alt" style={{ marginRight: '4px' }} />
         Zvolenská cesta 85, Banská Bystrica

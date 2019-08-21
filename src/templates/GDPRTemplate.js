@@ -30,6 +30,7 @@ const GDPRTemplate = ({ gdprText }) => {
     <Layout>
       <ContentWrapper>
         <Paragraph
+          fontFamily= {theme.fontFamilies.dinPro.bold}
           fontSize={theme.fontSizes.medium}
           marginBottom="34px"
           marginTop="34px"

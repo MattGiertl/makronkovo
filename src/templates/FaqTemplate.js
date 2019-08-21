@@ -28,7 +28,7 @@ const FaqTemplate = ({ faqPairs }) => {
   return (
     <Layout>
       <ContentWrapper>
-        <FountainHeading>Časté otázky</FountainHeading>
+        <FountainHeading>ČASTÉ OTÁZKY</FountainHeading>
         {faqPairs}
       </ContentWrapper>
     </Layout>

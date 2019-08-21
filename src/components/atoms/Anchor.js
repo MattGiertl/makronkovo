@@ -30,12 +30,12 @@ const StyledAnchor = styled.a(
     }
   },
   props => ({
-    fontWeight: props.bold ? "bold" : "normal",
+    fontFamily: props.fontFamily ? props.fontFamily : theme.fontFamilies.dinPro.regular,
   })
 );
 
-const Anchor = ({ href, children, bold }) => (
-  <StyledAnchor href={href} bold={bold}>{children}</StyledAnchor>
+const Anchor = ({ href, children, fontFamily }) => (
+  <StyledAnchor href={href} fontFamily={fontFamily}>{children}</StyledAnchor>
 );
 
 export default Anchor;
