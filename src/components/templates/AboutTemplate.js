@@ -10,6 +10,8 @@ const ContentWrapper = styled.div({
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
+  boxShadow: '0px 10px 20px rgba(0, 0, 0, 0.12)',
+  margin: "20px 22%",
 });
 
 const AboutTemplate = () => {
@@ -46,8 +48,8 @@ const AboutTemplate = () => {
   return (
     <>
       <Layout>
+        <Heading>O NÁS</Heading>
         <ContentWrapper>
-          <Heading>O NÁS</Heading>
           {renderFirstCard()}
           {renderSecondCard()}
         </ContentWrapper>
