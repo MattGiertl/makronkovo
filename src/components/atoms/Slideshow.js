@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import '../../slideshow.css';
+import '../../stylesheets/slideshow.css';
 
 import Carousel from 'nuka-carousel';
 
