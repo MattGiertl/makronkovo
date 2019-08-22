@@ -56,7 +56,7 @@ const CollectionTemplate = ({ pageContext }) => {
   const { categoryItems, title, lightText, boldText } = pageContext;
 
   const renderCategoryItems = categoryItems.map(categoryItem => (
-    <Polaroid shadowed src={categoryItem.image}>
+    <Polaroid to={categoryItem.to} shadowed src={categoryItem.image}>
       <Paragraph>{categoryItem.categoryName}</Paragraph>
     </Polaroid>
   ));
