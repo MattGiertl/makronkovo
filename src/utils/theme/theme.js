@@ -30,7 +30,7 @@ const theme = {
   },
   fontSizes: {
     xxxl: '120px', // RENAME LATER
-    xxl: '90px',
+    xxl: '70px',
     xl: '30px',
     large: '22px', // used for headings
     medium: '19px',

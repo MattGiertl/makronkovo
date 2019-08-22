@@ -20,9 +20,9 @@ const NotFoundWrapper = styled.div({
 
 const StyledCake = styled.img({
   [mobileQuery]: {
-    margin: '15px auto 12px',
-    width: '138px',
-    height: '108px',
+    margin: '19px auto 12px',
+    width: '118px',
+    height: '88px',
   },
 
   [tabletQuery]: {
@@ -74,22 +74,22 @@ const StyledHeading = styled(Heading)(
     fontFamily: theme.fontFamilies.dinPro.bold,
     [mobileQuery]: {
       fontSize: theme.fontSizes.xxl,
-      margin: '10px',
+      margin: '0 0 15px',
     },
 
     [tabletQuery]: {
       fontSize: theme.fontSizes.xxxl,
-      margin: '70px 0 50px',
+      margin: '50px 0 40px',
     },
 
     [laptopQuery]: {
       fontSize: theme.fontSizes.xxxl,
-      margin: '50px 0 14px',
+      margin: '14px 0 40px',
     },
 
     [desktopQuery]: {
       fontSize: theme.fontSizes.xxxl,
-      margin: '50px 0 14px',
+      margin: '14px 0 40px',
     },
   },
   props => ({
@@ -119,13 +119,13 @@ const NotFoundTemplate = () => {
   return (
     <Layout>
       <NotFoundWrapper>
-        <StyledHeading tabletMarginTop="70px" tabletMarginBottom="50px">
+        <StyledHeading>
           404
         </StyledHeading>
         <StyledCake src={CakeImg} alt="Koláč" />
         <ContentWrapper>
           <MediumHeading>Hups, stránka sa nenašla.</MediumHeading>
-          <Paragraph textAlign="center">
+          <Paragraph textAlign="center" marginTop="20px">
             Ale chutné dezerty a torty sa pre Vás nájdu vždy :)
           </Paragraph>
           <Paragraph textAlign="center">Pozrite si našu ponuku.</Paragraph>
