@@ -1,6 +1,7 @@
 import React from 'react';
 import Paragraph from '../atoms/Paragraph';
 import styled from '@emotion/styled';
+import Image from '../atoms/Drawing';
 import { tabletQuery, mobileQuery, laptopQuery, desktopQuery } from '../../utils/mediaqueries';
 
 const StyledDiv = styled.div({
@@ -9,7 +10,7 @@ const StyledDiv = styled.div({
   justifyContent: 'center',
   alignItems: 'center',
   boxShadow: '0px 10px 20px rgba(0, 0, 0, 0.12)',
-  [mobileQuery]: { margin: '31px 10px' },
+  [mobileQuery]: { margin: '31px 20px' },
   [tabletQuery]: { margin: '31px 15% 40px' },
   [laptopQuery]: { margin: '31px 20% 40px' },
   [desktopQuery]: {
@@ -22,7 +23,7 @@ const ContentWrapper = styled.div({
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-  [mobileQuery]: { margin: '35px 55%' },
+  [mobileQuery]: { margin: '35px 10%' },
   [tabletQuery]: { margin: '35px 10%' },
   [laptopQuery]: { margin: '35px 10%' },
   [desktopQuery]: {
@@ -46,7 +47,7 @@ const TextWrapper = styled.div({
 const Card = ({ image, imageName, heading, paragraph, fontFamilyHeading, fontFamilyParagraph }) => (
   <StyledDiv>
     <ContentWrapper>
-      <img src={image} alt={imageName} />
+      <Image src={image} alt={imageName} />
       <TextWrapper>
         <Paragraph margin="20px 0" fontFamily={fontFamilyHeading}>
           {heading}
