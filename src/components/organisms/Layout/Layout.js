@@ -2,6 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 import './layout.css';
+import '../../../stylesheets/normalize.css';
 
 import NavBar from '../NavBar/Navbar';
 import Footer from '../../molecules/Footer';
