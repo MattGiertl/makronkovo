@@ -1,13 +1,13 @@
 {
   "slideshow": [
     {
-      "image": "img/products-full-width.jpg"
+      "image": "/img/products-full-width.jpg"
     },
     {
-      "image": "img/products-grid2.jpg"
+      "image": "/img/products-grid2.jpg"
     },
     {
-      "image": "img/home-jumbotron.jpg"
+      "image": "/img/home-jumbotron.jpg"
     }
   ],
   "sections": {
@@ -16,15 +16,15 @@
       "background": "#FCDFEB",
       "polaroids": [
         {
-          "image": "img/products-full-width.jpg",
+          "image": "/img/products-full-width.jpg",
           "heading": "TORTY NA MIERU"
         },
         {
-          "image": "img/products-full-width.jpg",
+          "image": "/img/products-full-width.jpg",
           "heading": "DEZERTY"
         },
         {
-          "image": "img/products-full-width.jpg",
+          "image": "/img/products-full-width.jpg",
           "heading": "CANDY BARY"
         }
       ]
@@ -34,19 +34,19 @@
       "background": "white",
       "polaroids": [
         {
-          "image": "img/products-full-width.jpg",
+          "image": "/img/products-full-width.jpg",
           "heading": "Vanilkovo-citrónový cheescake",
           "oldPrice": "22",
           "newPrice": "20"
         },
         {
-          "image": "img/products-full-width.jpg",
+          "image": "/img/products-full-width.jpg",
           "heading": "Macaron",
           "oldPrice": "0.90",
           "newPrice": "0.75"
         },
         {
-          "image": "img/products-full-width.jpg",
+          "image": "/img/products-full-width.jpg",
           "heading": "Eclair",
           "oldPrice": "2",
           "newPrice": "1.5"
@@ -58,16 +58,16 @@
       "background": "white",
       "posts": [
         {
-          "image": "img/products-full-width.jpg"
+          "image": "/img/products-full-width.jpg"
         },
         {
-          "image": "img/products-full-width.jpg"
+          "image": "/img/products-full-width.jpg"
         },
         {
-          "image": "img/products-full-width.jpg"
+          "image": "/img/products-full-width.jpg"
         },
         {
-          "image": "img/products-full-width.jpg"
+          "image": "/img/products-full-width.jpg"
         }
       ]
     },
@@ -76,17 +76,17 @@
       "background": "white",
       "polaroids": [
         {
-          "image": "img/products-full-width.jpg",
+          "image": "/img/products-full-width.jpg",
           "author": "@atelier_luka",
           "review": "Uzasna! ❤️"
         },
         {
-          "image": "img/products-full-width.jpg",
+          "image": "/img/products-full-width.jpg",
           "author": "@angiesdiary_",
           "review": "Ďakujem za najkrajšiu a najchutnejšiu tortu akú som mala 💗"
         },
         {
-          "image": "img/products-full-width.jpg",
+          "image": "/img/products-full-width.jpg",
           "author": "@katarina_kaA",
           "review": "A to aká je výborná ani písať nemusím ❤️"
         }
@@ -97,22 +97,22 @@
       "background": "white",
       "pictures": [
         {
-          "image": "img/products-full-width.jpg",
+          "image": "/img/products-full-width.jpg",
           "name": "Darinka",
           "position": "Šéfka"
         },
         {
-          "image": "img/products-full-width.jpg",
+          "image": "/img/products-full-width.jpg",
           "name": "Romana",
           "position": "Komunikácia"
         },
         {
-          "image": "img/products-full-width.jpg",
+          "image": "/img/products-full-width.jpg",
           "name": "Ivka",
           "position": "Cukrárka"
         },
         {
-          "image": "img/products-full-width.jpg",
+          "image": "/img/products-full-width.jpg",
           "name": "Veronika",
           "position": "Cukrárka"
         }
