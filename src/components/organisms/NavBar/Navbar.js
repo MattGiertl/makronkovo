@@ -32,7 +32,7 @@ const NavBar = () => {
         <NavLink to="/">
           <Logo show />
         </NavLink>
-        <NavLink marginTop="50px" to="/">
+        <NavLink marginTop="50px" to="/o-nas">
           O NÁS
         </NavLink>
         <NavLink to="/">GALÉRIA</NavLink>
