@@ -1,19 +1,17 @@
 import React from 'react';
-import '../normalize.css';
-
-import mainPageData from '../data/mainsite.json';
-
-import MainPageTemplate from '../templates/MainPageTemplate/MainPageTemplate';
-import Polaroid from '../components/molecules/Polaroid';
-import Paragraph from '../components/atoms/Paragraph';
+import { graphql, useStaticQuery } from 'gatsby';
 
 import theme from '../utils/theme/theme';
 
+import Paragraph from '../components/atoms/Paragraph';
 import SquarePic from '../components/atoms/SquarePic';
 import LabeledSquarePic from '../components/molecules/LabeledSquarePic';
+import Polaroid from '../components/molecules/Polaroid';
+import MainPageTemplate from '../templates/MainPageTemplate/MainPageTemplate';
 
 const MainPage = () => {
-  const { sections, slideshow } = mainPageData;
+  const data = useStaticQuery(mainPageQuery);
+  const { slideshow, sections } = data.allDataJson.nodes[0];
   const { offer, discount, instagram, reference, team } = sections;
 
   const renderOfferPolaroids = offer.polaroids.map(offer => (
@@ -102,5 +100,62 @@ const MainPage = () => {
     />
   );
 };
+
+const mainPageQuery = graphql`
+  query MainPageQuery {
+    allDataJson {
+      nodes {
+        slideshow {
+          image
+        }
+        sections {
+          offer {
+            heading
+            background
+            polaroids {
+              heading
+              image
+            }
+          }
+          discount {
+            heading
+            background
+            polaroids {
+              heading
+              image
+              newPrice
+              oldPrice
+            }
+          }
+          instagram {
+            heading
+            background
+            posts {
+              image
+            }
+          }
+          reference {
+            heading
+            background
+            polaroids {
+              review
+              author
+              image
+            }
+          }
+          team {
+            background
+            heading
+            pictures {
+              image
+              name
+              position
+            }
+          }
+        }
+      }
+    }
+  }
+`;
 
 export default MainPage;
