@@ -3,20 +3,38 @@ const path = require('path');
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
 
-  const collectionTemplate = path.resolve(`src/templates/CollectionTemplate.js`);
+  const templatePath = 'src/templates';
+
+  const collectionTemplate = path.resolve(`${templatePath}/CollectionTemplate.js`);
+  const categoryItemTemplate = path.resolve(`${templatePath}/CategoryItemTemplate.js`);
 
   const result = await graphql(`
     {
       allCategoriesJson {
         edges {
           node {
+            boldText
+            lightText
             title
             to
-            lightText
-            boldText
             categoryItems {
               categoryName
               image
+              to
+            }
+          }
+        }
+      }
+      allCategoryItemsJson {
+        edges {
+          node {
+            title
+            to
+            items {
+              image
+              newPrice
+              oldPrice
+              title
               to
             }
           }
@@ -34,6 +52,14 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     createPage({
       path: node.to,
       component: collectionTemplate,
+      context: { ...node },
+    });
+  });
+
+  result.data.allCategoryItemsJson.edges.forEach(({ node }) => {
+    createPage({
+      path: node.to,
+      component: categoryItemTemplate,
       context: { ...node },
     });
   });

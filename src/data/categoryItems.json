@@ -1,44 +1,52 @@
 [
   {
     "title": "CHEESECAKY",
+    "to": "/dezerty/cheesecaky",
     "items": [
       {
+        "image": "/img/cheesecake.jpg",
         "title": "Vanilkovo-citrónový cheesecake",
         "oldPrice": "22€",
         "newPrice": "20€",
         "to": "/dezerty/cheesecaky/vanilkovo-citronovy-cheesecake"
       },
       {
+        "image": "/img/cheesecake.jpg",
         "title": "Karamelový s lieskovcami",
         "oldPrice": "",
         "newPrice": "22€",
         "to": "/dezerty/cheesecaky/karamelovy-s-lieskovcami"
       },
       {
+        "image": "/img/cheesecake.jpg",
         "title": "Čucoriedkový",
         "oldPrice": "",
         "newPrice": "22€",
         "to": "/dezerty/cheesecaky/cucoriedkovy"
       },
       {
+        "image": "/img/cheesecake.jpg",
         "title": "Kokosový",
         "oldPrice": "",
         "newPrice": "22€",
         "to": "/dezerty/cheesecaky/kokosovy"
       },
       {
+        "image": "/img/cheesecake.jpg",
         "title": "Karamel a jablkové pyré",
         "oldPrice": "",
         "newPrice": "22€",
         "to": "/dezerty/cheesecaky/karamel-a-jablkove-pyre"
       },
       {
+        "image": "/img/cheesecake.jpg",
         "title": "Nepečený cutrónový",
         "oldPrice": "22€",
         "newPrice": "22€",
         "to": "/dezerty/cheesecaky/nepeceny-citronovy"
       },
       {
+        "image": "/img/cheesecake.jpg",
         "title": "Nepečený čucoriedkový",
         "oldPrice": "",
         "newPrice": "22€",
