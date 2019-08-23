@@ -132,7 +132,176 @@
         "title": "Šťavnatá čokoládová torta so slaným karamelom",
         "description": "",
         "oldPrice": "",
-        "newPrice": "24"
+        "newPrice": "24",
+        "to": "/dezerty/torty/cokoladova-torta-so-slanym-karamelom"
+      },
+      {
+        "image": "/img/cheesecake.jpg",
+        "title": "Brownie s krémom z mascarpone a citrónovým lemon crud",
+        "description": "",
+        "oldPrice": "",
+        "newPrice": "24",
+        "to": "/dezerty/torty/brownie-s-kremom"
+      }
+    ]
+  },
+  {
+    "title": "TARTY",
+    "to": "/dezerty/tarty",
+    "items": [
+      {
+        "image": "/img/cheesecake.jpg",
+        "title": "Citrónový tart s pusinkami",
+        "description": "Krehký kakaový tart s osviežujúcim citrónovým krémom a sladučkými penovými meringues pusinkami",
+        "oldPrice": "",
+        "newPrice": "22,50",
+        "to": "/dezerty/tarty/citronovy-s-pusinkami"
+      },
+      {
+        "image": "/img/cheesecake.jpg",
+        "title": "Tart čokoládový s gaštanovým pyré",
+        "description": "Kakaový tart s gaštanovým pyré, pikantným džemom a ganache z horkej čokolády a rumu",
+        "oldPrice": "",
+        "newPrice": "22,50",
+        "to": "/dezerty/tarty/cokoladovy-s-gastanovym-pyre"
+      },
+      {
+        "image": "/img/cheesecake.jpg",
+        "title": "Tart s čerstvým ovocím, bielou ganache a kokosom",
+        "description": "Kakaový tart naplnený čerstvými malinami,preliaty bielou ganache a bohato zasypaný kokosom",
+        "oldPrice": "",
+        "newPrice": "22,50",
+        "to": "/dezerty/tarty/tart-s-cerstvym-ovocim"
+      },
+      {
+        "image": "/img/cheesecake.jpg",
+        "title": "Tart so slaným karamelom a čokoládovou ganache",
+        "description": "",
+        "oldPrice": "",
+        "newPrice": "22,50",
+        "to": "/dezerty/tarty/tart-so-slanym-karamelom"
+      }
+    ]
+  },
+  {
+    "title": "RAŇAJKOVÉ KOLÁČE",
+    "to": "/dezerty/ranajkove-kolace",
+    "items": [
+      {
+        "image": "/img/cheesecake.jpg",
+        "title": "Čokoládová Babka",
+        "description": "Celosvetovo známy dezert, kysnutá babka z ktorej čokoláda doslova vyteká",
+        "oldPrice": "",
+        "newPrice": "14",
+        "to": "/dezerty/ranajkove-kolace/cokoladova-babka"
+      },
+      {
+        "image": "/img/cheesecake.jpg",
+        "title": "Tvarohová Bábovka",
+        "description": "",
+        "oldPrice": "",
+        "newPrice": "11",
+        "to": "/dezerty/ranajkove-kolace/tvarohova-babovka"
+      },
+      {
+        "image": "/img/cheesecake.jpg",
+        "title": "Šťavnatý citrónový chlebík",
+        "description": "",
+        "oldPrice": "",
+        "newPrice": "12",
+        "to": "/dezerty/ranajkove-kolace/stavnaty-citronovy-chlebik"
+      },
+      {
+        "image": "/img/cheesecake.jpg",
+        "title": "Banánový chlebík",
+        "description": "",
+        "oldPrice": "",
+        "newPrice": "14",
+        "to": "/dezerty/ranajkove-kolace/bananovy-chlebik"
+      }
+    ]
+  },
+  {
+    "title": "DEZERTY KUSOVKY",
+    "to": "/dezerty/kusovky",
+    "items": [
+      {
+        "image": "/img/cheesecake.jpg",
+        "title": "Macaron",
+        "description": "",
+        "oldPrice": "",
+        "newPrice": "0,75",
+        "to": "/dezerty/kusovky/macaron"
+      },
+      {
+        "image": "/img/cheesecake.jpg",
+        "title": "Paris Brest s praliné orieškovým krémom",
+        "description": "",
+        "oldPrice": "",
+        "newPrice": "0,75",
+        "to": "/dezerty/kusovky/paris-brest"
+      },
+      {
+        "image": "/img/cheesecake.jpg",
+        "title": "Tartletka",
+        "description": "",
+        "oldPrice": "",
+        "newPrice": "2,10",
+        "to": "/dezerty/kusovky/tartletka"
+      },
+      {
+        "image": "/img/cheesecake.jpg",
+        "title": "Pavlovka hniezdo s mascarpone a sezónnym ovocím",
+        "description": "",
+        "oldPrice": "",
+        "newPrice": "2,20",
+        "to": "/dezerty/kusovky/pavlovka-hniezdo"
+      }
+    ]
+  },
+  {
+    "title": "DEZERTY V POHÁRIKU",
+    "to": "/dezerty/v-pohariku",
+    "items": [
+      {
+        "image": "/img/cheesecake.jpg",
+        "title": "Tiramisu s jedlou zemou v črepníku",
+        "description": "",
+        "oldPrice": "",
+        "newPrice": "2",
+        "to": "/dezerty/kusovky/tiramisu"
+      },
+      {
+        "image": "/img/cheesecake.jpg",
+        "title": "Creme brullee",
+        "description": "",
+        "oldPrice": "",
+        "newPrice": "1,80",
+        "to": "/dezerty/kusovky/creme-brullee"
+      },
+      {
+        "image": "/img/cheesecake.jpg",
+        "title": "Brownie s limoncello krémom",
+        "description": "",
+        "oldPrice": "",
+        "newPrice": "2,20",
+        "to": "/dezerty/kusovky/brownie-s-limoncello-kremom"
+      },
+      {
+        "image": "/img/cheesecake.jpg",
+        "title": "Panna cota",
+        "description": "Rôzne príchute",
+        "oldPrice": "",
+        "newPrice": "1,80",
+        "to": "/dezerty/kusovky/panna-cota"
+      },
+      {
+        "image": "/img/cheesecake.jpg",
+        "title": "Hruškové tiramisu bezlepkové",
+        "description": "",
+        "oldPrice": "",
+        "newPrice": "1,80",
+        "to": "/dezerty/kusovky/hruskove-tiramisu"
       }
     ]
   }
