@@ -7,7 +7,7 @@
         "image": "/img/cheesecake.jpg",
         "title": "Vanilkovo-citrónový cheesecake",
         "description": "",
-        "isSeasonsal": false,
+        "isSeasonal": false,
         "oldPrice": "22",
         "newPrice": "20",
         "to": "/dezerty/cheesecaky/vanilkovo-citronovy-cheesecake"
@@ -16,16 +16,16 @@
         "image": "/img/cheesecake.jpg",
         "title": "Karamelový s lieskovcami",
         "description": "",
-        "isSeasonsal": false,
+        "isSeasonal": false,
         "oldPrice": "",
         "newPrice": "22",
         "to": "/dezerty/cheesecaky/karamelovy-s-lieskovcami"
       },
       {
         "image": "/img/cheesecake.jpg",
-        "title": "Čucoriedkový",
+        "title": "Čučoriedkový",
         "description": "",
-        "isSeasonsal": false,
+        "isSeasonal": false,
         "oldPrice": "",
         "newPrice": "22",
         "to": "/dezerty/cheesecaky/cucoriedkovy"
@@ -34,7 +34,7 @@
         "image": "/img/cheesecake.jpg",
         "title": "Kokosový",
         "description": "",
-        "isSeasonsal": false,
+        "isSeasonal": false,
         "oldPrice": "",
         "newPrice": "22",
         "to": "/dezerty/cheesecaky/kokosovy"
@@ -43,7 +43,7 @@
         "image": "/img/cheesecake.jpg",
         "title": "Karamel a jablkové pyré",
         "description": "",
-        "isSeasonsal": false,
+        "isSeasonal": false,
         "oldPrice": "",
         "newPrice": "22",
         "to": "/dezerty/cheesecaky/karamel-a-jablkove-pyre"
@@ -52,16 +52,16 @@
         "image": "/img/cheesecake.jpg",
         "title": "Nepečený citrónový",
         "description": "",
-        "isSeasonsal": false,
+        "isSeasonal": false,
         "oldPrice": "22",
         "newPrice": "22",
         "to": "/dezerty/cheesecaky/nepeceny-citronovy"
       },
       {
         "image": "/img/cheesecake.jpg",
-        "title": "Nepečený čucoriedkový",
+        "title": "Nepečený čučoriedkový",
         "description": "",
-        "isSeasonsal": false,
+        "isSeasonal": false,
         "oldPrice": "",
         "newPrice": "22",
         "to": "dezerty/cheesecaky/nepeceny-cucoriedkovy"
@@ -76,7 +76,7 @@
         "image": "/img/cheesecake.jpg",
         "title": "Švédska mandľová torta",
         "description": "Orechovo bielkový korpus a poctivý maslovo-žĺtkový krém prevoňaný rumom a plátky mandlí",
-        "isSeasonsal": false,
+        "isSeasonal": false,
         "oldPrice": "",
         "newPrice": "22",
         "to": "dezerty/bezlepkove-torty/svedska-mandlova-torta"
@@ -85,7 +85,7 @@
         "image": "/img/cheesecake.jpg",
         "title": "Švédska čokoládová torta",
         "description": "Orechovo bielkový korpus s čokoládovo- žĺtkovým krémom, prevoňaný rumom",
-        "isSeasonsal": false,
+        "isSeasonal": false,
         "oldPrice": "",
         "newPrice": "22",
         "to": "dezerty/bezlepkove-torty/svedska-cokoladova-torta"
@@ -94,7 +94,7 @@
         "image": "/img/cheesecake.jpg",
         "title": "Ferrero Rocher torta s wafličkami a lieskovcami",
         "description": "Torta na štýl známych cukríkov s chrumkavými wafličkami a lieskovými orechmi *wafličky v kréme obsahujú lepok",
-        "isSeasonsal": false,
+        "isSeasonal": false,
         "oldPrice": "",
         "newPrice": "22",
         "to": "dezerty/bezlepkove-torty/ferrero-rocher-torta"
@@ -103,7 +103,7 @@
         "image": "/img/cheesecake.jpg",
         "title": "Zamatová čokoládová kráska",
         "description": "Veľmi nadýchaná čokoládová torta na štýl pevnejšieho moussu",
-        "isSeasonsal": false,
+        "isSeasonal": false,
         "oldPrice": "",
         "newPrice": "22",
         "to": "dezerty/bezlepkove-torty/zamatova-cokoladova-kraska"
@@ -112,7 +112,7 @@
         "image": "/img/cheesecake.jpg",
         "title": "Čokoládová kráska s čerstvými malinami",
         "description": "Veľmi nadýchaná čokoládová torta na štýl pevnejšieho moussu",
-        "isSeasonsal": false,
+        "isSeasonal": false,
         "oldPrice": "",
         "newPrice": "24",
         "to": "dezerty/bezlepkove-torty/cokoladova-kraska-s-malinami"
@@ -121,7 +121,7 @@
         "image": "/img/cheesecake.jpg",
         "title": "Maková torta s mascarpone",
         "description": "Maková torta s citrónovým mascarpone a sviežim lemon curd",
-        "isSeasonsal": false,
+        "isSeasonal": false,
         "oldPrice": "",
         "newPrice": "23",
         "to": "dezerty/bezlepkove-torty/makova-torta-s-mascarpone"
@@ -136,7 +136,7 @@
         "image": "/img/cheesecake.jpg",
         "title": "Charlotta Berry",
         "description": "Domáce savoiardi piškóty s krémom z bobuľového ovocia a vrstvou vanilkového krému",
-        "isSeasonsal": false,
+        "isSeasonal": false,
         "oldPrice": "",
         "newPrice": "23",
         "to": "dezerty/torty/charlotta-berry"
@@ -145,7 +145,7 @@
         "image": "/img/cheesecake.jpg",
         "title": "Šťavnatá čokoládová torta so slaným karamelom",
         "description": "",
-        "isSeasonsal": false,
+        "isSeasonal": false,
         "oldPrice": "",
         "newPrice": "24",
         "to": "/dezerty/torty/cokoladova-torta-so-slanym-karamelom"
@@ -154,7 +154,7 @@
         "image": "/img/cheesecake.jpg",
         "title": "Brownie s krémom z mascarpone a citrónovým lemon crud",
         "description": "",
-        "isSeasonsal": false,
+        "isSeasonal": false,
         "oldPrice": "",
         "newPrice": "24",
         "to": "/dezerty/torty/brownie-s-kremom"
@@ -169,7 +169,7 @@
         "image": "/img/cheesecake.jpg",
         "title": "Citrónový tart s pusinkami",
         "description": "Krehký kakaový tart s osviežujúcim citrónovým krémom a sladučkými penovými meringues pusinkami",
-        "isSeasonsal": false,
+        "isSeasonal": false,
         "oldPrice": "",
         "newPrice": "22,50",
         "to": "/dezerty/tarty/citronovy-s-pusinkami"
@@ -178,7 +178,7 @@
         "image": "/img/cheesecake.jpg",
         "title": "Tart čokoládový s gaštanovým pyré",
         "description": "Kakaový tart s gaštanovým pyré, pikantným džemom a ganache z horkej čokolády a rumu",
-        "isSeasonsal": false,
+        "isSeasonal": false,
         "oldPrice": "",
         "newPrice": "22,50",
         "to": "/dezerty/tarty/cokoladovy-s-gastanovym-pyre"
@@ -187,7 +187,7 @@
         "image": "/img/cheesecake.jpg",
         "title": "Tart s čerstvým ovocím, bielou ganache a kokosom",
         "description": "Kakaový tart naplnený čerstvými malinami,preliaty bielou ganache a bohato zasypaný kokosom",
-        "isSeasonsal": false,
+        "isSeasonal": false,
         "oldPrice": "",
         "newPrice": "22,50",
         "to": "/dezerty/tarty/tart-s-cerstvym-ovocim"
@@ -196,7 +196,7 @@
         "image": "/img/cheesecake.jpg",
         "title": "Tart so slaným karamelom a čokoládovou ganache",
         "description": "",
-        "isSeasonsal": false,
+        "isSeasonal": false,
         "oldPrice": "",
         "newPrice": "22,50",
         "to": "/dezerty/tarty/tart-so-slanym-karamelom"
@@ -211,7 +211,7 @@
         "image": "/img/cheesecake.jpg",
         "title": "Čokoládová Babka",
         "description": "Celosvetovo známy dezert, kysnutá babka z ktorej čokoláda doslova vyteká",
-        "isSeasonsal": false,
+        "isSeasonal": false,
         "oldPrice": "",
         "newPrice": "14",
         "to": "/dezerty/ranajkove-kolace/cokoladova-babka"
@@ -220,7 +220,7 @@
         "image": "/img/cheesecake.jpg",
         "title": "Tvarohová Bábovka",
         "description": "",
-        "isSeasonsal": false,
+        "isSeasonal": false,
         "oldPrice": "",
         "newPrice": "11",
         "to": "/dezerty/ranajkove-kolace/tvarohova-babovka"
@@ -229,7 +229,7 @@
         "image": "/img/cheesecake.jpg",
         "title": "Šťavnatý citrónový chlebík",
         "description": "",
-        "isSeasonsal": false,
+        "isSeasonal": false,
         "oldPrice": "",
         "newPrice": "12",
         "to": "/dezerty/ranajkove-kolace/stavnaty-citronovy-chlebik"
@@ -238,7 +238,7 @@
         "image": "/img/cheesecake.jpg",
         "title": "Banánový chlebík",
         "description": "",
-        "isSeasonsal": false,
+        "isSeasonal": false,
         "oldPrice": "",
         "newPrice": "14",
         "to": "/dezerty/ranajkove-kolace/bananovy-chlebik"
@@ -253,7 +253,7 @@
         "image": "/img/cheesecake.jpg",
         "title": "Macaron",
         "description": "",
-        "isSeasonsal": false,
+        "isSeasonal": false,
         "oldPrice": "",
         "newPrice": "0,75",
         "to": "/dezerty/kusovky/macaron"
@@ -262,7 +262,7 @@
         "image": "/img/cheesecake.jpg",
         "title": "Paris Brest s praliné orieškovým krémom",
         "description": "",
-        "isSeasonsal": false,
+        "isSeasonal": false,
         "oldPrice": "",
         "newPrice": "0,75",
         "to": "/dezerty/kusovky/paris-brest"
@@ -271,7 +271,7 @@
         "image": "/img/cheesecake.jpg",
         "title": "Tartletka",
         "description": "",
-        "isSeasonsal": false,
+        "isSeasonal": false,
         "oldPrice": "",
         "newPrice": "2,10",
         "to": "/dezerty/kusovky/tartletka"
@@ -280,7 +280,7 @@
         "image": "/img/cheesecake.jpg",
         "title": "Pavlovka hniezdo s mascarpone a sezónnym ovocím",
         "description": "",
-        "isSeasonsal": false,
+        "isSeasonal": false,
         "oldPrice": "",
         "newPrice": "2,20",
         "to": "/dezerty/kusovky/pavlovka-hniezdo"
@@ -295,7 +295,7 @@
         "image": "/img/cheesecake.jpg",
         "title": "Tiramisu s jedlou zemou v črepníku",
         "description": "",
-        "isSeasonsal": false,
+        "isSeasonal": false,
         "oldPrice": "",
         "newPrice": "2",
         "to": "/dezerty/kusovky/tiramisu"
@@ -304,7 +304,7 @@
         "image": "/img/cheesecake.jpg",
         "title": "Creme brullee",
         "description": "",
-        "isSeasonsal": false,
+        "isSeasonal": false,
         "oldPrice": "",
         "newPrice": "1,80",
         "to": "/dezerty/kusovky/creme-brullee"
@@ -313,7 +313,7 @@
         "image": "/img/cheesecake.jpg",
         "title": "Brownie s limoncello krémom",
         "description": "",
-        "isSeasonsal": false,
+        "isSeasonal": false,
         "oldPrice": "",
         "newPrice": "2,20",
         "to": "/dezerty/kusovky/brownie-s-limoncello-kremom"
@@ -322,7 +322,7 @@
         "image": "/img/cheesecake.jpg",
         "title": "Panna cota",
         "description": "Rôzne príchute",
-        "isSeasonsal": false,
+        "isSeasonal": false,
         "oldPrice": "",
         "newPrice": "1,80",
         "to": "/dezerty/kusovky/panna-cota"
@@ -331,7 +331,7 @@
         "image": "/img/cheesecake.jpg",
         "title": "Hruškové tiramisu bezlepkové",
         "description": "",
-        "isSeasonsal": false,
+        "isSeasonal": false,
         "oldPrice": "",
         "newPrice": "1,80",
         "to": "/dezerty/kusovky/hruskove-tiramisu"

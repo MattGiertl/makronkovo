@@ -5,6 +5,7 @@ import Polaroid from '../components/molecules/Polaroid';
 import FountainHeading from '../components/molecules/FountainHeading';
 import Paragraph from '../components/atoms/Paragraph';
 import { mobileQuery, tabletQuery, laptopQuery, desktopQuery } from '../utils/mediaqueries';
+import theme from '../utils/theme/theme';
 
 const CategoriesWrapper = styled.div({
   display: 'flex',
@@ -34,9 +35,16 @@ const CategoryItemTemplate = ({ pageContext }) => {
 
   const renderItems = items.map(item => (
     <Polaroid shadowed src={item.image}>
-      <Paragraph>{item.title}</Paragraph>
-      {item.oldPrice && <Paragraph>{item.oldPrice}</Paragraph>}
-      <Paragraph>{item.newPrice}</Paragraph>
+      <Paragraph fontFamily={theme.fontFamilies.dinPro.bold}>{item.title}</Paragraph>
+      <div style={{ display: 'flex' }}>
+        {item.oldPrice && (
+          <Paragraph
+            marginRight="5px"
+            textDecoration="line-through"
+          >{`${item.oldPrice}€`}</Paragraph>
+        )}
+        <Paragraph>{`${item.newPrice}€`}</Paragraph>
+      </div>
     </Polaroid>
   ));
 
