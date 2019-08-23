@@ -6,51 +6,133 @@
       {
         "image": "/img/cheesecake.jpg",
         "title": "Vanilkovo-citrónový cheesecake",
-        "oldPrice": "22€",
-        "newPrice": "20€",
+        "description": "",
+        "oldPrice": "22",
+        "newPrice": "20",
         "to": "/dezerty/cheesecaky/vanilkovo-citronovy-cheesecake"
       },
       {
         "image": "/img/cheesecake.jpg",
         "title": "Karamelový s lieskovcami",
+        "description": "",
         "oldPrice": "",
-        "newPrice": "22€",
+        "newPrice": "22",
         "to": "/dezerty/cheesecaky/karamelovy-s-lieskovcami"
       },
       {
         "image": "/img/cheesecake.jpg",
         "title": "Čucoriedkový",
+        "description": "",
         "oldPrice": "",
-        "newPrice": "22€",
+        "newPrice": "22",
         "to": "/dezerty/cheesecaky/cucoriedkovy"
       },
       {
         "image": "/img/cheesecake.jpg",
         "title": "Kokosový",
+        "description": "",
         "oldPrice": "",
-        "newPrice": "22€",
+        "newPrice": "22",
         "to": "/dezerty/cheesecaky/kokosovy"
       },
       {
         "image": "/img/cheesecake.jpg",
         "title": "Karamel a jablkové pyré",
+        "description": "",
         "oldPrice": "",
-        "newPrice": "22€",
+        "newPrice": "22",
         "to": "/dezerty/cheesecaky/karamel-a-jablkove-pyre"
       },
       {
         "image": "/img/cheesecake.jpg",
-        "title": "Nepečený cutrónový",
-        "oldPrice": "22€",
-        "newPrice": "22€",
+        "title": "Nepečený citrónový",
+        "description": "",
+        "oldPrice": "22",
+        "newPrice": "22",
         "to": "/dezerty/cheesecaky/nepeceny-citronovy"
       },
       {
         "image": "/img/cheesecake.jpg",
         "title": "Nepečený čucoriedkový",
+        "description": "",
         "oldPrice": "",
-        "newPrice": "22€",
+        "newPrice": "22",
         "to": "dezerty/cheesecaky/nepeceny-cucoriedkovy"
+      }
+    ]
+  },
+  {
+    "title": "BEZLEPKOVÉ TORTY",
+    "to": "/dezerty/bezlepkove-torty",
+    "items": [
+      {
+        "image": "/img/cheesecake.jpg",
+        "title": "Švédska mandľová torta",
+        "description": "Orechovo bielkový korpus a poctivý maslovo-žĺtkový krém prevoňaný rumom a plátky mandlí",
+        "oldPrice": "",
+        "newPrice": "22",
+        "to": "dezerty/bezlepkove-torty/svedska-mandlova-torta"
+      },
+      {
+        "image": "/img/cheesecake.jpg",
+        "title": "Švédska čokoládová torta",
+        "description": "Orechovo bielkový korpus s čokoládovo- žĺtkovým krémom, prevoňaný rumom",
+        "oldPrice": "",
+        "newPrice": "22",
+        "to": "dezerty/bezlepkove-torty/svedska-cokoladova-torta"
+      },
+      {
+        "image": "/img/cheesecake.jpg",
+        "title": "Ferrero Rocher torta s wafličkami a lieskovcami",
+        "description": "Torta na štýl známych cukríkov s chrumkavými wafličkami a lieskovými orechmi *wafličky v kréme obsahujú lepok",
+        "oldPrice": "",
+        "newPrice": "22",
+        "to": "dezerty/bezlepkove-torty/ferrero-rocher-torta"
+      },
+      {
+        "image": "/img/cheesecake.jpg",
+        "title": "Zamatová čokoládová kráska",
+        "description": "Veľmi nadýchaná čokoládová torta na štýl pevnejšieho moussu",
+        "oldPrice": "",
+        "newPrice": "22",
+        "to": "dezerty/bezlepkove-torty/zamatova-cokoladova-kraska"
+      },
+      {
+        "image": "/img/cheesecake.jpg",
+        "title": "Čokoládová kráska s čerstvými malinami",
+        "description": "Veľmi nadýchaná čokoládová torta na štýl pevnejšieho moussu",
+        "oldPrice": "",
+        "newPrice": "24",
+        "to": "dezerty/bezlepkove-torty/cokoladova-kraska-s-malinami"
+      },
+      {
+        "image": "/img/cheesecake.jpg",
+        "title": "Maková torta s mascarpone",
+        "description": "Maková torta s citrónovým mascarpone a sviežim lemon curd",
+        "oldPrice": "",
+        "newPrice": "23",
+        "to": "dezerty/bezlepkove-torty/makova-torta-s-mascarpone"
+      }
+    ]
+  },
+  {
+    "title": "TORTY",
+    "to": "/dezerty/torty",
+    "items": [
+      {
+        "image": "/img/cheesecake.jpg",
+        "title": "Charlotta Berry",
+        "description": "Domáce savoiardi piškóty s krémom z bobuľového ovocia a vrstvou vanilkového krému",
+        "oldPrice": "",
+        "newPrice": "23",
+        "to": "dezerty/torty/charlotta-berry"
+      },
+      {
+        "image": "/img/cheesecake.jpg",
+        "title": "Šťavnatá čokoládová torta so slaným karamelom",
+        "description": "",
+        "oldPrice": "",
+        "newPrice": "24"
       }
     ]
   }
