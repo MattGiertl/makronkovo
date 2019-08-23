@@ -33,7 +33,7 @@ const CategoryItemTemplate = ({ pageContext }) => {
   const { items, title } = pageContext;
 
   const renderItems = items.map(item => (
-    <Polaroid shadowed src={item.image} >
+    <Polaroid shadowed src={item.image}>
       <Paragraph>{item.title}</Paragraph>
       {item.oldPrice && <Paragraph>{item.oldPrice}</Paragraph>}
       <Paragraph>{item.newPrice}</Paragraph>
@@ -43,9 +43,7 @@ const CategoryItemTemplate = ({ pageContext }) => {
   return (
     <Layout>
       <FountainHeading>{title}</FountainHeading>
-      <CategoriesWrapper>
-        {renderItems}
-      </CategoriesWrapper>
+      <CategoriesWrapper>{renderItems}</CategoriesWrapper>
     </Layout>
   );
 };
