@@ -33,6 +33,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
             items {
               description
               image
+              isSeasonal
               newPrice
               oldPrice
               title
