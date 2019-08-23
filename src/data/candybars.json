@@ -1,0 +1,124 @@
+[
+  {
+    "title": "KUSOVKY",
+    "to": "/candy-bar/kusovky",
+    "items": [
+      {
+        "image": "/img/cheesecake.jpg",
+        "title": "Pavlove hniezda",
+        "description": "Biele/kakaové s mascarpone a redukciou z lesného ovocia",
+        "smallSet": {
+          "amount": 12,
+          "price": 30,
+          "smallInfo": "1ks / 40g"
+        },
+        "largeSet": {
+          "amount": 12,
+          "price": 38,
+          "smallInfo": "1ks / 90g"
+        },
+        "to": "/candy-bar/kusovky/pavlove-hniezda"
+      },
+      {
+        "image": "/img/cheesecake.jpg",
+        "title": "Tartletky",
+        "description": "citrón s meringue pusinkami, čokoláda a ovocná redukcia, slaný karamel a pečené oriešky, gaštan, biela čokoláda s malinami a kokosom, cheesecake",
+        "smallSet": {
+          "amount": 12,
+          "price": 24,
+          "smallInfo": "1ks / 3cm"
+        },
+        "largeSet": {
+          "amount": 12,
+          "price": 36,
+          "smallInfo": "1ks / 7cm"
+        },
+        "to": "/candy-bar/kusovky/tartletky"
+      },
+      {
+        "image": "/img/cheesecake.jpg",
+        "title": "Cupcake",
+        "description": "Cupcake s čokoládovým krémom/mascarpone zdobené s ovocím alebo meringue pusinkou",
+        "smallSet": {
+          "amount": 20,
+          "price": 32,
+          "smallInfo": "1ks / 20g"
+        },
+        "largeSet": {
+          "amount": 12,
+          "price": 30,
+          "smallInfo": "1ks / 80g"
+        },
+        "to": "/candy-bar/kusovky/cupcake"
+      },
+      {
+        "image": "/img/cheesecake.jpg",
+        "title": "Popsticles",
+        "description": "Zdobené koláčíky na paličke",
+        "smallSet": {
+          "amount": "",
+          "price": "",
+          "smallInfo": ""
+        },
+        "largeSet": {
+          "amount": "",
+          "price": "",
+          "smallInfo": ""
+        },
+        "to": "/candy-bar/kusovky/popstickles"
+      },
+      {
+        "image": "/img/cheesecake.jpg",
+        "title": "Cupcake Deluxe",
+        "description": "Cupcake deluxe s buttercream a živými kvetmi s makronkou",
+        "smallSet": {
+          "amount": 20,
+          "price": 42,
+          "smallInfo": ""
+        },
+        "largeSet": {
+          "amount": 12,
+          "price": 40,
+          "smallInfo": ""
+        },
+        "to": "/candy-bar/kusovky/cupcake-deluxe"
+      },
+      {
+        "image": "/img/cheesecake.jpg",
+        "title": "Linecké srdcia",
+        "description": "Cupcake deluxe s buttercream a živými kvetmi s makronkou",
+        "smallSet": {
+          "amount": "",
+          "price": "",
+          "smallInfo": ""
+        },
+        "largeSet": {
+          "amount": 20,
+          "price": 16,
+          "smallInfo": "1ks / 5cm"
+        },
+        "to": "/candy-bar/kusovky/linecke-srdcia"
+      },
+      {
+        "image": "/img/cheesecake.jpg",
+        "title": "Meringue zliepané snehové ruže",
+        "description": "",
+        "smallSet": {
+          "amount": "",
+          "price": "",
+          "smallInfo": ""
+        },
+        "largeSet": {
+          "amount": 20,
+          "price": 30,
+          "smallInfo": ""
+        },
+        "to": "/candy-bar/kusovky/linecke-srdcia"
+      }
+    ]
+  },
+  {
+    "title": "ODPAĽOVANÉ CESTO",
+    "to": "/candy-bar/odpalovane-cesto"
+  }
+]

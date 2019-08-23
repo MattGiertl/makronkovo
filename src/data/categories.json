@@ -33,12 +33,12 @@
       {
         "categoryName": "DEZERTY KUSOVKY",
         "image": "/img/cake.jpg",
-        "to": "/dezerty/dezerty-kusovky"
+        "to": "/dezerty/kusovky"
       },
       {
         "categoryName": "DEZERTY V POHÁRIKU",
         "image": "/img/cake.jpg",
-        "to": "/dezerty/dezerty-v-pohariku"
+        "to": "/dezerty/v-pohariku"
       }
     ]
   },

@@ -25,12 +25,13 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           }
         }
       }
-      allCategoryItemsJson {
+      allDessertsJson {
         edges {
           node {
-            title
             to
+            title
             items {
+              description
               image
               newPrice
               oldPrice
@@ -56,7 +57,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     });
   });
 
-  result.data.allCategoryItemsJson.edges.forEach(({ node }) => {
+  result.data.allDessertsJson.edges.forEach(({ node }) => {
     createPage({
       path: node.to,
       component: categoryItemTemplate,
