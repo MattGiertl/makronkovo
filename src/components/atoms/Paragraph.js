@@ -30,6 +30,8 @@ const Paragraph = styled.p(
     [tabletQuery]: {
       width: props.tabletWidth,
       fontSize: props.tabletFontSize,
+      margin: props.tabletMargin,
+
     },
 
     [laptopQuery]: {
