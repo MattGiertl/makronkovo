@@ -30,6 +30,10 @@ const CategoriesWrapper = styled.div({
   },
 });
 
+const Description = styled.div({
+  display: 'flex',
+});
+
 const CategoryItemTemplate = ({ pageContext }) => {
   const { items, title } = pageContext;
 
@@ -38,7 +42,7 @@ const CategoryItemTemplate = ({ pageContext }) => {
       <Paragraph textAlign="center" fontFamily={theme.fontFamilies.dinPro.bold}>
         {item.title}
       </Paragraph>
-      <div style={{ display: 'flex' }}>
+      <Description>
         {item.oldPrice && (
           <Paragraph
             marginRight="5px"
@@ -46,7 +50,7 @@ const CategoryItemTemplate = ({ pageContext }) => {
           >{`${item.oldPrice}€`}</Paragraph>
         )}
         <Paragraph>{`${item.newPrice}€`}</Paragraph>
-      </div>
+      </Description>
     </Polaroid>
   ));
 
