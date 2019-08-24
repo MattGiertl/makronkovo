@@ -10,6 +10,7 @@ import Heading from '../components/atoms/Heading';
 import Price from '../components/molecules/Price';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import FountainHeading from '../components/molecules/FountainHeading';
+import Polaroid from '../components/molecules/Polaroid/Polaroid';
 
 const ContentWrapper = styled.div({
   display: 'flex',
@@ -54,7 +55,17 @@ const ContactInfo = styled.div({
 
 const DessertDetailTemplate = ({ pageContext }) => {
   const { fontSizes, fontFamilies } = theme;
-  const { description, image, newPrice, oldPrice, title, isSeasonal, isSet } = pageContext;
+  const {
+    description,
+    image,
+    newPrice,
+    oldPrice,
+    title,
+    isSeasonal,
+    isSet,
+    productCategoryTitle,
+    moreProducts,
+  } = pageContext;
 
   return (
     <Layout>
@@ -73,10 +84,7 @@ const DessertDetailTemplate = ({ pageContext }) => {
         </Heading>
         <Price oldPrice={oldPrice} newPrice={newPrice} />
         <ProductImage src={image} alt={image} />
-        <Paragraph fontSize={fontSizes.medium}>
-          Krehký kakaový tart s osviežujúcim citrónovým krémom a sladučkými penovými meringues
-          pusinkami
-        </Paragraph>
+        <Paragraph fontSize={fontSizes.medium}>{description}</Paragraph>
         <Paragraph margin="60px 0 20px">
           Objednávku nám prosím písomne zadajte emailom, sms alebo na naše sociálne siete.
         </Paragraph>
@@ -99,7 +107,12 @@ const DessertDetailTemplate = ({ pageContext }) => {
             makronkovo
           </Paragraph>
         </ContactInfo>
-        <FountainHeading>{`ĎALŠIE CHEESECAKY`}</FountainHeading>
+        <FountainHeading>{`ĎALŠIE ${productCategoryTitle}`}</FountainHeading>
+        {moreProducts.map(product => (
+          <Polaroid shadowed src={product.src} to={product.to}>
+            {product.title}
+          </Polaroid>
+        ))}
       </ContentWrapper>
     </Layout>
   );

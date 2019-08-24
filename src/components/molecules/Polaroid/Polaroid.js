@@ -1,7 +1,7 @@
 import React from 'react';
-import Wrapper from './Polaroid/Wrapper';
-import Image from './Polaroid/Image';
-import Content from './Polaroid/Content';
+import Wrapper from './Wrapper';
+import Image from './Image';
+import Content from './Content';
 
 const Polaroid = ({ children, src, shadowed, to }) => (
   <Wrapper shadowed={shadowed} to={to} disabled={!!to}>

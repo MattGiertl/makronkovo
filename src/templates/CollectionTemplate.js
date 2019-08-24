@@ -6,7 +6,7 @@ import styled from '@emotion/styled';
 
 import Paragraph from '../components/atoms/Paragraph';
 import FountainHeading from '../components/molecules/FountainHeading';
-import Polaroid from '../components/molecules/Polaroid';
+import Polaroid from '../components/molecules/Polaroid/Polaroid';
 import Layout from '../components/organisms/Layout/Layout';
 import theme from '../utils/theme/theme';
 
