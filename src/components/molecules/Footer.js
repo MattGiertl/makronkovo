@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import theme from '../../utils/theme/theme';
 import { mobileQuery, laptopQuery, desktopQuery, tabletQuery } from '../../utils/mediaqueries';
 import Paragraph from '../atoms/Paragraph';
-import Anchor from '../atoms/Anchor'
+import Anchor from '../atoms/Anchor';
 
 const FooterBackground = styled.div({
   display: 'flex',

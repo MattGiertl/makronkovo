@@ -29,7 +29,16 @@ const StyledAnchor = styled.a(
   }),
 );
 
-const Anchor = ({ href, children, fontFamily, mobileFontSize, tabletFontSize, laptopFontSize, desktopFontSize, mobileMargin }) => (
+const Anchor = ({
+  href,
+  children,
+  fontFamily,
+  mobileFontSize,
+  tabletFontSize,
+  laptopFontSize,
+  desktopFontSize,
+  mobileMargin,
+}) => (
   <StyledAnchor
     href={href}
     fontFamily={fontFamily}
