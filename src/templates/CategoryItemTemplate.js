@@ -30,13 +30,10 @@ const CategoriesWrapper = styled.div({
   },
 });
 
-<<<<<<< HEAD
 const Description = styled.div({
   display: 'flex',
 });
 
-=======
->>>>>>> da2e86938ca3c6f3423f33ae127dfe9e5c6db5e2
 const CategoryItemTemplate = ({ pageContext }) => {
   const { items, title } = pageContext;
 
@@ -45,11 +42,7 @@ const CategoryItemTemplate = ({ pageContext }) => {
       <Paragraph textAlign="center" fontFamily={theme.fontFamilies.dinPro.bold}>
         {item.title}
       </Paragraph>
-<<<<<<< HEAD
       <Description>
-=======
-      <div style={{ display: 'flex' }}>
->>>>>>> da2e86938ca3c6f3423f33ae127dfe9e5c6db5e2
         {item.oldPrice && (
           <Paragraph
             marginRight="5px"
@@ -57,11 +50,7 @@ const CategoryItemTemplate = ({ pageContext }) => {
           >{`${item.oldPrice}€`}</Paragraph>
         )}
         <Paragraph>{`${item.newPrice}€`}</Paragraph>
-<<<<<<< HEAD
       </Description>
-=======
-      </div>
->>>>>>> da2e86938ca3c6f3423f33ae127dfe9e5c6db5e2
     </Polaroid>
   ));
 
