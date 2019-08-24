@@ -7,6 +7,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const collectionTemplate = path.resolve(`${templatePath}/CollectionTemplate.js`);
   const categoryItemTemplate = path.resolve(`${templatePath}/CategoryItemTemplate.js`);
+  const dessertDetailTemplate = path.resolve(`${templatePath}/DessertDetailTemplate.js`);
 
   const result = await graphql(`
     {
@@ -63,6 +64,16 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       path: node.to,
       component: categoryItemTemplate,
       context: { ...node },
+    });
+  });
+
+  result.data.allDessertsJson.edges.forEach(({ node }) => {
+    node.items.map(dessert => {
+      createPage({
+        path: dessert.to,
+        component: dessertDetailTemplate,
+        context: { ...dessert },
+      });
     });
   });
 };

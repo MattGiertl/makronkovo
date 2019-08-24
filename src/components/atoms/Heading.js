@@ -6,12 +6,12 @@ const Heading = styled.h1(
   {
     color: theme.colors.mediumGold,
     letterSpacing: theme.letterSpacing.heading,
-    textAlign: 'center',
     lineHeight: '28px',
     margin: 0,
   },
 
   props => ({
+    textAlign: props.textAlign ? props.textAlign : 'center',
     fontFamily: props.fontFamily ? props.fontFamily : theme.fontFamilies.caslonAntique.regular,
     marginTop: props.marginTop,
     marginBottom: props.marginBottom ? props.marginBottom : '6px',

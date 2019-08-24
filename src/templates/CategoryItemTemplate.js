@@ -38,7 +38,7 @@ const CategoryItemTemplate = ({ pageContext }) => {
   const { items, title } = pageContext;
 
   const renderItems = items.map(item => (
-    <Polaroid shadowed src={item.image}>
+    <Polaroid shadowed src={item.image} to={item.to}>
       <Paragraph textAlign="center" fontFamily={theme.fontFamilies.dinPro.bold}>
         {item.title}
       </Paragraph>
