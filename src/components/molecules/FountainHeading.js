@@ -4,15 +4,19 @@ import styled from '@emotion/styled';
 import Fountain from '../atoms/Fountain';
 import { mobileQuery } from '../../utils/mediaqueries';
 
-const Wrapper = styled.div({
-  display: 'flex',
-  flexDirection: 'column',
-  margin: '0 5px 25px',
+const Wrapper = styled.div(
+  {
+    display: 'flex',
+    flexDirection: 'column',
 
-  [mobileQuery]: {
-    margin: '0 50px 25px',
+    [mobileQuery]: {
+      margin: '0 50px 25px',
+    },
   },
-});
+  props => ({
+    margin: props.margin ? props.margin : '0 5px 25px',
+  }),
+);
 
 const FountainHeading = ({ children }) => (
   <Wrapper>
