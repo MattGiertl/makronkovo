@@ -1,5 +1,5 @@
 import React from 'react';
-import Heading from '../components/molecules/FountainHeading';
+import FountainHeading from '../components/molecules/FountainHeading';
 import Layout from '../components/organisms/Layout/Layout';
 import styled from '@emotion/styled';
 import { tabletQuery } from '../utils/mediaqueries';
@@ -21,7 +21,7 @@ const ContentWrapper = styled.div(
 const AboutTemplate = ({ cards }) => {
   return (
     <Layout>
-      <Heading margin="0 5px 15px">O NÁS</Heading>
+      <FountainHeading margin="0 5px 15px">O NÁS</FountainHeading>
       <ContentWrapper>{cards}</ContentWrapper>
     </Layout>
   );
