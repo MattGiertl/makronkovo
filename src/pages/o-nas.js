@@ -16,7 +16,7 @@ const CardContent = ({
 }) => {
   return (
     <Card
-      boxShadow={isVisible ? '0px 10px 20px rgba(0, 0, 0, 0.12)' : 'normal'}
+      boxShadow={isVisible ? '0px 10px 20px rgba(0, 0, 0, 0.12)' : 'none'}
       image={image}
       imageName={imageName}
       heading={heading}
