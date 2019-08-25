@@ -149,7 +149,7 @@ const DessertDetailTemplate = ({ pageContext }) => {
           <Paragraph margin="10px 0" fontSize={fontSizes.small}>
             1800g
           </Paragraph>
-          <Heading fontFamily={fontFamilies.dinPro.bold} textAlign="left">
+          <Heading letterSpacing="0" fontFamily={fontFamilies.dinPro.bold} textAlign="left">
             {title}
           </Heading>
           <Price oldPrice={oldPrice} newPrice={newPrice} />
@@ -166,7 +166,7 @@ const DessertDetailTemplate = ({ pageContext }) => {
             <Paragraph margin="10px 0" fontSize={fontSizes.small}>
               1800g
             </Paragraph>
-            <Heading fontFamily={fontFamilies.dinPro.bold} textAlign="left">
+            <Heading letterSpacing="0" fontFamily={fontFamilies.dinPro.bold} textAlign="left">
               {title}
             </Heading>
             <Price oldPrice={oldPrice} newPrice={newPrice} />
