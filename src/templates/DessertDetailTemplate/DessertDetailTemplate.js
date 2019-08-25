@@ -60,6 +60,8 @@ const DessertDetailTemplate = ({ pageContext }) => {
     items,
   } = pageContext;
 
+  const moreProducts = items.filter(item => item.title !== title);
+
   return (
     <Layout>
       <ContentWrapper>
@@ -94,8 +96,10 @@ const DessertDetailTemplate = ({ pageContext }) => {
               {title}
             </Heading>
             <Price oldPrice={oldPrice} newPrice={newPrice} />
-            <Paragraph fontSize={fontSizes.medium}>{description}</Paragraph>
-            <Paragraph margin="60px 0 20px">
+            <Paragraph marginBottom="40px" fontSize={fontSizes.medium}>
+              {description}
+            </Paragraph>
+            <Paragraph marginBottom="20px">
               Objednávku nám prosím písomne zadajte emailom, sms alebo na naše sociálne siete.
             </Paragraph>
             <ContactInfo>
@@ -138,7 +142,7 @@ const DessertDetailTemplate = ({ pageContext }) => {
 
         <FountainHeading>{`ĎALŠIE ${productCategoryTitle}`}</FountainHeading>
         <MoreProductsWrapper>
-          {items.map(product => (
+          {moreProducts.map(product => (
             <Polaroid shadowed src={product.image} to={product.to}>
               <Paragraph>{product.title}</Paragraph>
               <Paragraph>{product.newPrice}€</Paragraph>
