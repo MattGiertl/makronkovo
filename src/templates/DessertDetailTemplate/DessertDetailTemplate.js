@@ -1,24 +1,28 @@
 import React from 'react';
-import Layout from '../../components/organisms/Layout/Layout';
+
 import styled from '@emotion/styled';
-import { mobileQuery, tabletQuery, laptopQuery, desktopQuery } from '../../utils/mediaqueries';
-import BackButton from '../../components/molecules/BackButton';
-import ProductLabel from '../../components/molecules/ProductLabel';
 import theme from '../../utils/theme/theme';
-import Paragraph from '../../components/atoms/Paragraph';
-import Heading from '../../components/atoms/Heading';
-import Price from '../../components/molecules/Price';
+import { mobileQuery, tabletQuery, laptopQuery, desktopQuery } from '../../utils/mediaqueries';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import FountainHeading from '../../components/molecules/FountainHeading';
-import Polaroid from '../../components/molecules/Polaroid/Polaroid';
+import Heading from '../../components/atoms/Heading';
+import Paragraph from '../../components/atoms/Paragraph';
 import Labels from '../../components/atoms/Labels';
 import InfoStrip from '../../components/atoms/InfoStrip';
-import Contact from '../../components/molecules/Contact';
 import MobileOnly from '../../components/atoms/MobileOnly';
 import ContactInfo from '../../components/atoms/ContactInfo';
 import MoreProductsWrapper from '../../components/atoms/MoreProductsWrapper';
 import ProductDetailImage from '../../components/atoms/ProducDetailtImage';
 import DesktopOnly from '../../components/atoms/DesktopOnly';
+
+import BackButton from '../../components/molecules/BackButton';
+import FountainHeading from '../../components/molecules/FountainHeading';
+import Price from '../../components/molecules/Price';
+import ProductLabel from '../../components/molecules/ProductLabel';
+import Polaroid from '../../components/molecules/Polaroid/Polaroid';
+import Contact from '../../components/molecules/Contact';
+
+import Layout from '../../components/organisms/Layout/Layout';
 
 const ContentWrapper = styled.div({
   display: 'flex',
