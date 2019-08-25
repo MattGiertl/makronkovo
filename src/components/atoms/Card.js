@@ -9,6 +9,7 @@ const StyledCard = styled.div(
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    transition: 'box-shadow 300ms',
   },
   props => ({
     boxShadow: props.boxShadow,
