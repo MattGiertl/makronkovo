@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import theme from '../../utils/theme/theme';
-import { mobileQuery } from '../../utils/mediaqueries';
+import { mobileQuery, desktopQuery } from '../../utils/mediaqueries';
 
 const BackButtonWrapper = styled.div({
   display: 'flex',
@@ -10,6 +10,10 @@ const BackButtonWrapper = styled.div({
 
   [mobileQuery]: {
     marginBottom: '50px',
+  },
+
+  [desktopQuery]: {
+    marginLeft: '2%',
   },
 });
 

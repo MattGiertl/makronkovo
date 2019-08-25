@@ -16,7 +16,7 @@ const CategoriesWrapper = styled.div({
   flexWrap: 'wrap',
 
   [mobileQuery]: {
-    margin: '0 35px',
+    margin: '0 15px',
   },
 
   [tabletQuery]: {

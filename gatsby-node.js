@@ -69,17 +69,13 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   result.data.allDessertsJson.edges.forEach(({ node }) => {
     const productCategoryTitle = node.title;
-    // const moreProducts = [];
-
-    // for (let i = 0; i < array.length; i++) {
-    //   moreProducts.append(node.items[i]);
-    // }
+    const items = node.items;
 
     node.items.map(dessert => {
       createPage({
         path: dessert.to,
         component: dessertDetailTemplate,
-        context: { ...dessert, productCategoryTitle },
+        context: { ...dessert, productCategoryTitle, items },
       });
     });
   });
