@@ -7,7 +7,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const collectionTemplate = path.resolve(`${templatePath}/CollectionTemplate.js`);
   const categoryItemTemplate = path.resolve(`${templatePath}/CategoryItemTemplate.js`);
-  const dessertDetailTemplate = path.resolve(`${templatePath}/DessertDetailTemplate.js`);
+  const dessertDetailTemplate = path.resolve(
+    `${templatePath}/DessertDetailTemplate/DessertDetailTemplate.js`,
+  );
 
   const result = await graphql(`
     {
