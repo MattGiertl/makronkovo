@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import theme from '../../../utils/theme/theme';
 import { tabletQuery } from '../../../utils/mediaqueries';
+import { Link } from 'gatsby';
 
 const Wrapper = styled.div(
   {
@@ -9,6 +10,8 @@ const Wrapper = styled.div(
     background: theme.colors.white,
     padding: '9px 9px 0',
     margin: '0 15px 40px',
+    cursor: 'pointer',
+    textDecoration: 'none',
 
     height: '19rem',
     width: '18rem',
@@ -30,4 +33,6 @@ const Wrapper = styled.div(
   }),
 );
 
-export default Wrapper;
+const PolaroidWrapper = Wrapper.withComponent(Link);
+
+export default PolaroidWrapper;

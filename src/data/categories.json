@@ -7,31 +7,38 @@
     "categoryItems": [
       {
         "categoryName": "CHEESECAKY",
-        "image": "/img/cake.jpg"
+        "image": "/img/cake.jpg",
+        "to": "/dezerty/cheesecaky"
       },
       {
         "categoryName": "BEZLEPKOVÉ TORTY",
-        "image": "/img/cake.jpg"
+        "image": "/img/cake.jpg",
+        "to": "/dezerty/bezlepkove-torty"
       },
       {
         "categoryName": "TORTY",
-        "image": "/img/cake.jpg"
+        "image": "/img/cake.jpg",
+        "to": "/dezerty/torty"
       },
       {
         "categoryName": "TARTY",
-        "image": "/img/cake.jpg"
+        "image": "/img/cake.jpg",
+        "to": "/dezerty/tarty"
       },
       {
         "categoryName": "RANAJKOVÉ KOLÁČE",
-        "image": "/img/cake.jpg"
+        "image": "/img/cake.jpg",
+        "to": "/dezerty/ranajkove-kolace"
       },
       {
         "categoryName": "DEZERTY KUSOVKY",
-        "image": "/img/cake.jpg"
+        "image": "/img/cake.jpg",
+        "to": "/dezerty/kusovky"
       },
       {
         "categoryName": "DEZERTY V POHÁRIKU",
-        "image": "/img/cake.jpg"
+        "image": "/img/cake.jpg",
+        "to": "/dezerty/v-pohariku"
       }
     ]
   },
@@ -43,23 +50,28 @@
     "categoryItems": [
       {
         "categoryName": "KUSOVKY",
-        "image": "/img/cake.jpg"
+        "image": "/img/cake.jpg",
+        "to": "/candy-bar/kusovky"
       },
       {
-        "categoryName": "OBALOVANÉ CESTO",
-        "image": "/img/cake.jpg"
+        "categoryName": "ODPALOVANÉ CESTO",
+        "image": "/img/cake.jpg",
+        "to": "/candy-bar/odpalovane-cesto"
       },
       {
         "categoryName": "TORTY A MINI KOCKY",
-        "image": "/img/cake.jpg"
+        "image": "/img/cake.jpg",
+        "to": "/candy-bar/torty-a-mini-kocky"
       },
       {
         "categoryName": "MAKRÓNKY",
-        "image": "/img/cake.jpg"
+        "image": "/img/cake.jpg",
+        "to": "/candy-bar/makronky"
       },
       {
         "categoryName": "DEZERTY V POHÁRIKU",
-        "image": "/img/cake.jpg"
+        "image": "/img/cake.jpg",
+        "to": "/candy-bar/dezerty-v-pohariku"
       }
     ]
   }

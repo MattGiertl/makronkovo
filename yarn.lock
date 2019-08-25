@@ -11529,6 +11529,15 @@ react-move@^5.0.0:
     prop-types "^15.7.2"
     react-lifecycles-compat "^3.0.4"
 
+react-on-screen@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/react-on-screen/-/react-on-screen-2.1.1.tgz#c66d78a8187457262d57f71766d1733f875e727a"
+  integrity sha512-mV2Ntd61ncJ9nBsXF/p5Y6lMDGTTwXTGvHaal4b7O1eX3GwSwDXKAe7KKXTf/4Oc1BuYc7j5Sy0XdT89w/MjDA==
+  dependencies:
+    lodash.throttle "^4.1.1"
+    prop-types "^15.6.0"
+    shallowequal "^1.0.2"
+
 react-onclickoutside@^6.5.0:
   version "6.8.0"
   resolved "https://registry.yarnpkg.com/react-onclickoutside/-/react-onclickoutside-6.8.0.tgz#9f91b5b3ed59f4d9e43fd71620dc200773a4d569"

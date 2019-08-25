@@ -11,8 +11,9 @@ const Input = styled.input(
     color: theme.colors.mediumGold,
     textAlign: 'center',
 
-    '&:placeholder': {
+    '::placeholder': {
       color: theme.colors.mediumGold,
+      opacity: 0.5
     },
 
     [mobileQuery]: {

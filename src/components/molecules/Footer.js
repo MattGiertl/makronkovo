@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import theme from '../../utils/theme/theme';
 import { mobileQuery, laptopQuery, desktopQuery, tabletQuery } from '../../utils/mediaqueries';
 import Paragraph from '../atoms/Paragraph';
+import Anchor from '../atoms/Anchor';
 
 const FooterBackground = styled.div({
   display: 'flex',
@@ -45,13 +46,16 @@ const Footer = () => (
     <Paragraph mobileMarginTop="16px" fontFamily={theme.fontFamilies.dinPro.regular}>
       &copy; Makronkovo, 2019
     </Paragraph>
-    <Paragraph
+    <Anchor
       mobileMargin="auto 0 20px"
-      fontFamily={theme.fontFamilies.dinPro.regular}
-      fontSize={theme.fontSizes.small}
+      mobileFontSize={theme.fontSizes.small}
+      tabletFontSize={theme.fontSizes.small}
+      laptopFontSize={theme.fontSizes.small}
+      desktopFontSize={theme.fontSizes.small}
+      href="/gdpr"
     >
       Newsletter - Spracovanie osobných údajov
-    </Paragraph>
+    </Anchor>
   </FooterBackground>
 );
 

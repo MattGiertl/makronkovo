@@ -3,8 +3,8 @@ import Wrapper from './Polaroid/Wrapper';
 import Image from './Polaroid/Image';
 import Content from './Polaroid/Content';
 
-const Polaroid = ({ children, src, shadowed }) => (
-  <Wrapper shadowed={shadowed}>
+const Polaroid = ({ children, src, shadowed, to }) => (
+  <Wrapper shadowed={shadowed} to={to} disabled={!!to}>
     <Image src={src} alt="Polaroid" />
     <Content>{children}</Content>
   </Wrapper>

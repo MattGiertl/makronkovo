@@ -12,6 +12,7 @@ import DoubleCake from '../../static/assets/DoubleCake.png';
 import Anchor from '../components/atoms/Anchor';
 import CakeType from '../components/molecules/CakeType';
 import MiniCake from '../../static/assets/Group.png';
+import Card from '../components/atoms/Card';
 
 
 const ContentWrapper = styled.div({
@@ -45,26 +46,6 @@ const TypeWrapper = styled.div({
   justifyContent: 'center',
   alignItems: 'center',
   flexWrap: 'wrap'
-});
-
-const SizeConfig = styled.div({
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  alignItems: 'center',
-  boxShadow: '0px 10px 20px rgba(0, 0, 0, 0.12)',
-  [mobileQuery]: {
-    width: '90%',
-  },
-  [tabletQuery]: {
-    width: '80%',
-  },
-  [laptopQuery]: {
-    width: '60%',
-  },
-  [desktopQuery]: {
-    width: '60%',
-  },
 });
 
 const CakeConfigTemplate = () => {
@@ -112,7 +93,7 @@ const CakeConfigTemplate = () => {
             makronkovo
           </Anchor>
         </ContactWrapper>
-        <SizeConfig>
+        <Card>
           <img src={NumberOne} alt="prvý odsek" />
           <Paragraph margin="9px" fontSize={theme.fontSizes.large}>
             VELKOSŤ
@@ -145,7 +126,7 @@ const CakeConfigTemplate = () => {
           >
             5 € / porcia
           </Paragraph>
-        </SizeConfig>
+        </Card>
       </ContentWrapper>
     </Layout>
   );

@@ -28,14 +28,21 @@ margin: '0 40px',
   },
 });
 
+const ListItem = styled.li({
+  fontFamily: theme.fontFamilies.dinPro.regular,
+  color: theme.colors.mediumGold,
+})
+
 const CakeType = ({ src, imgName, type, weight, height, portions, price }) => (
 <TypeWrapper>
     <img src={src} alt={imgName} />
     <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} marginTop='19px'>{type}</Paragraph>
-    <Paragraph>{weight}</Paragraph>
-    <Paragraph>{height}</Paragraph>
-    <Paragraph>{portions}</Paragraph>
-    <Paragraph marginTop='22px' mobileMargin='22px'>{price}</Paragraph>
+    <ul>
+      <ListItem>{weight}</ListItem>
+      <ListItem>{height}</ListItem>
+      <ListItem>{portions}</ListItem>
+      <ListItem>{price}</ListItem>
+    </ul>
 </TypeWrapper>
 );
 

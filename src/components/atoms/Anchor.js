@@ -10,27 +10,44 @@ const StyledAnchor = styled.a(
   },
   props => ({
     fontFamily: props.fontFamily ? props.fontFamily : theme.fontFamilies.dinPro.regular,
-    lineHeight: props.lineHeight,
     [mobileQuery]: {
-      fontSize: props.fontSize ? props.fontSize : theme.fontSizes.small,
+      fontSize: props.mobileFontSize ? props.mobileFontSize : theme.fontSizes.small,
+      margin: props.mobileMargin,
     },
 
     [tabletQuery]: {
-      fontSize: props.fontSize ? props.fontSize : theme.fontSizes.medium,
+      fontSize: props.tabletFontSize ? props.tabletFontSize : theme.fontSizes.medium,
     },
 
     [laptopQuery]: {
-      fontSize: props.fontSize ? props.fontSize : theme.fontSizes.medium,
+      fontSize: props.laptopFontSize ? props.laptopFontSize : theme.fontSizes.medium,
     },
 
     [desktopQuery]: {
-      fontSize: props.fontSize ? props.fontSize : theme.fontSizes.medium,
+      fontSize: props.desktopFontSize ? props.desktopFontSize : theme.fontSizes.medium,
     },
   }),
 );
 
-const Anchor = ({ href, children, fontFamily, lineHeight, fontSize }) => (
-  <StyledAnchor href={href} fontFamily={fontFamily} lineHeight={lineHeight} fontSize={fontSize}>
+const Anchor = ({
+  href,
+  children,
+  fontFamily,
+  mobileFontSize,
+  tabletFontSize,
+  laptopFontSize,
+  desktopFontSize,
+  mobileMargin,
+}) => (
+  <StyledAnchor
+    href={href}
+    fontFamily={fontFamily}
+    mobileFontSize={mobileFontSize}
+    tabletFontSize={tabletFontSize}
+    laptopFontSize={laptopFontSize}
+    desktopFontSize={desktopFontSize}
+    mobileMargin={mobileMargin}
+  >
     {children}
   </StyledAnchor>
 );
