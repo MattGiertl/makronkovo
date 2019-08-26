@@ -53,15 +53,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
               to
               description
               image
-              largeSet {
+              setInfo {
+                size
                 amount
-                price
-                smallInfo
-              }
-              smallSet {
-                amount
-                price
-                smallInfo
+                unitSize
               }
             }
           }

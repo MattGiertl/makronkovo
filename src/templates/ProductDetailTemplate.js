@@ -61,6 +61,7 @@ const ProductDetailTemplate = ({ pageContext }) => {
     isSet,
     productCategoryTitle,
     items,
+    setInfo,
   } = pageContext;
 
   const moreProducts = items.filter(item => item.title !== title);
@@ -79,8 +80,9 @@ const ProductDetailTemplate = ({ pageContext }) => {
             {weight}
           </Paragraph>
           <SetCards>
-            <SetCard size="malé" amount="12ks 30" unitSize="1ks / 40g" />
-            <SetCard />
+            {setInfo.map(set => (
+              <SetCard size={set.size} amount={set.amount} unitSize={set.unitSize} />
+            ))}
           </SetCards>
           <Heading letterSpacing="0" fontFamily={fontFamilies.dinPro.bold} textAlign="left">
             {title}
@@ -103,8 +105,9 @@ const ProductDetailTemplate = ({ pageContext }) => {
               {title}
             </Heading>
             <SetCards>
-              <SetCard size="malé" amount="12ks 30" unitSize="1ks / 40g" />
-              <SetCard />
+              {setInfo.map(set => (
+                <SetCard size={set.size} amount={set.amount} unitSize={set.unitSize} />
+              ))}
             </SetCards>
             {newPrice && <Price oldPrice={oldPrice} newPrice={newPrice} />}
             <Paragraph marginBottom="40px" fontSize={fontSizes.medium}>
