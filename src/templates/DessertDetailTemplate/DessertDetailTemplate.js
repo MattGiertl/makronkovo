@@ -27,6 +27,7 @@ import Layout from '../../components/organisms/Layout/Layout';
 const ContentWrapper = styled.div({
   display: 'flex',
   flexDirection: 'column',
+  maxWidth: '1100px',
 
   [mobileQuery]: {
     margin: '0 15px 50px',
@@ -37,11 +38,11 @@ const ContentWrapper = styled.div({
   },
 
   [laptopQuery]: {
-    margin: '0 10% 50px',
+    margin: '0 auto 50px',
   },
 
   [desktopQuery]: {
-    margin: '0 20% 50px',
+    margin: '0 auto 50px',
   },
 });
 
@@ -144,8 +145,8 @@ const DessertDetailTemplate = ({ pageContext }) => {
         <MoreProductsWrapper>
           {moreProducts.map(product => (
             <Polaroid shadowed src={product.image} to={product.to}>
-              <Paragraph>{product.title}</Paragraph>
-              <Paragraph>{product.newPrice}€</Paragraph>
+              <Paragraph lineHeight="24px">{product.title}</Paragraph>
+              <Paragraph lineHeight="24px">{product.newPrice}€</Paragraph>
             </Polaroid>
           ))}
         </MoreProductsWrapper>

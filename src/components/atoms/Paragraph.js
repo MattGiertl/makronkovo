@@ -5,7 +5,6 @@ import { mobileQuery, tabletQuery, desktopQuery, laptopQuery } from '../../utils
 const Paragraph = styled.p(
   {
     color: theme.colors.mediumGold,
-    lineHeight: '19px',
     margin: '0',
   },
   props => ({
