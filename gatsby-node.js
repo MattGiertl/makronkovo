@@ -49,15 +49,15 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
             title
             to
             items {
-              title
-              to
               description
               image
               setInfo {
-                size
                 amount
+                size
                 unitSize
               }
+              title
+              to
             }
           }
         }
