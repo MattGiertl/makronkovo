@@ -30,19 +30,33 @@ margin: '0 40px',
 
 const ListItem = styled.li({
   fontFamily: theme.fontFamilies.dinPro.regular,
+  fontSize: theme.fontSizes.medium,
   color: theme.colors.mediumGold,
+},
+props => ({
+  marginTop: props.marginTop
 })
+);
+
+const UnorderList = styled.ul({
+  listStyleType: 'none',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  paddingInlineStart: "0px",
+  marginBlockEnd: '0px'
+});
 
 const CakeType = ({ src, imgName, type, weight, height, portions, price }) => (
 <TypeWrapper>
     <img src={src} alt={imgName} />
-    <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} marginTop='19px'>{type}</Paragraph>
-    <ul>
+    <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} fontSize={theme.fontSizes.medium} marginTop='19px'>{type}</Paragraph>
+    <UnorderList>
       <ListItem>{weight}</ListItem>
       <ListItem>{height}</ListItem>
       <ListItem>{portions}</ListItem>
-      <ListItem>{price}</ListItem>
-    </ul>
+      <ListItem marginTop="20px">{price}</ListItem>
+    </UnorderList>
 </TypeWrapper>
 );
 

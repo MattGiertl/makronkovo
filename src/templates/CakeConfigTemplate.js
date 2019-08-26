@@ -6,14 +6,8 @@ import styled from '@emotion/styled';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import theme from '../utils/theme/theme';
 import SocialButton from '../components/atoms/SocialButton';
-import { mobileQuery, tabletQuery, desktopQuery, laptopQuery } from '../utils/mediaqueries';
-import NumberOne from '../../static/assets/NumberOne.png';
-import DoubleCake from '../../static/assets/DoubleCake.png';
+import { mobileQuery, tabletQuery } from '../utils/mediaqueries';
 import Anchor from '../components/atoms/Anchor';
-import CakeType from '../components/molecules/CakeType';
-import MiniCake from '../../static/assets/Group.png';
-import Card from '../components/atoms/Card';
-
 
 const ContentWrapper = styled.div({
   display: 'flex',
@@ -41,14 +35,7 @@ const ContactWrapper = styled.div({
   },
 });
 
-const TypeWrapper = styled.div({
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  flexWrap: 'wrap'
-});
-
-const CakeConfigTemplate = () => {
+const CakeConfigTemplate = ({ cards }) => {
   return (
     <Layout>
       <Heading>VYSKLADAJTE SI SVOJU TORTU NA MIERU</Heading>
@@ -93,40 +80,7 @@ const CakeConfigTemplate = () => {
             makronkovo
           </Anchor>
         </ContactWrapper>
-        <Card>
-          <img src={NumberOne} alt="prvý odsek" />
-          <Paragraph margin="9px" fontSize={theme.fontSizes.large}>
-            VELKOSŤ
-          </Paragraph>
-          <Paragraph
-            margin="38px"
-            fontFamily={theme.fontFamilies.dinPro.bold}
-            fontSize={theme.fontSizes.medium}
-          >
-            Jednoposchodové torty (18 cm priemer)
-          </Paragraph>
-          <TypeWrapper>
-            <CakeType src={MiniCake} imgName="Mini" type="Mini" weight="1500 g" height="výška 10 cm" portions="8 procií" price="od 45€" />
-            <CakeType src={MiniCake} imgName="Mini" type="Mini" weight="1500 g" height="výška 10 cm" portions="8 procií" price="od 45€" />
-            <CakeType src={MiniCake} imgName="Mini" type="Mini" weight="1500 g" height="výška 10 cm" portions="8 procií" price="od 45€" />
-            <CakeType src={MiniCake} imgName="Mini" type="Mini" weight="1500 g" height="výška 10 cm" portions="8 procií" price="od 45€" />
-          </TypeWrapper>
-          <Paragraph
-            margin="40px auto 21px"
-            fontFamily={theme.fontFamilies.dinPro.bold}
-            fontSize={theme.fontSizes.medium}
-          >
-            Dvojposchodová torta a torta nad 22 porcií
-          </Paragraph>
-          <img src={DoubleCake} alt="dvojposchodová torta" />
-          <Paragraph
-            margin="20px auto 40px"
-            fontFamily={theme.fontFamilies.dinPro.regular}
-            fontSize={theme.fontSizes.medium}
-          >
-            5 € / porcia
-          </Paragraph>
-        </Card>
+        {cards}
       </ContentWrapper>
     </Layout>
   );

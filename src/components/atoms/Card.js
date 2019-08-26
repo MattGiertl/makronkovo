@@ -8,9 +8,9 @@ const StyledCard = styled.div(
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    alignItems: 'center',
   },
   props => ({
+    alignItems: props.alignItems ? props.alignItems : 'center',
     boxShadow: props.boxShadow,
     [mobileQuery]: { margin: props.mobileMargin },
     [tabletQuery]: { margin: props.tabletMargin },
@@ -21,6 +21,7 @@ const StyledCard = styled.div(
 
 const CardWrapper = ({
   isVisible,
+  alignItems,
   children,
   mobileMargin,
   tabletMargin,
@@ -29,6 +30,7 @@ const CardWrapper = ({
 }) => (
   <StyledCard
     boxShadow={isVisible ? '0px 10px 20px rgba(0, 0, 0, 0.12)' : 'none'}
+    alignItems={alignItems}
     mobileMargin={mobileMargin}
     tabletMargin={tabletMargin}
     laptopMargin={laptopMargin}
@@ -38,9 +40,17 @@ const CardWrapper = ({
   </StyledCard>
 );
 
-const Card = ({ children, mobileMargin, tabletMargin, laptopMargin, desktopMargin }) => (
-  <TrackVisibility>
+const Card = ({
+  children,
+  alignItems,
+  mobileMargin,
+  tabletMargin,
+  laptopMargin,
+  desktopMargin,
+}) => (
+  <TrackVisibility partialVisibility>
     <CardWrapper
+      alignItems={alignItems}
       mobileMargin={mobileMargin}
       tabletMargin={tabletMargin}
       laptopMargin={laptopMargin}
