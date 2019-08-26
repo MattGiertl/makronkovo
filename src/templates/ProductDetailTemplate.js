@@ -1,28 +1,30 @@
 import React from 'react';
 
 import styled from '@emotion/styled';
-import theme from '../../utils/theme/theme';
-import { mobileQuery, tabletQuery, laptopQuery, desktopQuery } from '../../utils/mediaqueries';
+import theme from '../utils/theme/theme';
+import { mobileQuery, tabletQuery, laptopQuery, desktopQuery } from '../utils/mediaqueries';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Heading from '../../components/atoms/Heading';
-import Paragraph from '../../components/atoms/Paragraph';
-import Labels from '../../components/atoms/Labels';
-import InfoStrip from '../../components/atoms/InfoStrip';
-import MobileOnly from '../../components/atoms/MobileOnly';
-import ContactInfo from '../../components/atoms/ContactInfo';
-import MoreProductsWrapper from '../../components/atoms/MoreProductsWrapper';
-import ProductDetailImage from '../../components/atoms/ProducDetailtImage';
-import DesktopOnly from '../../components/atoms/DesktopOnly';
+import Heading from '../components/atoms/Heading';
+import Paragraph from '../components/atoms/Paragraph';
+import Labels from '../components/atoms/Labels';
+import InfoStrip from '../components/atoms/InfoStrip';
+import MobileOnly from '../components/atoms/MobileOnly';
+import ContactInfo from '../components/atoms/ContactInfo';
+import MoreProductsWrapper from '../components/atoms/MoreProductsWrapper';
+import ProductDetailImage from '../components/atoms/ProducDetailtImage';
+import DesktopOnly from '../components/atoms/DesktopOnly';
 
-import BackButton from '../../components/molecules/BackButton';
-import FountainHeading from '../../components/molecules/FountainHeading';
-import Price from '../../components/molecules/Price';
-import ProductLabel from '../../components/molecules/ProductLabel';
-import Polaroid from '../../components/molecules/Polaroid/Polaroid';
-import Contact from '../../components/molecules/Contact';
+import BackButton from '../components/molecules/BackButton';
+import FountainHeading from '../components/molecules/FountainHeading';
+import Price from '../components/molecules/Price';
+import ProductLabel from '../components/molecules/ProductLabel';
+import Polaroid from '../components/molecules/Polaroid/Polaroid';
+import Contact from '../components/molecules/Contact';
 
-import Layout from '../../components/organisms/Layout/Layout';
+import Layout from '../components/organisms/Layout/Layout';
+import SetCard from '../components/molecules/SetCard';
+import SetCards from '../components/atoms/SetCards';
 
 const ContentWrapper = styled.div({
   display: 'flex',
@@ -46,7 +48,7 @@ const ContentWrapper = styled.div({
   },
 });
 
-const DessertDetailTemplate = ({ pageContext }) => {
+const ProductDetailTemplate = ({ pageContext }) => {
   const { fontSizes, fontFamilies } = theme;
   const {
     description,
@@ -76,10 +78,14 @@ const DessertDetailTemplate = ({ pageContext }) => {
           <Paragraph margin="10px 0" fontSize={fontSizes.small}>
             {weight}
           </Paragraph>
+          <SetCards>
+            <SetCard size="malé" amount="12ks 30" unitSize="1ks / 40g" />
+            <SetCard />
+          </SetCards>
           <Heading letterSpacing="0" fontFamily={fontFamilies.dinPro.bold} textAlign="left">
             {title}
           </Heading>
-          <Price oldPrice={oldPrice} newPrice={newPrice} />
+          {newPrice && <Price oldPrice={oldPrice} newPrice={newPrice} />}
         </MobileOnly>
         <InfoStrip>
           <ProductDetailImage src={image} alt={image} />
@@ -96,7 +102,11 @@ const DessertDetailTemplate = ({ pageContext }) => {
             <Heading letterSpacing="0" fontFamily={fontFamilies.dinPro.bold} textAlign="left">
               {title}
             </Heading>
-            <Price oldPrice={oldPrice} newPrice={newPrice} />
+            <SetCards>
+              <SetCard size="malé" amount="12ks 30" unitSize="1ks / 40g" />
+              <SetCard />
+            </SetCards>
+            {newPrice && <Price oldPrice={oldPrice} newPrice={newPrice} />}
             <Paragraph marginBottom="40px" fontSize={fontSizes.medium}>
               {description}
             </Paragraph>
@@ -130,6 +140,7 @@ const DessertDetailTemplate = ({ pageContext }) => {
         </InfoStrip>
 
         <MobileOnly>
+          <Paragraph fontSize={fontSizes.medium}>{description}</Paragraph>
           <Paragraph margin="60px 0 20px">
             Objednávku nám prosím písomne zadajte emailom, sms alebo na naše sociálne siete.
           </Paragraph>
@@ -146,7 +157,7 @@ const DessertDetailTemplate = ({ pageContext }) => {
           {moreProducts.map(product => (
             <Polaroid shadowed src={product.image} to={product.to}>
               <Paragraph lineHeight="24px">{product.title}</Paragraph>
-              <Paragraph lineHeight="24px">{product.newPrice}€</Paragraph>
+              {newPrice && <Paragraph lineHeight="24px">{product.newPrice}€</Paragraph>}
             </Polaroid>
           ))}
         </MoreProductsWrapper>
@@ -155,4 +166,4 @@ const DessertDetailTemplate = ({ pageContext }) => {
   );
 };
 
-export default DessertDetailTemplate;
+export default ProductDetailTemplate;

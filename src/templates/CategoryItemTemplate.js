@@ -36,23 +36,25 @@ const Description = styled.div({
 
 const CategoryItemTemplate = ({ pageContext }) => {
   const { items, title } = pageContext;
+  const { dinPro } = theme.fontFamilies;
 
-  const renderItems = items.map(item => (
-    <Polaroid shadowed src={item.image} to={item.to}>
-      <Paragraph textAlign="center" fontFamily={theme.fontFamilies.dinPro.bold}>
-        {item.title}
-      </Paragraph>
-      <Description>
-        {item.oldPrice && (
-          <Paragraph
-            marginRight="5px"
-            textDecoration="line-through"
-          >{`${item.oldPrice}€`}</Paragraph>
-        )}
-        <Paragraph>{`${item.newPrice}€`}</Paragraph>
-      </Description>
-    </Polaroid>
-  ));
+  const renderItems = items.map(item => {
+    const { image, to, title, oldPrice, newPrice } = item;
+
+    return (
+      <Polaroid shadowed src={image} to={to}>
+        <Paragraph textAlign="center" fontFamily={dinPro.bold}>
+          {title}
+        </Paragraph>
+        <Description>
+          {oldPrice && (
+            <Paragraph marginRight="5px" textDecoration="line-through">{`${oldPrice}€`}</Paragraph>
+          )}
+          {newPrice && <Paragraph>{`${newPrice}€`}</Paragraph>}
+        </Description>
+      </Polaroid>
+    );
+  });
 
   return (
     <Layout>
