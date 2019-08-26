@@ -7,6 +7,7 @@ import { mobileQuery, desktopQuery } from '../../utils/mediaqueries';
 const BackButtonWrapper = styled.div({
   display: 'flex',
   width: '100%',
+  cursor: 'pointer',
 
   [mobileQuery]: {
     marginBottom: '50px',
