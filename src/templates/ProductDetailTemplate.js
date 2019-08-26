@@ -110,7 +110,7 @@ const ProductDetailTemplate = ({ pageContext }) => {
               ))}
             </SetCards>
             {newPrice && <Price oldPrice={oldPrice} newPrice={newPrice} />}
-            <Paragraph marginBottom="40px" fontSize={fontSizes.medium}>
+            <Paragraph lineHeight="24px" marginBottom="40px" fontSize={fontSizes.medium}>
               {description}
             </Paragraph>
             <Paragraph marginBottom="20px">
@@ -143,7 +143,9 @@ const ProductDetailTemplate = ({ pageContext }) => {
         </InfoStrip>
 
         <MobileOnly>
-          <Paragraph fontSize={fontSizes.medium}>{description}</Paragraph>
+          <Paragraph lineHeight="24px" fontSize={fontSizes.medium}>
+            {description}
+          </Paragraph>
           <Paragraph margin="60px 0 20px">
             Objednávku nám prosím písomne zadajte emailom, sms alebo na naše sociálne siete.
           </Paragraph>
