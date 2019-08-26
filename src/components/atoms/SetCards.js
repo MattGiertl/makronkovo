@@ -6,6 +6,7 @@ const SetCards = styled.div({
 
   [mobileQuery]: {
     justifyContent: 'space-around',
+    margin: '30px 0 -40px',
   },
 
   [tabletToDesktopQuery]: {

@@ -79,6 +79,9 @@ const ProductDetailTemplate = ({ pageContext }) => {
           <Paragraph margin="10px 0" fontSize={fontSizes.small}>
             {weight}
           </Paragraph>
+          <Heading letterSpacing="0" fontFamily={fontFamilies.dinPro.bold} textAlign="left">
+            {title}
+          </Heading>
           {setInfo && (
             <SetCards>
               {setInfo.map(set => (
@@ -86,10 +89,6 @@ const ProductDetailTemplate = ({ pageContext }) => {
               ))}
             </SetCards>
           )}
-
-          <Heading letterSpacing="0" fontFamily={fontFamilies.dinPro.bold} textAlign="left">
-            {title}
-          </Heading>
           {newPrice && <Price oldPrice={oldPrice} newPrice={newPrice} />}
         </MobileOnly>
         <InfoStrip>
@@ -167,7 +166,9 @@ const ProductDetailTemplate = ({ pageContext }) => {
         <MoreProductsWrapper>
           {moreProducts.map(product => (
             <Polaroid shadowed src={product.image} to={product.to}>
-              <Paragraph textAlign="center" lineHeight="24px">{product.title}</Paragraph>
+              <Paragraph textAlign="center" lineHeight="24px">
+                {product.title}
+              </Paragraph>
               {newPrice && <Paragraph lineHeight="24px">{product.newPrice}€</Paragraph>}
             </Polaroid>
           ))}
