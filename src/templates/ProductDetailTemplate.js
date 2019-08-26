@@ -79,11 +79,14 @@ const ProductDetailTemplate = ({ pageContext }) => {
           <Paragraph margin="10px 0" fontSize={fontSizes.small}>
             {weight}
           </Paragraph>
-          <SetCards>
-            {setInfo.map(set => (
-              <SetCard size={set.size} amount={set.amount} unitSize={set.unitSize} />
-            ))}
-          </SetCards>
+          {setInfo && (
+            <SetCards>
+              {setInfo.map(set => (
+                <SetCard size={set.size} amount={set.amount} unitSize={set.unitSize} />
+              ))}
+            </SetCards>
+          )}
+
           <Heading letterSpacing="0" fontFamily={fontFamilies.dinPro.bold} textAlign="left">
             {title}
           </Heading>
@@ -104,11 +107,14 @@ const ProductDetailTemplate = ({ pageContext }) => {
             <Heading letterSpacing="0" fontFamily={fontFamilies.dinPro.bold} textAlign="left">
               {title}
             </Heading>
-            <SetCards>
-              {setInfo.map(set => (
-                <SetCard size={set.size} amount={set.amount} unitSize={set.unitSize} />
-              ))}
-            </SetCards>
+            {setInfo && (
+              <SetCards>
+                {setInfo.map(set => (
+                  <SetCard size={set.size} amount={set.amount} unitSize={set.unitSize} />
+                ))}
+              </SetCards>
+            )}
+
             {newPrice && <Price oldPrice={oldPrice} newPrice={newPrice} />}
             <Paragraph lineHeight="24px" marginBottom="40px" fontSize={fontSizes.medium}>
               {description}
