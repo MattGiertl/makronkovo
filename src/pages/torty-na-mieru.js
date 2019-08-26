@@ -6,9 +6,8 @@ import styled from '@emotion/styled';
 import Card from '../components/atoms/Card';
 import Paragraph from '../components/atoms/Paragraph';
 import CakeType from '../components/molecules/CakeType';
-import { tabletQuery, mobileQuery, laptopQuery, desktopQuery } from '../utils/mediaqueries';
+import TypeLook from '../components/molecules/CakeView';
 
-//Card
 const TypeWrapper = styled.div({
   display: 'flex',
   justifyContent: 'center',
@@ -21,47 +20,16 @@ const Image = styled.img({
   margin: '44px auto 0',
 });
 
-//SecondCard
-const HeadingDiv = styled.div({
-  display: 'flex',
-  marginTop: '43px',
-  marginLeft: 0,
-});
-
 const ListItem = styled.li(
   {
     fontFamily: theme.fontFamilies.dinPro.regular,
-    fontSize: theme.fontSizes.medium,
+    fontSize: theme.fontSizes.small,
     color: theme.colors.mediumGold,
   },
   props => ({
     marginTop: props.marginTop,
   }),
 );
-
-const UnorderList = styled.ul({
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'left',
-  flexWrap: 'wrap',
-  paddingInlineStart: '0px',
-  marginBlockEnd: '0px',
-});
-
-const ListWrapper = styled.div({
-  display: 'flex',
-  alignItems: 'left',
-  [mobileQuery]: { marginLeft: '0', width: '100%' },
-  [tabletQuery]: { marginLeft: '30%', width: '60%' },
-  [laptopQuery]: { marginLeft: '30%', width: '60%' },
-  [desktopQuery]: { margin: '0 auto 41px 30%', width: '60%' },
-});
-
-const OptionWrapper = styled.div({
-  display: 'flex',
-  flexDirection: 'column',
-  margin: '0 20%',
-});
 
 const CakeConfig = () => {
   const data = useStaticQuery(cakeConfigQuery);
@@ -80,30 +48,26 @@ const CakeConfig = () => {
     ));
 
     const renderSecondCardItems = secondCard.items.map(item => (
-      <OptionWrapper>
-        <HeadingDiv>
-          <img src={item.image} alt={item.imgName} />
-          <Paragraph
-            fontFamily={theme.fontFamilies.dinPro.bold}
-            fontSize={theme.fontSizes.medium}
-            marginLeft="33%"
-          >
-            {item.heading}
-          </Paragraph>
-        </HeadingDiv>
-        <ListWrapper>
-          <UnorderList>
-            {item.options.map(item => (
-              <ListItem>{item}</ListItem>
-            ))}
-          </UnorderList>
-        </ListWrapper>
-      </OptionWrapper>
+      <TypeLook src={item.image} imgName={item.imgName} heading={item.heading}>
+        {item.options.map(item => (
+          <ListItem>{item}</ListItem>
+        ))}
+      </TypeLook>
     ));
 
     return (
       <>
-        <Card>
+        <Card
+          mobileMargin="0 20px 30px"
+          tabletMargin="31px 0 40px"
+          laptopMargin="0 0 30px"
+          desktopMargin="0 0 30px"
+          mobileWidth="90%"
+          tabletWidth="700px"
+          laptopWidth="900px"
+          desktopWidth="1010px"
+          partialVisibility="true"
+        >
           <Image src={firstCard.section} alt="prvý odsek" />
           <Paragraph margin="9px" fontSize={theme.fontSizes.large}>
             {firstCard.title}
@@ -132,7 +96,18 @@ const CakeConfig = () => {
             {firstCard.price}
           </Paragraph>
         </Card>
-        <Card alignItems="left">
+        <Card
+          alignItems="left"
+          mobileMargin="0 20px 30px"
+          tabletMargin="31px 0 40px"
+          laptopMargin="0 0 30px"
+          desktopMargin="0 0 30px"
+          mobileWidth="90%"
+          tabletWidth="700px"
+          laptopWidth="900px"
+          desktopWidth="1010px"
+          partialVisibility="true"
+        >
           <Image src={secondCard.section} alt="druhý odsek" />
           <Paragraph margin="9px auto" fontSize={theme.fontSizes.large}>
             {secondCard.title}

@@ -11,7 +11,7 @@ flexDirection: 'column',
 alignItems: 'center',
 margin: '0 40px',
 [mobileQuery]: {
-    margin: '0 20px',
+    margin: '0 20px 30px',
   },
 
   [tabletQuery]: {

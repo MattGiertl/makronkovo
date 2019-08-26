@@ -8,6 +8,7 @@ import theme from '../utils/theme/theme';
 import SocialButton from '../components/atoms/SocialButton';
 import { mobileQuery, tabletQuery } from '../utils/mediaqueries';
 import Anchor from '../components/atoms/Anchor';
+import InfoImage from '../../static/assets/Info.png';
 
 const ContentWrapper = styled.div({
   display: 'flex',
@@ -81,6 +82,18 @@ const CakeConfigTemplate = ({ cards }) => {
           </Anchor>
         </ContactWrapper>
         {cards}
+        <img src={InfoImage} alt="info" />
+        <Paragraph
+          mobileMargin="10px 40px 50px"
+          tabletMargin="10px 25% 80px"
+          laptopMargin="10px 30% 126px"
+          desktopMargin="10px 30% 146px"
+          textAlign="center"
+        >
+          Zadajte nám prosím aj farebnú škálu v ktorej chcete mať tortu prevedenú, vek oslávenca a
+          iné požiadavky ktoré sa Vám budeme snažiť v rámci našich možností splniť a pomôžu nám tak
+          vytvoriť perfektnú tortu na mieru
+        </Paragraph>
       </ContentWrapper>
     </Layout>
   );
