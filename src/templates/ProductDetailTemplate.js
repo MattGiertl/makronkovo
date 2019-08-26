@@ -167,7 +167,7 @@ const ProductDetailTemplate = ({ pageContext }) => {
         <MoreProductsWrapper>
           {moreProducts.map(product => (
             <Polaroid shadowed src={product.image} to={product.to}>
-              <Paragraph lineHeight="24px">{product.title}</Paragraph>
+              <Paragraph textAlign="center" lineHeight="24px">{product.title}</Paragraph>
               {newPrice && <Paragraph lineHeight="24px">{product.newPrice}€</Paragraph>}
             </Polaroid>
           ))}
