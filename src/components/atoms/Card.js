@@ -12,7 +12,6 @@ const StyledCard = styled.div(
   props => ({
     alignItems: props.alignItems ? props.alignItems : 'center',
     boxShadow: props.boxShadow,
-    // width: props.width,
     [mobileQuery]: { margin: props.mobileMargin, width: props.mobileWidth },
     [tabletQuery]: { margin: props.tabletMargin, width: props.tabletWidth },
     [laptopQuery]: { margin: props.laptopMargin, width: props.laptopWidth },
