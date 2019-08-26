@@ -14,11 +14,21 @@ import {
   faMapMarkerAlt,
   faEnvelope,
   faPhoneAlt,
+  faChevronLeft,
 } from '@fortawesome/free-solid-svg-icons';
 
 import { fab, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
-library.add(fab, faInstagram, faTimes, faBars, faMapMarkerAlt, faEnvelope, faPhoneAlt);
+library.add(
+  faChevronLeft,
+  fab,
+  faInstagram,
+  faTimes,
+  faBars,
+  faMapMarkerAlt,
+  faEnvelope,
+  faPhoneAlt,
+);
 
 const Wrapper = styled.div({
   display: 'flex',

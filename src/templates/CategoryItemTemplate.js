@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../components/organisms/Layout/Layout';
 import styled from '@emotion/styled';
-import Polaroid from '../components/molecules/Polaroid';
+import Polaroid from '../components/molecules/Polaroid/Polaroid';
 import FountainHeading from '../components/molecules/FountainHeading';
 import Paragraph from '../components/atoms/Paragraph';
 import { mobileQuery, tabletQuery, laptopQuery, desktopQuery } from '../utils/mediaqueries';
@@ -13,7 +13,7 @@ const CategoriesWrapper = styled.div({
   flexWrap: 'wrap',
 
   [mobileQuery]: {
-    margin: '0 35px',
+    margin: '0 15px',
   },
 
   [tabletQuery]: {
@@ -38,7 +38,7 @@ const CategoryItemTemplate = ({ pageContext }) => {
   const { items, title } = pageContext;
 
   const renderItems = items.map(item => (
-    <Polaroid shadowed src={item.image}>
+    <Polaroid shadowed src={item.image} to={item.to}>
       <Paragraph textAlign="center" fontFamily={theme.fontFamilies.dinPro.bold}>
         {item.title}
       </Paragraph>

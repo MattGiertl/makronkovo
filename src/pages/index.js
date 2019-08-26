@@ -6,7 +6,7 @@ import theme from '../utils/theme/theme';
 import Paragraph from '../components/atoms/Paragraph';
 import SquarePic from '../components/atoms/SquarePic';
 import LabeledSquarePic from '../components/molecules/LabeledSquarePic';
-import Polaroid from '../components/molecules/Polaroid';
+import Polaroid from '../components/molecules/Polaroid/Polaroid';
 import MainPageTemplate from '../templates/MainPageTemplate/MainPageTemplate';
 
 const MainPage = () => {

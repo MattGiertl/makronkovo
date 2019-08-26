@@ -5,13 +5,13 @@ import { tabletQuery, mobileQuery, desktopQuery, laptopQuery } from '../../utils
 const Heading = styled.h1(
   {
     color: theme.colors.mediumGold,
-    letterSpacing: theme.letterSpacing.heading,
-    textAlign: 'center',
     lineHeight: '28px',
     margin: 0,
   },
 
   props => ({
+    letterSpacing: props.letterSpacing ? props.letterSpacing : theme.letterSpacing.heading,
+    textAlign: props.textAlign ? props.textAlign : 'center',
     fontFamily: props.fontFamily ? props.fontFamily : theme.fontFamilies.caslonAntique.regular,
     marginTop: props.marginTop,
     marginBottom: props.marginBottom ? props.marginBottom : '6px',
