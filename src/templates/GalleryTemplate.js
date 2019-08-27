@@ -46,8 +46,8 @@ const Image = styled.img({
     margin: '20px 20px',
   },
   [desktopQuery]: {
-    width: '344px',
-    height: '500px',
+    width: '380px',
+    height: '405px',
     margin: '20px 20px',
   },
 });
