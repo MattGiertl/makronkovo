@@ -16,12 +16,13 @@ const OptionWrapper = styled.div({
 const HeadingDiv = styled.div({
   display: 'flex',
   marginTop: '43px',
+  width:'100%',
 });
 
 const ListWrapper = styled.div({
   display: 'flex',
   alignItems: 'left',
-  [mobileQuery]: { marginLeft: '8%', marginBottom: '41px', width: '80%' },
+  [mobileQuery]: { marginLeft: '8%', marginBottom: '41px', width: '90%' },
   [tabletQuery]: { marginLeft: '30%', marginBottom: '41px', width: '60%' },
   [laptopQuery]: { marginLeft: '35%', width: '80%' },
   [desktopQuery]: { margin: '0 auto 41px 30%', width: '80%' },
@@ -42,7 +43,7 @@ const CakeView = ({ src, imgName, heading, children }) => (
         fontFamily={theme.fontFamilies.dinPro.bold}
         fontSize={theme.fontSizes.medium}
         mobileMargin="0 0 0 10%"
-        tabletMargin="0 0 0 25%"
+        tabletMargin="0 0 0 28%"
         laptopMargin="0 0 0 36%"
         desktopMargin="0 0 0 30%"
       >

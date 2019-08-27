@@ -58,15 +58,15 @@ const CakeConfig = () => {
     return (
       <>
         <Card
-          mobileMargin="0 20px 30px"
+          mobileMargin="0 0 30px"
           tabletMargin="31px 0 40px"
           laptopMargin="0 0 30px"
           desktopMargin="0 0 30px"
-          mobileWidth="90%"
+          mobileWidth="100%"
           tabletWidth="700px"
           laptopWidth="900px"
           desktopWidth="1010px"
-          partialVisibility="true"
+          partialVisibility={true}
         >
           <Image src={firstCard.section} alt="prvý odsek" />
           <Paragraph margin="9px" fontSize={theme.fontSizes.large} fontFamily={theme.fontFamilies.caslonAntique.bold} letterSpacing={theme.letterSpacing.heading}>
@@ -76,14 +76,16 @@ const CakeConfig = () => {
             margin="38px"
             fontFamily={theme.fontFamilies.dinPro.bold}
             fontSize={theme.fontSizes.medium}
+            textAlign="center"
           >
             {firstCard.paragraph}
           </Paragraph>
           <TypeWrapper>{renderFirstCardItems}</TypeWrapper>
           <Paragraph
-            margin="40px auto 21px"
+            margin="40px 5% 21px"
             fontFamily={theme.fontFamilies.dinPro.bold}
             fontSize={theme.fontSizes.medium}
+            textAlign="center"
           >
             {firstCard.secondParagraph}
           </Paragraph>
@@ -98,11 +100,11 @@ const CakeConfig = () => {
         </Card>
         <Card
           alignItems="left"
-          mobileMargin="0 20px 30px"
+          mobileMargin="0 0 30px"
           tabletMargin="31px 0 40px"
           laptopMargin="0 0 30px"
           desktopMargin="0 0 30px"
-          mobileWidth="90%"
+          mobileWidth="100%"
           tabletWidth="700px"
           laptopWidth="900px"
           desktopWidth="1010px"

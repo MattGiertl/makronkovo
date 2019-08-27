@@ -36,6 +36,10 @@ const ContactWrapper = styled.div({
   },
 });
 
+const CardWrapper = styled.div({
+  margin:"0 10px"
+});
+
 const CakeConfigTemplate = ({ cards }) => {
   return (
     <Layout>
@@ -81,7 +85,9 @@ const CakeConfigTemplate = ({ cards }) => {
             makronkovo
           </Anchor>
         </ContactWrapper>
+        <CardWrapper>
         {cards}
+        </CardWrapper>
         <img src={InfoImage} alt="info" />
         <Paragraph
           mobileMargin="10px 40px 50px"
