@@ -7,6 +7,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const collectionTemplate = path.resolve(`${templatePath}/CollectionTemplate.js`);
   const categoryItemTemplate = path.resolve(`${templatePath}/CategoryItemTemplate.js`);
+  const productDetailTemplate = path.resolve(`${templatePath}/ProductDetailTemplate.js`);
 
   const result = await graphql(`
     {
@@ -42,6 +43,25 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           }
         }
       }
+      allCandyBarsJson {
+        edges {
+          node {
+            title
+            to
+            items {
+              description
+              image
+              setInfo {
+                amount
+                size
+                unitSize
+              }
+              title
+              to
+            }
+          }
+        }
+      }
     }
   `);
 
@@ -63,6 +83,40 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       path: node.to,
       component: categoryItemTemplate,
       context: { ...node },
+    });
+  });
+
+  result.data.allDessertsJson.edges.forEach(({ node }) => {
+    const productCategoryTitle = node.title;
+    const items = node.items;
+
+    node.items.map(dessert => {
+      createPage({
+        path: dessert.to,
+        component: productDetailTemplate,
+        context: { ...dessert, productCategoryTitle, items },
+      });
+    });
+  });
+
+  result.data.allCandyBarsJson.edges.forEach(({ node }) => {
+    createPage({
+      path: node.to,
+      component: categoryItemTemplate,
+      context: { ...node },
+    });
+  });
+
+  result.data.allCandyBarsJson.edges.forEach(({ node }) => {
+    const productCategoryTitle = node.title;
+    const items = node.items;
+
+    node.items.map(candyBar => {
+      createPage({
+        path: candyBar.to,
+        component: productDetailTemplate,
+        context: { ...candyBar, productCategoryTitle, items },
+      });
     });
   });
 };

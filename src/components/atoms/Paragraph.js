@@ -5,7 +5,6 @@ import { mobileQuery, tabletQuery, desktopQuery, laptopQuery } from '../../utils
 const Paragraph = styled.p(
   {
     color: theme.colors.mediumGold,
-    lineHeight: '19px',
     margin: '0',
   },
   props => ({
@@ -19,6 +18,7 @@ const Paragraph = styled.p(
     textAlign: props.textAlign,
     fontSize: props.fontSize ? props.fontSize : theme.fontSizes.small,
     textDecoration: props.textDecoration,
+    opacity: props.opacity,
     letterSpacing: props.letterSpacing,
 
     [mobileQuery]: {
