@@ -35,7 +35,7 @@ const NavBar = () => {
         <NavLink marginTop="50px" to="/o-nas">
           O NÁS
         </NavLink>
-        <NavLink to="/">GALÉRIA</NavLink>
+        <NavLink to="/galeria">GALÉRIA</NavLink>
         <NavLink to="/kontakt">KONTAKT</NavLink>
         <NavLink to="/caste-otazky">ČASTÉ OTÁZKY</NavLink>
       </NavItems>
