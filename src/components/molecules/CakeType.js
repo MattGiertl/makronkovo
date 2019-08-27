@@ -9,7 +9,8 @@ const TypeWrapper = styled.div({
 display: 'flex',
 flexDirection: 'column',
 alignItems: 'center',
-margin: '0 40px',
+justifyContent:'flex-end',
+height:"265px",
 [mobileQuery]: {
     margin: '0 20px 30px',
   },
@@ -43,6 +44,7 @@ const UnorderList = styled.ul({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
+  justifyContent:'flex-end',
   paddingInlineStart: "0px",
   marginBlockEnd: '0px'
 });

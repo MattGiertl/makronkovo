@@ -58,11 +58,11 @@ const CakeConfig = () => {
     return (
       <>
         <Card
-          mobileMargin="0 20px 30px"
+          mobileMargin="0 0 30px"
           tabletMargin="31px 0 40px"
           laptopMargin="0 0 30px"
           desktopMargin="0 0 30px"
-          mobileWidth="90%"
+          mobileWidth="100%"
           tabletWidth="700px"
           laptopWidth="900px"
           desktopWidth="1010px"
@@ -100,11 +100,11 @@ const CakeConfig = () => {
         </Card>
         <Card
           alignItems="left"
-          mobileMargin="0 20px 30px"
+          mobileMargin="0 0 30px"
           tabletMargin="31px 0 40px"
           laptopMargin="0 0 30px"
           desktopMargin="0 0 30px"
-          mobileWidth="90%"
+          mobileWidth="100%"
           tabletWidth="700px"
           laptopWidth="900px"
           desktopWidth="1010px"
