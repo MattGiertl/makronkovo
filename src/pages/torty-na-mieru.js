@@ -66,7 +66,7 @@ const CakeConfig = () => {
           tabletWidth="700px"
           laptopWidth="900px"
           desktopWidth="1010px"
-          partialVisibility="true"
+          partialVisibility={true}
         >
           <Image src={firstCard.section} alt="prvý odsek" />
           <Paragraph margin="9px" fontSize={theme.fontSizes.large}>
@@ -76,14 +76,16 @@ const CakeConfig = () => {
             margin="38px"
             fontFamily={theme.fontFamilies.dinPro.bold}
             fontSize={theme.fontSizes.medium}
+            textAlign="center"
           >
             {firstCard.paragraph}
           </Paragraph>
           <TypeWrapper>{renderFirstCardItems}</TypeWrapper>
           <Paragraph
-            margin="40px auto 21px"
+            margin="40px 5% 21px"
             fontFamily={theme.fontFamilies.dinPro.bold}
             fontSize={theme.fontSizes.medium}
+            textAlign="center"
           >
             {firstCard.secondParagraph}
           </Paragraph>

@@ -8,6 +8,7 @@ const StyledCard = styled.div(
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
+    transition: 'box-shadow 300ms',
   },
   props => ({
     alignItems: props.alignItems ? props.alignItems : 'center',

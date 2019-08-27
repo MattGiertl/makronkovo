@@ -42,7 +42,7 @@ const CakeView = ({ src, imgName, heading, children }) => (
         fontFamily={theme.fontFamilies.dinPro.bold}
         fontSize={theme.fontSizes.medium}
         mobileMargin="0 0 0 10%"
-        tabletMargin="0 0 0 25%"
+        tabletMargin="0 0 0 28%"
         laptopMargin="0 0 0 36%"
         desktopMargin="0 0 0 30%"
       >
