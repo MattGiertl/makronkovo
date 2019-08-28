@@ -9,7 +9,7 @@ import { mobileQuery, tabletQuery } from '../../utils/mediaqueries';
 const StyledIcon = styled(FontAwesomeIcon)({
   color: theme.colors.mediumGold,
   display: 'none',
-  position: 'fixed',
+  position: 'absolute',
 
   [mobileQuery]: {
     display: 'flex',

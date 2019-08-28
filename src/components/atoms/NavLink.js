@@ -10,8 +10,11 @@ const StyledLink = styled(Link)(
     textDecoration: 'none',
     color: theme.colors.mediumGold,
     fontSize: theme.fontSizes.small,
+    fontFamily: theme.fontFamilies.caslonAntique.regular,
+    transition: 'color 300ms',
 
     [mobileQuery]: {
+      fontFamily: theme.fontFamilies.caslonAntique.bold,
       fontSize: theme.fontSizes.medium,
       marginBottom: '17px',
     },
@@ -22,7 +25,11 @@ const StyledLink = styled(Link)(
     },
 
     '&:active': {
-      color: theme.colors.lightPink,
+      color: theme.colors.mediumPink,
+    },
+
+    '&:hover': {
+      color: theme.colors.mediumPink,
     },
   },
   props => ({

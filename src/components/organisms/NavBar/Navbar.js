@@ -22,22 +22,21 @@ const NavBar = () => {
             marginRight="15px"
             icon={['fab', 'instagram']}
           />
-          <SocialButton
-            to="https://www.facebook.com/makronkovo/"
-            icon={['fab', 'facebook']}
-          />
+          <SocialButton to="https://www.facebook.com/makronkovo/" icon={['fab', 'facebook']} />
         </SocialButtonGroup>
         <NavLink to="/">TORTY NA MIERU</NavLink>
-        <NavLink to="/">DEZERTY</NavLink>
-        <NavLink marginBottom="50px" to="/">
+        <NavLink to="/dezerty">DEZERTY</NavLink>
+        <NavLink marginBottom="50px" to="/candy-bar">
           CANDY BAR
         </NavLink>
-        <Logo show />
-        <NavLink marginTop="50px" to="/">
+        <NavLink to="/">
+          <Logo show />
+        </NavLink>
+        <NavLink marginTop="50px" to="/o-nas">
           O NÁS
         </NavLink>
         <NavLink to="/">GALÉRIA</NavLink>
-        <NavLink to="/">KONTAKT</NavLink>
+        <NavLink to="/kontakt">KONTAKT</NavLink>
         <NavLink to="/caste-otazky">ČASTÉ OTÁZKY</NavLink>
       </NavItems>
     </NavBarWrapper>

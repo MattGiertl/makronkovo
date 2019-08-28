@@ -1,36 +1,22 @@
-import React from 'react'
+import React from 'react';
 
 import styled from '@emotion/styled';
 import LogoImg from '../../../static/logo.png';
 
-import {
-  desktopQuery,
-  laptopQuery,
-  mobileQuery,
-  tabletQuery,
-} from '../../utils/mediaqueries';
+import { desktopQuery, laptopQuery, mobileQuery, tabletQuery } from '../../utils/mediaqueries';
 
 const StyledLogo = styled.img(
   {
+    display: 'flex',
+
     [mobileQuery]: {
-      display: 'flex',
-      margin: '0 auto',
-      marginTop: '30px',
+      margin: '30px auto 0',
       width: '180px',
     },
 
     [tabletQuery]: {
-      display: 'flex',
-      margin: '0 auto',
-      marginTop: '50px',
-    },
-
-    [laptopQuery]: {
-      margin: '0 50px',
-    },
-
-    [desktopQuery]: {
-      margin: '0 116px',
+      margin: '30px auto 0',
+      width: '200px',
     },
   },
   props => ({
@@ -40,6 +26,7 @@ const StyledLogo = styled.img(
 
     [tabletQuery]: {
       display: props.showLogo ? 'none' : 'block',
+      width: '180px',
     },
 
     [laptopQuery]: {
@@ -52,8 +39,6 @@ const StyledLogo = styled.img(
   }),
 );
 
-const Logo = ({ show }) => (
-  <StyledLogo showLogo={show} src={LogoImg} alt="Makronkovo logo" />
-);
+const Logo = ({ show }) => <StyledLogo showLogo={show} src={LogoImg} alt="Makronkovo logo" />;
 
 export default Logo;

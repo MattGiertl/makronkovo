@@ -1,10 +1,6 @@
-
 import styled from '@emotion/styled';
 
-import {
-  mobileQuery,
-  tabletQuery,
-} from '../../../utils/mediaqueries';
+import { mobileQuery, tabletQuery, desktopQuery, laptopQuery } from '../../../utils/mediaqueries';
 
 const NavBarWrapper = styled.div(
   {
@@ -17,6 +13,14 @@ const NavBarWrapper = styled.div(
 
     [tabletQuery]: {
       flexDirection: 'column',
+    },
+
+    [laptopQuery]: {
+      marginBottom: '50px',
+    },
+
+    [desktopQuery]: {
+      marginBottom: '60px',
     },
   },
   props => ({
