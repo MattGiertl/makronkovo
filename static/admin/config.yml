@@ -1,7 +1,5 @@
 backend:
   name: git-gateway
-  repo: grg-sites/makronkovo
-  branch: develop
 
 media_folder: static/img
 public_folder: /img
