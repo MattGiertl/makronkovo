@@ -5,24 +5,12 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - label: "Dezerty"
-    name: desserts
+  - label: "Kategórie - dezerty"
+    name: "dessertCategories"
+    folder: "src/data/dessertsfolder"
+    format: json
     create: true
-    files:
-      - label: "Dezerty - Kategórie"
-        name: dessertCategories
-        file: "src/data/desserts.json"
-        allow_add: true
-        widget: list
-        fields:
-          - {
-              label: "Položky jídelníčku",
-              name: eatmenuCollection,
-              widget: list,
-              fields:
-                [
-                  { label: "Název", name: "name", widget: string },
-                  { label: "Popisek", name: "description", widget: text },
-                  { label: "Cena", name: "price", widget: number },
-                ],
-            }
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "thumbnail", widget: "image" }
