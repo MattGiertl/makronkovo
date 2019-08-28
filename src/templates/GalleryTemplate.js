@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 import { useStaticQuery, graphql } from 'gatsby';
 import Layout from '../components/organisms/Layout/Layout';
 import FountainHeading from '../components/molecules/FountainHeading';
-import { mobileQuery, tabletQuery, laptopQuery, desktopQuery } from '../utils/mediaqueries';
+import { mobileQuery,  tabletQuery, laptopQuery, desktopQuery } from '../utils/mediaqueries';
 
 const ContentWrapper = styled.div({
   display: 'flex',
@@ -20,48 +20,77 @@ const ContentWrapper = styled.div({
   },
 
   [laptopQuery]: {
-    width: '80%',
+    width: '100%',
   },
+
   [desktopQuery]: {
-    width: '80%',
+    width: '85%',
   },
 });
 
-const Image = styled.img({
+const GalleryItem = styled.div({
+  display: 'flex',
+  backgroundRepeat: 'no-repeat',
+  backgroundPosition: 'center', 
+  backgroundSize: 'cover',
   [mobileQuery]: {
-    width: '280px',
-    height: '400px',
-    margin: '20px 20px',
+    maxWidth: '280px',
+    maxHeight: '305px',
   },
 
   [tabletQuery]: {
-    width: '300px',
-    height: '450px',
-    margin: '20px 20px',
+    maxWidth: '300px',
+    maxHeight: '325px',
   },
 
   [laptopQuery]: {
-    width: '344px',
-    height: '500px',
-    margin: '20px 20px',
+    maxWidth: '380px',
+    maxHeight: '405px',
   },
   [desktopQuery]: {
-    width: '380px',
-    height: '405px',
-    margin: '20px 20px',
+    maxWidth: '380px',
+    maxHeight: '405px',
   },
-});
+},
+props => ({
+  backgroundImage: `url(${props.image})`,
+})
+);
+
+// const Image = styled.img(
+//   {
+//     width: 'initial',
+//     height: 'initial',
+//   },
+//   props => ({
+//     margin: props.margin,
+//     [mobileQuery]: {
+//       margin: props.mobileMargin,
+//       width: "400px",
+//       height: "600px"
+//     },
+
+//     [tabletQuery]: {
+//       margin: props.tabletMargin,
+//     },
+
+//     [laptopQuery]: {
+//       margin: props.desktopMargin,
+//     },
+//     [desktopQuery]: {
+//       margin: props.desktopMargin,
+//       width: "auto",
+//       height: "auto"
+//     },
+//   }),
+// );
 
 const GalleryTemplate = () => {
-
-const data = useStaticQuery(galleryQuery);
-const { nodes: images } = data.allGalleryJson;
-const renderImages = images.map(image => (
-  <Image
-          src={image.src}
-          onClick={() => openLightboxOnSource(image.src)}
-        />
-));
+  const data = useStaticQuery(galleryQuery);
+  const { nodes: images } = data.allGalleryJson;
+  const renderImages = images.map(image => (
+      <GalleryItem image={image.src} onClick={() => openLightboxOnSource(image.src)} />
+  ));
 
   const [lightboxController, setLightboxController] = useState({
     toggler: false,
@@ -101,12 +130,15 @@ const renderImages = images.map(image => (
 
 const galleryQuery = graphql`
   query GalleryQuery {
-  allGalleryJson {
+    allGalleryJson {
     nodes {
       src
+      desktopMargin
+      mobileMargin
+      tabletMargin
     }
   }
-}
+  }
 `;
 
 export default GalleryTemplate;
