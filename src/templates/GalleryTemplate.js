@@ -4,57 +4,33 @@ import styled from '@emotion/styled';
 import { useStaticQuery, graphql } from 'gatsby';
 import Layout from '../components/organisms/Layout/Layout';
 import FountainHeading from '../components/molecules/FountainHeading';
-import { mobileQuery,  tabletQuery, laptopQuery, desktopQuery } from '../utils/mediaqueries';
+import { mobileQuery, tabletQuery, laptopQuery, desktopQuery } from '../utils/mediaqueries';
 
 const ContentWrapper = styled.div({
   display: 'flex',
   flexWrap: 'wrap',
   justifyContent: 'center',
-  margin: '0 auto',
-  [mobileQuery]: {
-    width: '100%',
-  },
-
-  [tabletQuery]: {
-    width: '100%',
-  },
-
-  [laptopQuery]: {
-    width: '100%',
-  },
-
-  [desktopQuery]: {
-    width: '85%',
-  },
 });
 
-const GalleryItem = styled.div({
-  display: 'flex',
-  backgroundRepeat: 'no-repeat',
-  backgroundPosition: 'center', 
-  backgroundSize: 'cover',
-  [mobileQuery]: {
-    maxWidth: '280px',
-    maxHeight: '305px',
-  },
+const GalleryItem = styled.div(
+  {
+    textDecoration: 'none',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    height: '225px',
+    width: '225px',
+    margin: '0 10px 20px',
 
-  [tabletQuery]: {
-    maxWidth: '300px',
-    maxHeight: '325px',
+    [mobileQuery]: {
+      width: '140px',
+      height: '140px',
+      margin: '0 5px 10px',
+    },
   },
-
-  [laptopQuery]: {
-    maxWidth: '380px',
-    maxHeight: '405px',
-  },
-  [desktopQuery]: {
-    maxWidth: '380px',
-    maxHeight: '405px',
-  },
-},
-props => ({
-  backgroundImage: `url(${props.image})`,
-})
+  props => ({
+    backgroundImage: `url(${props.backgroundImage})`,
+  }),
 );
 
 // const Image = styled.img(
@@ -89,7 +65,7 @@ const GalleryTemplate = () => {
   const data = useStaticQuery(galleryQuery);
   const { nodes: images } = data.allGalleryJson;
   const renderImages = images.map(image => (
-      <GalleryItem image={image.src} onClick={() => openLightboxOnSource(image.src)} />
+    <GalleryItem image={image.src} onClick={() => openLightboxOnSource(image.src)} />
   ));
 
   const [lightboxController, setLightboxController] = useState({
@@ -117,7 +93,8 @@ const GalleryTemplate = () => {
     <Layout>
       <FountainHeading>GALÉRIA</FountainHeading>
       <ContentWrapper>
-        {renderImages}
+        {/* {renderImages} */}
+        <GalleryItem backgroundImage="/img/makronkovo-galeria002.jpg" />
         <FsLightbox
           toggler={lightboxController.toggler}
           source={lightboxController.source}
@@ -131,13 +108,13 @@ const GalleryTemplate = () => {
 const galleryQuery = graphql`
   query GalleryQuery {
     allGalleryJson {
-    nodes {
-      src
-      desktopMargin
-      mobileMargin
-      tabletMargin
+      nodes {
+        src
+        desktopMargin
+        mobileMargin
+        tabletMargin
+      }
     }
-  }
   }
 `;
 
