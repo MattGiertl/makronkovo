@@ -1,0 +1,23 @@
+{
+  "title": "Cheesecaky",
+  "to": "/cheesecaky",
+  "products": [
+    {
+      "title": "Fikus Huncut",
+      "isSeasonal": true,
+      "weight": "1800g",
+      "oldPrice": "20",
+      "price": "18",
+      "description": "Jemna popicovka",
+      "images": [
+        {
+          "image": "/img/bezlepkove-torty.jpg"
+        },
+        {
+          "image": "/img/cheesecake.jpg"
+        }
+      ],
+      "to": "/fikus-huncut"
+    }
+  ]
+}
