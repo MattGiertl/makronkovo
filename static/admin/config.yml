@@ -11,6 +11,38 @@ collections:
     format: json
     create: true
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - { label: "Title", name: title, widget: "string" }
+      - { label: "Link", name: to, widget: "string" }
+      - {
+          label: "Produkty",
+          name: products,
+          widget: "list",
+          allow_add: true,
+          fields:
+            [
+              { label: "Názov", name: title, widget: "string" },
+              { label: "Sezónne", name: isSeasonal, widget: "boolean" },
+              { label: "Váha", name: weight, widget: string },
+              {
+                label: "Pôvodná cena",
+                name: oldPrice,
+                widget: "string",
+                required: false,
+              },
+              { label: "Nová cena", name: price, widget: string },
+              {
+                label: "Popis Produktu",
+                name: description,
+                widget: string,
+                required: false,
+              },
+              {
+                label: "Obrázky",
+                name: images,
+                widget: list,
+                allow_add: true,
+                fields: [{ label: "Obrázok", name: image, widget: image }],
+              },
+              { label: "Link", name: to, widget: "string" },
+            ],
+        }
