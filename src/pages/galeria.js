@@ -7,9 +7,13 @@ import GalleryItem from '../components/atoms/GalleryItem';
 const Gallery = () => {
   const data = useStaticQuery(galleryQuery);
   const { nodes: images } = data.allGalleryJson;
-  const renderImages = images.map(image => (
-    <GalleryItem backgroundImage={image.src} onClick={() => openLightboxOnSource(image.src)} />
-  ));
+  const Source = [];
+  const renderImages = images.map(image => {
+    Source.push(image.src);
+    return (
+      <GalleryItem backgroundImage={image.src} onClick={() => openLightboxOnSource(image.src)} />
+    );
+  });
 
   const [lightboxController, setLightboxController] = useState({
     toggler: false,
@@ -22,7 +26,7 @@ const Gallery = () => {
         <FsLightbox
           toggler={lightboxController.toggler}
           source={lightboxController.source}
-          sources={images}
+          sources={Source}
         />
       </>
     );
