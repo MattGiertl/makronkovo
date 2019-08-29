@@ -1,0 +1,28 @@
+{
+  "title": "TORTY",
+  "to": "https://develop--makronkovo.netlify.com/dezerty/torty",
+  "products": [
+    {
+      "title": "Charlotta berry ",
+      "isSeasonal": false,
+      "weight": "1300g",
+      "price": "23€",
+      "description": "Domáce savoiardi piškóty s krémom z bobuľového ovocia a vrstvou vanilkového krému",
+      "to": "https://develop--makronkovo.netlify.com/dezerty/torty/charlotta-berry"
+    },
+    {
+      "title": "Šťavnatá čokoládová torta so slaným karamelom",
+      "isSeasonal": false,
+      "weight": "1200g",
+      "price": "24€",
+      "to": "https://develop--makronkovo.netlify.com/dezerty/torty/cokoladova-torta-so-slanym-karamelom"
+    },
+    {
+      "title": "Brownie s krémom z mascarone a citrónovým lemon curd",
+      "isSeasonal": false,
+      "weight": "1000g",
+      "price": "24€",
+      "to": "https://develop--makronkovo.netlify.com/dezerty/torty/brownie-s-kremom"
+    }
+  ]
+}
