@@ -54,11 +54,12 @@ collections:
         }
   - label: "Galéria"
     name: gallery
+    create: true
     files:
-      - label: Obrázky
-        name: galleryItems
+      - label: "Obrázky"
+        name: galleryImages
         file: "src/data/gallery.json"
         allow_add: true
-        field:
-          widget: list
-          field: { label: Name, name: name, widget: string }
+        widget: list
+        fields:
+          - { label: "Obrázok", name: image, widget: image }
