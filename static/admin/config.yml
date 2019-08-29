@@ -16,7 +16,7 @@ collections:
       - { label: "Link", name: to, widget: "string" }
       - {
           label: "Produkty",
-          name: items,
+          name: products,
           widget: "list",
           allow_add: true,
           fields:
