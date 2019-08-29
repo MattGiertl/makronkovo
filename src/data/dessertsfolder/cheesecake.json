@@ -23,14 +23,14 @@
       "isSeasonal": false,
       "weight": "1200g",
       "price": "22",
-      "to": "nepeceny-cucoriedkovy-cheesecake"
+      "to": "nepeceny-cucoriedkovy"
     },
     {
       "title": "Kokosový",
       "isSeasonal": false,
       "weight": "1200g",
       "price": "22",
-      "to": "kokosovy-cheesecake"
+      "to": "kokosovy"
     },
     {
       "title": "Karamel a jablkové pyré",
@@ -44,14 +44,14 @@
       "isSeasonal": false,
       "weight": "1200g",
       "price": "22",
-      "to": "nepeceny-citronovy-cheesecake"
+      "to": "nepeceny-citronovy"
     },
     {
       "title": "Nepečený čučoriedový",
       "isSeasonal": false,
       "weight": "1200g",
       "price": "22",
-      "to": "nepeceny-cucoriedkovy-cheesecake"
+      "to": "nepeceny-cucoriedkovy"
     }
   ]
 }
