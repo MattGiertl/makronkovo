@@ -1,0 +1,35 @@
+{
+  "title": "DEZERTY KUSOVKY",
+  "to": "https://develop--makronkovo.netlify.com/dezerty/kusovky",
+  "products": [
+    {
+      "title": "Macaron",
+      "isSeasonal": false,
+      "weight": "20g",
+      "price": "0,75€",
+      "to": "https://develop--makronkovo.netlify.com/dezerty/kusovky/macaron"
+    },
+    {
+      "title": "Paris Brest s praliné orieškovým krémom",
+      "isSeasonal": false,
+      "weight": "60g",
+      "price": "1,80€",
+      "to": "https://develop--makronkovo.netlify.com/dezerty/kusovky/paris-brest"
+    },
+    {
+      "title": "Tartletka",
+      "isSeasonal": false,
+      "weight": "70g",
+      "price": "2,10€",
+      "description": "Príchuť: • citrón s meringue pusinkami • čokoláda a ovocná redukcia • slaný karamel s orieškami",
+      "to": "https://develop--makronkovo.netlify.com/dezerty/kusovky/tartletka"
+    },
+    {
+      "title": "Pavlovka hniezdo s mascarpone a sezónnym ovocím ",
+      "isSeasonal": false,
+      "weight": "90g",
+      "price": "2,20€",
+      "to": "https://develop--makronkovo.netlify.com/dezerty/kusovky/pavlovka-hniezdo"
+    }
+  ]
+}
