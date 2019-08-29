@@ -16,13 +16,18 @@ collections:
       - { label: "Link", name: to, widget: "string" }
       - {
           label: "Produkty",
-          name: products,
+          name: items,
           widget: "list",
           allow_add: true,
           fields:
             [
               { label: "Názov", name: title, widget: "string" },
-              { label: "Sezónne", name: isSeasonal, widget: "boolean", default: false },
+              {
+                label: "Sezónne",
+                name: isSeasonal,
+                widget: "boolean",
+                default: false,
+              },
               { label: "Váha", name: weight, widget: string },
               {
                 label: "Pôvodná cena",
