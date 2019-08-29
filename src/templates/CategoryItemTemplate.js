@@ -37,10 +37,10 @@ const Description = styled.div({
 });
 
 const CategoryItemTemplate = ({ pageContext }) => {
-  const { products, title: categoryName, to: categoryTo } = pageContext;
+  const { items, title: categoryName, to: categoryTo } = pageContext;
   const { dinPro } = theme.fontFamilies;
 
-  const renderItems = products.map(item => {
+  const renderItems = items.map(item => {
     const { image, to, title, oldPrice, price } = item;
 
     return (
