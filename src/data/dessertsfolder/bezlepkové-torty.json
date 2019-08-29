@@ -8,7 +8,7 @@
       "weight": "1000g ",
       "price": "22€",
       "description": "Orechovo bielkový korpus a poctivý maslovo-žĺtkový krém prevoňaný rumom a plátky mandlí",
-      "to": "https://develop--makronkovo.netlify.com/dezerty/bezlepkove-torty/svedska-mandlova-torta"
+      "to": "svedska-mandlova-torta"
     },
     {
       "title": "Švédska čokoládová torta",
@@ -16,7 +16,7 @@
       "weight": "1000g",
       "price": "22€",
       "description": "Orechovo bielkový korpus s čokoládovožĺtkovým krémom, prevoňaný rumom",
-      "to": "https://develop--makronkovo.netlify.com/dezerty/bezlepkove-torty/svedska-cokoladova-torta"
+      "to": "svedska-cokoladova-torta"
     },
     {
       "title": "Ferrero Rocher torta s wafličkami a lieskovcami ",
@@ -24,7 +24,7 @@
       "weight": "1000g",
       "price": "22€",
       "description": "Torta na štýl známych cukríkov s chrumkavými wafličkami a lieskovými orechmi *wafličky v kréme obsahujú lepok ",
-      "to": "https://develop--makronkovo.netlify.com/dezerty/bezlepkove-torty/ferrero-rocher-torta"
+      "to": "ferrero-rocher-torta"
     },
     {
       "title": "Zamatová čokoládová kráska",
@@ -32,14 +32,14 @@
       "weight": "1200g",
       "price": "22€",
       "description": "Veľmi nadýchaná čokoládová torta na štýl pevnejšieho moussu",
-      "to": "https://develop--makronkovo.netlify.com/dezerty/bezlepkove-torty/zamatova-cokoladova-kraska"
+      "to": "zamatova-cokoladova-kraska"
     },
     {
       "title": "Čokoládová kráska s čestvými malinami",
       "isSeasonal": false,
       "weight": "1200g",
       "price": "24€",
-      "to": "https://develop--makronkovo.netlify.com/dezerty/bezlepkove-torty/cokoladova-kraska-s-malinami"
+      "to": "cokoladova-kraska-s-malinami"
     },
     {
       "title": "Maková torta s mascarpone",
@@ -47,7 +47,7 @@
       "weight": "1000g",
       "price": "23€",
       "description": "Maková torta s citrónovým mascarpone a sviežim lemon curd",
-      "to": "https://develop--makronkovo.netlify.com/dezerty/bezlepkove-torty/makova-torta-s-mascarpone"
+      "to": "makova-torta-s-mascarpone"
     }
   ]
 }
