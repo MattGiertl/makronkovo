@@ -18,7 +18,7 @@ const MainPage = () => {
     <Polaroid src={offer.image}>
       <Paragraph
         fontFamily={theme.fontFamilies.caslonAntique.regular}
-        desktopFontSize={theme.fontSizes.large}
+        desktopFontSize={theme.fontSizes.medium}
         laptopFontSize={theme.fontSizes.medium}
       >
         {offer.heading}
