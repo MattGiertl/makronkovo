@@ -1,56 +1,57 @@
 {
   "title": "CHEESECAKY",
-  "to": "dezerty/cheesecaky",
+  "to": "/dezerty/cheesecaky",
   "products": [
     {
       "title": "Vanilkovo-citrónový",
       "isSeasonal": false,
       "weight": "1800g",
-      "price": "22€",
-      "to": "https://develop--makronkovo.netlify.com/dezerty/cheesecaky/vanilkovo-citronovy-cheesecake"
+      "price": "22",
+      "images": [],
+      "to": "vanilkovo-citronovy-cheesecake"
     },
     {
       "title": "Karamelový s lieskovcami",
       "isSeasonal": false,
       "weight": "1200g",
-      "price": "22€",
+      "price": "22",
       "description": "",
-      "to": "https://develop--makronkovo.netlify.com/dezerty/cheesecaky/karamelovy-s-lieskovcami"
+      "to": "karamelovy-s-lieskovcami"
     },
     {
       "title": "Čučoriedkový",
       "isSeasonal": false,
       "weight": "1200g",
-      "price": "22€",
-      "to": "https://develop--makronkovo.netlify.com/dezerty/cheesecaky/nepeceny-cucoriedkovy"
+      "price": "22",
+      "to": "nepeceny-cucoriedkovy-cheesecake"
     },
     {
       "title": "Kokosový",
       "isSeasonal": false,
       "weight": "1200g",
-      "price": "22€",
-      "to": "https://develop--makronkovo.netlify.com/dezerty/cheesecaky/kokosovy"
+      "price": "22",
+      "to": "kokosovy-cheesecake"
     },
     {
       "title": "Karamel a jablkové pyré",
       "isSeasonal": false,
       "weight": "1200g",
       "price": "22€",
-      "to": "https://develop--makronkovo.netlify.com/dezerty/cheesecaky/karamel-a-jablkove-pyre"
+      "to": "karamel-a-jablkove-pyre"
     },
     {
       "title": "Nepečený citrónový",
       "isSeasonal": false,
       "weight": "1200g",
-      "price": "22€",
-      "to": "https://develop--makronkovo.netlify.com/dezerty/cheesecaky/nepeceny-citronovy"
+      "price": "22",
+      "to": "nepeceny-citronovy-cheesecake"
     },
     {
       "title": "Nepečený čučoriedový",
       "isSeasonal": false,
       "weight": "1200g",
-      "price": "22€",
-      "to": "https://develop--makronkovo.netlify.com/dezerty/cheesecaky/nepeceny-cucoriedkovy"
+      "price": "22",
+      "to": "nepeceny-cucoriedkovy-cheesecake"
     }
   ]
 }
