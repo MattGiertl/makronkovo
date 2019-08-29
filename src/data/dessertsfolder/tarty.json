@@ -1,0 +1,14 @@
+{
+  "title": "Tarty",
+  "to": "fdsa",
+  "products": [
+    {
+      "title": "Citrónový tart s pusinkami",
+      "isSeasonal": true,
+      "weight": "1000g",
+      "price": "22,50€",
+      "description": "Krehký kakaový tart s osviežujúcim citrónovým krémom a sladučkými penovými meringues pusinkami",
+      "to": "https://develop--makronkovo.netlify.com/dezerty/cheesecaky"
+    }
+  ]
+}
