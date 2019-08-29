@@ -57,7 +57,7 @@ const CollectionTemplate = ({ pageContext }) => {
 
   const renderCategoryItems = categoryItems.map(categoryItem => (
     <Polaroid to={categoryItem.to} shadowed src={categoryItem.image}>
-      <Paragraph>{categoryItem.categoryName}</Paragraph>
+      <Paragraph fontFamily={theme.fontFamilies.caslonAntique.bold}>{categoryItem.categoryName}</Paragraph>
     </Polaroid>
   ));
 
@@ -65,7 +65,7 @@ const CollectionTemplate = ({ pageContext }) => {
     <Layout>
       <FountainHeading>{title}</FountainHeading>
       <TextWrapper>
-        <Paragraph fontFamily={theme.fontFamilies.dinPro} textAlign="center">
+        <Paragraph fontFamily={theme.fontFamilies.dinPro.regular} textAlign="center">
           {lightText}
         </Paragraph>
         <Paragraph marginTop="20px" fontFamily={theme.fontFamilies.dinPro.bold} textAlign="center">
