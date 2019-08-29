@@ -61,10 +61,13 @@ const ProductDetailTemplate = ({ pageContext }) => {
     isSet,
     productCategoryTitle,
     items,
+    products,
     setInfo,
   } = pageContext;
 
-  const moreProducts = items.filter(item => item.title !== title);
+  const moreProducts = items
+    ? items.filter(item => item.title !== title)
+    : products.filter(item => item.title !== title);
 
   return (
     <Layout>
