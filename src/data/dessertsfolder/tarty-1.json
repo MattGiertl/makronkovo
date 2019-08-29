@@ -8,7 +8,7 @@
       "weight": "1000g",
       "price": "22,50€",
       "description": "Krehký kakaový tart s osviežujúcim citrónovým krémom a sladučkými penovými meringues pusinkami",
-      "to": "https://develop--makronkovo.netlify.com/dezerty/tarty/citronovy-s-pusinkami"
+      "to": "citronovy-s-pusinkami"
     },
     {
       "title": "Tart čokoládový s gaštanovým pyré",
@@ -16,7 +16,7 @@
       "weight": "1000g",
       "price": "22,50€",
       "description": "Kakaový tart s gaštanovým pyré, pikantným džemom a ganache z horkej čokolády a rumu",
-      "to": "https://develop--makronkovo.netlify.com/dezerty/tarty/cokoladovy-s-gastanovym-pyre"
+      "to": "cokoladovy-s-gastanovym-pyre"
     },
     {
       "title": "Tart s čerstvým ovocím, bielou ganache a kokosom",
@@ -24,14 +24,14 @@
       "weight": "1000g",
       "price": "22,50€",
       "description": "Kakaový tart naplnený čerstvými malinami,preliaty bielou ganache a bohato zasypaný kokosom",
-      "to": "https://develop--makronkovo.netlify.com/dezerty/tarty/tart-s-cerstvym-ovocim"
+      "to": "tart-s-cerstvym-ovocim"
     },
     {
       "title": "Tart so slaným karamelom a čokoládovou ganache",
       "isSeasonal": false,
       "weight": "1000g",
       "price": "22,50€",
-      "to": "https://develop--makronkovo.netlify.com/dezerty/tarty/tart-so-slanym-karamelom"
+      "to": "tart-so-slanym-karamelom"
     }
   ]
 }
