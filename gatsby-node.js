@@ -48,7 +48,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           node {
             title
             to
-            items {
+            products {
               description
               image
               setInfo {
