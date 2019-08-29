@@ -1,0 +1,56 @@
+{
+  "title": "CHEESECAKE",
+  "to": "https://develop--makronkovo.netlify.com/dezerty/cheesecaky",
+  "products": [
+    {
+      "title": "Vanilkovo-citrónový",
+      "isSeasonal": false,
+      "weight": "1800g",
+      "price": "22€",
+      "to": "https://develop--makronkovo.netlify.com/dezerty/cheesecaky/vanilkovo-citronovy-cheesecake"
+    },
+    {
+      "title": "Karamelový s lieskovcami",
+      "isSeasonal": false,
+      "weight": "1200g",
+      "price": "22€",
+      "description": "",
+      "to": "https://develop--makronkovo.netlify.com/dezerty/cheesecaky/karamelovy-s-lieskovcami"
+    },
+    {
+      "title": "Čučoriedkový",
+      "isSeasonal": false,
+      "weight": "1200g",
+      "price": "22€",
+      "to": "https://develop--makronkovo.netlify.com/dezerty/cheesecaky/nepeceny-cucoriedkovy"
+    },
+    {
+      "title": "Kokosový",
+      "isSeasonal": false,
+      "weight": "1200g",
+      "price": "22€",
+      "to": "https://develop--makronkovo.netlify.com/dezerty/cheesecaky/kokosovy"
+    },
+    {
+      "title": "Karamel a jablkové pyré",
+      "isSeasonal": false,
+      "weight": "1200g",
+      "price": "22€",
+      "to": "https://develop--makronkovo.netlify.com/dezerty/cheesecaky/karamel-a-jablkove-pyre"
+    },
+    {
+      "title": "Nepečený citrónový",
+      "isSeasonal": false,
+      "weight": "1200g",
+      "price": "22€",
+      "to": "https://develop--makronkovo.netlify.com/dezerty/cheesecaky/nepeceny-citronovy"
+    },
+    {
+      "title": "Nepečený čučoriedový",
+      "isSeasonal": false,
+      "weight": "1200g",
+      "price": "22€",
+      "to": "https://develop--makronkovo.netlify.com/dezerty/cheesecaky/nepeceny-cucoriedkovy"
+    }
+  ]
+}
