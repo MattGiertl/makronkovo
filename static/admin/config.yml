@@ -22,7 +22,12 @@ collections:
           fields:
             [
               { label: "Názov", name: title, widget: "string" },
-              { label: "Sezónne", name: isSeasonal, widget: "boolean", default: false },
+              {
+                label: "Sezónne",
+                name: isSeasonal,
+                widget: "boolean",
+                default: false,
+              },
               { label: "Váha", name: weight, widget: string },
               {
                 label: "Pôvodná cena",
@@ -47,3 +52,9 @@ collections:
               { label: "Link", name: to, widget: "string" },
             ],
         }
+  - label: "Galéria"
+    name: gallery
+    file: "src/data/gallery.json"
+    widget: list
+    allow_add: true
+    field: { label: "Obrázok", name: src, widget: image }
