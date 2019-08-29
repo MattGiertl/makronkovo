@@ -8,28 +8,28 @@
       "weight": "1000g",
       "price": "14€",
       "description": "Celosvetovo známy dezert, kysnutá babka z ktorej čokoláda doslova vyteká",
-      "to": "https://develop--makronkovo.netlify.com/dezerty/ranajkove-kolace/cokoladova-babka"
+      "to": "cokoladova-babka"
     },
     {
       "title": "Tvarohová Bábovka ",
       "isSeasonal": false,
       "weight": "800g",
       "price": "11€",
-      "to": "https://develop--makronkovo.netlify.com/dezerty/ranajkove-kolace/tvarohova-babovka"
+      "to": "tvarohova-babovka"
     },
     {
       "title": "Šťavnatý citrónový chlebík ",
       "isSeasonal": false,
       "weight": "950g",
       "price": "12€",
-      "to": "https://develop--makronkovo.netlify.com/dezerty/ranajkove-kolace/stavnaty-citronovy-chlebik"
+      "to": "stavnaty-citronovy-chlebik"
     },
     {
       "title": "Banánový chlebík",
       "isSeasonal": false,
       "weight": "800g",
       "price": "14€",
-      "to": "https://develop--makronkovo.netlify.com/dezerty/ranajkove-kolace/bananovy-chlebik"
+      "to": "bananovy-chlebik"
     }
   ]
 }
