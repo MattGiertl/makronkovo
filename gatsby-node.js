@@ -62,6 +62,22 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           }
         }
       }
+      allDessertsfolderJson {
+        edges {
+          node {
+            title
+            to
+            products {
+              description
+              isSeasonal
+              price
+              title
+              to
+              weight
+            }
+          }
+        }
+      }
     }
   `);
 
@@ -78,7 +94,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     });
   });
 
-  result.data.allDessertsJson.edges.forEach(({ node }) => {
+  result.data.allDessertsfolderJson.edges.forEach(({ node }) => {
     createPage({
       path: node.to,
       component: categoryItemTemplate,
