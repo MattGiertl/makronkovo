@@ -125,13 +125,13 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   result.data.allCandyBarsJson.edges.forEach(({ node }) => {
     const productCategoryTitle = node.title;
-    const items = node.items;
+    const products = node.products;
 
-    node.items.map(candyBar => {
+    node.products.map(candyBar => {
       createPage({
         path: candyBar.to,
         component: productDetailTemplate,
-        context: { ...candyBar, productCategoryTitle, items },
+        context: { ...candyBar, productCategoryTitle, products },
       });
     });
   });
