@@ -58,8 +58,17 @@ collections:
     files:
       - label: "Obrázky"
         name: galleryImages
-        file: "src/data/gallery.json"
+        file: "src/data/cmsGallery.json"
         allow_add: true
         widget: list
         fields:
-          - { label: "Obrázok", name: image, widget: image }
+          - {
+              label: "Položky galérie",
+              name: galleryCollection,
+              widget: list,
+              fields:
+                [
+                  { label: "Popis", name: "title", widget: string },
+                  { label: "Obrázok", name: "image", widget: image },
+                ],
+            }
