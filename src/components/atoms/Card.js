@@ -8,20 +8,25 @@ const StyledCard = styled.div(
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    alignItems: 'center',
     transition: 'box-shadow 300ms',
   },
   props => ({
+    alignItems: props.alignItems ? props.alignItems : 'center',
     boxShadow: props.boxShadow,
-    [mobileQuery]: { margin: props.mobileMargin },
-    [tabletQuery]: { margin: props.tabletMargin },
-    [laptopQuery]: { margin: props.laptopMargin },
-    [desktopQuery]: { margin: props.desktopMargin },
+    [mobileQuery]: { margin: props.mobileMargin, width: props.mobileWidth },
+    [tabletQuery]: { margin: props.tabletMargin, width: props.tabletWidth },
+    [laptopQuery]: { margin: props.laptopMargin, width: props.laptopWidth },
+    [desktopQuery]: { margin: props.desktopMargin, width: props.desktopWidth },
   }),
 );
 
 const CardWrapper = ({
   isVisible,
+  alignItems,
+  mobileWidth,
+  tabletWidth,
+  laptopWidth,
+  desktopWidth,
   children,
   mobileMargin,
   tabletMargin,
@@ -30,6 +35,11 @@ const CardWrapper = ({
 }) => (
   <StyledCard
     boxShadow={isVisible ? '0px 10px 20px rgba(0, 0, 0, 0.12)' : 'none'}
+    mobileWidth={mobileWidth}
+    tabletWidth={tabletWidth}
+    laptopWidth={laptopWidth}
+    desktopWidth={desktopWidth}
+    alignItems={alignItems}
     mobileMargin={mobileMargin}
     tabletMargin={tabletMargin}
     laptopMargin={laptopMargin}
@@ -39,9 +49,26 @@ const CardWrapper = ({
   </StyledCard>
 );
 
-const Card = ({ children, mobileMargin, tabletMargin, laptopMargin, desktopMargin }) => (
-  <TrackVisibility>
+const Card = ({
+  children,
+  alignItems,
+  mobileWidth,
+  tabletWidth,
+  laptopWidth,
+  desktopWidth,
+  mobileMargin,
+  tabletMargin,
+  laptopMargin,
+  desktopMargin,
+  partialVisibility
+}) => (
+  <TrackVisibility partialVisibility={partialVisibility}>
     <CardWrapper
+      alignItems={alignItems}
+      mobileWidth={mobileWidth}
+      tabletWidth={tabletWidth}
+      laptopWidth={laptopWidth}
+      desktopWidth={desktopWidth}
       mobileMargin={mobileMargin}
       tabletMargin={tabletMargin}
       laptopMargin={laptopMargin}

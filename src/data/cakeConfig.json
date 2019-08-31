@@ -1,0 +1,118 @@
+[
+  {
+    "firstCard": {
+      "section": "/assets/FirstSection.svg",
+      "title": "VELKOSŤ",
+      "paragraph": "Jednoposchodové torty (18 cm priemer)",
+      "secondParagraph": "Dvojposchodová torta a torta nad 22 porcií",
+      "image": "/assets/DoubleCake.png",
+      "price": "5€ / porcia",
+      "items": [
+        {
+          "image": "/assets/MiniCake.png",
+          "imgName": "Mini",
+          "type": "Mini",
+          "weight": "1500 g",
+          "height": "výška 10 cm",
+          "portions": "8 porcií",
+          "price": "od 45€"
+        },
+        {
+          "image": "/assets/MidiCake.png",
+          "imgName": "Midi",
+          "type": "Midi",
+          "weight": "2000 g",
+          "height": "výška 13 cm",
+          "portions": "10 porcií",
+          "price": "od 55€"
+        },
+        {
+          "image": "/assets/ClassikCake.png",
+          "imgName": "Klasik",
+          "type": "Klasik",
+          "weight": "2500 g",
+          "height": "výška 17 cm",
+          "portions": "16 porcií",
+          "price": "od 70€"
+        },
+        {
+          "image": "/assets/TallCake.png",
+          "imgName": "Tall",
+          "type": "Tall",
+          "weight": "3000 g",
+          "height": "výška 20 cm",
+          "portions": "22 porcií",
+          "price": "od 85€"
+        }
+      ]
+    },
+    "secondCard": {
+      "section": "/assets/SecondSection.svg",
+      "title": "VZHĽAD",
+      "items": [
+        {
+          "image": "/assets/Korpus.png",
+          "imgName": "Korpus",
+          "heading": "Korpus",
+          "options": ["Vanilka", "Kakao", "Bezlepkový orechový"]
+        },
+        {
+          "image": "/assets/Krem.png",
+          "imgName": "Krem",
+          "heading": "Krém",
+          "options": [
+            "Mascarpone s tvarohom a redukciou z lesného ovocia",
+            "Mascarpone s kokosom, malinovou redukciou a čerstvými malinami ",
+            "Čokoláda a slaný karamel s chrumkavými kúskami karamelu v čokoláde a pomarančovou redukciou",
+            "Čokoláda s maracujou",
+            "Maková s mascarpone a višňovou redukciou",
+            "Ruby čokoláda s mascarpone a čerstvými malinami (plus 5€, ruby je nová prírodne ružová a kyselkavá odroda čokolády spoločnosti callebaut)",
+            "Mascarpone s tvarohom a limoncellom"
+          ]
+        },
+        {
+          "image": "/assets/VonkajsiePrevedenie.png",
+          "imgName": "VonkajsiePrevedenie",
+          "heading": "Vonkajšie prevedenie",
+          "options": ["Polonahá torta", "Celá obtretá", "Obtretá na hladko", "Obtretá nedbalo"]
+        },
+        {
+          "image": "/assets/Poleva.png",
+          "imgName": "Poleva",
+          "heading": "Poleva",
+          "options": ["Karamel", "Tmavá čokoláda", "Biela čokoláda", "Bez polevy"]
+        },
+        {
+          "image": "/assets/Zdobenie.png",
+          "imgName": "Zdobenie",
+          "heading": "Zdobenie torty",
+          "options": [
+            "Snehové pusinky",
+            "Bobuľové ovocie",
+            "Sušené ovocie",
+            "Tropické ovcocie (maracuja, granátové jablko, figy) od 1 €",
+            "Macarons od 1 €",
+            "Plátkové zlato od 1 €",
+            "Živé kvety (nejedlé) a eucalyptus od 5 €",
+            "Čokoládové a cukrové sochy od 5 €",
+            "Cukrové guličky zlaté, medené, ružové, modré, farebné ",
+            "Farebný buttercream"
+          ]
+        },
+        {
+          "image": "/assets/Zapich.png",
+          "imgName": "Zapich",
+          "heading": "Zápich",
+          "options": [
+            "Plastový na mieru od 8 €",
+            "Vlajkový na mieru od 5 €",
+            "Vlajkový štandardný „Happy birthday“ od 5 €",
+            "Balón s konfetami 5 €",
+            "Fondantové rámiky s menom 5 €",
+            "Sviečky od 2 €"
+          ]
+        }
+      ]
+    }
+  }
+]
