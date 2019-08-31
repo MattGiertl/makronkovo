@@ -185,7 +185,7 @@ const ProductDetailTemplate = ({ pageContext }) => {
           </ContactInfo>
         </MobileOnly>
 
-        <FountainHeading>{`ĎAĽŠIE ${productCategoryTitle}`}</FountainHeading>
+        <FountainHeading>{`ĎALŠIE ${productCategoryTitle}`}</FountainHeading>
         <MoreProductsWrapper>
           {moreProducts.map(product => (
             <Polaroid shadowed src={product.image ? product.image : Fallback} to={product.to}>
