@@ -11,7 +11,7 @@ import MainPageTemplate from '../templates/MainPageTemplate/MainPageTemplate';
 
 const MainPage = () => {
   const data = useStaticQuery(mainPageQuery);
-  const { slideshow, sections } = data.allDataJson.nodes[0];
+  const { slideshow, sections } = data.mainPageDataJson;
   const { offer, discount, instagram, reference, team } = sections;
 
   const renderOfferPolaroids = offer.polaroids.map(offer => (
@@ -58,7 +58,7 @@ const MainPage = () => {
   ));
 
   const renderInstagramPosts = instagram.posts.map(post => (
-    <SquarePic src={post.image} href="https://www.instagram.com/makronkovo" />
+    <SquarePic src={post.image} href="https://www.instagram.com/makronkovo/" />
   ));
 
   const renderReferencePolaroids = reference.polaroids.map(reference => (
@@ -103,54 +103,52 @@ const MainPage = () => {
 
 const mainPageQuery = graphql`
   query MainPageQuery {
-    allDataJson {
-      nodes {
-        slideshow {
-          image
+    mainPageDataJson {
+      slideshow {
+        image
+      }
+      sections {
+        discount {
+          background
+          heading
+          polaroids {
+            heading
+            image
+            newPrice
+            oldPrice
+          }
         }
-        sections {
-          offer {
-            heading
-            background
-            polaroids {
-              heading
-              image
-            }
+        instagram {
+          background
+          heading
+          posts {
+            image
           }
-          discount {
+        }
+        offer {
+          background
+          heading
+          polaroids {
             heading
-            background
-            polaroids {
-              heading
-              image
-              newPrice
-              oldPrice
-            }
+            image
           }
-          instagram {
-            heading
-            background
-            posts {
-              image
-            }
+        }
+        reference {
+          background
+          heading
+          polaroids {
+            author
+            image
+            review
           }
-          reference {
-            heading
-            background
-            polaroids {
-              review
-              author
-              image
-            }
-          }
-          team {
-            background
-            heading
-            pictures {
-              image
-              name
-              position
-            }
+        }
+        team {
+          background
+          heading
+          pictures {
+            image
+            name
+            position
           }
         }
       }

@@ -6,12 +6,15 @@ import GalleryItem from '../components/atoms/GalleryItem';
 
 const Gallery = () => {
   const data = useStaticQuery(galleryQuery);
-  const { nodes: images } = data.allGalleryJson;
+  const { images } = data.galleryJson;
   const Source = [];
   const renderImages = images.map(image => {
-    Source.push(image.src);
+    Source.push(image.image);
     return (
-      <GalleryItem backgroundImage={image.src} onClick={() => openLightboxOnSource(image.src)} />
+      <GalleryItem
+        backgroundImage={image.image}
+        onClick={() => openLightboxOnSource(image.image)}
+      />
     );
   });
 
@@ -44,9 +47,9 @@ const Gallery = () => {
 
 const galleryQuery = graphql`
   query GalleryQuery {
-    allGalleryJson {
-      nodes {
-        src
+    galleryJson {
+      images {
+        image
       }
     }
   }
