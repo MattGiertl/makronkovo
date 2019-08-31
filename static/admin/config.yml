@@ -119,7 +119,6 @@ collections:
                 allow_add: true,
                 fields: [{ label: "Obrázok", name: image, widget: image }],
               },
-
               { label: "Link", name: to, widget: "string" },
             ],
         }
