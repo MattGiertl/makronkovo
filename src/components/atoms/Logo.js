@@ -1,7 +1,7 @@
 import React from 'react';
 
 import styled from '@emotion/styled';
-import LogoImg from '../../../static/logo.png';
+import LogoImg from '../../../static/Logo.svg';
 
 import { desktopQuery, laptopQuery, mobileQuery, tabletQuery } from '../../utils/mediaqueries';
 
