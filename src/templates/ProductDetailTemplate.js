@@ -3,6 +3,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import theme from '../utils/theme/theme';
 import { mobileQuery, tabletQuery, laptopQuery, desktopQuery } from '../utils/mediaqueries';
+import Fallback from '../../static/assets/fallback.png';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Heading from '../components/atoms/Heading';
@@ -25,6 +26,7 @@ import Contact from '../components/molecules/Contact';
 import Layout from '../components/organisms/Layout/Layout';
 import SetCard from '../components/molecules/SetCard';
 import SetCards from '../components/atoms/SetCards';
+import SlideShow from '../components/atoms/Slideshow';
 
 const ContentWrapper = styled.div({
   display: 'flex',
@@ -52,21 +54,20 @@ const ProductDetailTemplate = ({ pageContext }) => {
   const { fontSizes, fontFamilies } = theme;
   const {
     description,
-    image,
+    images,
     weight,
-    newPrice,
+    price,
     oldPrice,
     title,
     isSeasonal,
     isSet,
     productCategoryTitle,
-    items,
     products,
     setInfo,
   } = pageContext;
 
-  const moreProducts = items
-    ? items.filter(item => item.title !== title)
+  const moreProducts = products
+    ? products.filter(item => item.title !== title)
     : products.filter(item => item.title !== title);
 
   return (
@@ -92,10 +93,29 @@ const ProductDetailTemplate = ({ pageContext }) => {
               ))}
             </SetCards>
           )}
-          {newPrice && <Price oldPrice={oldPrice} newPrice={newPrice} />}
+          {price && <Price oldPrice={oldPrice} price={price} />}
         </MobileOnly>
         <InfoStrip>
-          <ProductDetailImage src={image} alt={image} />
+          {images ? (
+            <SlideShow>
+              {images.map(img => (
+                <ProductDetailImage src={img.image} alt={img.image} />
+              ))}
+            </SlideShow>
+          ) : (
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                padding: '100px',
+                border: '1px solid #EDEDED',
+                margin: '0 50px 50px 0',
+              }}
+            >
+              <img src={Fallback} alt="Nebol poskytnutý žiadny obrázok" />
+            </div>
+          )}
 
           <DesktopOnly>
             <Labels>
@@ -117,7 +137,7 @@ const ProductDetailTemplate = ({ pageContext }) => {
               </SetCards>
             )}
 
-            {newPrice && <Price oldPrice={oldPrice} newPrice={newPrice} />}
+            {price && <Price oldPrice={oldPrice} price={price} />}
             <Paragraph lineHeight="24px" marginBottom="40px" fontSize={fontSizes.medium}>
               {description}
             </Paragraph>
@@ -168,11 +188,11 @@ const ProductDetailTemplate = ({ pageContext }) => {
         <FountainHeading>{`ĎALŠIE ${productCategoryTitle}`}</FountainHeading>
         <MoreProductsWrapper>
           {moreProducts.map(product => (
-            <Polaroid shadowed src={product.image} to={product.to}>
+            <Polaroid shadowed src={product.image ? product.image : Fallback} to={product.to}>
               <Paragraph textAlign="center" lineHeight="24px">
                 {product.title}
               </Paragraph>
-              {newPrice && <Paragraph lineHeight="24px">{product.newPrice}€</Paragraph>}
+              {price && <Paragraph lineHeight="24px">{product.price}€</Paragraph>}
             </Polaroid>
           ))}
         </MoreProductsWrapper>
