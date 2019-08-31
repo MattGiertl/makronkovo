@@ -1,14 +1,91 @@
 backend:
   name: git-gateway
-  branch: develop
+  branch: cms-candybar
 
 media_folder: static/img
 public_folder: /img
 
 collections:
-  - label: "Kategórie - dezerty"
+  - label: "Kategórie - Dezerty"
     name: "dessertCategories"
     folder: "src/data/dessertsfolder"
+    format: json
+    create: true
+    fields:
+      - { label: "Title", name: title, widget: "string" }
+      - { label: "Link", name: to, widget: "string" }
+      - {
+          label: "Produkty",
+          name: products,
+          widget: "list",
+          allow_add: true,
+          fields:
+            [
+              { label: "Názov", name: title, widget: "string" },
+              {
+                label: "Sezónne",
+                name: isSeasonal,
+                widget: "boolean",
+                default: false,
+              },
+              {
+                label: "Malý set",
+                name: smallSet,
+                widget: "object",
+                required: false,
+                fields:
+                  [
+                    { label: "Počet a cena", name: amount, widget: "string" },
+                    {
+                      label: "Jednotková vaha",
+                      name: unitWeight,
+                      widget: "string",
+                    },
+                  ],
+              },
+              {
+                label: "Veľký set",
+                name: largeSet,
+                widget: "object",
+                required: false,
+                fields:
+                  [
+                    { label: "Počet a cena", name: amount, widget: "string" },
+                    {
+                      label: "Jednotková vaha",
+                      name: unitWeight,
+                      widget: "string",
+                    },
+                  ],
+              },
+              { label: "Počet", name: pieces, widget: string, required: false },
+              {
+                label: "Príchute",
+                name: flavor,
+                required: false,
+                widget: list,
+                allow_add: true,
+                fields: [{ label: "Príchuť", name: flavor, widget: string }],
+              },
+              {
+                label: "Popis Produktu",
+                name: description,
+                widget: string,
+                required: false,
+              },
+              {
+                label: "Obrázky",
+                name: images,
+                widget: list,
+                allow_add: true,
+                fields: [{ label: "Obrázok", name: image, widget: image }],
+              },
+              { label: "Link", name: to, widget: "string" },
+            ],
+        }
+  - label: "Kategórie - Candy bar"
+    name: "dessertCategories"
+    folder: "src/data/candyBarData"
     format: json
     create: true
     fields:

@@ -24,6 +24,13 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
+        path: `${__dirname}/src/data/candyBarData`,
+        name: 'candyBarData',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
         path: `${__dirname}/src/pages`,
         name: 'pages',
       },
