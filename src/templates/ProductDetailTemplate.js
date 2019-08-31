@@ -4,7 +4,6 @@ import styled from '@emotion/styled';
 import theme from '../utils/theme/theme';
 import { mobileQuery, tabletQuery, laptopQuery, desktopQuery } from '../utils/mediaqueries';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Heading from '../components/atoms/Heading';
 import Paragraph from '../components/atoms/Paragraph';
 import Labels from '../components/atoms/Labels';
@@ -25,6 +24,12 @@ import Contact from '../components/molecules/Contact';
 import Layout from '../components/organisms/Layout/Layout';
 import SetCard from '../components/molecules/SetCard';
 import SetCards from '../components/atoms/SetCards';
+
+import SocialButton from '../components/atoms/SocialButton';
+import Mail from '../../static/assets/Mail.svg';
+import Telephone from '../../static/assets/Telefon.svg';
+import Facebook from '../../static/assets/Facebook.svg';
+import Instagram from '../../static/assets/Instagram.svg';
 
 const ContentWrapper = styled.div({
   display: 'flex',
@@ -127,22 +132,22 @@ const ProductDetailTemplate = ({ pageContext }) => {
             <ContactInfo>
               <div>
                 <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
-                  <FontAwesomeIcon style={{ marginRight: '4px' }} icon="envelope" />
+                  <SocialButton marginRight="8px" src={Mail} />
                   makronkovo@makronkovo.sk
                 </Paragraph>
                 <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
-                  <FontAwesomeIcon style={{ marginRight: '4px' }} icon="phone-alt" />
-                  0948 009 800
+                  <SocialButton marginRight="8px" src={Instagram} />
+                  makronkovo
                 </Paragraph>
               </div>
 
               <div>
                 <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
-                  <FontAwesomeIcon style={{ marginRight: '4px' }} icon={['fab', 'instagram']} />
-                  makronkovo
+                  <SocialButton marginRight="8px" src={Telephone} />
+                  0948 009 800
                 </Paragraph>
                 <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
-                  <FontAwesomeIcon style={{ marginRight: '4px' }} icon={['fab', 'facebook']} />
+                  <SocialButton marginRight="8px" src={Facebook} />
                   makronkovo
                 </Paragraph>
               </div>

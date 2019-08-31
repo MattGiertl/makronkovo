@@ -7,6 +7,8 @@ import MenuToggle from '../../atoms/MenuToggle';
 import NavBarWrapper from './NavBarWrapper';
 import NavItems from './NavItems';
 import SocialButtonGroup from './SocialButtonGroup';
+import FacebookIcon from '../../../../static/assets/Facebook.svg';
+import InstagramIcon from '../../../../static/assets/Instagram.svg';
 
 const NavBar = () => {
   const [showMenu, toggleMenu] = useState(false);
@@ -20,9 +22,9 @@ const NavBar = () => {
           <SocialButton
             to="https://www.instagram.com/makronkovo/?hl=en"
             marginRight="15px"
-            icon={['fab', 'instagram']}
+            src={InstagramIcon}
           />
-          <SocialButton to="https://www.facebook.com/makronkovo/" icon={['fab', 'facebook']} />
+          <SocialButton to="https://www.facebook.com/makronkovo/" src={FacebookIcon} />
         </SocialButtonGroup>
         <NavLink to="/torty-na-mieru">TORTY NA MIERU</NavLink>
         <NavLink to="/dezerty">DEZERTY</NavLink>

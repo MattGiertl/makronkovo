@@ -3,12 +3,15 @@ import Layout from '../components/organisms/Layout/Layout';
 import Heading from '../components/molecules/FountainHeading';
 import Paragraph from '../components/atoms/Paragraph';
 import styled from '@emotion/styled';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import theme from '../utils/theme/theme';
 import SocialButton from '../components/atoms/SocialButton';
 import { mobileQuery, tabletQuery } from '../utils/mediaqueries';
 import Anchor from '../components/atoms/Anchor';
 import InfoImage from '../../static/assets/Info.png';
+import Mail from '../../static/assets/Mail.svg';
+import Telephone from '../../static/assets/Telefon.svg';
+import Facebook from '../../static/assets/Facebook.svg';
+import Instagram from '../../static/assets/Instagram.svg';
 
 const ContentWrapper = styled.div({
   display: 'flex',
@@ -51,11 +54,11 @@ const CakeConfigTemplate = ({ cards }) => {
         </Paragraph>
         <ContactWrapper>
           <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
-            <FontAwesomeIcon style={{ marginRight: '12px' }} icon="envelope" />
+            <SocialButton marginRight="12px" src={Mail} />
             makronkovo@makronkovo.sk
           </Paragraph>
           <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
-            <FontAwesomeIcon style={{ marginRight: '12px' }} icon="phone-alt" />
+            <SocialButton marginRight="12px" src={Telephone} />
             0948 009 800
           </Paragraph>
           <Anchor
@@ -67,7 +70,7 @@ const CakeConfigTemplate = ({ cards }) => {
             <SocialButton
               to="https://www.instagram.com/makronkovo/?hl=en"
               marginRight="12px"
-              icon={['fab', 'instagram']}
+              src={Instagram}
             />
             makronkovo
           </Anchor>
@@ -79,7 +82,7 @@ const CakeConfigTemplate = ({ cards }) => {
           >
             <SocialButton
               to="https://www.facebook.com/makronkovo/"
-              icon={['fab', 'facebook']}
+              src={Facebook}
               marginRight="12px"
             />
             makronkovo

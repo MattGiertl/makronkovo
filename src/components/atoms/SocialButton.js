@@ -1,6 +1,4 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import theme from '../../utils/theme/theme';
 import styled from '@emotion/styled';
 
 const StyledAnchor = styled.a({
@@ -8,14 +6,20 @@ const StyledAnchor = styled.a({
   cursor: 'pointer',
 });
 
-const SocialButton = ({ marginRight, icon, to }) => (
+const Image = styled.img(
+  {
+    height: '20px',
+    width: '16px',
+    verticalAlign: 'bottom',
+  },
+  props => ({
+    marginRight: props.marginRight,
+  }),
+);
+
+const SocialButton = ({ marginRight, src, to }) => (
   <StyledAnchor target="_blank" href={to}>
-    <FontAwesomeIcon
-      style={{ marginRight: marginRight }}
-      icon={icon}
-      color={theme.colors.mediumGold}
-      size="lg"
-    />
+    <Image src={src} marginRight={marginRight} />
   </StyledAnchor>
 );
 

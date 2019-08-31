@@ -9,7 +9,10 @@ import Paragraph from '../components/atoms/Paragraph';
 import Map from '../components/atoms/Map';
 import Layout from '../components/organisms/Layout/Layout';
 import FountainHeading from '../components/molecules/FountainHeading';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import SocialButton from '../components/atoms/SocialButton';
+import Mail from '../../static/assets/Mail.svg';
+import Telephone from '../../static/assets/Telefon.svg';
+import Location from '../../static/assets/Location.svg';
 
 const ContentWrapper = styled.div({
   display: 'flex',
@@ -41,15 +44,15 @@ const ContactTemplate = () => (
     <ContentWrapper>
       <FountainHeading>KONTAKT</FountainHeading>
       <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
-        <FontAwesomeIcon icon="map-marker-alt" style={{ marginRight: '4px' }} />
+        <SocialButton src={Location} marginRight="8px" />
         Zvolenská cesta 85, Banská Bystrica
       </Paragraph>
       <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
-        <FontAwesomeIcon style={{ marginRight: '4px' }} icon="envelope" />
+        <SocialButton marginRight="8px" src={Mail} />
         makronkovo@makronkovo.sk
       </Paragraph>
       <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
-        <FontAwesomeIcon style={{ marginRight: '4px' }} icon="phone-alt" />
+        <SocialButton marginRight="8px" src={Telephone} />
         0948 009 800
       </Paragraph>
       <OpeningHours>
