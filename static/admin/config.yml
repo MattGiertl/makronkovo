@@ -105,7 +105,7 @@ collections:
                 widget: "boolean",
                 default: false,
               },
-              { label: "Váha", name: weight, widget: string },
+              { label: "Váha", name: weight, widget: string, required: false },
               {
                 label: "Pôvodná cena",
                 name: oldPrice,
