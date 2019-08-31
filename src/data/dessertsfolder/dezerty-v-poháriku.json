@@ -7,7 +7,7 @@
       "isSeasonal": false,
       "weight": "180g",
       "price": "2€",
-      "to": "https://develop--makronkovo.netlify.com/dezerty/kusovky/tiramisu"
+      "to": "tiramisu"
     },
     {
       "title": "Creme brullee",
@@ -15,14 +15,14 @@
       "weight": "120g",
       "price": "1,80€",
       "description": "Príchuť: • Vanilka • Čokoláda",
-      "to": "https://develop--makronkovo.netlify.com/dezerty/kusovky/creme-brullee"
+      "to": "creme-brullee"
     },
     {
       "title": "Brownie s limoncello krémom",
       "isSeasonal": false,
       "weight": "120g",
       "price": "2,20€",
-      "to": "https://develop--makronkovo.netlify.com/dezerty/kusovky/brownie-s-limoncello-kremom"
+      "to": "brownie-s-limoncello-kremom"
     },
     {
       "title": "Panna cota",
@@ -30,14 +30,14 @@
       "weight": "120g",
       "price": "1,80€",
       "description": "Rôzne príchute",
-      "to": "https://develop--makronkovo.netlify.com/dezerty/kusovky/panna-cota"
+      "to": "panna-cota"
     },
     {
       "title": "Hruškové tiramisu bezlepkové ",
       "isSeasonal": false,
       "weight": "80g",
       "price": "2,90€",
-      "to": "https://develop--makronkovo.netlify.com/dezerty/kusovky/hruskove-tiramisu"
+      "to": "hruskove-tiramisu"
     }
   ]
 }

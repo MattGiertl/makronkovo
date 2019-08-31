@@ -7,6 +7,7 @@ const GalleryItem = styled.div(
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
     backgroundSize: 'cover',
+    cursor: 'pointer',
 
     [mobileQuery]: {
       width: '300px',

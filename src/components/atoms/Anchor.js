@@ -7,6 +7,7 @@ const StyledAnchor = styled.a(
   {
     color: theme.colors.mediumGold,
     textDecoration: 'none',
+    target: '_blank'
   },
   props => ({
     fontFamily: props.fontFamily ? props.fontFamily : theme.fontFamilies.dinPro.regular,

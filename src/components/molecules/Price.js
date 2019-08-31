@@ -8,14 +8,14 @@ const PriceWrapper = styled.div({
   marginBottom: '20px',
 });
 
-const Price = ({ oldPrice, newPrice }) => (
+const Price = ({ oldPrice, price }) => (
   <PriceWrapper>
     {oldPrice && (
       <Paragraph marginRight="5px" fontSize={theme.fontSizes.large} textDecoration="line-through">
         {`${oldPrice}€`}
       </Paragraph>
     )}
-    <Paragraph fontSize={theme.fontSizes.large}>{`${newPrice}€`}</Paragraph>
+    <Paragraph fontSize={theme.fontSizes.large}>{`${price}€`}</Paragraph>
   </PriceWrapper>
 );
 
