@@ -12,7 +12,7 @@ collections:
     format: json
     create: true
     fields:
-      - { label: "Title", name: title, widget: "string" }
+      - { label: "Názov kategórie", name: title, widget: "string" }
       - { label: "Link", name: to, widget: "string" }
       - {
           label: "Produkty",
@@ -58,7 +58,7 @@ collections:
     format: json
     create: true
     fields:
-      - { label: "Title", name: title, widget: "string" }
+      - { label: "Názov Kategórie", name: title, widget: "string" }
       - { label: "Link", name: to, widget: "string" }
       - {
           label: "Produkty",
@@ -67,6 +67,7 @@ collections:
           allow_add: true,
           fields:
             [
+              { label: "Názov produktu", name: title, widget: "string" },
               {
                 label: "Sezónne",
                 name: isSeasonal,
