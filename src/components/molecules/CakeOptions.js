@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import Paragraph from '../atoms/Paragraph';
 import theme from '../../utils/theme/theme';
 import { tabletQuery, mobileQuery, laptopQuery, desktopQuery } from '../../utils/mediaqueries';
+import UnorderedList from '../atoms/UnorderedList';
 
 const OptionWrapper = styled.div({
   display: 'flex',
@@ -20,14 +21,6 @@ const TextWrapper = styled.div({
   [tabletQuery]: { marginLeft: '10%', marginBottom: '41px', width: '60%' },
   [laptopQuery]: { marginLeft: '15%', width: '80%' },
   [desktopQuery]: { margin: '0 auto 41px 15%', width: '80%' },
-});
-
-const UnorderList = styled.ul({
-  display: 'flex',
-  flexDirection: 'column',
-  paddingInlineStart: '20px',
-  marginBlockEnd: 0,
-  marginBlockStart: 0,
 });
 
 const Image = styled.img({
@@ -48,7 +41,7 @@ const CakeView = ({ src, imgName, heading, children }) => (
       >
         {heading}
       </Paragraph>
-      <UnorderList>{children}</UnorderList>
+      <UnorderedList>{children}</UnorderedList>
     </TextWrapper>
   </OptionWrapper>
 );
