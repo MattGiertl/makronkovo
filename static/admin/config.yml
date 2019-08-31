@@ -52,23 +52,3 @@ collections:
               { label: "Link", name: to, widget: "string" },
             ],
         }
-  - label: "Galéria"
-    name: gallery
-    create: true
-    files:
-      - label: "Obrázky"
-        name: galleryImages
-        file: "src/data/cmsGallery.json"
-        allow_add: true
-        widget: list
-        fields:
-          - {
-              label: "Položky galérie",
-              name: galleryCollection,
-              widget: list,
-              fields:
-                [
-                  { label: "Popis", name: "title", widget: string },
-                  { label: "Obrázok", name: "image", widget: image },
-                ],
-            }
