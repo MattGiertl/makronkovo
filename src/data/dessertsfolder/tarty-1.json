@@ -1,0 +1,37 @@
+{
+  "title": "Tarty",
+  "to": "/dezerty/tarty",
+  "products": [
+    {
+      "title": "Citrónový tart s pusinkami",
+      "isSeasonal": false,
+      "weight": "1000g",
+      "price": "22,50€",
+      "description": "Krehký kakaový tart s osviežujúcim citrónovým krémom a sladučkými penovými meringues pusinkami",
+      "to": "citronovy-s-pusinkami"
+    },
+    {
+      "title": "Tart čokoládový s gaštanovým pyré",
+      "isSeasonal": false,
+      "weight": "1000g",
+      "price": "22,50€",
+      "description": "Kakaový tart s gaštanovým pyré, pikantným džemom a ganache z horkej čokolády a rumu",
+      "to": "cokoladovy-s-gastanovym-pyre"
+    },
+    {
+      "title": "Tart s čerstvým ovocím, bielou ganache a kokosom",
+      "isSeasonal": false,
+      "weight": "1000g",
+      "price": "22,50€",
+      "description": "Kakaový tart naplnený čerstvými malinami,preliaty bielou ganache a bohato zasypaný kokosom",
+      "to": "tart-s-cerstvym-ovocim"
+    },
+    {
+      "title": "Tart so slaným karamelom a čokoládovou ganache",
+      "isSeasonal": false,
+      "weight": "1000g",
+      "price": "22,50€",
+      "to": "tart-so-slanym-karamelom"
+    }
+  ]
+}

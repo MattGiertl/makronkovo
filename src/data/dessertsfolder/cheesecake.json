@@ -1,0 +1,57 @@
+{
+  "title": "CHEESECAKY",
+  "to": "/dezerty/cheesecaky",
+  "products": [
+    {
+      "title": "Vanilkovo-citrónový",
+      "isSeasonal": false,
+      "weight": "1800g",
+      "price": "22",
+      "images": [],
+      "to": "vanilkovo-citronovy-cheesecake"
+    },
+    {
+      "title": "Karamelový s lieskovcami",
+      "isSeasonal": false,
+      "weight": "1200g",
+      "price": "22",
+      "description": "",
+      "to": "karamelovy-s-lieskovcami"
+    },
+    {
+      "title": "Čučoriedkový",
+      "isSeasonal": false,
+      "weight": "1200g",
+      "price": "22",
+      "to": "nepeceny-cucoriedkovy"
+    },
+    {
+      "title": "Kokosový",
+      "isSeasonal": false,
+      "weight": "1200g",
+      "price": "22",
+      "to": "kokosovy"
+    },
+    {
+      "title": "Karamel a jablkové pyré",
+      "isSeasonal": false,
+      "weight": "1200g",
+      "price": "22€",
+      "to": "karamel-a-jablkove-pyre"
+    },
+    {
+      "title": "Nepečený citrónový",
+      "isSeasonal": false,
+      "weight": "1200g",
+      "price": "22",
+      "to": "nepeceny-citronovy"
+    },
+    {
+      "title": "Nepečený čučoriedový",
+      "isSeasonal": false,
+      "weight": "1200g",
+      "price": "22",
+      "to": "nepeceny-cucoriedkovy"
+    }
+  ]
+}

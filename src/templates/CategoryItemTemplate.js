@@ -5,6 +5,8 @@ import Polaroid from '../components/molecules/Polaroid/Polaroid';
 import FountainHeading from '../components/molecules/FountainHeading';
 import Paragraph from '../components/atoms/Paragraph';
 import { mobileQuery, tabletQuery, laptopQuery, desktopQuery } from '../utils/mediaqueries';
+
+import PlaceholderImg from '../../static/assets/cake.jpg';
 import theme from '../utils/theme/theme';
 
 const CategoriesWrapper = styled.div({
@@ -35,14 +37,14 @@ const Description = styled.div({
 });
 
 const CategoryItemTemplate = ({ pageContext }) => {
-  const { items, title } = pageContext;
+  const { products, title: categoryName, to: categoryTo } = pageContext;
   const { dinPro } = theme.fontFamilies;
 
-  const renderItems = items.map(item => {
-    const { image, to, title, oldPrice, newPrice } = item;
+  const renderItems = products.map(item => {
+    const { image, to, title, oldPrice, price } = item;
 
     return (
-      <Polaroid shadowed src={image} to={to}>
+      <Polaroid shadowed src={image ? image : PlaceholderImg} to={`/${categoryTo}/${to}`}>
         <Paragraph textAlign="center" fontFamily={dinPro.bold}>
           {title}
         </Paragraph>
@@ -50,7 +52,7 @@ const CategoryItemTemplate = ({ pageContext }) => {
           {oldPrice && (
             <Paragraph marginRight="5px" textDecoration="line-through">{`${oldPrice}€`}</Paragraph>
           )}
-          {newPrice && <Paragraph>{`${newPrice}€`}</Paragraph>}
+          {price && <Paragraph>{`${price}€`}</Paragraph>}
         </Description>
       </Polaroid>
     );
@@ -58,7 +60,7 @@ const CategoryItemTemplate = ({ pageContext }) => {
 
   return (
     <Layout>
-      <FountainHeading>{title}</FountainHeading>
+      <FountainHeading>{categoryName}</FountainHeading>
       <CategoriesWrapper>{renderItems}</CategoriesWrapper>
     </Layout>
   );
