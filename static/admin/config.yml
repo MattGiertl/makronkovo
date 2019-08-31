@@ -6,7 +6,7 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - label: "Kategórie - Dezerty"
+  - label: "Kategórie - dezerty"
     name: "dessertCategories"
     folder: "src/data/dessertsfolder"
     format: json
@@ -28,45 +28,14 @@ collections:
                 widget: "boolean",
                 default: false,
               },
+              { label: "Váha", name: weight, widget: string },
               {
-                label: "Malý set",
-                name: smallSet,
-                widget: "object",
+                label: "Pôvodná cena",
+                name: oldPrice,
+                widget: "string",
                 required: false,
-                fields:
-                  [
-                    { label: "Počet a cena", name: amount, widget: "string" },
-                    {
-                      label: "Jednotková vaha",
-                      name: unitWeight,
-                      widget: "string",
-                    },
-                  ],
               },
-              {
-                label: "Veľký set",
-                name: largeSet,
-                widget: "object",
-                required: false,
-                fields:
-                  [
-                    { label: "Počet a cena", name: amount, widget: "string" },
-                    {
-                      label: "Jednotková vaha",
-                      name: unitWeight,
-                      widget: "string",
-                    },
-                  ],
-              },
-              { label: "Počet", name: pieces, widget: string, required: false },
-              {
-                label: "Príchute",
-                name: flavor,
-                required: false,
-                widget: list,
-                allow_add: true,
-                fields: [{ label: "Príchuť", name: flavor, widget: string }],
-              },
+              { label: "Nová cena", name: price, widget: string },
               {
                 label: "Popis Produktu",
                 name: description,
