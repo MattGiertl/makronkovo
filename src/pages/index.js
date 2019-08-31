@@ -58,7 +58,7 @@ const MainPage = () => {
   ));
 
   const renderInstagramPosts = instagram.posts.map(post => (
-    <SquarePic src={post.image} href="https://www.instagram.com/makronkovo/" />
+    <SquarePic src={post.image} href="https://www.instagram.com/makronkovo" />
   ));
 
   const renderReferencePolaroids = reference.polaroids.map(reference => (
