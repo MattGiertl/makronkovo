@@ -1,3 +1,16 @@
 {
-  
+  "images": [
+    {
+      "title": "Test1",
+      "image": "/img/cake.jpg"
+    },
+    {
+      "title": "Test2",
+      "image": "/img/bezlepkove-torty.jpg"
+    },
+    {
+      "title": "Test 3",
+      "image": "/img/dezerty-kusovky.jpg"
+    }
+  ]
 }

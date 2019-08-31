@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: develop
+  branch: cms-gallery
 
 media_folder: static/img
 public_folder: /img
@@ -53,22 +53,20 @@ collections:
             ],
         }
   - label: "Galéria"
-    name: gallery
-    create: true
+    name: "gallery"
     files:
-      - label: "Obrázky"
-        name: galleryImages
+      - label: "Galéria"
+        name: "gallery"
         file: "src/data/cmsGallery.json"
-        allow_add: true
-        widget: list
         fields:
           - {
-              label: "Položky galérie",
-              name: galleryCollection,
+              label: "Obrázky",
+              name: images,
               widget: list,
+              allow_add: true,
               fields:
                 [
-                  { label: "Popis", name: "title", widget: string },
+                  { label: "Názov", name: "title", widget: string },
                   { label: "Obrázok", name: "image", widget: image },
                 ],
-            }
+          }
