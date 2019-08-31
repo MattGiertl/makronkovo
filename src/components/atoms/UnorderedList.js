@@ -3,9 +3,14 @@ import styled from '@emotion/styled';
 const UnorderedList = styled.ul({
     display: 'flex',
     flexDirection: 'column',
-    paddingInlineStart: '20px',
     marginBlockEnd: 0,
-    marginBlockStart: 0,
-  });
+  },
+  props => ({
+    listStyleType: props.listStyleType,
+    alignItems: props.alignItems,
+    justifyContent: props.justifyContent,
+    paddingInlineStart: props.paddingInlineStart,
+    marginBlockStart: props.marginBlockStart,
+  }));
 
   export default UnorderedList;

@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import Paragraph from '../atoms/Paragraph';
 import theme from '../../utils/theme/theme';
 import { mobileQuery, tabletQuery, desktopQuery, laptopQuery } from '../../utils/mediaqueries';
+import UnorderedList from '../atoms/UnorderedList';
 
 const TypeWrapper = styled.div({
   display: 'flex',
@@ -38,16 +39,6 @@ const ListItem = styled.li(
   }),
 );
 
-const UnorderList = styled.ul({
-  listStyleType: 'none',
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  justifyContent: 'flex-end',
-  paddingInlineStart: '0px',
-  marginBlockEnd: '0px',
-});
-
 const CakeType = ({ src, imgName, type, weight, height, portions, price }) => (
   <TypeWrapper>
     <img src={src} alt={imgName} />
@@ -58,12 +49,12 @@ const CakeType = ({ src, imgName, type, weight, height, portions, price }) => (
     >
       {type}
     </Paragraph>
-    <UnorderList>
+    <UnorderedList listStyleType='none' alignItems='center' justifyContent='flex-end' paddingInlineStart='0'>
       <ListItem>{weight}</ListItem>
       <ListItem>{height}</ListItem>
       <ListItem>{portions}</ListItem>
       <ListItem marginTop="20px">{price}</ListItem>
-    </UnorderList>
+    </UnorderedList>
   </TypeWrapper>
 );
 

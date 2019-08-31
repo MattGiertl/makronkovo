@@ -41,7 +41,7 @@ const CakeView = ({ src, imgName, heading, children }) => (
       >
         {heading}
       </Paragraph>
-      <UnorderedList>{children}</UnorderedList>
+      <UnorderedList paddingInlineStart='20px' marginBlockStart='0' >{children}</UnorderedList>
     </TextWrapper>
   </OptionWrapper>
 );
