@@ -3,7 +3,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import theme from '../utils/theme/theme';
 import { mobileQuery, tabletQuery, laptopQuery, desktopQuery } from '../utils/mediaqueries';
-import Fallback from '../../static/assets/fallback.png';
+import Fallback from '../../static/assets/Fallback.png';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Heading from '../components/atoms/Heading';
