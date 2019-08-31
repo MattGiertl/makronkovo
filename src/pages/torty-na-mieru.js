@@ -6,7 +6,7 @@ import styled from '@emotion/styled';
 import Card from '../components/atoms/Card';
 import Paragraph from '../components/atoms/Paragraph';
 import CakeType from '../components/molecules/CakeType';
-import TypeLook from '../components/molecules/CakeView';
+import CakeView from '../components/molecules/CakeView';
 
 const TypeWrapper = styled.div({
   display: 'flex',
@@ -25,6 +25,7 @@ const ListItem = styled.li(
     fontFamily: theme.fontFamilies.dinPro.regular,
     fontSize: theme.fontSizes.small,
     color: theme.colors.mediumGold,
+    lineHeight: '19px',
   },
   props => ({
     marginTop: props.marginTop,
@@ -48,11 +49,11 @@ const CakeConfig = () => {
     ));
 
     const renderSecondCardItems = secondCard.items.map(item => (
-      <TypeLook src={item.image} imgName={item.imgName} heading={item.heading}>
+      <CakeView src={item.image} imgName={item.imgName} heading={item.heading}>
         {item.options.map(item => (
           <ListItem>{item}</ListItem>
         ))}
-      </TypeLook>
+      </CakeView>
     ));
 
     return (
