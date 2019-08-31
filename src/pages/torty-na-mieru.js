@@ -6,7 +6,7 @@ import styled from '@emotion/styled';
 import Card from '../components/atoms/Card';
 import Paragraph from '../components/atoms/Paragraph';
 import CakeType from '../components/molecules/CakeType';
-import CakeView from '../components/molecules/CakeView';
+import CakeOptions from '../components/molecules/CakeOptions';
 
 const TypeWrapper = styled.div({
   display: 'flex',
@@ -49,11 +49,11 @@ const CakeConfig = () => {
     ));
 
     const renderSecondCardItems = secondCard.items.map(item => (
-      <CakeView src={item.image} imgName={item.imgName} heading={item.heading}>
+      <CakeOptions src={item.image} imgName={item.imgName} heading={item.heading}>
         {item.options.map(item => (
           <ListItem>{item}</ListItem>
         ))}
-      </CakeView>
+      </CakeOptions>
     ));
 
     return (

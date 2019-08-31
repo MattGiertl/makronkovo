@@ -1,7 +1,7 @@
 [
   {
     "firstCard": {
-      "section": "/assets/FirstSection.png",
+      "section": "/assets/FirstSection.svg",
       "title": "VELKOSŤ",
       "paragraph": "Jednoposchodové torty (18 cm priemer)",
       "secondParagraph": "Dvojposchodová torta a torta nad 22 porcií",
@@ -47,7 +47,7 @@
       ]
     },
     "secondCard": {
-      "section": "/assets/SecondSection.png",
+      "section": "/assets/SecondSection.svg",
       "title": "VZHĽAD",
       "items": [
         {
