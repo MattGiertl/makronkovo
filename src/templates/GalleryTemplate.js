@@ -16,7 +16,7 @@ const ContentWrapper = styled.div({
     margin: '0 auto',
   },
   [desktopQuery]: {
-    width: '80%',
+    maxWidth: '1200px',
     margin: '0 auto',
   },
 });
