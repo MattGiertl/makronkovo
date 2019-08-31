@@ -4,20 +4,18 @@ import Paragraph from '../atoms/Paragraph';
 import theme from '../../utils/theme/theme';
 import { mobileQuery, tabletQuery, desktopQuery, laptopQuery } from '../../utils/mediaqueries';
 
-
 const TypeWrapper = styled.div({
-display: 'flex',
-flexDirection: 'column',
-alignItems: 'center',
-justifyContent:'flex-end',
-height:"265px",
-[mobileQuery]: {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'flex-end',
+  height: '265px',
+  [mobileQuery]: {
     margin: '0 20px 30px',
   },
 
   [tabletQuery]: {
     margin: '0 20px',
-
   },
 
   [laptopQuery]: {
@@ -29,14 +27,15 @@ height:"265px",
   },
 });
 
-const ListItem = styled.li({
-  fontFamily: theme.fontFamilies.dinPro.regular,
-  fontSize: theme.fontSizes.medium,
-  color: theme.colors.mediumGold,
-},
-props => ({
-  marginTop: props.marginTop
-})
+const ListItem = styled.li(
+  {
+    fontFamily: theme.fontFamilies.dinPro.regular,
+    fontSize: theme.fontSizes.medium,
+    color: theme.colors.mediumGold,
+  },
+  props => ({
+    marginTop: props.marginTop,
+  }),
 );
 
 const UnorderList = styled.ul({
@@ -44,22 +43,28 @@ const UnorderList = styled.ul({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  justifyContent:'flex-end',
-  paddingInlineStart: "0px",
-  marginBlockEnd: '0px'
+  justifyContent: 'flex-end',
+  paddingInlineStart: '0px',
+  marginBlockEnd: '0px',
 });
 
 const CakeType = ({ src, imgName, type, weight, height, portions, price }) => (
-<TypeWrapper>
+  <TypeWrapper>
     <img src={src} alt={imgName} />
-    <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} fontSize={theme.fontSizes.medium} marginTop='19px'>{type}</Paragraph>
+    <Paragraph
+      fontFamily={theme.fontFamilies.dinPro.bold}
+      fontSize={theme.fontSizes.medium}
+      marginTop="19px"
+    >
+      {type}
+    </Paragraph>
     <UnorderList>
       <ListItem>{weight}</ListItem>
       <ListItem>{height}</ListItem>
       <ListItem>{portions}</ListItem>
       <ListItem marginTop="20px">{price}</ListItem>
     </UnorderList>
-</TypeWrapper>
+  </TypeWrapper>
 );
 
 export default CakeType;
