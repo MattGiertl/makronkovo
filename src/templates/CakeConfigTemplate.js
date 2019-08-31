@@ -8,10 +8,6 @@ import SocialButton from '../components/atoms/SocialButton';
 import { mobileQuery, tabletQuery } from '../utils/mediaqueries';
 import Anchor from '../components/atoms/Anchor';
 import InfoImage from '../../static/assets/Info.png';
-import Mail from '../../static/assets/Mail.svg';
-import Telephone from '../../static/assets/Telefon.svg';
-import Facebook from '../../static/assets/Facebook.svg';
-import Instagram from '../../static/assets/Instagram.svg';
 
 const ContentWrapper = styled.div({
   display: 'flex',
@@ -54,11 +50,11 @@ const CakeConfigTemplate = ({ cards }) => {
         </Paragraph>
         <ContactWrapper>
           <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
-            <SocialButton marginRight="12px" src={Mail} />
+            <SocialButton marginRight="12px" mail />
             makronkovo@makronkovo.sk
           </Paragraph>
           <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
-            <SocialButton marginRight="12px" src={Telephone} />
+            <SocialButton marginRight="12px" telephone />
             0948 009 800
           </Paragraph>
           <Anchor
@@ -70,7 +66,7 @@ const CakeConfigTemplate = ({ cards }) => {
             <SocialButton
               to="https://www.instagram.com/makronkovo/?hl=en"
               marginRight="12px"
-              src={Instagram}
+              instagram
             />
             makronkovo
           </Anchor>
@@ -80,11 +76,7 @@ const CakeConfigTemplate = ({ cards }) => {
             fontFamily={theme.fontFamilies.dinPro.bold}
             lineHeight="24px"
           >
-            <SocialButton
-              to="https://www.facebook.com/makronkovo/"
-              src={Facebook}
-              marginRight="12px"
-            />
+            <SocialButton to="https://www.facebook.com/makronkovo/" facebook marginRight="12px" />
             makronkovo
           </Anchor>
         </ContactWrapper>

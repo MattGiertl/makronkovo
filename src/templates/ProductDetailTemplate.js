@@ -26,10 +26,6 @@ import SetCard from '../components/molecules/SetCard';
 import SetCards from '../components/atoms/SetCards';
 
 import SocialButton from '../components/atoms/SocialButton';
-import Mail from '../../static/assets/Mail.svg';
-import Telephone from '../../static/assets/Telefon.svg';
-import Facebook from '../../static/assets/Facebook.svg';
-import Instagram from '../../static/assets/Instagram.svg';
 
 const ContentWrapper = styled.div({
   display: 'flex',
@@ -132,22 +128,22 @@ const ProductDetailTemplate = ({ pageContext }) => {
             <ContactInfo>
               <div>
                 <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
-                  <SocialButton marginRight="8px" src={Mail} />
+                  <SocialButton marginRight="8px" mail />
                   makronkovo@makronkovo.sk
                 </Paragraph>
                 <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
-                  <SocialButton marginRight="8px" src={Instagram} />
+                  <SocialButton marginRight="8px" instagram />
                   makronkovo
                 </Paragraph>
               </div>
 
               <div>
                 <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
-                  <SocialButton marginRight="8px" src={Telephone} />
+                  <SocialButton marginRight="8px" telephone />
                   0948 009 800
                 </Paragraph>
                 <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
-                  <SocialButton marginRight="8px" src={Facebook} />
+                  <SocialButton marginRight="8px" facebook />
                   makronkovo
                 </Paragraph>
               </div>
