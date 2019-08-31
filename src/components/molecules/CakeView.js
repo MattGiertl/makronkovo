@@ -6,53 +6,50 @@ import { tabletQuery, mobileQuery, laptopQuery, desktopQuery } from '../../utils
 
 const OptionWrapper = styled.div({
   display: 'flex',
-  flexDirection: 'column',
-  [mobileQuery]: { margin: '0 5%' },
-  [tabletQuery]: { margin: '0 10%', width: '80%' },
-  [laptopQuery]: { marginLeft: '15%', width: '60%' },
-  [desktopQuery]: { margin: '0 20%' },
+  [mobileQuery]: { margin: '0 5% 10px' },
+  [tabletQuery]: { margin: '0 10% 10px', width: '80%' },
+  [laptopQuery]: { margin: '0 18% 10px', width: '80%' },
+  [desktopQuery]: { margin: '0 18% 10px' },
 });
 
-const HeadingDiv = styled.div({
-  display: 'flex',
-  marginTop: '43px',
-  width:'100%',
-});
-
-const ListWrapper = styled.div({
+const TextWrapper = styled.div({
   display: 'flex',
   alignItems: 'left',
+  flexDirection: 'column',
   [mobileQuery]: { marginLeft: '8%', marginBottom: '41px', width: '90%' },
-  [tabletQuery]: { marginLeft: '30%', marginBottom: '41px', width: '60%' },
-  [laptopQuery]: { marginLeft: '35%', width: '80%' },
-  [desktopQuery]: { margin: '0 auto 41px 30%', width: '80%' },
+  [tabletQuery]: { marginLeft: '10%', marginBottom: '41px', width: '60%' },
+  [laptopQuery]: { marginLeft: '15%', width: '80%' },
+  [desktopQuery]: { margin: '0 auto 41px 15%', width: '80%' },
 });
 
 const UnorderList = styled.ul({
   display: 'flex',
   flexDirection: 'column',
-  paddingInlineStart: 0,
+  paddingInlineStart: '20px',
   marginBlockEnd: 0,
+  marginBlockStart: 0,
+});
+
+const Image = styled.img({
+  height: '100%',
+  weight: '100%',
+  marginTop: '-10px',
 });
 
 const CakeView = ({ src, imgName, heading, children }) => (
   <OptionWrapper>
-    <HeadingDiv>
-      <img src={src} alt={imgName} />
+    <Image src={src} alt={imgName} />
+    <TextWrapper>
       <Paragraph
         fontFamily={theme.fontFamilies.dinPro.bold}
         fontSize={theme.fontSizes.medium}
-        mobileMargin="0 0 0 10%"
-        tabletMargin="0 0 0 28%"
-        laptopMargin="0 0 0 36%"
-        desktopMargin="0 0 0 30%"
+        textAlign="left"
+        marginBottom="21px"
       >
         {heading}
       </Paragraph>
-    </HeadingDiv>
-    <ListWrapper>
       <UnorderList>{children}</UnorderList>
-    </ListWrapper>
+    </TextWrapper>
   </OptionWrapper>
 );
 

@@ -66,10 +66,14 @@ const CakeConfig = () => {
           tabletWidth="700px"
           laptopWidth="900px"
           desktopWidth="1010px"
-          partialVisibility={true}
         >
           <Image src={firstCard.section} alt="prvý odsek" />
-          <Paragraph margin="9px" fontSize={theme.fontSizes.large} fontFamily={theme.fontFamilies.caslonAntique.bold} letterSpacing={theme.letterSpacing.heading}>
+          <Paragraph
+            margin="9px"
+            fontSize={theme.fontSizes.large}
+            fontFamily={theme.fontFamilies.caslonAntique.bold}
+            letterSpacing={theme.letterSpacing.heading}
+          >
             {firstCard.title}
           </Paragraph>
           <Paragraph
@@ -111,7 +115,12 @@ const CakeConfig = () => {
           partialVisibility="true"
         >
           <Image src={secondCard.section} alt="druhý odsek" />
-          <Paragraph margin="9px auto" fontSize={theme.fontSizes.large} fontFamily={theme.fontFamilies.caslonAntique.bold}  letterSpacing={theme.letterSpacing.heading}>
+          <Paragraph
+            margin="9px auto 43px"
+            fontSize={theme.fontSizes.large}
+            fontFamily={theme.fontFamilies.caslonAntique.bold}
+            letterSpacing={theme.letterSpacing.heading}
+          >
             {secondCard.title}
           </Paragraph>
           {renderSecondCardItems}
