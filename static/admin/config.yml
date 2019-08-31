@@ -98,26 +98,50 @@ collections:
           allow_add: true,
           fields:
             [
-              { label: "Názov", name: title, widget: "string" },
               {
                 label: "Sezónne",
                 name: isSeasonal,
                 widget: "boolean",
                 default: false,
               },
-              { label: "Váha", name: weight, widget: string, required: false },
               {
-                label: "Pôvodná cena",
-                name: oldPrice,
-                widget: "string",
+                label: "Info Kartičky",
+                name: infoCards,
                 required: false,
+                widget: list,
+                allow_add: true,
+                fields:
+                  [
+                    {
+                      label: "Kartička",
+                      name: infoCard,
+                      widget: "object",
+                      fields:
+                        [
+                          {
+                            label: "Popisok",
+                            name: description,
+                            widget: "string",
+                          },
+                          { label: "Cena", name: price, widget: "string" },
+                          { label: "Váha", name": weight, widget: "string" },
+                        ],
+                    },
+                  ],
               },
-              { label: "Nová cena", name: price, widget: string },
               {
                 label: "Popis Produktu",
                 name: description,
                 widget: string,
                 required: false,
+              },
+              {
+                label: "Príchute",
+                name: flavor,
+                required: false,
+                widget: list,
+                allow_add: true,
+                fields: [{ label: "Príchuť", name: flavor, widget: string }],
               },
               {
                 label: "Obrázky",
@@ -126,6 +150,7 @@ collections:
                 allow_add: true,
                 fields: [{ label: "Obrázok", name: image, widget: image }],
               },
+
               { label: "Link", name: to, widget: "string" },
             ],
         }
