@@ -19,6 +19,7 @@ const Paragraph = styled.p(
     fontSize: props.fontSize ? props.fontSize : theme.fontSizes.small,
     textDecoration: props.textDecoration,
     opacity: props.opacity,
+    letterSpacing: props.letterSpacing,
 
     [mobileQuery]: {
       width: props.mobileWidth,
@@ -30,6 +31,8 @@ const Paragraph = styled.p(
     [tabletQuery]: {
       width: props.tabletWidth,
       fontSize: props.tabletFontSize,
+      margin: props.tabletMargin,
+
     },
 
     [laptopQuery]: {
