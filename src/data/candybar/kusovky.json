@@ -1,0 +1,32 @@
+{
+  "title": "KUSOVKY",
+  "to": "candy-bar/kusovky",
+  "products": [
+    {
+      "title": "Pavlove hniezda",
+      "isSeasonal": true,
+      "infoCards": [
+        {
+          "infoCard": {
+            "description": "Malý set",
+            "price": "12ks 30€",
+            "undefined": "1ks / 40g"
+          }
+        },
+        {
+          "infoCard": {
+            "description": "Veľký set",
+            "price": "12ks 38€",
+            "undefined": "1ks/90g"
+          }
+        }
+      ],
+      "flavor": [
+        {
+          "flavor": "Biele/kakaové s mascarpone a redukciou z lesného ovocia"
+        }
+      ],
+      "to": "pavlove-hniezda"
+    }
+  ]
+}
