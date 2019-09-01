@@ -50,11 +50,11 @@ const CakeConfigTemplate = ({ cards }) => {
         </Paragraph>
         <ContactWrapper>
           <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
-            <SocialButton marginRight="12px" mail />
+            <SocialButton marginRight="12px" icon='mail' />
             makronkovo@makronkovo.sk
           </Paragraph>
           <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
-            <SocialButton marginRight="12px" telephone />
+            <SocialButton marginRight="12px" icon='telephone' />
             0948 009 800
           </Paragraph>
           <Anchor
@@ -66,7 +66,7 @@ const CakeConfigTemplate = ({ cards }) => {
             <SocialButton
               to="https://www.instagram.com/makronkovo/?hl=en"
               marginRight="12px"
-              instagram
+              icon='instagram'
             />
             makronkovo
           </Anchor>
@@ -76,7 +76,7 @@ const CakeConfigTemplate = ({ cards }) => {
             fontFamily={theme.fontFamilies.dinPro.bold}
             lineHeight="24px"
           >
-            <SocialButton to="https://www.facebook.com/makronkovo/" facebook marginRight="12px" />
+            <SocialButton to="https://www.facebook.com/makronkovo/" icon='facebook' marginRight="12px" />
             makronkovo
           </Anchor>
         </ContactWrapper>

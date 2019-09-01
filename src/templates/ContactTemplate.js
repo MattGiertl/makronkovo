@@ -41,15 +41,15 @@ const ContactTemplate = () => (
     <ContentWrapper>
       <FountainHeading>KONTAKT</FountainHeading>
       <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
-        <SocialButton marginRight="8px" />
+        <SocialButton marginRight="8px" icon='location'/>
         Zvolenská cesta 85, Banská Bystrica
       </Paragraph>
       <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
-        <SocialButton marginRight="8px" mail />
+        <SocialButton marginRight="8px" icon='mail' />
         makronkovo@makronkovo.sk
       </Paragraph>
       <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
-        <SocialButton marginRight="8px" telephone />
+        <SocialButton marginRight="8px" icon='telephone' />
         0948 009 800
       </Paragraph>
       <OpeningHours>

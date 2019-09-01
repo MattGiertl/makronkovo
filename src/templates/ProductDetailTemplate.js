@@ -128,22 +128,22 @@ const ProductDetailTemplate = ({ pageContext }) => {
             <ContactInfo>
               <div>
                 <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
-                  <SocialButton marginRight="8px" mail />
+                  <SocialButton marginRight="8px" icon='mail' />
                   makronkovo@makronkovo.sk
                 </Paragraph>
                 <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
-                  <SocialButton marginRight="8px" instagram />
+                  <SocialButton marginRight="8px" icon='instagram' />
                   makronkovo
                 </Paragraph>
               </div>
 
               <div>
                 <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
-                  <SocialButton marginRight="8px" telephone />
+                  <SocialButton marginRight="8px" icon='telephone' />
                   0948 009 800
                 </Paragraph>
                 <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
-                  <SocialButton marginRight="8px" facebook />
+                  <SocialButton marginRight="8px" icon='facebook' />
                   makronkovo
                 </Paragraph>
               </div>
