@@ -22,7 +22,7 @@ const Image = styled.img(
   }),
 );
 
-const SocialButton = ({ marginRight, icon, to }) => {
+const SetIcon = icon => {
   let src = '';
   if (icon === 'facebook') src = Facebook;
   if (icon === 'instagram') src = Instagram;
@@ -30,6 +30,11 @@ const SocialButton = ({ marginRight, icon, to }) => {
   if (icon === 'mail') src = Mail;
   if (icon === 'location') src = Location;
 
+  return src;
+};
+
+const SocialButton = ({ marginRight, icon, to }) => {
+  const src = SetIcon(icon);
   return (
     <StyledAnchor target="_blank" href={to}>
       <Image src={src} marginRight={marginRight} />
