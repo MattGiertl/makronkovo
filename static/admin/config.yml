@@ -123,3 +123,21 @@ collections:
               { label: "Link", name: to, widget: "string" },
             ],
         }
+  - label: "Galéria"
+    name: "gallery"
+    files:
+      - label: "Galéria"
+        name: "gallery"
+        file: "src/data/cmsGallery.json"
+        fields:
+          - {
+              label: "Obrázky galérie",
+              name: galleryImages,
+              widget: list,
+              allow_add: true,
+              fields:
+                [
+                  { label: "Názov", name: "title", widget: string },
+                  { label: "Obrázok", name: "image", widget: image },
+                ],
+          }
