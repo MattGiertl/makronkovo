@@ -12,7 +12,7 @@ collections:
     format: json
     create: true
     fields:
-      - { label: "Title", name: title, widget: "string" }
+      - { label: "Názov kategórie", name: title, widget: "string" }
       - { label: "Link", name: to, widget: "string" }
       - {
           label: "Produkty",
@@ -41,6 +41,77 @@ collections:
                 name: description,
                 widget: string,
                 required: false,
+              },
+              {
+                label: "Obrázky",
+                name: images,
+                widget: list,
+                allow_add: true,
+                fields: [{ label: "Obrázok", name: image, widget: image }],
+              },
+              { label: "Link", name: to, widget: "string" },
+            ],
+        }
+  - label: "Kategórie - Candy bar"
+    name: "dessertCategories"
+    folder: "src/data/candybar"
+    format: json
+    create: true
+    fields:
+      - { label: "Názov Kategórie", name: title, widget: "string" }
+      - { label: "Link", name: to, widget: "string" }
+      - {
+          label: "Produkty",
+          name: products,
+          widget: "list",
+          allow_add: true,
+          fields:
+            [
+              { label: "Názov produktu", name: title, widget: "string" },
+              {
+                label: "Sezónne",
+                name: isSeasonal,
+                widget: "boolean",
+                default: false,
+              },
+              {
+                label: "Info Kartičky",
+                name: infoCards,
+                required: false,
+                widget: list,
+                allow_add: true,
+                fields:
+                  [
+                    {
+                      label: "Kartička",
+                      name: infoCard,
+                      widget: "object",
+                      fields:
+                        [
+                          {
+                            label: "Popisok",
+                            name: description,
+                            widget: "string",
+                          },
+                          { label: "Cena", name: price, widget: "string" },
+                          { label: "Váha", name": weight, widget: "string" },
+                        ],
+                    },
+                  ],
+              },
+              {
+                label: "Popis Produktu",
+                name: description,
+                widget: string,
+                required: false,
+              },
+              {
+                label: "Príchute",
+                name: flavor,
+                required: false,
+                widget: list,
+                allow_add: true,
+                fields: [{ label: "Príchuť", name: flavor, widget: string }],
               },
               {
                 label: "Obrázky",
