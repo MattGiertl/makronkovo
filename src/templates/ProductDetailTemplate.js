@@ -26,6 +26,8 @@ import Layout from '../components/organisms/Layout/Layout';
 import SetCard from '../components/molecules/SetCard';
 import SetCards from '../components/atoms/SetCards';
 import SlideShow from '../components/atoms/Slideshow';
+import SEO from '../components/atoms/SEO';
+import { toPascalCase } from '../utils/functions';
 
 import SocialButton from '../components/atoms/SocialButton';
 
@@ -51,7 +53,7 @@ const ContentWrapper = styled.div({
   },
 });
 
-const ProductDetailTemplate = ({ pageContext }) => {
+const ProductDetailTemplate = ({ pageContext, uri }) => {
   const { fontSizes, fontFamilies } = theme;
   const {
     description,
@@ -71,8 +73,14 @@ const ProductDetailTemplate = ({ pageContext }) => {
     ? products.filter(item => item.title !== title)
     : products.filter(item => item.title !== title);
 
+  const productSectionTitle = uri.indexOf('dezerty') !== -1 ? 'Dezerty' : 'Candy Bary';
   return (
     <Layout>
+      <SEO
+        title={`${toPascalCase(title)} > ${toPascalCase(
+          productCategoryTitle,
+        )} > ${productSectionTitle} | MAKRONKOVO`}
+      />
       <ContentWrapper>
         <BackButton />
         <MobileOnly>

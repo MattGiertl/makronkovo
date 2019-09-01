@@ -5,6 +5,7 @@ import SlideShow from '../../components/atoms/Slideshow';
 import Section from '../../components/organisms/Section';
 import Newsletter from '../../components/organisms/Newsletter/Newsletter';
 import Layout from '../../components/organisms/Layout/Layout';
+import SEO from '../../components/atoms/SEO';
 
 const MainPageTemplate = ({
   slideshow,
@@ -21,6 +22,10 @@ const MainPageTemplate = ({
 }) => {
   return (
     <Layout>
+      <SEO
+        title="MAKRONKOVO - Cukrárska manufaktúra"
+        description="Torty na mieru, dezerty a candy bary ktoré spôsobujú závislosti. To je Makronkovo, cukrárska manufaktúra v Banskej Bystrici."
+      />
       <SlideShowWrapper>
         <SlideShow>
           {slideshow.map(item => (

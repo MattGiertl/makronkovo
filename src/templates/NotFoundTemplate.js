@@ -114,14 +114,17 @@ const NotFoundTemplate = () => {
     },
   ];
 
-  const navLinks = navLinkData.map(link => <Anchor href={link.href} fontFamily={theme.fontFamilies.dinPro.bold}>{link.text}</Anchor>);
+  const navLinks = navLinkData.map(link => (
+    <Anchor href={link.href} fontFamily={theme.fontFamilies.dinPro.bold}>
+      {link.text}
+    </Anchor>
+  ));
 
   return (
     <Layout>
+      <Layout title="404 - stránka sa nenašla | MAKRONKOVO - Cukrárska manufaktúra" />
       <NotFoundWrapper>
-        <StyledHeading>
-          404
-        </StyledHeading>
+        <StyledHeading>404</StyledHeading>
         <StyledCake src={CakeImg} alt="Koláč" />
         <ContentWrapper>
           <MediumHeading>Hups, stránka sa nenašla.</MediumHeading>

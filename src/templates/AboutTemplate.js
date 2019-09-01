@@ -3,6 +3,7 @@ import FountainHeading from '../components/molecules/FountainHeading';
 import Layout from '../components/organisms/Layout/Layout';
 import styled from '@emotion/styled';
 import { tabletQuery } from '../utils/mediaqueries';
+import SEO from '../components/atoms/SEO';
 
 const ContentWrapper = styled.div({
   display: 'flex',
@@ -21,6 +22,7 @@ const CardsWrapper = styled.div({
 const AboutTemplate = ({ cards }) => {
   return (
     <Layout>
+      <SEO title="O nás | MAKRONKOVO - Cukrárska manufaktúra" />
       <FountainHeading margin="0 5px 15px">O NÁS</FountainHeading>
       <ContentWrapper>
         <CardsWrapper>{cards}</CardsWrapper>
