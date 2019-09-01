@@ -15,7 +15,7 @@ const MainPage = () => {
   const { offer, discount, instagram, reference, team } = sections;
 
   const renderOfferPolaroids = offer.polaroids.map(offer => (
-    <Polaroid src={offer.image}>
+    <Polaroid src={offer.image} to={offer.to}>
       <Paragraph
         fontFamily={theme.fontFamilies.caslonAntique.regular}
         desktopFontSize={theme.fontSizes.medium}
@@ -131,6 +131,7 @@ const mainPageQuery = graphql`
           polaroids {
             heading
             image
+            to
           }
         }
         reference {
