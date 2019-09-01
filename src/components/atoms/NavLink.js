@@ -24,10 +24,6 @@ const StyledLink = styled(Link)(
       marginBottom: '25px',
     },
 
-    '&:active': {
-      color: theme.colors.mediumPink,
-    },
-
     '&:hover': {
       color: theme.colors.mediumPink,
     },
@@ -43,8 +39,12 @@ const StyledLink = styled(Link)(
   }),
 );
 
+const activeStyle = {
+  color: theme.colors.mediumPink
+}
+
 const NavLink = ({ marginTop, children, to, ...rest }) => (
-  <StyledLink marginTop={marginTop} to={to} {...rest}>
+  <StyledLink marginTop={marginTop} activeStyle={activeStyle} to={to} {...rest}>
     {children}
   </StyledLink>
 );
