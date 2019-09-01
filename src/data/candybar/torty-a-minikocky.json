@@ -1,5 +1,5 @@
 {
-  "title": "Torty a minikocky",
+  "title": "TORTY A MINIKOCKY",
   "to": "torty-a-mini-kocky",
   "products": [
     {
@@ -33,8 +33,7 @@
       "infoCards": [
         {
           "infoCard": {
-            "price": "45€",
-            "undefined": "1900g"
+            "price": "45€"
           }
         }
       ],
@@ -47,8 +46,7 @@
       "infoCards": [
         {
           "infoCard": {
-            "price": "40€",
-            "undefined": "1200g"
+            "price": "40€"
           }
         }
       ],
