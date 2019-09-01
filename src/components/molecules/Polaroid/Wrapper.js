@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import theme from '../../../utils/theme/theme';
-import { tabletQuery } from '../../../utils/mediaqueries';
+import { mobileQuery, tabletQuery } from '../../../utils/mediaqueries';
 import { Link } from 'gatsby';
 
 const Wrapper = styled.div(
@@ -28,6 +28,11 @@ const Wrapper = styled.div(
   },
   props => ({
     boxShadow: props.shadowed ? '0px 10px 20px rgba(0, 0, 0, 0.12)' : null,
+    [mobileQuery]: {
+      height: props.sm ? '130px' : '19rem',
+      width: props.sm ? '115px' : '18rem',
+      margin: props.sm ? '0 5px 10px' : '0 15px 40px',
+    },
   }),
 );
 
