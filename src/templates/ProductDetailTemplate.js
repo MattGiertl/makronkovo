@@ -5,7 +5,6 @@ import theme from '../utils/theme/theme';
 import { mobileQuery, tabletQuery, laptopQuery, desktopQuery } from '../utils/mediaqueries';
 import Fallback from '../../static/assets/Fallback.png';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Heading from '../components/atoms/Heading';
 import Paragraph from '../components/atoms/Paragraph';
 import Labels from '../components/atoms/Labels';
@@ -27,6 +26,8 @@ import Layout from '../components/organisms/Layout/Layout';
 import SetCard from '../components/molecules/SetCard';
 import SetCards from '../components/atoms/SetCards';
 import SlideShow from '../components/atoms/Slideshow';
+
+import SocialButton from '../components/atoms/SocialButton';
 
 const ContentWrapper = styled.div({
   display: 'flex',
@@ -147,22 +148,22 @@ const ProductDetailTemplate = ({ pageContext }) => {
             <ContactInfo>
               <div>
                 <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
-                  <FontAwesomeIcon style={{ marginRight: '4px' }} icon="envelope" />
+                  <SocialButton marginRight="8px" icon='mail' />
                   makronkovo@makronkovo.sk
                 </Paragraph>
                 <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
-                  <FontAwesomeIcon style={{ marginRight: '4px' }} icon="phone-alt" />
-                  0948 009 800
+                  <SocialButton marginRight="8px" icon='instagram' />
+                  makronkovo
                 </Paragraph>
               </div>
 
               <div>
                 <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
-                  <FontAwesomeIcon style={{ marginRight: '4px' }} icon={['fab', 'instagram']} />
-                  makronkovo
+                  <SocialButton marginRight="8px" icon='telephone' />
+                  0948 009 800
                 </Paragraph>
                 <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
-                  <FontAwesomeIcon style={{ marginRight: '4px' }} icon={['fab', 'facebook']} />
+                  <SocialButton marginRight="8px" icon='facebook' />
                   makronkovo
                 </Paragraph>
               </div>

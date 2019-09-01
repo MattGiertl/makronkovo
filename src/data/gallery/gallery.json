@@ -1,20 +1,40 @@
 {
-  "images": [
+  "galleryImages": [
     {
-      "title": "Test1",
-      "image": "/img/cake.jpg"
+      "title": "galeria001",
+      "image": "/img/makronkovo-galeria001.jpg"
     },
     {
-      "title": "Test2",
-      "image": "/img/bezlepkove-torty.jpg"
+      "title": "galeria002",
+      "image": "/img/makronkovo-galeria002.jpg"
     },
     {
-      "title": "Test 3",
-      "image": "/img/dezerty-kusovky.jpg"
+      "title": "galeria003",
+      "image": "/img/makronkovo-galeria003.jpg"
     },
     {
-      "title": "Test 4",
-      "image": "/img/cheesecake.jpg"
+      "title": "galeria004",
+      "image": "/img/makronkovo-galeria004.jpg"
+    },
+    {
+      "title": "galeria005",
+      "image": "/img/makronkovo-galeria005.jpg"
+    },
+    {
+      "title": "galeria006",
+      "image": "/img/makronkovo-galeria006.jpg"
+    },
+    {
+      "title": "galeria007",
+      "image": "/img/makronkovo-galeria007.jpg"
+    },
+    {
+      "title": "galeria008",
+      "image": "/img/makronkovo-galeria008.jpg"
+    },
+    {
+      "title": "galeria009",
+      "image": "/img/makronkovo-galeria009.jpg"
     }
   ]
 }

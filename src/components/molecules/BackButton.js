@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import theme from '../../utils/theme/theme';
 import { mobileQuery, desktopQuery } from '../../utils/mediaqueries';
+import BackBtn from '../../../static/assets/BackButton.svg';
 
 const BackButtonWrapper = styled.div({
   display: 'flex',
@@ -20,10 +19,9 @@ const BackButtonWrapper = styled.div({
 
 const BackButton = () => (
   <BackButtonWrapper>
-    <FontAwesomeIcon
-      size="lg"
-      color={theme.colors.darkGold}
-      icon="chevron-left"
+    <img
+      src={BackBtn}
+      alt='BackButton'
       onClick={() => window.history.back()}
     />
   </BackButtonWrapper>
