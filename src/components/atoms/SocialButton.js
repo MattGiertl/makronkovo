@@ -24,17 +24,11 @@ const Image = styled.img(
 
 const SocialButton = ({ marginRight, icon, to }) => {
   let src = '';
-  if (icon === 'facebook') {
-    src = Facebook;
-  } else if (icon === 'instagram') {
-    src = Instagram;
-  } else if (icon === 'telephone') {
-    src = Telephone;
-  } else if (icon === 'mail') {
-    src = Mail;
-  } else if (icon === 'location') {
-    src = Location;
-  }
+  if (icon === 'facebook') src = Facebook;
+  if (icon === 'instagram') src = Instagram;
+  if (icon === 'telephone') src = Telephone;
+  if (icon === 'mail') src = Mail;
+  if (icon === 'location') src = Location;
 
   return (
     <StyledAnchor target="_blank" href={to}>
