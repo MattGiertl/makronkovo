@@ -125,12 +125,10 @@ collections:
         }
   - label: "Galéria"
     name: "gallery"
-    # TODO: Remove this after the gallery has been created
-    create: true
     files:
       - label: "Galéria"
         name: "gallery"
-        file: "src/data/cmsGallery.json"
+        file: "src/data/gallery/gallery.json"
         fields:
           - {
               label: "Obrázky galérie",
