@@ -68,6 +68,41 @@
         }
       ],
       "to": "tartletky"
+    },
+    {
+      "title": "Cupcake",
+      "isSeasonal": false,
+      "infoCards": [
+        {
+          "infoCard": {
+            "description": "Malý set",
+            "price": "20ks 32€",
+            "undefined": "1ks / 20g"
+          }
+        },
+        {
+          "infoCard": {
+            "description": "Veľký set",
+            "price": "12ks 30€",
+            "undefined": "1ks / 80g"
+          }
+        }
+      ],
+      "description": "Cupcake s čokoládovým krémom/mascarpone zdobené s ovocím alebo meringue pusinkou",
+      "to": "cupcake"
+    },
+    {
+      "title": "Popsticles",
+      "isSeasonal": false,
+      "infoCards": [
+        {
+          "infoCard": {
+            "price": "10ks 25€"
+          }
+        }
+      ],
+      "description": "Zdobené koláčiky na paličke",
+      "to": "popsticles"
     }
   ]
 }
