@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import Layout from '../components/organisms/Layout/Layout';
 import FountainHeading from '../components/molecules/FountainHeading';
 import { laptopQuery, desktopQuery, mobileToTabletQuery } from '../utils/mediaqueries';
+import SEO from '../components/atoms/SEO';
 
 const ContentWrapper = styled.div({
   display: 'flex',
@@ -24,6 +25,7 @@ const ContentWrapper = styled.div({
 const GalleryTemplate = ({ renderContent }) => {
   return (
     <Layout>
+      <SEO title="Galéria | MAKRONKOVO - Cukrárska manufaktúra" />
       <FountainHeading>GALÉRIA</FountainHeading>
       <ContentWrapper>{renderContent}</ContentWrapper>
     </Layout>

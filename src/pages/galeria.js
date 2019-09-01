@@ -6,7 +6,7 @@ import GalleryItem from '../components/atoms/GalleryItem';
 
 const Gallery = () => {
   const data = useStaticQuery(galleryQuery);
-  const { images } = data.galleryJson;
+  const { galleryImages: images } = data.galleryJson;
   const Source = [];
   const renderImages = images.map(image => {
     Source.push(image.image);
@@ -48,8 +48,9 @@ const Gallery = () => {
 const galleryQuery = graphql`
   query GalleryQuery {
     galleryJson {
-      images {
+      galleryImages {
         image
+        title
       }
     }
   }

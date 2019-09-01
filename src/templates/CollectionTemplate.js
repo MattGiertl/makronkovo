@@ -9,6 +9,8 @@ import FountainHeading from '../components/molecules/FountainHeading';
 import Polaroid from '../components/molecules/Polaroid/Polaroid';
 import Layout from '../components/organisms/Layout/Layout';
 import theme from '../utils/theme/theme';
+import SEO from '../components/atoms/SEO';
+import { toPascalCase } from '../utils/functions';
 
 const CategoriesWrapper = styled.div({
   display: 'flex',
@@ -63,8 +65,11 @@ const CollectionTemplate = ({ pageContext }) => {
     </Polaroid>
   ));
 
+  const seoTitle = toPascalCase(title);
+
   return (
     <Layout>
+      <SEO title={`${seoTitle} | MAKRONKOVO - Cukrárska manufaktúra`} />
       <FountainHeading>{title}</FountainHeading>
       <TextWrapper>
         <Paragraph fontFamily={theme.fontFamilies.dinPro.regular} textAlign="center">

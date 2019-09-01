@@ -6,6 +6,7 @@ import theme from '../utils/theme/theme';
 
 import Layout from '../components/organisms/Layout/Layout';
 import Paragraph from '../components/atoms/Paragraph';
+import SEO from '../components/atoms/SEO';
 
 const ContentWrapper = styled.div({
   display: 'flex',
@@ -28,9 +29,10 @@ const ContentWrapper = styled.div({
 const GDPRTemplate = ({ gdprText }) => {
   return (
     <Layout>
+      <SEO title="Newsletter - spracovanie osobných údajov | MAKRONKOVO - Cukrárska manufaktúra" />
       <ContentWrapper>
         <Paragraph
-          fontFamily= {theme.fontFamilies.dinPro.bold}
+          fontFamily={theme.fontFamilies.dinPro.bold}
           fontSize={theme.fontSizes.medium}
           marginBottom="34px"
           marginTop="34px"

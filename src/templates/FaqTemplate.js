@@ -5,6 +5,7 @@ import { tabletQuery, mobileQuery, tabletLandscapeQuery } from '../utils/mediaqu
 
 import Layout from '../components/organisms/Layout/Layout';
 import FountainHeading from '../components/molecules/FountainHeading';
+import SEO from '../components/atoms/SEO';
 
 const ContentWrapper = styled.div({
   display: 'flex',
@@ -27,6 +28,7 @@ const ContentWrapper = styled.div({
 const FaqTemplate = ({ faqPairs }) => {
   return (
     <Layout>
+      <SEO title="Časté Otázky | MAKRONKOVO - Cukrárska manufaktúra" />
       <ContentWrapper>
         <FountainHeading>ČASTÉ OTÁZKY</FountainHeading>
         {faqPairs}
