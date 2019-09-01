@@ -1,0 +1,58 @@
+{
+  "title": "Torty a minikocky",
+  "to": "torty-a-mini-kocky",
+  "products": [
+    {
+      "title": "Brownies kocky",
+      "isSeasonal": false,
+      "infoCards": [
+        {
+          "infoCard": {
+            "price": "12ks 20€"
+          }
+        }
+      ],
+      "to": "brownies-kocky"
+    },
+    {
+      "title": "Švédske mandľové kocky alebo čokoládové kocky",
+      "isSeasonal": false,
+      "infoCards": [
+        {
+          "infoCard": {
+            "price": "24ks 36€"
+          }
+        }
+      ],
+      "description": "",
+      "to": "svedske-kocky"
+    },
+    {
+      "title": "Cheesecake",
+      "isSeasonal": false,
+      "infoCards": [
+        {
+          "infoCard": {
+            "price": "45€",
+            "undefined": "1900g"
+          }
+        }
+      ],
+      "description": "Cheesecake bohato nazdobený s meringue pusinkami, ovocím a makronkami",
+      "to": "cheesecake"
+    },
+    {
+      "title": "Zamatová čokoládová torta so zdobením",
+      "isSeasonal": false,
+      "infoCards": [
+        {
+          "infoCard": {
+            "price": "40€",
+            "undefined": "1200g"
+          }
+        }
+      ],
+      "to": "zamatova-torta"
+    }
+  ]
+}
