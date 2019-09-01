@@ -1,5 +1,5 @@
 {
-  "title": "Odpaľované cesto",
+  "title": "ODPAĽOVANÉ CESTO",
   "to": "candy-bar/odpalovane-cesto",
   "products": [
     {
@@ -9,15 +9,13 @@
         {
           "infoCard": {
             "description": "Malý set",
-            "price": "12ks 22€",
-            "undefined": "1ks / 30g"
+            "price": "12ks 22€"
           }
         },
         {
           "infoCard": {
             "description": "Veľký set",
-            "price": "12ks 38€",
-            "undefined": "1ks / 60g"
+            "price": "12ks 38€"
           }
         }
       ],
@@ -34,8 +32,7 @@
       "infoCards": [
         {
           "infoCard": {
-            "price": "20ks 26€",
-            "undefined": "1ks / 20g"
+            "price": "20ks 26€"
           }
         }
       ],
@@ -52,8 +49,7 @@
       "infoCards": [
         {
           "infoCard": {
-            "price": "12ks 22€",
-            "undefined": "1ks / 30g"
+            "price": "12ks 22€"
           }
         }
       ],
