@@ -7,7 +7,6 @@ import { mobileQuery, tabletQuery } from '../utils/mediaqueries';
 
 import InfoImage from '../../static/assets/Info.png';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Anchor from '../components/atoms/Anchor';
 import SEO from '../components/atoms/SEO';
 import Paragraph from '../components/atoms/Paragraph';
