@@ -18,7 +18,7 @@ const CategoriesWrapper = styled.div({
   flexWrap: 'wrap',
 
   [mobileQuery]: {
-    margin: '0 15px',
+    margin: '0 15px 20px',
   },
 
   [tabletQuery]: {
@@ -58,8 +58,8 @@ const CollectionTemplate = ({ pageContext }) => {
   const { categoryItems, title, lightText, boldText } = pageContext;
 
   const renderCategoryItems = categoryItems.map(categoryItem => (
-    <Polaroid to={categoryItem.to} shadowed src={categoryItem.image}>
-      <Paragraph fontFamily={theme.fontFamilies.caslonAntique.bold}>
+    <Polaroid to={categoryItem.to} shadowed src={categoryItem.image} sm>
+      <Paragraph fontFamily={theme.fontFamilies.caslonAntique.bold} textAlign="center">
         {categoryItem.categoryName}
       </Paragraph>
     </Polaroid>

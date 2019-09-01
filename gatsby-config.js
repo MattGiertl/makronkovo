@@ -5,7 +5,6 @@ module.exports = {
       'Torty na mieru, dezerty a candy bary ktoré spôsobujú závislosti. To je Makronkovo, cukrárska manufaktúra v Banskej Bystrici.',
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: 'gatsby-source-filesystem',
@@ -22,6 +21,20 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/data/mainPageData`,
+        name: 'mainPageData',
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/data/gallery`,
+        name: 'galleryData',
+      },
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/data/candybar`,
@@ -35,9 +48,23 @@ module.exports = {
         name: 'pages',
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: 'Makronkovo',
+        short_name: 'Makronkovo',
+        start_url: '/',
+        background_color: '#FFF',
+        theme_color: '##FCDFEB',
+        display: 'standalone',
+        icon: 'static/assets/makronkovo_favicon.png',
+      },
+    },
+    'gatsby-plugin-offline',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     `gatsby-transformer-json`,
+    'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
