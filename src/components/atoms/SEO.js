@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
-function SEO({ description, lang = 'sk', meta, title }) {
+function SEO({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -24,6 +25,7 @@ function SEO({ description, lang = 'sk', meta, title }) {
         lang,
       }}
       title={title}
+      titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
           name: `description`,
@@ -41,9 +43,38 @@ function SEO({ description, lang = 'sk', meta, title }) {
           property: `og:type`,
           content: `website`,
         },
+        {
+          name: `twitter:card`,
+          content: `summary`,
+        },
+        {
+          name: `twitter:creator`,
+          content: site.siteMetadata.author,
+        },
+        {
+          name: `twitter:title`,
+          content: title,
+        },
+        {
+          name: `twitter:description`,
+          content: metaDescription,
+        },
       ].concat(meta)}
     />
   );
 }
+
+SEO.defaultProps = {
+  lang: `sk`,
+  meta: [],
+  description: `Torty na mieru, dezerty a candy bary ktoré spôsobujú závislosti. To je Makronkovo, cukrárska manufaktúra v Banskej Bystrici.`,
+};
+
+SEO.propTypes = {
+  description: PropTypes.string,
+  lang: PropTypes.string,
+  meta: PropTypes.arrayOf(PropTypes.object),
+  title: PropTypes.string.isRequired,
+};
 
 export default SEO;

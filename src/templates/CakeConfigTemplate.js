@@ -1,14 +1,19 @@
 import React from 'react';
-import Layout from '../components/organisms/Layout/Layout';
-import Heading from '../components/molecules/FountainHeading';
-import Paragraph from '../components/atoms/Paragraph';
+
 import styled from '@emotion/styled';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import theme from '../utils/theme/theme';
-import SocialButton from '../components/atoms/SocialButton';
+
 import { mobileQuery, tabletQuery } from '../utils/mediaqueries';
-import Anchor from '../components/atoms/Anchor';
+
 import InfoImage from '../../static/assets/Info.png';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Anchor from '../components/atoms/Anchor';
+import SEO from '../components/atoms/SEO';
+import Paragraph from '../components/atoms/Paragraph';
+import SocialButton from '../components/atoms/SocialButton';
+import Heading from '../components/molecules/FountainHeading';
+import Layout from '../components/organisms/Layout/Layout';
 
 const ContentWrapper = styled.div({
   display: 'flex',
@@ -43,6 +48,10 @@ const CardWrapper = styled.div({
 const CakeConfigTemplate = ({ cards }) => {
   return (
     <Layout>
+      <SEO
+        title="Torty na mieru | MAKRONKOVO - Cukrárska manufaktúra"
+        description="Vyskladajte si svoju tortu na mieru podľa vašich predstáv. Torty v rôznych veľkostiach, príchutiach so zdobením a zápichom na mieru."
+      />
       <Heading>VYSKLADAJTE SI SVOJU TORTU NA MIERU</Heading>
       <ContentWrapper>
         <Paragraph margin="0 35%" mobileMargin="0 5%" tabletMargin="0 15%" textAlign="center">

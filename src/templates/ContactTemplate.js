@@ -10,6 +10,7 @@ import Map from '../components/atoms/Map';
 import Layout from '../components/organisms/Layout/Layout';
 import FountainHeading from '../components/molecules/FountainHeading';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import SEO from '../components/atoms/SEO';
 
 const ContentWrapper = styled.div({
   display: 'flex',
@@ -38,6 +39,10 @@ const OpeningHours = styled.div({
 
 const ContactTemplate = () => (
   <Layout>
+    <SEO
+      title="Kontakt | MAKRONKOVO - Cukrárska manufaktúra"
+      description="Máte záujem o naše dezerty alebo torty? Neváhajte nás kontaktovať cez naše sociálne siete, telefonicky, sms alebo mailom. Radi Vám pomôžeme."
+    />
     <ContentWrapper>
       <FountainHeading>KONTAKT</FountainHeading>
       <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
