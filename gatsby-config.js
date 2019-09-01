@@ -5,7 +5,6 @@ module.exports = {
       'This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: 'gatsby-source-filesystem',
@@ -49,9 +48,23 @@ module.exports = {
         name: 'pages',
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: 'Makronkovo',
+        short_name: 'Makronkovo',
+        start_url: '/',
+        background_color: '#FFF',
+        theme_color: '##FCDFEB',
+        display: 'standalone',
+        icon: 'static/assets/makronkovo_favicon.png',
+      },
+    },
+    'gatsby-plugin-offline',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     `gatsby-transformer-json`,
+    'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
