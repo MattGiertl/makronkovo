@@ -103,6 +103,63 @@
       ],
       "description": "Zdobené koláčiky na paličke",
       "to": "popsticles"
+    },
+    {
+      "title": "Cupcake Deluxe",
+      "isSeasonal": false,
+      "infoCards": [
+        {
+          "infoCard": {
+            "description": "Malý set",
+            "price": "20ks 42€"
+          }
+        },
+        {
+          "infoCard": {
+            "description": "Veľký set",
+            "price": "12ks 40€"
+          }
+        }
+      ],
+      "description": "Cupcake Deluxe s buttercream a živými kvetmi a s makronkou",
+      "to": "cupcake-deluxe"
+    },
+    {
+      "title": "Linecké srdcia",
+      "isSeasonal": false,
+      "infoCards": [
+        {
+          "infoCard": {
+            "price": "20ks 16€",
+            "undefined": "1ks / 5cm"
+          }
+        }
+      ],
+      "to": "linecke-srdcia"
+    },
+    {
+      "title": "Personalizované keksíky",
+      "isSeasonal": false,
+      "infoCards": [
+        {
+          "infoCard": {
+            "price": "1ks od 1,50€"
+          }
+        }
+      ],
+      "to": "personalizovane-keksiky"
+    },
+    {
+      "title": "Meringue zliepané snehové ruže",
+      "isSeasonal": false,
+      "infoCards": [
+        {
+          "infoCard": {
+            "price": "20ks 30€"
+          }
+        }
+      ],
+      "to": "snehove-ruze"
     }
   ]
 }
