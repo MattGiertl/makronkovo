@@ -17,7 +17,7 @@
           "infoCard": {
             "description": "Veľký set",
             "price": "12ks 38€",
-            "undefined": "1ks/90g"
+            "undefined": "1ks / 90g"
           }
         }
       ],
@@ -27,6 +27,47 @@
         }
       ],
       "to": "pavlove-hniezda"
+    },
+    {
+      "title": "Tartletky",
+      "isSeasonal": false,
+      "infoCards": [
+        {
+          "infoCard": {
+            "description": "Malý set",
+            "price": "12ks 24€",
+            "undefined": "1ks / 3cm"
+          }
+        },
+        {
+          "infoCard": {
+            "description": "Veľký set",
+            "price": "12ks 36€",
+            "undefined": "1ks / 7cm"
+          }
+        }
+      ],
+      "flavor": [
+        {
+          "flavor": "citrón s meringue pusinkami"
+        },
+        {
+          "flavor": "čokoláda a ovocná redukcia"
+        },
+        {
+          "flavor": "slaný karamel a pečené oriešky"
+        },
+        {
+          "flavor": "gaštan"
+        },
+        {
+          "flavor": "biela čokoláda s malinami a kokosom"
+        },
+        {
+          "flavor": "cheesecake"
+        }
+      ],
+      "to": "tartletky"
     }
   ]
 }
