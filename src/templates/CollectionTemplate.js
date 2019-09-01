@@ -10,6 +10,7 @@ import Polaroid from '../components/molecules/Polaroid/Polaroid';
 import Layout from '../components/organisms/Layout/Layout';
 import theme from '../utils/theme/theme';
 import SEO from '../components/atoms/SEO';
+import { toPascalCase } from '../utils/functions';
 
 const CategoriesWrapper = styled.div({
   display: 'flex',
@@ -64,7 +65,7 @@ const CollectionTemplate = ({ pageContext }) => {
     </Polaroid>
   ));
 
-  const seoTitle = title.toLowerCase();
+  const seoTitle = toPascalCase(title);
 
   return (
     <Layout>
