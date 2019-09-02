@@ -20,9 +20,9 @@ const NavBar = () => {
           <SocialButton
             to="https://www.instagram.com/makronkovo/?hl=en"
             marginRight="15px"
-            instagram
+            icon="instagram"
           />
-          <SocialButton to="https://www.facebook.com/makronkovo/" facebook />
+          <SocialButton to="https://www.facebook.com/makronkovo/" icon="facebook" />
         </SocialButtonGroup>
         <NavLink to="/torty-na-mieru">TORTY NA MIERU</NavLink>
         <NavLink to="/dezerty">DEZERTY</NavLink>
