@@ -197,7 +197,7 @@ const ProductDetailTemplate = ({ pageContext, uri }) => {
         <FountainHeading>{`ĎALŠIE ${productCategoryTitle}`}</FountainHeading>
         <MoreProductsWrapper>
           {moreProducts.map(product => (
-            <Polaroid shadowed src={product.image ? product.image : Fallback} to={product.to}>
+            <Polaroid shadowed src={product.image} to={product.to}>
               <Paragraph textAlign="center" lineHeight="24px">
                 {product.title}
               </Paragraph>
