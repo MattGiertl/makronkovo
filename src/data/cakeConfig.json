@@ -51,13 +51,13 @@
       "title": "VZHĽAD",
       "items": [
         {
-          "image": "/assets/Korpus.png",
+          "image": "/assets/Corpus.png",
           "imgName": "Korpus",
           "heading": "Korpus",
           "options": ["Vanilka", "Kakao", "Bezlepkový orechový"]
         },
         {
-          "image": "/assets/Krem.png",
+          "image": "/assets/Cream.png",
           "imgName": "Krem",
           "heading": "Krém",
           "options": [
@@ -71,19 +71,19 @@
           ]
         },
         {
-          "image": "/assets/VonkajsiePrevedenie.png",
+          "image": "/assets/Design.png",
           "imgName": "VonkajsiePrevedenie",
           "heading": "Vonkajšie prevedenie",
           "options": ["Polonahá torta", "Celá obtretá", "Obtretá na hladko", "Obtretá nedbalo"]
         },
         {
-          "image": "/assets/Poleva.png",
+          "image": "/assets/Topping.png",
           "imgName": "Poleva",
           "heading": "Poleva",
           "options": ["Karamel", "Tmavá čokoláda", "Biela čokoláda", "Bez polevy"]
         },
         {
-          "image": "/assets/Zdobenie.png",
+          "image": "/assets/Decoration.png",
           "imgName": "Zdobenie",
           "heading": "Zdobenie torty",
           "options": [
