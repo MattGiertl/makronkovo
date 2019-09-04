@@ -1,11 +1,37 @@
 backend:
   name: git-gateway
-  branch: develop
+  branch: cms-mainpage
 
 media_folder: static/img
 public_folder: /img
 
 collections:
+  - label: "Hlavná stránka"
+    name: "main"
+    files:
+      - label: "Banner"
+        name: "banner"
+        file: "src/data/mainPageData/slideshow.json"
+        fields:
+          - {
+              label: "Obrázky",
+              name: bannerImages,
+              widget: list,
+              allow_add: true,
+              fields:
+                [
+                  { label: "Názov", name: "title", widget: string },
+                  { label: "Obrázok", name: "image", widget: image },
+                ],
+          }
+      - label: "Referencie"
+        name: "references"
+        file: "src/data/mainPageData/references.json"
+        fields: 
+          - { label: "Autor", name: author, widget: string }
+          - { label: "Recenzia", name: review, widget: text }
+          - { label: "Obrázok", name: image, widget: image }
+
   - label: "Kategórie - dezerty"
     name: "dessertCategories"
     folder: "src/data/dessertsfolder"
