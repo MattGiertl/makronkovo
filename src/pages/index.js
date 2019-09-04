@@ -150,7 +150,7 @@ const mainPageQuery = graphql`
         }
       }
     }
-    allInstagramContent(limit: 4) {
+    allInstagramContent(limit: 8) {
       edges {
         node {
           images {
