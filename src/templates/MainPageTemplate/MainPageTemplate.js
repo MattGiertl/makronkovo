@@ -43,7 +43,7 @@ const MainPageTemplate = ({
       </Section>
 
       <Section heading="INSTAGRAM @MAKRONKOVO" id="InstagramSection">
-        {instagramPosts}
+        <div style={{ maxWidth: '970px' }}>{instagramPosts}</div>
       </Section>
 
       <Section spaceAround heading={reference.heading} id="ReferenceSection">
