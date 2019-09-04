@@ -1,3 +1,12 @@
 {
-  
+  "bannerImages": [
+    {
+      "title": "obr1",
+      "image": "/img/_dsf2643.jpg"
+    },
+    {
+      "title": "obr2",
+      "image": "/img/51989520_590710134672810_4074661538922691162_n.jpg"
+    }
+  ]
 }
