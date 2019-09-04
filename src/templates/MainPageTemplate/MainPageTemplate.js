@@ -9,11 +9,9 @@ import SEO from '../../components/atoms/SEO';
 
 const MainPageTemplate = ({
   slideshow,
-  offer,
   offerPolaroids,
   discount,
   discountPolaroids,
-  instagram,
   instagramPosts,
   reference,
   referencePolaroids,
@@ -29,16 +27,16 @@ const MainPageTemplate = ({
       <SlideShowWrapper>
         <SlideShow>
           {slideshow.map(item => (
-            <img src={item.image} alt={item.image} key={item.image} />
+            <img src={item.image} alt={item.title} key={item.title} />
           ))}
         </SlideShow>
       </SlideShowWrapper>
 
-      <Section background={offer.background} heading={offer.heading} id="OfferSection">
+      <Section background="#FCDFEB" heading="PONÚKAME VÁM" id="OfferSection">
         {offerPolaroids}
       </Section>
 
-      <Section heading={discount.heading} price="20" oldPrice="22" id="DiscountedProducts">
+      <Section heading="ZĽAVNENÉ PRODUKTY" id="DiscountedProducts">
         {discountPolaroids}
       </Section>
 
@@ -51,7 +49,7 @@ const MainPageTemplate = ({
         {instagramPosts}
       </Section>
 
-      <Section spaceAround heading={reference.heading} id="ReferenceSection">
+      <Section spaceAround heading="REFERENCIE OD NAŠICH KLIENTOV" id="ReferenceSection">
         {referencePolaroids}
       </Section>
 
@@ -59,7 +57,7 @@ const MainPageTemplate = ({
         <Newsletter />
       </Section>
 
-      <Section team={team.heading} background={team.background} heading="NÁŠ tím">
+      <Section heading="NÁŠ tím">
         {teamMembers}
       </Section>
     </Layout>

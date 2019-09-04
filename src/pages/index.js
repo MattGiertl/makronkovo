@@ -11,11 +11,10 @@ import MainPageTemplate from '../templates/MainPageTemplate/MainPageTemplate';
 
 const MainPage = () => {
   const data = useStaticQuery(mainPageQuery);
-  const { slideshow, sections } = data.mainPageDataJson;
+  const { bannerImages, offers, discounts, referenceList, teamMembers } = data.mainPageDataJson;
   const { edges: instagramEdges } = data.allInstagramContent;
-  const { offer, discount, instagram, reference, team } = sections;
 
-  const renderOfferPolaroids = offer.polaroids.map(offer => (
+  const renderOfferPolaroids = offers.map(offer => (
     <Polaroid src={offer.image} to={offer.to}>
       <Paragraph
         fontFamily={theme.fontFamilies.caslonAntique.regular}
@@ -27,7 +26,7 @@ const MainPage = () => {
     </Polaroid>
   ));
 
-  const renderDiscountPolaroids = discount.polaroids.map(discount => (
+  const renderDiscountPolaroids = discounts.map(discount => (
     <Polaroid src={discount.image} shadowed>
       <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} fontSize={theme.fontSizes.small}>
         {discount.heading}
@@ -64,7 +63,7 @@ const MainPage = () => {
     return <SquarePic src={url} href="https://www.instagram.com/makronkovo/" />;
   });
 
-  const renderReferencePolaroids = reference.polaroids.map(reference => (
+  const renderReferencePolaroids = referenceList.map(reference => (
     <Polaroid src={reference.image} shadowed>
       <Paragraph
         fontFamily={theme.fontFamilies.dinPro.bold}
@@ -83,22 +82,17 @@ const MainPage = () => {
     </Polaroid>
   ));
 
-  const renderTeamMembers = team.pictures.map(member => (
+  const renderTeamMembers = teamMembers.pictures.map(member => (
     <LabeledSquarePic src={member.image} heading={member.name} description={member.position} />
   ));
 
   return (
     <MainPageTemplate
-      slideshow={slideshow}
-      offer={offer}
+      slideshow={bannerImages}
       offerPolaroids={renderOfferPolaroids}
-      discount={discount}
       discountPolaroids={renderDiscountPolaroids}
-      instagram={instagram}
       instagramPosts={renderInstagramPosts}
-      reference={reference}
       referencePolaroids={renderReferencePolaroids}
-      team={team}
       teamMembers={renderTeamMembers}
     />
   );
@@ -107,47 +101,30 @@ const MainPage = () => {
 const mainPageQuery = graphql`
   query MainPageQuery {
     mainPageDataJson {
-      slideshow {
+      bannerImages {
         image
+        title
       }
-      sections {
-        discount {
-          background
-          heading
-          polaroids {
-            heading
-            image
-            newPrice
-            oldPrice
-          }
-        }
-        offer {
-          background
-          heading
-          polaroids {
-            heading
-            image
-            to
-          }
-        }
-        reference {
-          background
-          heading
-          polaroids {
-            author
-            image
-            review
-          }
-        }
-        team {
-          background
-          heading
-          pictures {
-            image
-            name
-            position
-          }
-        }
+      offers {
+        heading
+        image
+        to
+      }
+      discounts {
+        heading
+        image
+        newPrice
+        oldPrice
+      }
+      referenceList {
+        author
+        image
+        review
+      }
+      teamMembers {
+        image
+        name
+        position
       }
     }
     allInstagramContent(limit: 8) {
