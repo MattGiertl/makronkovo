@@ -35,6 +35,22 @@ collections:
                 { label: "Obrázok", name: image, widget: image }
               ] 
             }
+      - label: "Náš Tím"
+        name: "team"
+        file: "src/data/mainPageData/team.json"
+        fields:
+          - {
+              label: "Členovia tímu",
+              name: bannerImages,
+              widget: list,
+              allow_add: true,
+              fields:
+                [
+                  { label: "Meno", name: name, widget: string },
+                  { label: "Pozícia", name: position, widget: string },
+                  { label: "Fotka", name: "image", widget: image },
+                ],
+          }
 
   - label: "Kategórie - dezerty"
     name: "dessertCategories"

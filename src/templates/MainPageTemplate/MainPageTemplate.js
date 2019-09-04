@@ -59,7 +59,7 @@ const MainPageTemplate = ({
         <Newsletter />
       </Section>
 
-      <Section team={team.heading} background={team.background} heading="NÁŠ TÝM">
+      <Section team={team.heading} background={team.background} heading="NÁŠ tím">
         {teamMembers}
       </Section>
     </Layout>
