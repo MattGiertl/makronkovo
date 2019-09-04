@@ -42,7 +42,12 @@ const MainPageTemplate = ({
         {discountPolaroids}
       </Section>
 
-      <Section heading="INSTAGRAM @MAKRONKOVO" id="InstagramSection">
+      <Section
+        heading="INSTAGRAM @MAKRONKOVO"
+        id="InstagramSection"
+        maxWidth="1000px"
+        mobileMaxWidth="350px"
+      >
         {instagramPosts}
       </Section>
 
