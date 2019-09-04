@@ -56,24 +56,6 @@
         }
       ]
     },
-    "instagram": {
-      "heading": "INSTAGRAM @MAKRONKOVO",
-      "background": "white",
-      "posts": [
-        {
-          "image": "/img/torty.jpg"
-        },
-        {
-          "image": "/img/torty.jpg"
-        },
-        {
-          "image": "/img/torty.jpg"
-        },
-        {
-          "image": "/img/torty.jpg"
-        }
-      ]
-    },
     "reference": {
       "heading": "REFERENCIE OD NAŠICH KLIENTOV",
       "background": "white",

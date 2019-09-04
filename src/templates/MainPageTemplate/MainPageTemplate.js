@@ -42,7 +42,7 @@ const MainPageTemplate = ({
         {discountPolaroids}
       </Section>
 
-      <Section heading={instagram.heading} background={instagram.background} id="InstagramSection">
+      <Section heading="INSTAGRAM @MAKRONKOVO" id="InstagramSection">
         {instagramPosts}
       </Section>
 
