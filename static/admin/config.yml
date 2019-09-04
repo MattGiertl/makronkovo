@@ -41,7 +41,7 @@ collections:
         fields:
           - {
               label: "Členovia tímu",
-              name: bannerImages,
+              name: teamMembers,
               widget: list,
               allow_add: true,
               fields:
