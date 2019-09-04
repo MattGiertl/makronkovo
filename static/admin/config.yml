@@ -11,7 +11,7 @@ collections:
     files:
       - label: "Banner"
         name: "banner"
-        file: "src/data/mainPageData/slideshow.json"
+        file: "src/data/mainPage/slideshow.json"
         fields:
           - {
               label: "Obrázky",
@@ -26,7 +26,7 @@ collections:
           }
       - label: "Referencie"
         name: "references"
-        file: "src/data/mainPageData/references.json"
+        file: "src/data/mainPage/references.json"
         fields: 
           - { label: "Referencie", name: referenceList, widget: list, allow_add: true, fields: 
               [
@@ -37,7 +37,7 @@ collections:
             }
       - label: "Náš Tím"
         name: "team"
-        file: "src/data/mainPageData/team.json"
+        file: "src/data/mainPage/team.json"
         fields:
           - {
               label: "Členovia tímu",
