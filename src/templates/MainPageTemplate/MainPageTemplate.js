@@ -42,8 +42,13 @@ const MainPageTemplate = ({
         {discountPolaroids}
       </Section>
 
-      <Section heading="INSTAGRAM @MAKRONKOVO" id="InstagramSection">
-        <div style={{ maxWidth: '970px' }}>{instagramPosts}</div>
+      <Section
+        heading="INSTAGRAM @MAKRONKOVO"
+        id="InstagramSection"
+        maxWidth="1000px"
+        mobileMaxWidth="350px"
+      >
+        {instagramPosts}
       </Section>
 
       <Section spaceAround heading={reference.heading} id="ReferenceSection">
