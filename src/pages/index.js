@@ -12,6 +12,7 @@ import MainPageTemplate from '../templates/MainPageTemplate/MainPageTemplate';
 const MainPage = () => {
   const data = useStaticQuery(mainPageQuery);
   const { slideshow, sections } = data.mainPageDataJson;
+  const { edges: instagramEdges } = data.allInstagramContent;
   const { offer, discount, instagram, reference, team } = sections;
 
   const renderOfferPolaroids = offer.polaroids.map(offer => (
@@ -57,9 +58,11 @@ const MainPage = () => {
     </Polaroid>
   ));
 
-  const renderInstagramPosts = instagram.posts.map(post => (
-    <SquarePic src={post.image} href="https://www.instagram.com/makronkovo/" />
-  ));
+  const renderInstagramPosts = instagramEdges.map(edge => {
+    const { url } = edge.node.images.standard_resolution;
+
+    return <SquarePic src={url} href="https://www.instagram.com/makronkovo/" />;
+  });
 
   const renderReferencePolaroids = reference.polaroids.map(reference => (
     <Polaroid src={reference.image} shadowed>
@@ -118,13 +121,6 @@ const mainPageQuery = graphql`
             oldPrice
           }
         }
-        instagram {
-          background
-          heading
-          posts {
-            image
-          }
-        }
         offer {
           background
           heading
@@ -150,6 +146,17 @@ const mainPageQuery = graphql`
             image
             name
             position
+          }
+        }
+      }
+    }
+    allInstagramContent(limit: 4) {
+      edges {
+        node {
+          images {
+            standard_resolution {
+              url
+            }
           }
         }
       }
