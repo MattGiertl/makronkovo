@@ -23,8 +23,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/data/mainpage`,
-        name: 'mainPage',
+        path: `${__dirname}/src/data/mainpage/`,
+        name: 'mainpage',
       },
     },
     {

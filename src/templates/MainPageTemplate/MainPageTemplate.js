@@ -10,12 +10,9 @@ import SEO from '../../components/atoms/SEO';
 const MainPageTemplate = ({
   slideshow,
   offerPolaroids,
-  discount,
-  discountPolaroids,
+  // discountPolaroids,
   instagramPosts,
-  reference,
   referencePolaroids,
-  team,
   teamMembers,
 }) => {
   return (
@@ -36,9 +33,9 @@ const MainPageTemplate = ({
         {offerPolaroids}
       </Section>
 
-      <Section heading="ZĽAVNENÉ PRODUKTY" id="DiscountedProducts">
+      {/* <Section heading="ZĽAVNENÉ PRODUKTY" id="DiscountedProducts">
         {discountPolaroids}
-      </Section>
+      </Section> */}
 
       <Section
         heading="INSTAGRAM @MAKRONKOVO"
@@ -57,9 +54,7 @@ const MainPageTemplate = ({
         <Newsletter />
       </Section>
 
-      <Section heading="NÁŠ tím">
-        {teamMembers}
-      </Section>
+      <Section heading="NÁŠ tím">{teamMembers}</Section>
     </Layout>
   );
 };

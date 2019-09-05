@@ -11,7 +11,8 @@ import MainPageTemplate from '../templates/MainPageTemplate/MainPageTemplate';
 
 const MainPage = () => {
   const data = useStaticQuery(mainPageQuery);
-  const { bannerImages, offers, discounts, referenceList, teamMembers } = data.mainPageDataJson;
+  const { bannerImages, referenceList, teamMembers } = data.mainpageJson;
+  const { nodes: offers } = data.allOffersData;
   const { edges: instagramEdges } = data.allInstagramContent;
 
   const renderOfferPolaroids = offers.map(offer => (
@@ -26,36 +27,36 @@ const MainPage = () => {
     </Polaroid>
   ));
 
-  const renderDiscountPolaroids = discounts.map(discount => (
-    <Polaroid src={discount.image} shadowed>
-      <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} fontSize={theme.fontSizes.small}>
-        {discount.heading}
-      </Paragraph>
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-      >
-        <Paragraph
-          textDecoration="line-through"
-          marginRight="10px"
-          fontSize={theme.fontSizes.small}
-          fontFamily={theme.fontFamilies.dinPro.regular}
-        >
-          {discount.oldPrice}€
-        </Paragraph>
-        <Paragraph
-          fontFamily={theme.fontFamilies.dinPro.regular}
-          marginRight="10px"
-          fontSize={theme.fontSizes.small}
-        >
-          {discount.newPrice}€
-        </Paragraph>
-      </div>
-    </Polaroid>
-  ));
+  // const renderDiscountPolaroids = discounts.map(discount => (
+  //   <Polaroid src={discount.image} shadowed>
+  //     <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} fontSize={theme.fontSizes.small}>
+  //       {discount.heading}
+  //     </Paragraph>
+  //     <div
+  //       style={{
+  //         display: 'flex',
+  //         justifyContent: 'center',
+  //         alignItems: 'center',
+  //       }}
+  //     >
+  //       <Paragraph
+  //         textDecoration="line-through"
+  //         marginRight="10px"
+  //         fontSize={theme.fontSizes.small}
+  //         fontFamily={theme.fontFamilies.dinPro.regular}
+  //       >
+  //         {discount.oldPrice}€
+  //       </Paragraph>
+  //       <Paragraph
+  //         fontFamily={theme.fontFamilies.dinPro.regular}
+  //         marginRight="10px"
+  //         fontSize={theme.fontSizes.small}
+  //       >
+  //         {discount.newPrice}€
+  //       </Paragraph>
+  //     </div>
+  //   </Polaroid>
+  // ));
 
   const renderInstagramPosts = instagramEdges.map(edge => {
     const { url } = edge.node.images.standard_resolution;
@@ -90,7 +91,6 @@ const MainPage = () => {
     <MainPageTemplate
       slideshow={bannerImages}
       offerPolaroids={renderOfferPolaroids}
-      discountPolaroids={renderDiscountPolaroids}
       instagramPosts={renderInstagramPosts}
       referencePolaroids={renderReferencePolaroids}
       teamMembers={renderTeamMembers}
@@ -100,21 +100,17 @@ const MainPage = () => {
 
 const mainPageQuery = graphql`
   query MainPageQuery {
-    mainPageDataJson {
-      bannerImages {
-        image
-        title
-      }
-      offers {
+    allOffersJson {
+      nodes {
         heading
         image
         to
       }
-      discounts {
-        heading
+    }
+    mainpageJson {
+      bannerImages {
         image
-        newPrice
-        oldPrice
+        title
       }
       referenceList {
         author
