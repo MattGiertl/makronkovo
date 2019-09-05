@@ -11,9 +11,11 @@ import MainPageTemplate from '../templates/MainPageTemplate/MainPageTemplate';
 
 const MainPage = () => {
   const data = useStaticQuery(mainPageQuery);
-  const { bannerImages, referenceList, teamMembers } = data.mainpageJson;
-  const { nodes: offers } = data.allOffersData;
+  const { bannerImages } = data.bannerJson;
+  const { nodes: offers } = data.allOffersJson;
   const { edges: instagramEdges } = data.allInstagramContent;
+  const { referenceList } = data.referencesJson;
+  const { teamMembers } = data.teamJson;
 
   const renderOfferPolaroids = offers.map(offer => (
     <Polaroid src={offer.image} to={offer.to}>
@@ -27,6 +29,7 @@ const MainPage = () => {
     </Polaroid>
   ));
 
+  // TODO: Uncomment this after discount implementation
   // const renderDiscountPolaroids = discounts.map(discount => (
   //   <Polaroid src={discount.image} shadowed>
   //     <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} fontSize={theme.fontSizes.small}>
@@ -83,7 +86,7 @@ const MainPage = () => {
     </Polaroid>
   ));
 
-  const renderTeamMembers = teamMembers.pictures.map(member => (
+  const renderTeamMembers = teamMembers.map(member => (
     <LabeledSquarePic src={member.image} heading={member.name} description={member.position} />
   ));
 
@@ -100,6 +103,12 @@ const MainPage = () => {
 
 const mainPageQuery = graphql`
   query MainPageQuery {
+    bannerJson {
+      bannerImages {
+        title
+        image
+      }
+    }
     allOffersJson {
       nodes {
         heading
@@ -107,16 +116,22 @@ const mainPageQuery = graphql`
         to
       }
     }
-    mainpageJson {
-      bannerImages {
+    allDiscountsJson {
+      nodes {
+        newPrice
+        oldPrice
+        heading
         image
-        title
       }
+    }
+    referencesJson {
       referenceList {
         author
         image
         review
       }
+    }
+    teamJson {
       teamMembers {
         image
         name

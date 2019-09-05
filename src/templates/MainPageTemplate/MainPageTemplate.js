@@ -46,7 +46,13 @@ const MainPageTemplate = ({
         {instagramPosts}
       </Section>
 
-      <Section spaceAround heading="REFERENCIE OD NAŠICH KLIENTOV" id="ReferenceSection">
+      <Section
+        maxWidth="1200px"
+        mobileMaxWidth="350px"
+        spaceAround
+        heading="REFERENCIE OD NAŠICH KLIENTOV"
+        id="ReferenceSection"
+      >
         {referencePolaroids}
       </Section>
 
@@ -54,7 +60,7 @@ const MainPageTemplate = ({
         <Newsletter />
       </Section>
 
-      <Section heading="NÁŠ tím">{teamMembers}</Section>
+      <Section heading="NÁŠ TÍM">{teamMembers}</Section>
     </Layout>
   );
 };
