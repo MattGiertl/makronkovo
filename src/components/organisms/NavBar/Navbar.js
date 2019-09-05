@@ -12,7 +12,11 @@ const NavBar = () => {
   const [showMenu, toggleMenu] = useState(false);
 
   return (
-    <NavBarWrapper id="NavBarWrapper" showMenu={showMenu}>
+    <NavBarWrapper
+      id="NavBarWrapper"
+      showMenu={showMenu}
+      marginBottomMobile={showMenu ? '50px' : '0'}
+    >
       <MenuToggle opened={showMenu} onClick={() => toggleMenu(!showMenu)} />
       <NavLink to="/">
         <Logo />
