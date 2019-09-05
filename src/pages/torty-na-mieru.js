@@ -45,6 +45,7 @@ const CakeConfig = () => {
         height={item.height}
         portions={item.portions}
         price={item.price}
+        partialVisibility={true}
       />
     ));
 
@@ -67,6 +68,7 @@ const CakeConfig = () => {
           tabletWidth="700px"
           laptopWidth="900px"
           desktopWidth="1010px"
+          partialVisibility={true}
         >
           <Image src={firstCard.section} alt="prvý odsek" />
           <Paragraph
