@@ -14,7 +14,9 @@ const NavBar = () => {
   return (
     <NavBarWrapper id="NavBarWrapper" showMenu={showMenu}>
       <MenuToggle opened={showMenu} onClick={() => toggleMenu(!showMenu)} />
-      <Logo />
+      <NavLink to="/">
+        <Logo />
+      </NavLink>
       <NavItems showMenu={showMenu} id="NavItems">
         <SocialButtonGroup>
           <SocialButton
