@@ -14,7 +14,7 @@ const SlideShowItem = styled.div(
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
     backgroundSize: 'cover',
-    height: '290px',
+    height: '270px',
     width: '100%',
 
     [mobileToTabletQuery]: {
