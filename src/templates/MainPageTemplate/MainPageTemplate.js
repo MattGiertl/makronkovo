@@ -12,7 +12,7 @@ const MainPageTemplate = ({
   offerPolaroids,
   // discountPolaroids,
   instagramPosts,
-  referencePolaroids,
+  // referencePolaroids,
   // teamMembers,
 }) => {
   return (
@@ -41,20 +41,18 @@ const MainPageTemplate = ({
         heading="INSTAGRAM @MAKRONKOVO"
         id="InstagramSection"
         maxWidth="1000px"
-        mobileMaxWidth="350px"
       >
         {instagramPosts}
       </Section>
 
-      <Section
+      {/* <Section
         maxWidth="1200px"
-        mobileMaxWidth="350px"
         spaceAround
         heading="REFERENCIE OD NAŠICH KLIENTOV"
         id="ReferenceSection"
       >
         {referencePolaroids}
-      </Section>
+      </Section> */}
 
       <Section heading="NEWSLETTER">
         <Newsletter />
