@@ -13,7 +13,7 @@ const MainPageTemplate = ({
   // discountPolaroids,
   instagramPosts,
   referencePolaroids,
-  teamMembers,
+  // teamMembers,
 }) => {
   return (
     <Layout>
@@ -60,7 +60,7 @@ const MainPageTemplate = ({
         <Newsletter />
       </Section>
 
-      <Section heading="NÁŠ TÍM">{teamMembers}</Section>
+      {/* <Section heading="NÁŠ TÍM">{teamMembers}</Section> */}
     </Layout>
   );
 };
