@@ -38,9 +38,9 @@ const MainPageTemplate = ({
         {offerPolaroids}
       </Section>
 
-      <Section heading={discount.heading} price="20" oldPrice="22" id="DiscountedProducts">
+      {/* <Section heading={discount.heading} price="20" oldPrice="22" id="DiscountedProducts">
         {discountPolaroids}
-      </Section>
+      </Section> */}
 
       <Section
         heading="INSTAGRAM @MAKRONKOVO"
@@ -59,9 +59,9 @@ const MainPageTemplate = ({
         <Newsletter />
       </Section>
 
-      <Section team={team.heading} background={team.background} heading="NÁŠ TÝM">
+      {/* <Section team={team.heading} background={team.background} heading="NÁŠ TÝM">
         {teamMembers}
-      </Section>
+      </Section> */}
     </Layout>
   );
 };
