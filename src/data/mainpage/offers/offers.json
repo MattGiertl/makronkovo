@@ -1,0 +1,17 @@
+[
+  {
+    "image": "/img/torty.jpg",
+    "heading": "TORTY NA MIERU",
+    "to": "/torty-na-mieru"
+  },
+  {
+    "image": "/img/torty.jpg",
+    "heading": "DEZERTY",
+    "to": "/dezerty"
+  },
+  {
+    "image": "/img/torty.jpg",
+    "heading": "CANDY BARY",
+    "to": "/candy-bar"
+  }
+]

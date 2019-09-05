@@ -9,16 +9,11 @@ import SEO from '../../components/atoms/SEO';
 
 const MainPageTemplate = ({
   slideshow,
-  offer,
   offerPolaroids,
-  discount,
-  discountPolaroids,
-  instagram,
+  // discountPolaroids,
   instagramPosts,
-  reference,
-  referencePolaroids,
-  team,
-  teamMembers,
+  // referencePolaroids,
+  // teamMembers,
 }) => {
   return (
     <Layout>
@@ -29,16 +24,16 @@ const MainPageTemplate = ({
       <SlideShowWrapper>
         <SlideShow>
           {slideshow.map(item => (
-            <img src={item.image} alt={item.image} key={item.image} />
+            <img src={item.image} alt={item.title} key={item.title} />
           ))}
         </SlideShow>
       </SlideShowWrapper>
 
-      <Section background={offer.background} heading={offer.heading} id="OfferSection">
+      <Section background="#FCDFEB" heading="PONÚKAME VÁM" id="OfferSection">
         {offerPolaroids}
       </Section>
 
-      {/* <Section heading={discount.heading} price="20" oldPrice="22" id="DiscountedProducts">
+      {/* <Section heading="ZĽAVNENÉ PRODUKTY" id="DiscountedProducts">
         {discountPolaroids}
       </Section> */}
 
@@ -46,22 +41,24 @@ const MainPageTemplate = ({
         heading="INSTAGRAM @MAKRONKOVO"
         id="InstagramSection"
         maxWidth="1000px"
-        mobileMaxWidth="350px"
       >
         {instagramPosts}
       </Section>
 
-      <Section spaceAround heading={reference.heading} id="ReferenceSection">
+      {/* <Section
+        maxWidth="1200px"
+        spaceAround
+        heading="REFERENCIE OD NAŠICH KLIENTOV"
+        id="ReferenceSection"
+      >
         {referencePolaroids}
-      </Section>
+      </Section> */}
 
       <Section heading="NEWSLETTER">
         <Newsletter />
       </Section>
 
-      {/* <Section team={team.heading} background={team.background} heading="NÁŠ TÝM">
-        {teamMembers}
-      </Section> */}
+      {/* <Section heading="NÁŠ TÍM">{teamMembers}</Section> */}
     </Layout>
   );
 };
