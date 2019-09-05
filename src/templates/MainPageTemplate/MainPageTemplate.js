@@ -6,6 +6,25 @@ import Section from '../../components/organisms/Section';
 import Newsletter from '../../components/organisms/Newsletter/Newsletter';
 import Layout from '../../components/organisms/Layout/Layout';
 import SEO from '../../components/atoms/SEO';
+import styled from '@emotion/styled';
+import { mobileToTabletQuery } from '../../utils/mediaqueries';
+
+const SlideShowItem = styled.div(
+  {
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    height: '290px',
+    width: '100%',
+
+    [mobileToTabletQuery]: {
+      height: '265px',
+    },
+  },
+  props => ({
+    backgroundImage: `url(${props.backgroundImage})`,
+  }),
+);
 
 const MainPageTemplate = ({
   slideshow,
@@ -24,7 +43,7 @@ const MainPageTemplate = ({
       <SlideShowWrapper>
         <SlideShow>
           {slideshow.map(item => (
-            <img src={item.image} alt={item.title} key={item.title} />
+            <SlideShowItem backgroundImage={item.image} key={item.title} />
           ))}
         </SlideShow>
       </SlideShowWrapper>
@@ -37,11 +56,7 @@ const MainPageTemplate = ({
         {discountPolaroids}
       </Section> */}
 
-      <Section
-        heading="INSTAGRAM @MAKRONKOVO"
-        id="InstagramSection"
-        maxWidth="1000px"
-      >
+      <Section heading="INSTAGRAM @MAKRONKOVO" id="InstagramSection" maxWidth="1000px">
         {instagramPosts}
       </Section>
 
