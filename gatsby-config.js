@@ -84,21 +84,21 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-instagram-all`,
+      options: {
+        access_token: '3265946889.1677ed0.d9aef6cd62c44e4ba81bf45683c2952d',
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: 'Makronkovo',
         short_name: 'Makronkovo',
         start_url: '/',
         background_color: '#FFF',
-        theme_color: '##FCDFEB',
+        theme_color: '#FCDFEB',
         display: 'standalone',
         icon: 'static/assets/makronkovo_favicon.png',
-      },
-    },
-    {
-      resolve: `gatsby-source-instagram-all`,
-      options: {
-        access_token: '3265946889.1677ed0.d9aef6cd62c44e4ba81bf45683c2952d',
       },
     },
     'gatsby-plugin-offline',
