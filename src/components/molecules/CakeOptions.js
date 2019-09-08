@@ -24,8 +24,6 @@ const TextWrapper = styled.div({
 });
 
 const Image = styled.img({
-  height: '100%',
-  weight: '100%',
   margin: '-10px auto auto',
 });
 
