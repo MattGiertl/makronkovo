@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import Paragraph from '../atoms/Paragraph';
 import theme from '../../utils/theme/theme';
-import { tabletQuery, mobileQuery, laptopQuery, desktopQuery } from '../../utils/mediaqueries';
+import { tabletQuery, mobileQuery, laptopQuery, desktopQuery, laptopToDesktopQuery } from '../../utils/mediaqueries';
 import UnorderedList from '../atoms/UnorderedList';
 
 const OptionWrapper = styled.div({
@@ -19,8 +19,7 @@ const TextWrapper = styled.div({
   flexDirection: 'column',
   [mobileQuery]: { marginLeft: '8%', marginBottom: '41px', width: '90%' },
   [tabletQuery]: { marginLeft: '0px', marginRight: 'auto', marginBottom: '41px', width: '60%' },
-  [laptopQuery]: { marginLeft: '50px', marginBottom: '41px', width: '500px' },
-  [desktopQuery]: { marginLeft: '50px', marginBottom: '41px', width: '500px'},
+  [laptopToDesktopQuery]: { marginLeft: '50px', marginBottom: '41px', width: '500px' },
 });
 
 const Image = styled.img({
