@@ -18,15 +18,15 @@ const TextWrapper = styled.div({
   alignItems: 'left',
   flexDirection: 'column',
   [mobileQuery]: { marginLeft: '8%', marginBottom: '41px', width: '90%' },
-  [tabletQuery]: { marginLeft: '10%', marginBottom: '41px', width: '60%' },
-  [laptopQuery]: { marginLeft: '15%', width: '80%' },
-  [desktopQuery]: { margin: '0 auto 41px 15%', width: '80%' },
+  [tabletQuery]: { marginLeft: '0px', marginRight: 'auto', marginBottom: '41px', width: '60%' },
+  [laptopQuery]: { marginLeft: '50px', marginBottom: '41px', width: '500px' },
+  [desktopQuery]: { marginLeft: '50px', marginBottom: '41px', width: '500px'},
 });
 
 const Image = styled.img({
   height: '100%',
   weight: '100%',
-  marginTop: '-10px',
+  margin: '-10px auto auto',
 });
 
 const CakeView = ({ src, imgName, heading, children }) => (
