@@ -8,6 +8,7 @@ import { mobileQuery, tabletQuery, laptopQuery, desktopQuery } from '../utils/me
 
 import PlaceholderImg from '../../static/assets/cake.jpg';
 import theme from '../utils/theme/theme';
+import BackBtn from '../../static/assets/BackButton.svg';
 
 const CategoriesWrapper = styled.div({
   display: 'flex',
@@ -36,6 +37,30 @@ const Description = styled.div({
   display: 'flex',
 });
 
+const BackButton = styled.img({
+  position: 'absolute',
+  cursor: 'pointer',
+  [mobileQuery]: {
+    top: '205px',
+    left: '35px',
+  },
+
+  [tabletQuery]: {
+    top: '205px',
+    left: '75px',
+  },
+
+  [laptopQuery]: {
+    top: '265px',
+    left: '12%',
+  },
+
+  [desktopQuery]: {
+    top: '265px',
+    left: '12%',
+  },
+});
+
 const CategoryItemTemplate = ({ pageContext }) => {
   const { products, title: categoryName, to: categoryTo } = pageContext;
   const { dinPro } = theme.fontFamilies;
@@ -60,6 +85,7 @@ const CategoryItemTemplate = ({ pageContext }) => {
 
   return (
     <Layout>
+      <BackButton src={BackBtn} alt="backButton" onClick={() => window.history.back()} />
       <FountainHeading>{categoryName}</FountainHeading>
       <CategoriesWrapper>{renderItems}</CategoriesWrapper>
     </Layout>
