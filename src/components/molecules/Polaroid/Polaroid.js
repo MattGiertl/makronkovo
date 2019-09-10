@@ -25,10 +25,10 @@ const FallBackWrapper = styled.div({
 const Polaroid = ({ children, src, shadowed, to, sm, isSeasonal, isDiscount, isSet }) => (
   <Wrapper shadowed={shadowed} to={to} disabled={!!to} sm={sm}>
     {isSeasonal ? <Label background={theme.colors.mediumPink} top='70px'>SEZÓNNE</Label> : null}
-    {isDiscount ? <Label background={theme.colors.green} top='70px'>AKCIA</Label> : null}
-    {isSet ? <Label background={theme.colors.darkGold} top='70px'>SET</Label> : null}
-    <Label background={theme.colors.green} top='25px'>AKCIA</Label>
-    <Label background={theme.colors.mediumPink} top='70px'>SEZÓNNE</Label>
+    {isDiscount ? <Label background={theme.colors.green} top='25px'>AKCIA</Label> : null}
+    {isSet ? <Label background={theme.colors.darkGold} top='25px'>SET</Label> : null}
+    {/* <Label background={theme.colors.green} top='25px'>AKCIA</Label>
+    <Label background={theme.colors.mediumPink} top='70px'>SEZÓNNE</Label> */}
     {src ? (
       <Image src={src} alt="Polaroid" />
     ) : (
