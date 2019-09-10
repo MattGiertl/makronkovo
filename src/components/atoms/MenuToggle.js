@@ -10,11 +10,12 @@ const StyledIcon = styled.img({
   position: 'absolute',
   height: '21px',
   width: '34px',
+  padding: '10px',
 
   [mobileToTabletQuery]: {
     display: 'flex',
-    top: '80px',
-    right: '7%',
+    top: '70px',
+    right: '5%',
   },
 });
 
