@@ -10,7 +10,7 @@ const StyledIcon = styled.img({
   position: 'absolute',
   height: '21px',
   width: '34px',
-  padding: '10px 10px',
+  padding: '10px',
 
   [mobileToTabletQuery]: {
     display: 'flex',
