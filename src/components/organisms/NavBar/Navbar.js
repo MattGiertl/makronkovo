@@ -12,19 +12,25 @@ const NavBar = () => {
   const [showMenu, toggleMenu] = useState(false);
 
   return (
-    <NavBarWrapper id="NavBarWrapper" showMenu={showMenu}>
+    <NavBarWrapper
+      id="NavBarWrapper"
+      showMenu={showMenu}
+      marginBottomMobile={showMenu ? '50px' : '0'}
+    >
       <MenuToggle opened={showMenu} onClick={() => toggleMenu(!showMenu)} />
-      <Logo />
+      <NavLink to="/">
+        <Logo />
+      </NavLink>
       <NavItems showMenu={showMenu} id="NavItems">
         <SocialButtonGroup>
           <SocialButton
             to="https://www.instagram.com/makronkovo/?hl=en"
             marginRight="15px"
-            icon={['fab', 'instagram']}
+            icon="instagram"
           />
-          <SocialButton to="https://www.facebook.com/makronkovo/" icon={['fab', 'facebook']} />
+          <SocialButton to="https://www.facebook.com/makronkovo/" icon="facebook" />
         </SocialButtonGroup>
-        <NavLink to="/">TORTY NA MIERU</NavLink>
+        <NavLink to="/torty-na-mieru">TORTY NA MIERU</NavLink>
         <NavLink to="/dezerty">DEZERTY</NavLink>
         <NavLink marginBottom="50px" to="/candy-bar">
           CANDY BAR
@@ -35,7 +41,7 @@ const NavBar = () => {
         <NavLink marginTop="50px" to="/o-nas">
           O NÁS
         </NavLink>
-        <NavLink to="/">GALÉRIA</NavLink>
+        <NavLink to="/galeria">GALÉRIA</NavLink>
         <NavLink to="/kontakt">KONTAKT</NavLink>
         <NavLink to="/caste-otazky">ČASTÉ OTÁZKY</NavLink>
       </NavItems>

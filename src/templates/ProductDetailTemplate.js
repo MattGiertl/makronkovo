@@ -3,8 +3,8 @@ import React from 'react';
 import styled from '@emotion/styled';
 import theme from '../utils/theme/theme';
 import { mobileQuery, tabletQuery, laptopQuery, desktopQuery } from '../utils/mediaqueries';
+import Fallback from '../../static/assets/Fallback.png';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Heading from '../components/atoms/Heading';
 import Paragraph from '../components/atoms/Paragraph';
 import Labels from '../components/atoms/Labels';
@@ -25,6 +25,11 @@ import Contact from '../components/molecules/Contact';
 import Layout from '../components/organisms/Layout/Layout';
 import SetCard from '../components/molecules/SetCard';
 import SetCards from '../components/atoms/SetCards';
+import SlideShow from '../components/atoms/Slideshow';
+import SEO from '../components/atoms/SEO';
+import { toPascalCase } from '../utils/functions';
+
+import SocialButton from '../components/atoms/SocialButton';
 
 const ContentWrapper = styled.div({
   display: 'flex',
@@ -48,26 +53,34 @@ const ContentWrapper = styled.div({
   },
 });
 
-const ProductDetailTemplate = ({ pageContext }) => {
+const ProductDetailTemplate = ({ pageContext, uri }) => {
   const { fontSizes, fontFamilies } = theme;
   const {
     description,
-    image,
+    images,
     weight,
-    newPrice,
+    price,
     oldPrice,
     title,
     isSeasonal,
     isSet,
     productCategoryTitle,
-    items,
+    products,
     setInfo,
   } = pageContext;
 
-  const moreProducts = items.filter(item => item.title !== title);
+  const moreProducts = products
+    ? products.filter(item => item.title !== title)
+    : products.filter(item => item.title !== title);
 
+  const productSectionTitle = uri.indexOf('dezerty') !== -1 ? 'Dezerty' : 'Candy Bary';
   return (
     <Layout>
+      <SEO
+        title={`${toPascalCase(title)} > ${toPascalCase(
+          productCategoryTitle,
+        )} > ${productSectionTitle} | MAKRONKOVO`}
+      />
       <ContentWrapper>
         <BackButton />
         <MobileOnly>
@@ -89,10 +102,29 @@ const ProductDetailTemplate = ({ pageContext }) => {
               ))}
             </SetCards>
           )}
-          {newPrice && <Price oldPrice={oldPrice} newPrice={newPrice} />}
+          {price && <Price oldPrice={oldPrice} price={price} />}
         </MobileOnly>
         <InfoStrip>
-          <ProductDetailImage src={image} alt={image} />
+          {images ? (
+            <SlideShow>
+              {images.map(img => (
+                <ProductDetailImage src={img.image} alt={img.image} />
+              ))}
+            </SlideShow>
+          ) : (
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                padding: '100px',
+                border: '1px solid #EDEDED',
+                margin: '0 50px 50px 0',
+              }}
+            >
+              <img src={Fallback} alt="Nebol poskytnutý žiadny obrázok" />
+            </div>
+          )}
 
           <DesktopOnly>
             <Labels>
@@ -114,7 +146,7 @@ const ProductDetailTemplate = ({ pageContext }) => {
               </SetCards>
             )}
 
-            {newPrice && <Price oldPrice={oldPrice} newPrice={newPrice} />}
+            {price && <Price oldPrice={oldPrice} price={price} />}
             <Paragraph lineHeight="24px" marginBottom="40px" fontSize={fontSizes.medium}>
               {description}
             </Paragraph>
@@ -124,22 +156,22 @@ const ProductDetailTemplate = ({ pageContext }) => {
             <ContactInfo>
               <div>
                 <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
-                  <FontAwesomeIcon style={{ marginRight: '4px' }} icon="envelope" />
+                  <SocialButton marginRight="8px" icon='mail' />
                   makronkovo@makronkovo.sk
                 </Paragraph>
                 <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
-                  <FontAwesomeIcon style={{ marginRight: '4px' }} icon="phone-alt" />
-                  0948 009 800
+                  <SocialButton marginRight="8px" icon='instagram' />
+                  makronkovo
                 </Paragraph>
               </div>
 
               <div>
                 <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
-                  <FontAwesomeIcon style={{ marginRight: '4px' }} icon={['fab', 'instagram']} />
-                  makronkovo
+                  <SocialButton marginRight="8px" icon='telephone' />
+                  0948 009 800
                 </Paragraph>
                 <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
-                  <FontAwesomeIcon style={{ marginRight: '4px' }} icon={['fab', 'facebook']} />
+                  <SocialButton marginRight="8px" icon='facebook' />
                   makronkovo
                 </Paragraph>
               </div>
@@ -169,7 +201,7 @@ const ProductDetailTemplate = ({ pageContext }) => {
               <Paragraph textAlign="center" lineHeight="24px">
                 {product.title}
               </Paragraph>
-              {newPrice && <Paragraph lineHeight="24px">{product.newPrice}€</Paragraph>}
+              {price && <Paragraph lineHeight="24px">{product.price}€</Paragraph>}
             </Polaroid>
           ))}
         </MoreProductsWrapper>

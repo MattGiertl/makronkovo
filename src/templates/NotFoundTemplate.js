@@ -8,6 +8,7 @@ import Paragraph from '../components/atoms/Paragraph';
 import Heading from '../components/atoms/Heading';
 import MediumHeading from '../components/atoms/MediumHeading';
 import Anchor from '../components/atoms/Anchor';
+import SEO from '../components/atoms/SEO';
 
 import CakeImg from '../../static/assets/Group.png';
 
@@ -114,14 +115,17 @@ const NotFoundTemplate = () => {
     },
   ];
 
-  const navLinks = navLinkData.map(link => <Anchor href={link.href} fontFamily={theme.fontFamilies.dinPro.bold}>{link.text}</Anchor>);
+  const navLinks = navLinkData.map(link => (
+    <Anchor href={link.href} fontFamily={theme.fontFamilies.dinPro.bold}>
+      {link.text}
+    </Anchor>
+  ));
 
   return (
     <Layout>
+      <SEO title="404 - stránka sa nenašla | MAKRONKOVO - Cukrárska manufaktúra" />
       <NotFoundWrapper>
-        <StyledHeading>
-          404
-        </StyledHeading>
+        <StyledHeading>404</StyledHeading>
         <StyledCake src={CakeImg} alt="Koláč" />
         <ContentWrapper>
           <MediumHeading>Hups, stránka sa nenašla.</MediumHeading>

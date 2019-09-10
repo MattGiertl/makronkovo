@@ -1,33 +1,29 @@
 import React from 'react';
-import styled from '@emotion/styled-base';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import styled from '@emotion/styled';
+import Hamburger from '../../../static/assets/Hamburger.svg';
+import CloseBtn from '../../../static/assets/CloseBtn.svg';
 
-import theme from '../../utils/theme/theme';
+import { mobileToTabletQuery } from '../../utils/mediaqueries';
 
-import { mobileQuery, tabletQuery } from '../../utils/mediaqueries';
-
-const StyledIcon = styled(FontAwesomeIcon)({
-  color: theme.colors.mediumGold,
+const StyledIcon = styled.img({
   display: 'none',
   position: 'absolute',
+  height: '21px',
+  width: '34px',
+  padding: '10px',
 
-  [mobileQuery]: {
+  [mobileToTabletQuery]: {
     display: 'flex',
-    top: '50px',
-    right: '25px',
-  },
-
-  [tabletQuery]: {
-    display: 'flex',
-    top: '50px',
-    right: '25px',
+    top: '70px',
+    right: '5%',
   },
 });
 
-const MenuToggle = ({ opened, onClick }) => {
-  const icon = opened ? 'times' : 'bars';
 
-  return <StyledIcon icon={icon} size="2x" onClick={onClick} />;
+const MenuToggle = ({ opened, onClick }) => {
+  const icon = opened ? CloseBtn : Hamburger;
+
+  return <StyledIcon src={icon} onClick={onClick} />;
 };
 
 export default MenuToggle;

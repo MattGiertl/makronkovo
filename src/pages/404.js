@@ -1,10 +1,6 @@
 import React from 'react';
 import NotFoundTemplate from '../templates/NotFoundTemplate';
 
-const NotFound = () => (
-  <div>
-    <NotFoundTemplate />
-  </div>
-);
+const NotFound = () => <NotFoundTemplate />;
 
 export default NotFound;

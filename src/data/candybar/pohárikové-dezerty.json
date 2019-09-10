@@ -1,0 +1,129 @@
+{
+  "title": "POHÁRIKOVÉ DEZERTY",
+  "to": "candy-bar/dezerty-v-pohariku",
+  "products": [
+    {
+      "title": "Tiramisu",
+      "isSeasonal": false,
+      "infoCards": [
+        {
+          "infoCard": {
+            "price": "1,60€",
+            "undefined": "0,5dcl"
+          }
+        },
+        {
+          "infoCard": {
+            "price": "2,80€",
+            "undefined": "1,25dlc"
+          }
+        }
+      ],
+      "flavor": [
+        {
+          "flavor": "Klasické"
+        },
+        {
+          "flavor": "Bezlepkové"
+        },
+        {
+          "flavor": "Jahodové"
+        },
+        {
+          "flavor": "Maracuja"
+        }
+      ],
+      "to": "tiramisu"
+    },
+    {
+      "title": "Panna cotta",
+      "isSeasonal": false,
+      "infoCards": [
+        {
+          "infoCard": {
+            "price": "1,60€",
+            "undefined": "0,5dcl"
+          }
+        },
+        {
+          "infoCard": {
+            "price": "2,80€",
+            "undefined": "1,25dcl"
+          }
+        }
+      ],
+      "flavor": [
+        {
+          "flavor": "Čokoláda"
+        },
+        {
+          "flavor": "Lesné ovocie"
+        },
+        {
+          "flavor": "Vaječný likér"
+        },
+        {
+          "flavor": "Baileys"
+        }
+      ],
+      "to": "panna-cotta"
+    },
+    {
+      "title": "Čoko mousse",
+      "isSeasonal": false,
+      "infoCards": [
+        {
+          "infoCard": {
+            "price": "1,40€",
+            "undefined": "0,5dcl"
+          }
+        },
+        {
+          "infoCard": {
+            "price": "2,80€",
+            "undefined": "1,25dcl"
+          }
+        }
+      ],
+      "to": "coko-mousse"
+    },
+    {
+      "title": "cheesecake",
+      "isSeasonal": false,
+      "infoCards": [
+        {
+          "infoCard": {
+            "price": "1,40€",
+            "undefined": "0,5dcl"
+          }
+        },
+        {
+          "infoCard": {
+            "price": "2,40€",
+            "undefined": "1,25dcl"
+          }
+        }
+      ],
+      "to": "cheesecake-poharik"
+    },
+    {
+      "title": "Eton mess",
+      "isSeasonal": false,
+      "infoCards": [
+        {
+          "infoCard": {
+            "price": "1,40€",
+            "undefined": "0,5dcl"
+          }
+        },
+        {
+          "infoCard": {
+            "price": "2,40€",
+            "undefined": "1,25dcl"
+          }
+        }
+      ],
+      "to": "eton-mess"
+    }
+  ]
+}

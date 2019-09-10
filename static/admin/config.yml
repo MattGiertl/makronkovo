@@ -1,28 +1,190 @@
 backend:
   name: git-gateway
+  branch: develop
 
 media_folder: static/img
 public_folder: /img
 
 collections:
-  - label: "Dezerty"
-    name: desserts
-    create: true
+  - label: "Hlavná stránka"
+    name: "main"
     files:
-      - label: "Dezerty - Kategórie"
-        name: dessertCategories
-        file: "src/data/desserts.json"
-        allow_add: true
-        widget: list
+      - label: "Banner"
+        name: "banner"
+        file: "src/data/mainpage/banner/banner.json"
         fields:
           - {
-              label: "Položky jídelníčku",
-              name: eatmenuCollection,
+              label: "Obrázky",
+              name: bannerImages,
               widget: list,
+              allow_add: true,
               fields:
                 [
-                  { label: "Název", name: "name", widget: string },
-                  { label: "Popisek", name: "description", widget: text },
-                  { label: "Cena", name: "price", widget: number },
+                  { label: "Názov", name: "title", widget: string },
+                  { label: "Obrázok", name: "image", widget: image },
                 ],
+          }
+      - label: "Referencie"
+        name: "references"
+        file: "src/data/mainpage/references/references.json"
+        fields: 
+          - { label: "Referencie", name: referenceList, widget: list, allow_add: true, fields: 
+              [
+                { label: "Autor", name: author, widget: string },
+                { label: "Recenzia", name: review, widget: text },
+                { label: "Obrázok", name: image, widget: image }
+              ] 
             }
+      - label: "Náš Tím"
+        name: "team"
+        file: "src/data/mainpage/team/team.json"
+        fields:
+          - {
+              label: "Členovia tímu",
+              name: teamMembers,
+              widget: list,
+              allow_add: true,
+              fields:
+                [
+                  { label: "Meno", name: name, widget: string },
+                  { label: "Pozícia", name: position, widget: string },
+                  { label: "Fotka", name: "image", widget: image },
+                ],
+          }
+
+  - label: "Kategórie - dezerty"
+    name: "dessertCategories"
+    folder: "src/data/dessertsfolder"
+    format: json
+    create: true
+    fields:
+      - { label: "Názov kategórie", name: title, widget: "string" }
+      - { label: "Link", name: to, widget: "string" }
+      - {
+          label: "Produkty",
+          name: products,
+          widget: "list",
+          allow_add: true,
+          fields:
+            [
+              { label: "Názov", name: title, widget: "string" },
+              {
+                label: "Sezónne",
+                name: isSeasonal,
+                widget: "boolean",
+                default: false,
+              },
+              { label: "Váha", name: weight, widget: string, required: false, },
+              {
+                label: "Pôvodná cena",
+                name: oldPrice,
+                widget: "string",
+                required: false,
+              },
+              { label: "Nová cena", name: price, widget: string },
+              {
+                label: "Popis Produktu",
+                name: description,
+                widget: string,
+                required: false,
+              },
+              {
+                label: "Obrázky",
+                name: images,
+                widget: list,
+                allow_add: true,
+                fields: [{ label: "Obrázok", name: image, widget: image }],
+              },
+              { label: "Link", name: to, widget: "string" },
+            ],
+        }
+  - label: "Kategórie - Candy bar"
+    name: "candyBarCategories"
+    folder: "src/data/candybar"
+    format: json
+    create: true
+    fields:
+      - { label: "Názov Kategórie", name: title, widget: "string" }
+      - { label: "Link", name: to, widget: "string" }
+      - {
+          label: "Produkty",
+          name: products,
+          widget: "list",
+          allow_add: true,
+          fields:
+            [
+              { label: "Názov produktu", name: title, widget: "string" },
+              {
+                label: "Sezónne",
+                name: isSeasonal,
+                widget: "boolean",
+                default: false,
+              },
+              {
+                label: "Info Kartičky",
+                name: infoCards,
+                required: false,
+                widget: list,
+                allow_add: true,
+                fields:
+                  [
+                    {
+                      label: "Kartička",
+                      name: infoCard,
+                      widget: "object",
+                      fields:
+                        [
+                          {
+                            label: "Popisok",
+                            name: description,
+                            widget: "string",
+                            required: false,
+                          },
+                          { label: "Cena", name: price, widget: "string" },
+                          { label: "Váha", name": weight, widget: "string", required: false, },
+                        ],
+                    },
+                  ],
+              },
+              {
+                label: "Popis Produktu",
+                name: description,
+                widget: string,
+                required: false,
+              },
+              {
+                label: "Príchute",
+                name: flavor,
+                required: false,
+                widget: list,
+                allow_add: true,
+                fields: [{ label: "Príchuť", name: flavor, widget: string }],
+              },
+              {
+                label: "Obrázky",
+                name: images,
+                widget: list,
+                allow_add: true,
+                fields: [{ label: "Obrázok", name: image, widget: image }],
+              },
+              { label: "Link", name: to, widget: "string" },
+            ],
+        }
+  - label: "Galéria"
+    name: "gallery"
+    files:
+      - label: "Galéria"
+        name: "gallery"
+        file: "src/data/gallery/gallery.json"
+        fields:
+          - {
+              label: "Obrázky galérie",
+              name: galleryImages,
+              widget: list,
+              allow_add: true,
+              fields:
+                [
+                  { label: "Názov", name: "title", widget: string },
+                  { label: "Obrázok", name: "image", widget: image },
+                ],
+          }

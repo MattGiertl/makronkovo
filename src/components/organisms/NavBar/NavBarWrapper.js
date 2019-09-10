@@ -1,6 +1,12 @@
 import styled from '@emotion/styled';
 
-import { mobileQuery, tabletQuery, desktopQuery, laptopQuery } from '../../../utils/mediaqueries';
+import {
+  mobileQuery,
+  tabletQuery,
+  desktopQuery,
+  laptopQuery,
+  mobileToTabletQuery,
+} from '../../../utils/mediaqueries';
 
 const NavBarWrapper = styled.div(
   {
@@ -25,6 +31,9 @@ const NavBarWrapper = styled.div(
   },
   props => ({
     height: props.showMenu ? '100vh' : '203px',
+    [mobileToTabletQuery]: {
+      marginBottom: props.marginBottomMobile,
+    },
   }),
 );
 

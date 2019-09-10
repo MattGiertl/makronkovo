@@ -1,0 +1,67 @@
+{
+  "title": "ODPAĽOVANÉ CESTO",
+  "to": "candy-bar/odpalovane-cesto",
+  "products": [
+    {
+      "title": "Paris Berst",
+      "isSeasonal": false,
+      "infoCards": [
+        {
+          "infoCard": {
+            "description": "Malý set",
+            "price": "12ks 22€"
+          }
+        },
+        {
+          "infoCard": {
+            "description": "Veľký set",
+            "price": "12ks 38€"
+          }
+        }
+      ],
+      "flavor": [
+        {
+          "flavor": "Praliné krém"
+        }
+      ],
+      "to": "paris-brest"
+    },
+    {
+      "title": "Linecké srdcia",
+      "isSeasonal": false,
+      "infoCards": [
+        {
+          "infoCard": {
+            "price": "20ks 26€"
+          }
+        }
+      ],
+      "flavor": [
+        {
+          "flavor": "citrón s meringue pusinkami"
+        }
+      ],
+      "to": "linecke-srdcia"
+    },
+    {
+      "title": "Eclairs",
+      "isSeasonal": false,
+      "infoCards": [
+        {
+          "infoCard": {
+            "price": "12ks 22€"
+          }
+        }
+      ],
+      "flavor": [
+        {
+          "flavor": "Vanilkový"
+        },
+        {
+          "flavor": "Čokoládový krém"
+        }
+      ],
+      "to": "eclairs"
+    }
+  ]
+}

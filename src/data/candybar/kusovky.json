@@ -1,0 +1,165 @@
+{
+  "title": "KUSOVKY",
+  "to": "candy-bar/kusovky",
+  "products": [
+    {
+      "title": "Pavlove hniezda",
+      "isSeasonal": true,
+      "infoCards": [
+        {
+          "infoCard": {
+            "description": "Malý set",
+            "price": "12ks 30€",
+            "undefined": "1ks / 40g"
+          }
+        },
+        {
+          "infoCard": {
+            "description": "Veľký set",
+            "price": "12ks 38€",
+            "undefined": "1ks / 90g"
+          }
+        }
+      ],
+      "flavor": [
+        {
+          "flavor": "Biele/kakaové s mascarpone a redukciou z lesného ovocia"
+        }
+      ],
+      "to": "pavlove-hniezda"
+    },
+    {
+      "title": "Tartletky",
+      "isSeasonal": false,
+      "infoCards": [
+        {
+          "infoCard": {
+            "description": "Malý set",
+            "price": "12ks 24€",
+            "undefined": "1ks / 3cm"
+          }
+        },
+        {
+          "infoCard": {
+            "description": "Veľký set",
+            "price": "12ks 36€",
+            "undefined": "1ks / 7cm"
+          }
+        }
+      ],
+      "flavor": [
+        {
+          "flavor": "citrón s meringue pusinkami"
+        },
+        {
+          "flavor": "čokoláda a ovocná redukcia"
+        },
+        {
+          "flavor": "slaný karamel a pečené oriešky"
+        },
+        {
+          "flavor": "gaštan"
+        },
+        {
+          "flavor": "biela čokoláda s malinami a kokosom"
+        },
+        {
+          "flavor": "cheesecake"
+        }
+      ],
+      "to": "tartletky"
+    },
+    {
+      "title": "Cupcake",
+      "isSeasonal": false,
+      "infoCards": [
+        {
+          "infoCard": {
+            "description": "Malý set",
+            "price": "20ks 32€",
+            "undefined": "1ks / 20g"
+          }
+        },
+        {
+          "infoCard": {
+            "description": "Veľký set",
+            "price": "12ks 30€",
+            "undefined": "1ks / 80g"
+          }
+        }
+      ],
+      "description": "Cupcake s čokoládovým krémom/mascarpone zdobené s ovocím alebo meringue pusinkou",
+      "to": "cupcake"
+    },
+    {
+      "title": "Popsticles",
+      "isSeasonal": false,
+      "infoCards": [
+        {
+          "infoCard": {
+            "price": "10ks 25€"
+          }
+        }
+      ],
+      "description": "Zdobené koláčiky na paličke",
+      "to": "popsticles"
+    },
+    {
+      "title": "Cupcake Deluxe",
+      "isSeasonal": false,
+      "infoCards": [
+        {
+          "infoCard": {
+            "description": "Malý set",
+            "price": "20ks 42€"
+          }
+        },
+        {
+          "infoCard": {
+            "description": "Veľký set",
+            "price": "12ks 40€"
+          }
+        }
+      ],
+      "description": "Cupcake Deluxe s buttercream a živými kvetmi a s makronkou",
+      "to": "cupcake-deluxe"
+    },
+    {
+      "title": "Linecké srdcia",
+      "isSeasonal": false,
+      "infoCards": [
+        {
+          "infoCard": {
+            "price": "20ks 16€",
+            "undefined": "1ks / 5cm"
+          }
+        }
+      ],
+      "to": "linecke-srdcia"
+    },
+    {
+      "title": "Personalizované keksíky",
+      "isSeasonal": false,
+      "infoCards": [
+        {
+          "infoCard": {
+            "price": "1ks od 1,50€"
+          }
+        }
+      ],
+      "to": "personalizovane-keksiky"
+    },
+    {
+      "title": "Meringue zliepané snehové ruže",
+      "isSeasonal": false,
+      "infoCards": [
+        {
+          "infoCard": {
+            "price": "20ks 30€"
+          }
+        }
+      ],
+      "to": "snehove-ruze"
+    }
+  ]
+}

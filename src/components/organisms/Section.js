@@ -4,7 +4,12 @@ import styled from '@emotion/styled';
 import FountainHeading from '../molecules/FountainHeading';
 
 import theme from '../../utils/theme/theme';
-import { laptopQuery, desktopQuery, mobileQuery } from '../../utils/mediaqueries';
+import {
+  laptopQuery,
+  desktopQuery,
+  mobileQuery,
+  laptopToDesktopQuery,
+} from '../../utils/mediaqueries';
 
 const Wrapper = styled.section(
   {
@@ -18,28 +23,44 @@ const Wrapper = styled.section(
   }),
 );
 
-const Content = styled.div({
-  display: 'flex',
-  flexWrap: 'wrap',
-  justifyContent: 'center',
-  margin: '0 10%',
-  [mobileQuery]: {
-    margin: 0,
-  },
-
-  [laptopQuery]: {
-    margin: '0 5%',
-  },
-
-  [desktopQuery]: {
+const Content = styled.div(
+  {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
     margin: '0 10%',
-  },
-});
+    height: 'auto',
+    [mobileQuery]: {
+      margin: 0,
+    },
 
-const Section = ({ heading, children, id, background }) => (
+    [laptopQuery]: {
+      margin: '0 5%',
+    },
+
+    [desktopQuery]: {
+      margin: '0 10%',
+    },
+  },
+  props => ({
+    [mobileQuery]: {
+      maxWidth: props.mobileMaxWidth,
+      margin: '0 auto',
+    },
+
+    [laptopToDesktopQuery]: {
+      maxWidth: props.maxWidth,
+      margin: '0 auto',
+    },
+  }),
+);
+
+const Section = ({ heading, children, id, background, maxWidth, mobileMaxWidth }) => (
   <Wrapper id={id} background={background}>
     <FountainHeading>{heading}</FountainHeading>
-    <Content>{children}</Content>
+    <Content maxWidth={maxWidth} mobileMaxWidth={mobileMaxWidth}>
+      {children}
+    </Content>
   </Wrapper>
 );
 

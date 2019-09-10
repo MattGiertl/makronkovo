@@ -5,53 +5,75 @@ import SlideShow from '../../components/atoms/Slideshow';
 import Section from '../../components/organisms/Section';
 import Newsletter from '../../components/organisms/Newsletter/Newsletter';
 import Layout from '../../components/organisms/Layout/Layout';
+import SEO from '../../components/atoms/SEO';
+import styled from '@emotion/styled';
+import { mobileToTabletQuery } from '../../utils/mediaqueries';
+
+const SlideShowItem = styled.div(
+  {
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    height: '270px',
+    width: '100%',
+
+    [mobileToTabletQuery]: {
+      height: '265px',
+    },
+  },
+  props => ({
+    backgroundImage: `url(${props.backgroundImage})`,
+  }),
+);
 
 const MainPageTemplate = ({
   slideshow,
-  offer,
   offerPolaroids,
-  discount,
-  discountPolaroids,
-  instagram,
+  // discountPolaroids,
   instagramPosts,
-  reference,
-  referencePolaroids,
-  team,
-  teamMembers,
+  // referencePolaroids,
+  // teamMembers,
 }) => {
   return (
     <Layout>
+      <SEO
+        title="MAKRONKOVO - Cukrárska manufaktúra"
+        description="Torty na mieru, dezerty a candy bary ktoré spôsobujú závislosti. To je Makronkovo, cukrárska manufaktúra v Banskej Bystrici."
+      />
       <SlideShowWrapper>
         <SlideShow>
           {slideshow.map(item => (
-            <img src={item.image} alt={item.image} key={item.image} />
+            <SlideShowItem backgroundImage={item.image} key={item.title} />
           ))}
         </SlideShow>
       </SlideShowWrapper>
 
-      <Section background={offer.background} heading={offer.heading} id="OfferSection">
+      <Section background="#FCDFEB" heading="PONÚKAME VÁM" id="OfferSection">
         {offerPolaroids}
       </Section>
 
-      <Section heading={discount.heading} price="20" oldPrice="22" id="DiscountedProducts">
+      {/* <Section heading="ZĽAVNENÉ PRODUKTY" id="DiscountedProducts">
         {discountPolaroids}
-      </Section>
+      </Section> */}
 
-      <Section heading={instagram.heading} background={instagram.background} id="InstagramSection">
+      <Section heading="INSTAGRAM @MAKRONKOVO" id="InstagramSection" maxWidth="1000px">
         {instagramPosts}
       </Section>
 
-      <Section spaceAround heading={reference.heading} id="ReferenceSection">
+      {/* <Section
+        maxWidth="1200px"
+        spaceAround
+        heading="REFERENCIE OD NAŠICH KLIENTOV"
+        id="ReferenceSection"
+      >
         {referencePolaroids}
-      </Section>
+      </Section> */}
 
       <Section heading="NEWSLETTER">
         <Newsletter />
       </Section>
 
-      <Section team={team.heading} background={team.background} heading="NÁŠ TÝM">
-        {teamMembers}
-      </Section>
+      {/* <Section heading="NÁŠ TÍM">{teamMembers}</Section> */}
     </Layout>
   );
 };

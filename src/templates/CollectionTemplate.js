@@ -9,6 +9,8 @@ import FountainHeading from '../components/molecules/FountainHeading';
 import Polaroid from '../components/molecules/Polaroid/Polaroid';
 import Layout from '../components/organisms/Layout/Layout';
 import theme from '../utils/theme/theme';
+import SEO from '../components/atoms/SEO';
+import { toPascalCase } from '../utils/functions';
 
 const CategoriesWrapper = styled.div({
   display: 'flex',
@@ -16,7 +18,7 @@ const CategoriesWrapper = styled.div({
   flexWrap: 'wrap',
 
   [mobileQuery]: {
-    margin: '0 15px',
+    margin: '0 15px 20px',
   },
 
   [tabletQuery]: {
@@ -56,16 +58,21 @@ const CollectionTemplate = ({ pageContext }) => {
   const { categoryItems, title, lightText, boldText } = pageContext;
 
   const renderCategoryItems = categoryItems.map(categoryItem => (
-    <Polaroid to={categoryItem.to} shadowed src={categoryItem.image}>
-      <Paragraph>{categoryItem.categoryName}</Paragraph>
+    <Polaroid to={categoryItem.to} shadowed src={categoryItem.image} sm>
+      <Paragraph fontFamily={theme.fontFamilies.caslonAntique.bold} textAlign="center">
+        {categoryItem.categoryName}
+      </Paragraph>
     </Polaroid>
   ));
 
+  const seoTitle = toPascalCase(title);
+
   return (
     <Layout>
+      <SEO title={`${seoTitle} | MAKRONKOVO - Cukrárska manufaktúra`} />
       <FountainHeading>{title}</FountainHeading>
       <TextWrapper>
-        <Paragraph fontFamily={theme.fontFamilies.dinPro} textAlign="center">
+        <Paragraph fontFamily={theme.fontFamilies.dinPro.regular} textAlign="center">
           {lightText}
         </Paragraph>
         <Paragraph marginTop="20px" fontFamily={theme.fontFamilies.dinPro.bold} textAlign="center">
