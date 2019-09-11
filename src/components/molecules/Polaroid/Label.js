@@ -1,18 +1,25 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import theme from '../../../utils/theme/theme';
+import { mobileQuery } from '../../../utils/mediaqueries';
 
 const Label = styled.label(
   {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    position: 'absolute',
     width: '117px',
     height: '40px',
     color: theme.colors.white,
     fontFamily: theme.fontFamilies.caslonAntique.regular,
     fontSize: theme.fontSizes.small,
+    marginBottom: '5px',
+
+    [mobileQuery]: {
+      width: '62px',
+      height: '20px',
+      fontSize: theme.fontSizes.xs,
+    },
   },
   props => ({
     background: props.background,
@@ -23,7 +30,6 @@ const Label = styled.label(
 const PolaroidLabel = ({ isDiscount, isSeasonal, isSet }) => {
   let backgroundColor = '';
   let text = '';
-  let top = '';
 
   const getBackgroundColor = () => {
     const { colors } = theme;
@@ -59,24 +65,8 @@ const PolaroidLabel = ({ isDiscount, isSeasonal, isSet }) => {
     return text;
   };
 
-  const getTop = () => {
-    if (isDiscount) {
-      top = '25px';
-    }
-
-    if (isSeasonal) {
-      top = '70px';
-    }
-
-    if (isSet) {
-      top = '25px';
-    }
-
-    return top;
-  };
-
   return (
-    <Label background={getBackgroundColor()} top={getTop()}>
+    <Label background={getBackgroundColor()}>
       {getText()}
     </Label>
   );

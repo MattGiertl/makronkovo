@@ -4,7 +4,7 @@ import Wrapper from './Wrapper';
 import Image from './Image';
 import Content from './Content';
 import Fallback from '../../../../static/assets/Fallback.png';
-import { tabletQuery, laptopToDesktopQuery } from '../../../utils/mediaqueries';
+import { mobileQuery, tabletQuery, laptopToDesktopQuery } from '../../../utils/mediaqueries';
 import Label from './Label';
 
 const FallBackWrapper = styled.div({
@@ -15,18 +15,31 @@ const FallBackWrapper = styled.div({
   [laptopToDesktopQuery]: { padding: '50px', border: '1px solid #EDEDED', margin: '0' },
 });
 
+const LabelWrapper = styled.div({
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'left',
+  position: 'absolute',
+  top: '25px',
+  [mobileQuery]: {
+    top: '9px'
+  }
+});
+
 const Polaroid = ({ children, src, shadowed, to, sm, isSeasonal, isDiscount, isSet }) => (
   <Wrapper shadowed={shadowed} to={to} disabled={!!to} sm={sm}>
-    {isSeasonal && <Label isSeasonal />}
-    {isDiscount && <Label isDiscount />}
-    {isSet && <Label isSet />}
+    <LabelWrapper>
+      {isDiscount && <Label isDiscount />}
+      {isSet && <Label isSet />}
+      {isSeasonal && <Label isSeasonal />}
+    </LabelWrapper>
     {src ? (
       <Image src={src} alt="Polaroid" />
     ) : (
-      <FallBackWrapper>
-        <img src={Fallback} alt="Nebol poskytnutý žiadny obrázok" />
-      </FallBackWrapper>
-    )}
+        <FallBackWrapper>
+          <img src={Fallback} alt="Nebol poskytnutý žiadny obrázok" />
+        </FallBackWrapper>
+      )}
     <Content>{children}</Content>
   </Wrapper>
 );
