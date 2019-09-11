@@ -14,6 +14,7 @@ const Label = styled.label(
     fontFamily: theme.fontFamilies.caslonAntique.regular,
     fontSize: theme.fontSizes.small,
     marginBottom: '5px',
+    marginLeft: '-9px',
 
     [mobileQuery]: {
       width: '62px',
