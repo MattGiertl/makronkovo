@@ -32,7 +32,7 @@ const Wrapper = styled.div(
     [mobileQuery]: {
       height: props.sm ? '130px' : '19rem',
       width: props.sm ? '115px' : '18rem',
-      margin: props.sm ? '0 5px 25px' : '0 15px 40px',
+      margin: props.sm ? '0 5px 25px' : '0 5px 40px',
     },
   }),
 );
