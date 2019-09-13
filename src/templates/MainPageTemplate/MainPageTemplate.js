@@ -31,8 +31,8 @@ const MainPageTemplate = ({
   offerPolaroids,
   // discountPolaroids,
   instagramPosts,
-  // referencePolaroids,
-  // teamMembers,
+  referencePolaroids,
+  teamMembers,
 }) => {
   return (
     <Layout>
@@ -60,20 +60,20 @@ const MainPageTemplate = ({
         {instagramPosts}
       </Section>
 
-      {/* <Section
+      <Section
         maxWidth="1200px"
         spaceAround
         heading="REFERENCIE OD NAŠICH KLIENTOV"
         id="ReferenceSection"
       >
         {referencePolaroids}
-      </Section> */}
+      </Section>
 
       <Section heading="NEWSLETTER">
         <Newsletter />
       </Section>
 
-      {/* <Section heading="NÁŠ TÍM">{teamMembers}</Section> */}
+      <Section heading="NÁŠ TÍM">{teamMembers}</Section>
     </Layout>
   );
 };

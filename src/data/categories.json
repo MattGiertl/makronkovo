@@ -1,7 +1,7 @@
 [
   {
     "title": "DEZERTY",
-    "to": "/dezert",
+    "to": "/dezerty",
     "lightText": "Vyberte si z našej širokej ponuky dezertov.",
     "boldText": "V prípade záujmu o odber dezertov pre kaviareň alebo reštauráciu nás prosím priamo kontaktujte.",
     "categoryItems": [
@@ -44,7 +44,7 @@
   },
   {
     "title": "CANDY BAR",
-    "to": "/candy",
+    "to": "/candy-bar",
     "lightText": "Zložte si candy bar na mieru z našej širokej ponuky dezertov.",
     "boldText": "Doprava a aranžovanie candy baru nie je súčasťou ceny dezertov. Doprava 50€ • Aranžovanie 50€",
     "categoryItems": [
