@@ -3,7 +3,7 @@ import React from 'react';
 import SlideShowWrapper from './SlideShowWrapper';
 import SlideShow from '../../components/atoms/Slideshow';
 import Section from '../../components/organisms/Section';
-import Newsletter from '../../components/organisms/Newsletter/Newsletter';
+// import Newsletter from '../../components/organisms/Newsletter/Newsletter';
 import Layout from '../../components/organisms/Layout/Layout';
 import SEO from '../../components/atoms/SEO';
 import styled from '@emotion/styled';
@@ -69,9 +69,9 @@ const MainPageTemplate = ({
         {referencePolaroids}
       </Section>
 
-      <Section heading="NEWSLETTER">
+      {/* <Section heading="NEWSLETTER">
         <Newsletter />
-      </Section>
+      </Section> */}
 
       <Section heading="NÁŠ TÍM">{teamMembers}</Section>
     </Layout>
