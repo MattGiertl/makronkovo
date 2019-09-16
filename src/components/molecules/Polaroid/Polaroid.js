@@ -5,7 +5,7 @@ import Image from './Image';
 import Content from './Content';
 import Fallback from '../../../../static/assets/Fallback.png';
 import { mobileQuery, tabletQuery, laptopToDesktopQuery } from '../../../utils/mediaqueries';
-import Label from './Label';
+import PolaroidLabel from './PolaroidLabel';
 
 const FallBackWrapper = styled.div({
   display: 'flex',
@@ -29,9 +29,9 @@ const LabelWrapper = styled.div({
 const Polaroid = ({ children, src, shadowed, to, sm, isSeasonal, isDiscount, isSet }) => (
   <Wrapper shadowed={shadowed} to={to} disabled={!!to} sm={sm}>
     <LabelWrapper>
-      {isDiscount && <Label isDiscount />}
-      {isSet && <Label isSet />}
-      {isSeasonal && <Label isSeasonal />}
+      {isDiscount && <PolaroidLabel isDiscount />}
+      {isSet && <PolaroidLabel isSet />}
+      {isSeasonal && <PolaroidLabel isSeasonal />}
     </LabelWrapper>
     {src ? (
       <Image src={src} alt="Polaroid" />
