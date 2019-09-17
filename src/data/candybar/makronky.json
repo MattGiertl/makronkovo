@@ -8,27 +8,24 @@
       "infoCards": [
         {
           "infoCard": {
-            "price": "1,30€",
-            "undefined": "20g (3cm)"
+            "price": "1,30€"
           }
         },
         {
           "infoCard": {
-            "price": "2,50€",
-            "undefined": "70g (6cm)"
+            "price": "2,50€"
           }
         }
       ],
       "to": "makronky"
     },
     {
-      "title": "MAxi makronka plnená ovocím",
+      "title": "Maxi makronka plnená ovocím",
       "isSeasonal": false,
       "infoCards": [
         {
           "infoCard": {
-            "price": "3,10€",
-            "undefined": "100g (6cm)"
+            "price": "3,10€"
           }
         },
         {
