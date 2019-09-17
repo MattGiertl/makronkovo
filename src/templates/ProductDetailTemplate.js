@@ -14,6 +14,7 @@ import ContactInfo from '../components/atoms/ContactInfo';
 import MoreProductsWrapper from '../components/atoms/MoreProductsWrapper';
 import ProductDetailImage from '../components/atoms/ProducDetailtImage';
 import DesktopOnly from '../components/atoms/DesktopOnly';
+import UnorderedList from '../components/atoms/UnorderedList';
 
 import BackButton from '../components/molecules/BackButton';
 import FountainHeading from '../components/molecules/FountainHeading';
@@ -53,6 +54,18 @@ const ContentWrapper = styled.div({
   },
 });
 
+const ListItem = styled.li(
+  {
+    fontFamily: theme.fontFamilies.dinPro.regular,
+    fontSize: theme.fontSizes.small,
+    color: theme.colors.mediumGold,
+    lineHeight: '19px',
+  },
+  props => ({
+    marginTop: props.marginTop,
+  }),
+);
+
 const ProductDetailTemplate = ({ pageContext, uri }) => {
   const { fontSizes, fontFamilies } = theme;
   const {
@@ -66,7 +79,8 @@ const ProductDetailTemplate = ({ pageContext, uri }) => {
     isSet,
     productCategoryTitle,
     products,
-    setInfo,
+    flavor,
+    infoCards
   } = pageContext;
 
   const moreProducts = products
@@ -74,6 +88,7 @@ const ProductDetailTemplate = ({ pageContext, uri }) => {
     : products.filter(item => item.title !== title);
 
   const productSectionTitle = uri.indexOf('dezerty') !== -1 ? 'Dezerty' : 'Candy Bary';
+
   return (
     <Layout>
       <SEO
@@ -95,14 +110,23 @@ const ProductDetailTemplate = ({ pageContext, uri }) => {
           <Heading letterSpacing="0" fontFamily={fontFamilies.dinPro.bold} textAlign="left">
             {title}
           </Heading>
-          {setInfo && (
+          {infoCards && (
             <SetCards>
-              {setInfo.map(set => (
-                <SetCard size={set.size} amount={set.amount} unitSize={set.unitSize} />
+              {infoCards.map(set => (
+                <SetCard size={set.infoCard.description} amount={set.infoCard.price} unitSize={set.infoCard.undefined} />
               ))}
             </SetCards>
           )}
           {price && <Price oldPrice={oldPrice} price={price} />}
+          {flavor && <>
+            <Paragraph textDecoration="underline" margin="50px 0 0">Príchuť:</Paragraph>
+            <UnorderedList paddingInlineStart="20px">
+                {flavor.map(flavor => 
+                  <ListItem>{flavor.flavor}</ListItem>
+                )}
+            </UnorderedList>
+            </>
+            }
         </MobileOnly>
         <InfoStrip>
           {images ? (
@@ -118,6 +142,7 @@ const ProductDetailTemplate = ({ pageContext, uri }) => {
                 justifyContent: 'center',
                 alignItems: 'center',
                 padding: '100px',
+                maxHeight: '100px',
                 border: '1px solid #EDEDED',
                 margin: '0 50px 50px 0',
               }}
@@ -138,15 +163,24 @@ const ProductDetailTemplate = ({ pageContext, uri }) => {
             <Heading letterSpacing="0" fontFamily={fontFamilies.dinPro.bold} textAlign="left">
               {title}
             </Heading>
-            {setInfo && (
+            {infoCards && (
               <SetCards>
-                {setInfo.map(set => (
-                  <SetCard size={set.size} amount={set.amount} unitSize={set.unitSize} />
+                {infoCards.map(card => (
+                  <SetCard size={card.infoCard.description} amount={card.infoCard.price} unitSize={card.infoCard.undefined} />
                 ))}
               </SetCards>
             )}
 
             {price && <Price oldPrice={oldPrice} price={price} />}
+            {flavor && <>
+            <Paragraph textDecoration="underline">Príchuť:</Paragraph>
+            <UnorderedList paddingInlineStart="20px">
+                {flavor.map(flavor => 
+                  <ListItem>{flavor.flavor}</ListItem>
+                )}
+            </UnorderedList>
+            </>
+            }
             <Paragraph lineHeight="24px" marginBottom="40px" fontSize={fontSizes.medium}>
               {description}
             </Paragraph>
