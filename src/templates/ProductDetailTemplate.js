@@ -60,11 +60,7 @@ const ListItem = styled.li(
     fontSize: theme.fontSizes.small,
     color: theme.colors.mediumGold,
     lineHeight: '19px',
-  },
-  props => ({
-    marginTop: props.marginTop,
-  }),
-);
+  });
 
 const ProductDetailTemplate = ({ pageContext, uri }) => {
   const { fontSizes, fontFamilies } = theme;
@@ -142,7 +138,6 @@ const ProductDetailTemplate = ({ pageContext, uri }) => {
                 justifyContent: 'center',
                 alignItems: 'center',
                 padding: '100px',
-                maxHeight: '100px',
                 border: '1px solid #EDEDED',
                 margin: '0 50px 50px 0',
               }}
