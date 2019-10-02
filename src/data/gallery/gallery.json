@@ -1,40 +1,124 @@
 {
   "galleryImages": [
     {
-      "title": "galeria001",
+      "title": "1",
+      "image": "/img/makronkovo-galeria029.jpg"
+    },
+    {
+      "title": "2",
+      "image": "/img/makronkovo-galeria028.jpg"
+    },
+    {
+      "title": "3",
+      "image": "/img/makronkovo-galeria027.jpg"
+    },
+    {
+      "title": "4",
+      "image": "/img/makronkovo-galeria026.jpg"
+    },
+    {
+      "title": "5",
+      "image": "/img/makronkovo-galeria025.jpg"
+    },
+    {
+      "title": "6",
+      "image": "/img/makronkovo-galeria024.jpg"
+    },
+    {
+      "title": "7",
+      "image": "/img/makronkovo-galeria023.jpg"
+    },
+    {
+      "title": "8",
+      "image": "/img/makronkovo-galeria022.jpg"
+    },
+    {
+      "title": "9",
+      "image": "/img/makronkovo-galeria020.jpg"
+    },
+    {
+      "title": "10",
+      "image": "/img/makronkovo-galeria019.jpg"
+    },
+    {
+      "title": "11",
+      "image": "/img/makronkovo-galeria018.jpg"
+    },
+    {
+      "title": "12",
+      "image": "/img/makronkovo-galeria017.jpg"
+    },
+    {
+      "title": "13",
+      "image": "/img/makronkovo-galeria016.jpg"
+    },
+    {
+      "title": "14",
+      "image": "/img/makronkovo-galeria015.jpg"
+    },
+    {
+      "title": "15",
+      "image": "/img/makronkovo-galeria014.jpg"
+    },
+    {
+      "title": "16",
+      "image": "/img/makronkovo-galeria013.jpg"
+    },
+    {
+      "title": "17",
+      "image": "/img/makronkovo-galeria012.jpg"
+    },
+    {
+      "title": "18",
+      "image": "/img/makronkovo-galeria011.jpg"
+    },
+    {
+      "title": "19",
+      "image": "/img/makronkovo-galeria010.jpg"
+    },
+    {
+      "title": "20",
       "image": "/img/makronkovo-galeria001.jpg"
     },
     {
-      "title": "galeria002",
+      "title": "21",
       "image": "/img/makronkovo-galeria002.jpg"
     },
     {
-      "title": "galeria003",
+      "title": "22",
       "image": "/img/makronkovo-galeria003.jpg"
     },
     {
-      "title": "galeria004",
+      "title": "23",
       "image": "/img/makronkovo-galeria004.jpg"
     },
     {
-      "title": "galeria005",
+      "title": "24",
       "image": "/img/makronkovo-galeria005.jpg"
     },
     {
-      "title": "galeria006",
+      "title": "25",
       "image": "/img/makronkovo-galeria006.jpg"
     },
     {
-      "title": "galeria007",
+      "title": "26",
       "image": "/img/makronkovo-galeria007.jpg"
     },
     {
-      "title": "galeria008",
+      "title": "27",
       "image": "/img/makronkovo-galeria008.jpg"
     },
     {
-      "title": "galeria009",
+      "title": "28",
       "image": "/img/makronkovo-galeria009.jpg"
+    },
+    {
+      "title": "29",
+      "image": "/img/tarty.jpg"
+    },
+    {
+      "title": "30",
+      "image": "/img/torty.jpg"
     }
   ]
 }
