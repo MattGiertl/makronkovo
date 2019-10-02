@@ -6,11 +6,19 @@
     },
     {
       "title": "ob2",
-      "image": "/img/makronkovo-banner02.jpg"
+      "image": "/img/makronkovo-banner04.jpg"
     },
     {
       "title": "ob3",
-      "image": "/img/makronkovo-banner03.jpg"
+      "image": "/img/makronkovo-banner05.jpg"
+    },
+    {
+      "title": "ob4",
+      "image": "/img/makronkovo-banner06.jpg"
+    },
+    {
+      "title": "ob5",
+      "image": "/img/makronkovo-banner08.jpg"
     }
   ]
 }
