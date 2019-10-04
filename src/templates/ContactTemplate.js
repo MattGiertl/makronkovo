@@ -45,6 +45,7 @@ const ContactTemplate = () => (
     />
     <ContentWrapper>
       <FountainHeading>KONTAKT</FountainHeading>
+      <Paragraph marginBottom="50px" fontSize={theme.fontSizes.medium}>MAKRONKOVO s.r.o.</Paragraph>
       <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
         <SocialButton marginRight="8px" icon="location" />
         Zvolenská cesta 85, Banská Bystrica
