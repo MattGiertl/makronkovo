@@ -4,7 +4,7 @@ import Wrapper from './Wrapper';
 import Image from './Image';
 import Content from './Content';
 import Fallback from '../../../../static/assets/Fallback.png';
-import { tabletQuery, laptopToDesktopQuery } from '../../../utils/mediaqueries';
+import { mobileQuery, tabletQuery, laptopToDesktopQuery } from '../../../utils/mediaqueries';
 
 const FallBackWrapper = styled.div({
   display: 'flex',
@@ -12,6 +12,7 @@ const FallBackWrapper = styled.div({
   alignItems: 'center',
   [tabletQuery]: { padding: '50px', border: '1px solid #EDEDED', margin: '0' },
   [laptopToDesktopQuery]: { padding: '50px', border: '1px solid #EDEDED', margin: '0' },
+  [mobileQuery]: { margin: '50px auto 20px' },
 });
 
 const Polaroid = ({ children, src, shadowed, to, sm }) => (
