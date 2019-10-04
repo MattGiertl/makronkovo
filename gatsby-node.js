@@ -142,7 +142,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       header: 'CANDY BAR',
       upperText: 'Stiahnite si náš cennik pre candy bar:',
       lowerText:
-        'Dezerty Vám radi dovezieme chladiarenským autom a naaranžujeme v štýle Vašej svadby/akcie. Ohúrte Vašich hostí nie len skvelou chuťou ale aj vizuálnym zážitkom. Ceny dostupné na vyžiadanie.',
+        'Dezerty Vám radi dovezieme chladiarenským autom a naaranžujeme v štýle Vašej svadby/akcie. Ohúrte Vašich hostí nielen skvelou chuťou ale aj vizuálnym zážitkom. Ceny dostupné na vyžiadanie.',
       link: 'https://drive.google.com/file/d/18UpR-87uXENjDBIz5CXZpnB17aD0dMQb/view?usp=drivesdk',
     },
   });
