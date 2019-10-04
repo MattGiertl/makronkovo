@@ -58,7 +58,7 @@ const CollectionTemplate = ({ pageContext }) => {
   const { categoryItems, title, lightText, boldText } = pageContext;
 
   const renderCategoryItems = categoryItems.map(categoryItem => (
-    <Polaroid to={categoryItem.to} shadowed src={categoryItem.image} sm>
+    <Polaroid to={categoryItem.to} shadowed src={categoryItem.image} sm >
       <Paragraph fontFamily={theme.fontFamilies.caslonAntique.bold} textAlign="center">
         {categoryItem.categoryName}
       </Paragraph>

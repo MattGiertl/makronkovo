@@ -5,6 +5,7 @@ import { Link } from 'gatsby';
 
 const Wrapper = styled.div(
   {
+    position: 'relative',
     display: 'flex',
     flexDirection: 'column',
     background: theme.colors.white,
