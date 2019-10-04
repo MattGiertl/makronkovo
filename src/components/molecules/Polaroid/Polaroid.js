@@ -13,6 +13,7 @@ const FallBackWrapper = styled.div({
   alignItems: 'center',
   [tabletQuery]: { padding: '50px', border: '1px solid #EDEDED', margin: '0' },
   [laptopToDesktopQuery]: { padding: '50px', border: '1px solid #EDEDED', margin: '0' },
+  [mobileQuery]: { margin: '50px auto 20px' },
 });
 
 const LabelWrapper = styled.div({
