@@ -15,7 +15,7 @@ const PlacehoderWrapper = styled.div({
 
 const ContentWrapper = styled.div({
   display: 'flex',
-  maxWidth: '560px',
+  maxWidth: '670px',
   flexDirection: 'column',
   justifyContent: 'center',
 });
