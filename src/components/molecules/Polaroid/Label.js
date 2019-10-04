@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import theme from '../../../utils/theme/theme';
-import { mobileQuery } from '../../../utils/mediaqueries';
 
 const Label = styled.label(
   {
@@ -14,12 +13,6 @@ const Label = styled.label(
     fontSize: theme.fontSizes.small,
     marginBottom: '5px',
     marginLeft: '-9px',
-
-    [mobileQuery]: {
-      width: '62px',
-      height: '20px',
-      fontSize: theme.fontSizes.xs,
-    },
   },
   props => ({
     background: props.background,

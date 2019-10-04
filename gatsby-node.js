@@ -8,7 +8,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const collectionTemplate = path.resolve(`${templatePath}/CollectionTemplate.js`);
   const categoryItemTemplate = path.resolve(`${templatePath}/CategoryItemTemplate.js`);
   const productDetailTemplate = path.resolve(`${templatePath}/ProductDetailTemplate.js`);
-  const placeholderTemplate = path.resolve(`${templatePath}/PlaceholderTemplate.js`);
+  // const placeholderTemplate = path.resolve(`${templatePath}/PlaceholderTemplate.js`);
 
   const result = await graphql(`
     {
@@ -121,29 +121,30 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     });
   });
 
-  createPage({
-    path: '/dezerty',
-    component: placeholderTemplate,
-    context: {
-      header: 'DEZERTY',
-      upperText: 'Stiahnite si náš cennik pre dezerty:',
-      lowerText:
-        'V prípade záujmu o odber dezertov pre kaviareň alebo reštauráciu nás prosím priamo ',
-      anchorText: 'kontaktujte.',
-      anchorTo: '/kontakt',
-      link: 'https://drive.google.com/file/d/1zUstZleOQgAc44pQvJ57_KbTVKRvDos5/view?usp=drivesdk',
-    },
-  });
+  // PLACEHOLDER PAGES FOR DESSERTS AND CANDYBARS
+  //   createPage({
+  //     path: '/dezerty',
+  //     component: placeholderTemplate,
+  //     context: {
+  //       header: 'DEZERTY',
+  //       upperText: 'Stiahnite si náš cennik pre dezerty:',
+  //       lowerText:
+  //         'V prípade záujmu o odber dezertov pre kaviareň alebo reštauráciu nás prosím priamo ',
+  //       anchorText: 'kontaktujte.',
+  //       anchorTo: '/kontakt',
+  //       link: 'https://drive.google.com/file/d/1zUstZleOQgAc44pQvJ57_KbTVKRvDos5/view?usp=drivesdk',
+  //     },
+  //   });
 
-  createPage({
-    path: '/candy-bar',
-    component: placeholderTemplate,
-    context: {
-      header: 'CANDY BAR',
-      upperText: 'Stiahnite si náš cennik pre candy bar:',
-      lowerText:
-        'Doprava a aranžovanie candy baru nie je súčasťou ceny dezertov. Doprava 50€ • Aranžovanie 50€',
-      link: 'https://drive.google.com/file/d/18UpR-87uXENjDBIz5CXZpnB17aD0dMQb/view?usp=drivesdk',
-    },
-  });
+  //   createPage({
+  //     path: '/candy-bar',
+  //     component: placeholderTemplate,
+  //     context: {
+  //       header: 'CANDY BAR',
+  //       upperText: 'Stiahnite si náš cennik pre candy bar:',
+  //       lowerText:
+  //         'Doprava a aranžovanie candy baru nie je súčasťou ceny dezertov. Doprava 50€ • Aranžovanie 50€',
+  //       link: 'https://drive.google.com/file/d/18UpR-87uXENjDBIz5CXZpnB17aD0dMQb/view?usp=drivesdk',
+  //     },
+  //   });
 };
