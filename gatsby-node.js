@@ -27,21 +27,25 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           }
         }
       }
-      allCandyBarsJson {
+      allCandybarJson {
         edges {
           node {
             title
             to
             products {
-              description
-              image
-              setInfo {
-                amount
-                size
-                unitSize
-              }
               title
               to
+              isSeasonal
+              flavor {
+                flavor
+              }
+              infoCards {
+                infoCard {
+                  description
+                  price
+                  undefined
+                }
+              }
             }
           }
         }
@@ -100,7 +104,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     });
   });
 
-  result.data.allCandyBarsJson.edges.forEach(({ node }) => {
+  result.data.allCandybarJson.edges.forEach(({ node }) => {
     createPage({
       path: node.to,
       component: categoryItemTemplate,
@@ -108,13 +112,14 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     });
   });
 
-  result.data.allCandyBarsJson.edges.forEach(({ node }) => {
+  result.data.allCandybarJson.edges.forEach(({ node }) => {
     const productCategoryTitle = node.title;
     const products = node.products;
 
     node.products.map(candyBar => {
+      const detailPath = `/${node.to}/${candyBar.to}`;
       createPage({
-        path: candyBar.to,
+        path: detailPath,
         component: productDetailTemplate,
         context: { ...candyBar, productCategoryTitle, products },
       });
