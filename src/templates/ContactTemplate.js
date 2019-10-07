@@ -37,6 +37,19 @@ const OpeningHours = styled.div({
   marginTop: '61px',
 });
 
+const ContactWrapper = styled.div({
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'left',
+});
+
+const TelephoneContactWrapper = styled.div({
+  display: 'flex',
+  [mobileQuery]: {
+    flexWrap: 'wrap',
+  },
+});
+
 const ContactTemplate = () => (
   <Layout>
     <SEO
@@ -45,19 +58,26 @@ const ContactTemplate = () => (
     />
     <ContentWrapper>
       <FountainHeading>KONTAKT</FountainHeading>
-      <Paragraph marginBottom="50px" fontSize={theme.fontSizes.medium}>MAKRONKOVO s.r.o.</Paragraph>
-      <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
-        <SocialButton marginRight="8px" icon="location" />
-        Zvolenská cesta 85, Banská Bystrica
+      <Paragraph marginBottom="50px" fontSize={theme.fontSizes.medium}>
+        MAKRONKOVO s.r.o.
       </Paragraph>
-      <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
-        <SocialButton marginRight="8px" icon="mail" />
-        makronkovo@makronkovo.sk
-      </Paragraph>
-      <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
-        <SocialButton marginRight="8px" icon="telephone" />
-        0948 009 800
-      </Paragraph>
+      <ContactWrapper>
+        <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
+          <SocialButton marginRight="8px" icon="location" />
+          Zvolenská cesta 85, Banská Bystrica
+        </Paragraph>
+        <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
+          <SocialButton marginRight="8px" icon="mail" mail />
+          makronkovo@makronkovo.sk
+        </Paragraph>
+        <TelephoneContactWrapper>
+          <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
+            <SocialButton marginRight="8px" icon="telephone" />
+            0948 009 800
+          </Paragraph>
+          <Paragraph marginLeft="5px">(Mgr. Romana Ďurišová)</Paragraph>
+        </TelephoneContactWrapper>
+      </ContactWrapper>
       <OpeningHours>
         <Paragraph fontFamily={theme.fontFamilies.dinPro.bold}>Otváracia doba:</Paragraph>
         <Paragraph marginLeft="4px">Podľa dohody</Paragraph>
