@@ -1,26 +1,51 @@
 [
   {
-    "question": "Aké množstvo dezertov mám objednať?",
-    "answer": "Na osobu odporúčame 3 ks dezertov."
+    "question": "V akom predstihu si mám zajednať tortu/dezerty/candy bar?",
+    "answer": "Na prípravu torty a dezertov na mieru sú potrebné minimálne 4 pracovné dni. Vašu objednávku však radi vezmeme aj niekoľko týždňov dopredu, aby  sa nestalo, že už pre Vás  nebudeme môcť napiecť. Svadobný candy bar odporúčame objednať aj niekoľko mesiacov dopredu. Torty ktoré distribuujeme do kaviarní je možné odobrať aj ihneď pokiaľ sú k dispozícii. ",
+    "email": "",
+    "underlined": "Pokiaľ Vaša objednávka nie je odoslaná na náš e-mail a následne nami potvrdená, nebude braná ako záväzná.",
+    "text": " Telefonické objednávky nie sú brané ako záväzné."
   },
   {
-    "question": "Prečo nemôžem na jeden set vybrať rôzne plnky?",
-    "answer": "Pretože plnky robíme vždy čerstvé a 12 ks je minimálne množstvo pre ktoré sa aj nám oplatí ich pripraviť."
+    "question": "Ako si mám objednať tortu/dezerty/candy bar?",
+    "answer": "Na našej webovej stránke pod záložkou „TORTY NA MIERU“ si môžete vyskladať tortu podľa Vášho želania, ktorú s Vami veľmi radi telefonicky prípadne e-mailom skonzultujeme. V záložke „DEZERTY NA MIERU“ nájdete všetky dezerty ktoré pečieme. Torty a dezerty si objednáte e-mailom na adrese ",
+    "email": "makronkovo@makronkovo.sk",
+    "underlined": "",
+    "text": ", keď Vašu objednávku potvrdíme, môžete ju brať ako záväznú. V prípade záujmu o svadobný alebo firemný candy bar si stihnite cenník pod záložkou „CANDY BAR“ Radi si s Vam dohodneme termín, kde preberieme všetky podrobnosti a možnosti zdobenia a dopravy. "
   },
   {
-    "question": "Akú trvanlivosť majú Vaše dezerty?",
-    "answer": "Naše torty majú pri správnom uskladnení trvanlivosť 5 dní, musia však byť uskladňované pri teplote do 8 stupňov Celzia a pri ich prevoze 420 g 16 ks musí byť tiež dodržaná táto teplota. V prípade, že stanovené teploty nie ste schopní dodržať, odporúčame tortu skonzumovať do 2 dní. Trvanlivosť tartaletiek a makroniek je 5 dní, Pavlove tortičky a dezerty z odpaľovaného cesta odporúčame skonzumovať do dvoch dní pretože ich plnka môže rozmočiť."
+    "question": "Akú trvanlivosť majú Vaše torty/dezerty?",
+    "answer": "Naše torty a dezerty majú pri správnom uskladnení (4-6 stupňov Celzia) trvanlivosť až 5 dní. Trvanlivosť dezertov z odpaľovaného cesta a Pavlovej torty je 2 dni. Kvalita dezertov sa pri uskladnení v bežnej chladničke môže meniť, nakoľko je v nej iná cirkulácia vzduchu ako v cukrárenskej chladničke. Môže dôjsť k navlhnutiu určitých druhov dezertov, hlavne makroniek, Pavlových hniezd a ozdôb z fondantu a cukru. ",
+    "email": "",
+    "underlined": "",
+    "text": ""
   },
   {
-    "question": "Musia byť dezerty uskladnené v chladničke?",
-    "answer": "Áno, dezerty musia byť uskladnené v chladničke s teplotou 8 stupňov Celzia. Pred konzumáciou nechajte dezerty zmäknúť aspoň pol hodinu pri vonkajšej teplote. Pri uskladňovaní dezertov v chladničke pri nesprávnej teplote môže nastať zvlhnutie niektorých dekorácií, napríklad cukrových pusiniek a makroniek."
+    "question": "Ako uskladňovať dezerty?",
+    "answer": "Ideálne uskladnenie tôrt a dezertov je v cukrárenskej chladničke pri teplote 4-6 stupňov celzia. Pri uskladnení v bežnej chladničke odporúčame torty a dezerty ponechať v pôvodnom obale ktorý chráni pred navlhnutím a napáchnutím. Torta z fondantu musí byť uskladnená v chladnej a tmavej miestnosti. Cukrové a fondánové ozdoby môžu uskladnením v chladničke navlhnúť a zmeniť svoju kvalitu a vzhľad.Pred podávaním nechajte dezerty pri izbovej teplote aspoň 30 minút aby zmäkli.",
+    "email": "",
+    "underlined": "",
+    "text": ""
   },
   {
-    "question": "Môžem odoberať od vás dezerty do mojej kaviarne/reštaurácie?",
-    "answer": "Áno, v tomto prípade nás prosím priamo kontaktujte."
+    "question": "Ako prevážať torty/dezerty ?",
+    "answer": "Torty a dezerty Vám zabalíme do krabíc a je potrebné ich prevážať v aute s klímou, ideálne čo najkratší čas. Odporúčame aby Vám s prevozom niekto pomohol, najmä pri prevoze torty je najlepšie keď ju môže niekto držať.",
+    "email": "",
+    "underlined": "",
+    "text": ""
   },
   {
-    "question": "Robíte aj bezlaktózové dezerty?",
-    "answer": "Áno, vieme pripraviť aj bezlaktózové dezerty. Ich nacenenie je individuálne."
+    "question": "Koľko kusov dezertov mám objednať do candy baru ?",
+    "answer": "Odporúčame množstvo 3-5 kúskov dezertov na osobu. Veľkosti dezertov v sladkom bare sú 30-40g, čiže každý môže ochutnať viac kúskov.",
+    "email": "",
+    "underlined": "",
+    "text": ""
+  },
+  {
+    "question": "Sú kvety a bylinky na tortách a dezertoch jedlé?",
+    "answer": "Kvety ktoré umiestňujeme na  torty a dezerty nie sú určené na konzumáciu. Ich stopky Však špeciálne obaľujeme aby neprišli do styku s tortou a nespôsobili Vám tak zdravotný problém. Je to našou najväčšou prioritou. Bylinky a sušené kvety sú určené na konzumáciu a sú zdravotne nezávadné.",
+    "email": "",
+    "underlined": "",
+    "text": ""
   }
 ]

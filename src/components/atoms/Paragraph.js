@@ -20,6 +20,7 @@ const Paragraph = styled.p(
     textDecoration: props.textDecoration,
     opacity: props.opacity,
     letterSpacing: props.letterSpacing,
+    display: props.display,
 
     [mobileQuery]: {
       width: props.mobileWidth,
