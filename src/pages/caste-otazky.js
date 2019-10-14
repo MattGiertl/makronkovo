@@ -10,7 +10,13 @@ const Faq = () => {
   const { nodes: faqPairs } = data.allFaqJson;
 
   const renderFaqPairs = faqPairs.map(pair => (
-    <FaqPair question={pair.question} answer={pair.answer} />
+    <FaqPair
+      question={pair.question}
+      answer={pair.answer}
+      email={pair.email}
+      underlined={pair.underlined}
+      text={pair.text}
+    />
   ));
 
   return <FaqTemplate faqPairs={renderFaqPairs} />;
@@ -22,6 +28,9 @@ const faqQuery = graphql`
       nodes {
         question
         answer
+        email
+        underlined
+        text
       }
     }
   }
