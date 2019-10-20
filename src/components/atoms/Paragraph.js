@@ -21,6 +21,7 @@ const Paragraph = styled.p(
     opacity: props.opacity,
     letterSpacing: props.letterSpacing,
     display: props.display,
+    color: props.color,
 
     [mobileQuery]: {
       width: props.mobileWidth,

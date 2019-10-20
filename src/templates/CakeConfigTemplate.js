@@ -23,7 +23,7 @@ const ContentWrapper = styled.div({
 
 const ContactWrapper = styled.div({
   display: 'flex',
-  justifyContent: 'space-between',
+  justifyContent: 'center',
   margin: '21px',
   width: '60%',
   maxWidth: '800px',
@@ -54,50 +54,27 @@ const CakeConfigTemplate = ({ cards }) => {
       />
       <Heading>VYSKLADAJTE SI SVOJU TORTU NA MIERU</Heading>
       <ContentWrapper>
-        <Paragraph margin="0 35%" mobileMargin="0 5%" tabletMargin="0 15%" textAlign="center">
-          Na základe našej ponuky nižšie nám prosím písomne zadajte Vašu objednávku cez email, sms
-          alebo na naše sociálne siete.
-        </Paragraph>
-        <ContactWrapper>
-          <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
-            <SocialButton marginRight="12px" icon="mail" />
+        <Paragraph margin="0 30%" mobileMargin="0 5%" tabletMargin="0 15%" textAlign="center">
+          Vyskladajte si Vašu tortu a objednávku prosím zadajte e-mailom na adresu
+          <Paragraph display="contents" color="blue">
+            {' '}
             makronkovo@makronkovo.sk
           </Paragraph>
-          <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
-            <SocialButton marginRight="12px" icon="telephone" />
-            0948 009 800
-          </Paragraph>
+          . Objednávka je považovaná za záväznú našim potvrdením.
+        </Paragraph>
+        <ContactWrapper>
           <Anchor
-            href="https://www.instagram.com/makronkovo/?hl=en"
+            fontFamily={theme.fontFamilies.dinPro.bold}
             mobileFontSize={theme.fontSizes.small}
             tabletFontSize={theme.fontSizes.small}
             laptopFontSize={theme.fontSizes.small}
             desktopFontSize={theme.fontSizes.small}
-            fontFamily={theme.fontFamilies.dinPro.bold}
             lineHeight="24px"
+            href="mailto:makronkovo@makronkovo.sk"
+            target="_blank"
           >
-            <SocialButton
-              to="https://www.instagram.com/makronkovo/?hl=en"
-              marginRight="12px"
-              icon="instagram"
-            />
-            makronkovo
-          </Anchor>
-          <Anchor
-            href="https://www.facebook.com/makronkovo/"
-            mobileFontSize={theme.fontSizes.small}
-            tabletFontSize={theme.fontSizes.small}
-            laptopFontSize={theme.fontSizes.small}
-            desktopFontSize={theme.fontSizes.small}
-            fontFamily={theme.fontFamilies.dinPro.bold}
-            lineHeight="24px"
-          >
-            <SocialButton
-              to="https://www.facebook.com/makronkovo/"
-              icon="facebook"
-              marginRight="12px"
-            />
-            makronkovo
+            <SocialButton marginRight="12px" icon="mail" />
+            makronkovo@makronkovo.sk
           </Anchor>
         </ContactWrapper>
         <CardWrapper>{cards}</CardWrapper>

@@ -7,10 +7,11 @@ const StyledAnchor = styled.a(
   {
     color: theme.colors.mediumGold,
     textDecoration: 'none',
-    target: '_blank'
+    target: '_blank',
   },
   props => ({
     fontFamily: props.fontFamily ? props.fontFamily : theme.fontFamilies.dinPro.regular,
+    lineHeight: props.lineHeight,
     [mobileQuery]: {
       fontSize: props.mobileFontSize ? props.mobileFontSize : theme.fontSizes.small,
       margin: props.mobileMargin,
@@ -34,6 +35,7 @@ const Anchor = ({
   href,
   children,
   fontFamily,
+  lineHeight,
   mobileFontSize,
   tabletFontSize,
   laptopFontSize,
@@ -43,6 +45,7 @@ const Anchor = ({
   <StyledAnchor
     href={href}
     fontFamily={fontFamily}
+    lineHeight={lineHeight}
     mobileFontSize={mobileFontSize}
     tabletFontSize={tabletFontSize}
     laptopFontSize={laptopFontSize}

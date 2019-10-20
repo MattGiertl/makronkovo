@@ -22,13 +22,13 @@ const Image = styled.img({
 
 const ListItem = styled.li(
   {
-    fontFamily: theme.fontFamilies.dinPro.regular,
     fontSize: theme.fontSizes.small,
     color: theme.colors.mediumGold,
     lineHeight: '19px',
   },
   props => ({
     marginTop: props.marginTop,
+    fontFamily: props.fontFamily ? props.fontFamily : theme.fontFamilies.dinPro.regular,
   }),
 );
 
@@ -51,9 +51,14 @@ const CakeConfig = () => {
 
     const renderSecondCardItems = secondCard.items.map(item => (
       <CakeOptions src={item.image} imgName={item.imgName} heading={item.heading}>
-        {item.options.map(item => (
-          <ListItem>{item}</ListItem>
-        ))}
+        {item.text.length
+          ? item.text.map(item => (
+              <>
+                <ListItem fontFamily={theme.fontFamilies.dinPro.bold}>{item.option}</ListItem>
+                <Paragraph lineHeight="19px">{item.description}</Paragraph>
+              </>
+            ))
+          : item.options.map(item => <ListItem>{item}</ListItem>)}
       </CakeOptions>
     ));
 
@@ -164,6 +169,10 @@ const cakeConfigQuery = graphql`
               imgName
               image
               options
+              text {
+                option
+                description
+              }
             }
           }
         }

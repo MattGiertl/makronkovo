@@ -54,63 +54,72 @@
           "image": "/assets/Corpus.png",
           "imgName": "Korpus",
           "heading": "Korpus",
-          "options": ["Vanilka", "Kakao", "Bezlepkový orechový"]
+          "options": ["Vanilka", "Kakao"],
+          "text": []
         },
         {
           "image": "/assets/Cream.png",
           "imgName": "Krem",
           "heading": "Krém",
-          "options": [
-            "Mascarpone s tvarohom a redukciou z lesného ovocia",
-            "Mascarpone s kokosom, malinovou redukciou a čerstvými malinami ",
-            "Čokoláda a slaný karamel s chrumkavými kúskami karamelu v čokoláde a pomarančovou redukciou",
-            "Čokoláda s maracujou",
-            "Maková s mascarpone a višňovou redukciou",
-            "Ruby čokoláda s mascarpone a čerstvými malinami (plus 5€, ruby je nová prírodne ružová a kyselkavá odroda čokolády spoločnosti callebaut)",
-            "Mascarpone s tvarohom a limoncellom"
+          "options": [],
+          "text": [
+            {
+              "option": "Mascarpone a lesné ovocie",
+              "description": "Veľmi svieži krém z mascarpone s jemným tvarohom, korpusy nasiaknuté redukciou z lesného ovocia a čerstvé bobuľové ovocie"
+            },
+            {
+              "option": "Čokoláda a maliny",
+              "description": "Ten NAJ jčokoládovejší buttercream osviežený čerstvými malinami a korpusy nasiaknuté redukciou z lesného ovocia"
+            },{
+              "option": "Tvaroh, lemon curd a čučoriedky",
+              "description": "Svieža kyselkavá chuť tvarohu a jemného mascarpone doplnená našou krémovou citrónovou plnkou s čerstvými čučoriedkami.Odporúčame s čokoládovým korpusom"
+            },{
+              "option": "Mak a višňa",
+              "description": "Nesmrteľná a žiadúca kombinácia maku a višní v kréme z mascarpone Na Vaše želanie aj kombinácia MAK a LEMON CURD"
+            },{
+              "option": "Čokoláda a slaný karamel",
+              "description": "Čokoládový buttercream a lahodný domáci slaný karamel"
+            }
           ]
         },
         {
           "image": "/assets/Design.png",
           "imgName": "VonkajsiePrevedenie",
           "heading": "Vonkajšie prevedenie",
-          "options": ["Polonahá torta", "Celá obtretá", "Obtretá na hladko", "Obtretá nedbalo"]
+          "options": ["Polonahá torta jemne obtretá s krémom ktorým je aj naplnená, korpusy presvitajú a vytvárajú naturálny finish", "Obtretá s buttercremom na hladko pre elegantný finish", "Obtretá s buttercreamom nedbalo pre rustikálny finish", "Čokoládová ganache (pre dospelých aj so štipkou alkoholu) ideálna pre špecifické minimalistické zdobenia jedlou farbou alebo prachom", "Fondant (cena na vyžiadanie, odporúčame len pri svadobných tortách a náročných ručne maľovaných tortách na mieru)"],
+          "text": []
         },
         {
           "image": "/assets/Topping.png",
           "imgName": "Poleva",
           "heading": "Poleva",
-          "options": ["Karamel", "Tmavá čokoláda", "Biela čokoláda", "Bez polevy"]
+          "options": ["Slaný karamel", "Tmavá alebo biela čokoláda", "Bez polevy (vždy pri tortách obtretých nedbalo)"],
+          "text": []
         },
         {
           "image": "/assets/Decoration.png",
           "imgName": "Zdobenie",
           "heading": "Zdobenie torty",
           "options": [
-            "Snehové pusinky",
-            "Bobuľové ovocie",
-            "Sušené ovocie",
-            "Tropické ovcocie (maracuja, granátové jablko, figy) od 1 €",
-            "Macarons od 1 €",
-            "Plátkové zlato od 1 €",
-            "Živé kvety (nejedlé) a eucalyptus od 5 €",
-            "Čokoládové a cukrové sochy od 5 €",
-            "Cukrové guličky zlaté, medené, ružové, modré, farebné ",
-            "Farebný buttercream"
-          ]
+            "Živé sezónne nejedlé kvety a zeleň (od 5€)",
+            "Makronky (od 1€)",
+            "Plátkové zlato (od 1€)",
+            "Čerstvé ovocie (od 4€)",
+            "Čerstvé bylinky (od 4€)"
+          ],
+          "text": []
         },
         {
           "image": "/assets/Zapich.png",
           "imgName": "Zapich",
           "heading": "Zápich",
           "options": [
-            "Plastový na mieru od 8 €",
-            "Vlajkový na mieru od 5 €",
-            "Vlajkový štandardný „Happy birthday“ od 5 €",
-            "Balón s konfetami 5 €",
-            "Fondantové rámiky s menom 5 €",
-            "Sviečky od 2 €"
-          ]
+            "Balónik s konfetami (od 5€)",
+            "Sviečky (od 2€)",
+            "Zápichy na mieru (od 7€)",
+            "Fondantové rámiky na mieru (od 5€)"
+          ],
+          "text": []
         }
       ]
     }
