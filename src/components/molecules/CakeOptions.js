@@ -2,7 +2,13 @@ import React from 'react';
 import styled from '@emotion/styled';
 import Paragraph from '../atoms/Paragraph';
 import theme from '../../utils/theme/theme';
-import { tabletQuery, mobileQuery, laptopQuery, desktopQuery, laptopToDesktopQuery } from '../../utils/mediaqueries';
+import {
+  tabletQuery,
+  mobileQuery,
+  laptopQuery,
+  desktopQuery,
+  laptopToDesktopQuery,
+} from '../../utils/mediaqueries';
 import UnorderedList from '../atoms/UnorderedList';
 
 const OptionWrapper = styled.div({
@@ -17,7 +23,7 @@ const TextWrapper = styled.div({
   display: 'flex',
   alignItems: 'left',
   flexDirection: 'column',
-  [mobileQuery]: { marginLeft: '8%', marginBottom: '41px', width: '90%' },
+  [mobileQuery]: { marginLeft: '8%', marginBottom: '41px', width: '60%' },
   [tabletQuery]: { marginLeft: '0px', marginRight: 'auto', marginBottom: '41px', width: '60%' },
   [laptopToDesktopQuery]: { marginLeft: '50px', marginBottom: '41px', width: '500px' },
 });
@@ -38,7 +44,9 @@ const CakeView = ({ src, imgName, heading, children }) => (
       >
         {heading}
       </Paragraph>
-      <UnorderedList paddingInlineStart='20px' marginBlockStart='0' >{children}</UnorderedList>
+      <UnorderedList paddingInlineStart="20px" marginBlockStart="0">
+        {children}
+      </UnorderedList>
     </TextWrapper>
   </OptionWrapper>
 );
