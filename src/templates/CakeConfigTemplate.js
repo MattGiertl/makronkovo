@@ -77,8 +77,28 @@ const CakeConfigTemplate = ({ cards }) => {
             makronkovo@makronkovo.sk
           </Anchor>
         </ContactWrapper>
+        <Paragraph
+          margin="0 30% 30px"
+          mobileMargin="0 5% 30px"
+          tabletMargin="0 15% 30px"
+          textAlign="center"
+          fontFamily={theme.fontFamilies.dinPro.bold}
+        >
+          UPOZORNENIE: Víkendové torty sú s odbermi v piatok do 15.00.
+        </Paragraph>
         <CardWrapper>{cards}</CardWrapper>
         <img src={InfoImage} alt="info" />
+        <Paragraph
+          mobileMargin="10px 40px 0"
+          tabletMargin="10px 25% 0"
+          laptopMargin="10px 30% 0"
+          desktopMargin="10px 30% 0"
+          textAlign="center"
+        >
+          Zadajte nám prosím aj farebnú škálu v ktorej chcete mať tortu prevedenú, vek oslávenca a
+          iné požiadavky ktoré sa Vám budeme snažiť v rámci našich možností splniť a pomôžu nám tak
+          vytvoriť perfektnú tortu na mieru.
+        </Paragraph>
         <Paragraph
           mobileMargin="10px 40px 50px"
           tabletMargin="10px 25% 80px"
@@ -86,9 +106,21 @@ const CakeConfigTemplate = ({ cards }) => {
           desktopMargin="10px 30% 146px"
           textAlign="center"
         >
-          Zadajte nám prosím aj farebnú škálu v ktorej chcete mať tortu prevedenú, vek oslávenca a
-          iné požiadavky ktoré sa Vám budeme snažiť v rámci našich možností splniť a pomôžu nám tak
-          vytvoriť perfektnú tortu na mieru
+          K torte Vám vieme pripraviť aj mini dezerty v rovnakom štýle. Tartaletky, cupcakes,
+          makronky, pavlove hniezda. Ponuku nájdete v sekcii{' '}
+          <Anchor
+            target="_blank"
+            fontFamily={theme.fontFamilies.dinPro.regular}
+            mobileFontSize={theme.fontSizes.small}
+            tabletFontSize={theme.fontSizes.small}
+            laptopFontSize={theme.fontSizes.small}
+            desktopFontSize={theme.fontSizes.small}
+            href="/dezerty"
+            textDecoration="underline"
+          >
+            dezerty
+          </Anchor>
+          .
         </Paragraph>
       </ContentWrapper>
     </Layout>

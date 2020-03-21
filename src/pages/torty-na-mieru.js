@@ -44,13 +44,18 @@ const CakeConfig = () => {
         weight={item.weight}
         height={item.height}
         portions={item.portions}
-        price={item.price}
         partialVisibility={true}
       />
     ));
 
     const renderSecondCardItems = secondCard.items.map(item => (
-      <CakeOptions src={item.image} imgName={item.imgName} heading={item.heading}>
+      <CakeOptions
+        src={item.image}
+        imgName={item.imgName}
+        heading={item.heading}
+        description={item.description}
+        listTitle={item.listTitle}
+      >
         {item.text.length
           ? item.text.map(item => (
               <>
@@ -106,8 +111,9 @@ const CakeConfig = () => {
             margin="20px auto 40px"
             fontFamily={theme.fontFamilies.dinPro.regular}
             fontSize={theme.fontSizes.medium}
+            textAlign="center"
           >
-            {firstCard.price}
+            {firstCard.portions}
           </Paragraph>
         </Card>
         <Card
@@ -147,7 +153,7 @@ const cakeConfigQuery = graphql`
           firstCard {
             image
             paragraph
-            price
+            portions
             secondParagraph
             section
             title
@@ -156,7 +162,6 @@ const cakeConfigQuery = graphql`
               image
               imgName
               portions
-              price
               type
               weight
             }
@@ -169,6 +174,8 @@ const cakeConfigQuery = graphql`
               imgName
               image
               options
+              description
+              listTitle
               text {
                 option
                 description

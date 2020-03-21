@@ -110,8 +110,8 @@ const NotFoundTemplate = () => {
       text: 'Dezerty',
     },
     {
-      href: '/candy-bar',
-      text: 'Candy Bar',
+      href: '/svadby',
+      text: 'Svadby',
     },
   ];
 

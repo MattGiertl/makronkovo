@@ -73,7 +73,7 @@ const ProductDetailTemplate = ({ pageContext, uri }) => {
     ? products.filter(item => item.title !== title)
     : products.filter(item => item.title !== title);
 
-  const productSectionTitle = uri.indexOf('dezerty') !== -1 ? 'Dezerty' : 'Candy Bary';
+  const productSectionTitle = uri.indexOf('dezerty') !== -1 ? 'Dezerty' : 'Svadby';
   return (
     <Layout>
       <SEO
@@ -156,22 +156,22 @@ const ProductDetailTemplate = ({ pageContext, uri }) => {
             <ContactInfo>
               <div>
                 <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
-                  <SocialButton marginRight="8px" icon='mail' />
+                  <SocialButton marginRight="8px" icon="mail" />
                   makronkovo@makronkovo.sk
                 </Paragraph>
                 <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
-                  <SocialButton marginRight="8px" icon='instagram' />
+                  <SocialButton marginRight="8px" icon="instagram" />
                   makronkovo
                 </Paragraph>
               </div>
 
               <div>
                 <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
-                  <SocialButton marginRight="8px" icon='telephone' />
+                  <SocialButton marginRight="8px" icon="telephone" />
                   0948 009 800
                 </Paragraph>
                 <Paragraph fontFamily={theme.fontFamilies.dinPro.bold} lineHeight="24px">
-                  <SocialButton marginRight="8px" icon='facebook' />
+                  <SocialButton marginRight="8px" icon="facebook" />
                   makronkovo
                 </Paragraph>
               </div>

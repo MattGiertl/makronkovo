@@ -2,47 +2,35 @@
   {
     "firstCard": {
       "section": "/assets/FirstSection.svg",
-      "title": "VELKOSŤ",
-      "paragraph": "Jednoposchodové torty (18 cm priemer)",
-      "secondParagraph": "Dvojposchodová torta a torta nad 22 porcií",
+      "title": "VEĽKOSŤ",
+      "paragraph": "Jednoposchodové torty (20 cm priemer)",
+      "secondParagraph": "Dvojposchodové torty a torty nad 24 porcií",
       "image": "/assets/DoubleCake.png",
-      "price": "5€ / porcia",
+      "portions": "Počet porcií je orientačný. 1 porcia = 150g",
       "items": [
-        {
-          "image": "/assets/MiniCake.png",
-          "imgName": "Mini",
-          "type": "Mini",
-          "weight": "1500 g",
-          "height": "výška 10 cm",
-          "portions": "8 porcií",
-          "price": "od 45€"
-        },
         {
           "image": "/assets/MidiCake.png",
           "imgName": "Midi",
-          "type": "Midi",
-          "weight": "2000 g",
-          "height": "výška 13 cm",
-          "portions": "10 porcií",
-          "price": "od 55€"
+          "type": "Klasik",
+          "weight": "1800g",
+          "height": "výška 9 cm",
+          "portions": "12 porcií"
         },
         {
           "image": "/assets/ClassikCake.png",
           "imgName": "Klasik",
-          "type": "Klasik",
-          "weight": "2500 g",
-          "height": "výška 17 cm",
-          "portions": "16 porcií",
-          "price": "od 70€"
+          "type": "Medium",
+          "weight": "2400g",
+          "height": "výška 15 cm",
+          "portions": "16 porcií"
         },
         {
           "image": "/assets/TallCake.png",
           "imgName": "Tall",
           "type": "Tall",
-          "weight": "3000 g",
-          "height": "výška 20 cm",
-          "portions": "22 porcií",
-          "price": "od 85€"
+          "weight": "3600g",
+          "height": "výška 18 cm",
+          "portions": "24 porcií"
         }
       ]
     },
@@ -55,6 +43,8 @@
           "imgName": "Korpus",
           "heading": "Korpus",
           "options": ["Vanilka", "Kakao"],
+          "description": "",
+          "listTitle": "",
           "text": []
         },
         {
@@ -62,6 +52,8 @@
           "imgName": "Krem",
           "heading": "Krém",
           "options": [],
+          "description": "",
+          "listTitle": "",
           "text": [
             {
               "option": "Mascarpone a lesné ovocie",
@@ -69,14 +61,17 @@
             },
             {
               "option": "Čokoláda a maliny",
-              "description": "Ten NAJ jčokoládovejší buttercream osviežený čerstvými malinami a korpusy nasiaknuté redukciou z lesného ovocia"
-            },{
+              "description": "Ten NAJ čokoládovejší buttercream osviežený čerstvými malinami a korpusy nasiaknuté redukciou z lesného ovocia"
+            },
+            {
               "option": "Tvaroh, lemon curd a čučoriedky",
               "description": "Svieža kyselkavá chuť tvarohu a jemného mascarpone doplnená našou krémovou citrónovou plnkou s čerstvými čučoriedkami.Odporúčame s čokoládovým korpusom"
-            },{
+            },
+            {
               "option": "Mak a višňa",
-              "description": "Nesmrteľná a žiadúca kombinácia maku a višní v kréme z mascarpone Na Vaše želanie aj kombinácia MAK a LEMON CURD"
-            },{
+              "description": "Nesmrteľná a žiadúca kombinácia maku a višní v kréme z mascarpone. Na Vaše želanie aj kombinácia MAK a LEMON CURD"
+            },
+            {
               "option": "Čokoláda a slaný karamel",
               "description": "Čokoládový buttercream a lahodný domáci slaný karamel"
             }
@@ -86,14 +81,28 @@
           "image": "/assets/Design.png",
           "imgName": "VonkajsiePrevedenie",
           "heading": "Vonkajšie prevedenie",
-          "options": ["Polonahá torta jemne obtretá s krémom ktorým je aj naplnená, korpusy presvitajú a vytvárajú naturálny finish", "Obtretá s buttercremom na hladko pre elegantný finish", "Obtretá s buttercreamom nedbalo pre rustikálny finish", "Čokoládová ganache (pre dospelých aj so štipkou alkoholu) ideálna pre špecifické minimalistické zdobenia jedlou farbou alebo prachom", "Fondant (cena na vyžiadanie, odporúčame len pri svadobných tortách a náročných ručne maľovaných tortách na mieru)"],
+          "options": [
+            "Polonahá torta jemne obtretá s krémom ktorým je aj naplnená, korpusy presvitajú a vytvárajú naturálny finish",
+            "Obtretá s buttercremom na hladko pre elegantný finish",
+            "Obtretá s buttercreamom nedbalo pre rustikálny finish",
+            "Čokoládová ganache (pre dospelých aj so štipkou alkoholu) ideálna pre špecifické minimalistické zdobenia jedlou farbou alebo prachom",
+            "Fondant (cena na vyžiadanie, odporúčame len pri svadobných tortách a náročných ručne maľovaných tortách na mieru)"
+          ],
+          "description": "",
+          "listTitle": "",
           "text": []
         },
         {
           "image": "/assets/Topping.png",
           "imgName": "Poleva",
           "heading": "Poleva",
-          "options": ["Slaný karamel", "Tmavá alebo biela čokoláda", "Bez polevy (vždy pri tortách obtretých nedbalo)"],
+          "options": [
+            "Slaný karamel",
+            "Tmavá alebo biela čokoláda",
+            "Bez polevy (vždy pri tortách obtretých nedbalo)"
+          ],
+          "description": "",
+          "listTitle": "",
           "text": []
         },
         {
@@ -101,12 +110,13 @@
           "imgName": "Zdobenie",
           "heading": "Zdobenie torty",
           "options": [
-            "Živé sezónne nejedlé kvety a zeleň (od 5€)",
-            "Makronky (od 1€)",
-            "Plátkové zlato (od 1€)",
-            "Čerstvé ovocie (od 4€)",
-            "Čerstvé bylinky (od 4€)"
+            "Zdobenie drahšími sezónnymi kvetmi alebo bohatú kvetinovú výzdobu (10€)",
+            "Jednoduché modelovanie  z fondantu  (od 5€)",
+            "Kreslenie na fondant (od 5€)",
+            "Zdobenie plátkovým zlatom (od 2€)"
           ],
+          "description": "V cene torty je zahrnuté jednoduchšie zdobenie so živými kvetmi, zeleňou, sprinkles, prípadne s makronkami.",
+          "listTitle": "Navyše si môžete zakúpiť:",
           "text": []
         },
         {
@@ -119,6 +129,8 @@
             "Zápichy na mieru (od 7€)",
             "Fondantové rámiky na mieru (od 5€)"
           ],
+          "description": "",
+          "listTitle": "",
           "text": []
         }
       ]
