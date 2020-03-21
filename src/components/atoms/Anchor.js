@@ -6,12 +6,12 @@ import { tabletQuery, mobileQuery, desktopQuery, laptopQuery } from '../../utils
 const StyledAnchor = styled.a(
   {
     color: theme.colors.mediumGold,
-    textDecoration: 'none',
     target: '_blank',
   },
   props => ({
     fontFamily: props.fontFamily ? props.fontFamily : theme.fontFamilies.dinPro.regular,
     lineHeight: props.lineHeight,
+    textDecoration: props.textDecoration ? props.textDecoration : 'none',
     [mobileQuery]: {
       fontSize: props.mobileFontSize ? props.mobileFontSize : theme.fontSizes.small,
       margin: props.mobileMargin,
@@ -41,6 +41,7 @@ const Anchor = ({
   laptopFontSize,
   desktopFontSize,
   mobileMargin,
+  textDecoration,
 }) => (
   <StyledAnchor
     href={href}
@@ -51,6 +52,7 @@ const Anchor = ({
     laptopFontSize={laptopFontSize}
     desktopFontSize={desktopFontSize}
     mobileMargin={mobileMargin}
+    textDecoration={textDecoration}
   >
     {children}
   </StyledAnchor>

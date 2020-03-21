@@ -32,8 +32,8 @@ const NavBar = () => {
         </SocialButtonGroup>
         <NavLink to="/torty-na-mieru">TORTY NA MIERU</NavLink>
         <NavLink to="/dezerty">DEZERTY</NavLink>
-        <NavLink marginBottom="50px" to="/candy-bar">
-          CANDY BAR
+        <NavLink marginBottom="50px" to="/svadby">
+          SVADBY
         </NavLink>
         <NavLink to="/">
           <Logo show />

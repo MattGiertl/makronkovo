@@ -32,7 +32,7 @@ const Image = styled.img({
   margin: '-10px auto auto',
 });
 
-const CakeView = ({ src, imgName, heading, children }) => (
+const CakeView = ({ src, imgName, heading, children, description, listTitle }) => (
   <OptionWrapper>
     <Image src={src} alt={imgName} />
     <TextWrapper>
@@ -44,7 +44,13 @@ const CakeView = ({ src, imgName, heading, children }) => (
       >
         {heading}
       </Paragraph>
-      <UnorderedList paddingInlineStart="20px" marginBlockStart="0">
+      {description && (
+        <Paragraph textAlign="left" marginBottom="10px">
+          {description}
+        </Paragraph>
+      )}
+      {listTitle && <Paragraph>{listTitle}</Paragraph>}
+      <UnorderedList paddingInlineStart={listTitle ? '40px' : '20px'} marginBlockStart="0">
         {children}
       </UnorderedList>
     </TextWrapper>

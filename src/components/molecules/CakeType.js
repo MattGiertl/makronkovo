@@ -39,7 +39,7 @@ const ListItem = styled.li(
   }),
 );
 
-const CakeType = ({ src, imgName, type, weight, height, portions, price }) => (
+const CakeType = ({ src, imgName, type, weight, height, portions }) => (
   <TypeWrapper>
     <img src={src} alt={imgName} />
     <Paragraph
@@ -49,11 +49,15 @@ const CakeType = ({ src, imgName, type, weight, height, portions, price }) => (
     >
       {type}
     </Paragraph>
-    <UnorderedList listStyleType='none' alignItems='center' justifyContent='flex-end' paddingInlineStart='0'>
+    <UnorderedList
+      listStyleType="none"
+      alignItems="center"
+      justifyContent="flex-end"
+      paddingInlineStart="0"
+    >
       <ListItem>{weight}</ListItem>
       <ListItem>{height}</ListItem>
       <ListItem>{portions}</ListItem>
-      <ListItem marginTop="20px">{price}</ListItem>
     </UnorderedList>
   </TypeWrapper>
 );
